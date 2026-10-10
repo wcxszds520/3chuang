@@ -1,0 +1,21 @@
+const fs=require('fs');const path=require('path');const crypto=require('crypto');const {spawnSync}=require('child_process');const {createRequire}=require('module');
+const req=createRequire('D:/cixing/3chuang_PRESERVED_20260911-003253/project/backend/package.json');
+const cfg=req('dotenv').parse(fs.readFileSync('D:/cixing/3chuang_PRESERVED_20260911-003253/project/backend/.env'));
+const base=path.resolve(__dirname,'..');const runtime='D:/cixing/3chuang_RECOVERY_RUN_20260911-003253';
+(async()=>{
+ fs.mkdirSync(runtime,{recursive:false});fs.mkdirSync(path.join(runtime,'screenshots'));
+ const admin=await req('mysql2/promise').createConnection({host:cfg.DB_HOST||'localhost',port:Number(cfg.DB_PORT||3306),user:cfg.DB_USER||'root',password:cfg.DB_PASSWORD||''});
+ const db='portcube_recovery_20260911_003253';const user='pc_restore_0911_003253';const pass=crypto.randomBytes(24).toString('hex');
+ await admin.query('CREATE DATABASE ?? CHARACTER SET utf8mb4',[db]);
+ await admin.query('CREATE USER ?@? IDENTIFIED BY ?',[user,'localhost',pass]);
+ await admin.query('GRANT ALL PRIVILEGES ON ??.* TO ?@?',[db,user,'localhost']);
+ await admin.end();
+ const runtimeConfig={DB_HOST:cfg.DB_HOST||'localhost',DB_PORT:String(cfg.DB_PORT||3306),DB_NAME:db,DB_USER:user,DB_PASSWORD:pass,PORT:'13000',NODE_ENV:'development'};
+ fs.writeFileSync(path.join(runtime,'isolated-env.local.json'),JSON.stringify(runtimeConfig,null,2));
+ const dump=path.join(base,'database','current-project-database.sql');
+ const input=fs.openSync(dump,'r');const out=fs.openSync(path.join(runtime,'database-import.log'),'wx');const err=fs.openSync(path.join(runtime,'database-import.err.log'),'wx');
+ const result=spawnSync('C:/Program Files/MySQL/MySQL Server 9.4/bin/mysql.exe',['--defaults-extra-file='+path.join(base,'database','local-mysql.cnf'),'--max-allowed-packet=1G',db],{stdio:[input,out,err],windowsHide:true});fs.closeSync(input);fs.closeSync(out);fs.closeSync(err);
+ if(result.status!==0)throw new Error('Isolated import failed; inspect local error log');
+ fs.writeFileSync(path.join(runtime,'database-provenance.json'),JSON.stringify({type:'CURRENT_DATABASE_COPY_FOR_COMPATIBILITY_ONLY',sourceDump:dump,createdAt:new Date().toISOString(),notPreRebuildDatabaseBackup:true,isolatedDatabase:db},null,2));
+ console.log(JSON.stringify({isolatedDatabase:db,runtime,source:'current database preservation dump; not historical restore'}));
+})().catch(e=>{console.error(e.message);process.exitCode=1});
