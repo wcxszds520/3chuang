@@ -1,0 +1,17 @@
+import { createRequire } from 'node:module';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { WORKSITE_DEMO } from '../web-dashboard/src/domain/cargo/worksiteDemo.js';
+import { normalizeCargo } from '../web-dashboard/src/domain/cargo/cargo.js';
+import { CONTAINER_CATALOG } from '../web-dashboard/src/domain/container/catalog.js';
+import { OperationMachine } from '../web-dashboard/src/three/operation/operationMachine.js';
+const require = createRequire(import.meta.url);
+const Solver = require('../backend/services/HybridConstraintPackingSolverV25.js');
+const container=CONTAINER_CATALOG['20GP'];
+const cargo=WORKSITE_DEMO.items.map(normalizeCargo);
+const plan=process.argv.includes('--saved') ? JSON.parse(readFileSync('tmp/realism-worksite.json')) : await new Solver().generatePackingPlan(cargo,container,{strategy:'SPACE',inputSource:'DEMO_DATA',route:[{portSequence:1},{portSequence:2},{portSequence:3}]});
+plan.containerInfo=container;
+if(!process.argv.includes('--saved'))writeFileSync('tmp/realism-worksite.json',JSON.stringify(plan,null,2));
+const m=new OperationMachine(plan);m.play();
+for(let frame=0;frame<50000 && !['COMPLETED','BLOCKED'].includes(m.phase);frame++)m.tick(.1);
+const s=m.getSnapshot();
+console.log(JSON.stringify({count:plan.loadedCargo.length,input:cargo.reduce((a,c)=>a+c.quantity,0),volume:plan.spaceUtilization,gap:Math.min(...plan.loadedCargo.map(c=>c.x)),cog:plan.cogOffset,hard:plan.validator.hardViolationCount,port:plan.portAccessibility.status,operation:s.phase,completed:s.completedCount,current:s.currentCargo?.sku,reasons:s.blockedReasons,profile:s.currentCargo?.packagingProfile,rows:plan.loadedCargo.map(c=>({sku:c.sku,x:c.x,y:c.y,z:c.z,l:c.l,w:c.w,h:c.h}))},null,2));

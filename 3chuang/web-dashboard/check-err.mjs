@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+const errors = [];
+page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
+page.on('pageerror', err => errors.push('PAGEERROR: ' + err.message));
+await page.goto('http://127.0.0.1:5173/#dashboard', { waitUntil: 'domcontentloaded' });
+await page.waitForTimeout(3000);
+const bodyText = await page.evaluate(() => document.body.innerText.slice(0, 500));
+const wsExists = await page.evaluate(() => !!document.querySelector('.workspace'));
+const focusExists = await page.evaluate(() => !!document.querySelector('.yg-focus-v6'));
+console.log(JSON.stringify({ errors: errors.slice(0, 10), wsExists, focusExists, bodyTextHead: bodyText.slice(0, 200) }, null, 2));
+await browser.close();
