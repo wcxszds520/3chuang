@@ -1,0 +1,10 @@
+<!--
+  数据跳动组件 (Data Counter)
+  数值变化时 ≥ 300ms 插值动画
+  Requirements: 7.4 - 数据跳动组件
+-->
+<view class="data-counter">
+  <text class="data-counter__prefix" wx:if="{{prefix}}">{{prefix}}</text>
+  <text class="data-counter__value">{{displayValue}}</text>
+  <text class="data-counter__suffix" wx:if="{{suffix}}">{{suffix}}</text>
+</view>

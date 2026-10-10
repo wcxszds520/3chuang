@@ -1,0 +1,127 @@
+{
+  "task": "Real forwarder cargo optimization loop (base = FINAL_OPTIMIZED_SOLUTION/best_v7)",
+  "startedAt": "2026-10-05T08:17:26.745Z",
+  "backbone": "FINAL_OPTIMIZED_SOLUTION (best_v7): core suite 20.371% = 99.5% of input-bound ceiling, 0 violations both validators",
+  "dataset": {
+    "source": "3chuang_PRESERVED_20260911-003253/database/current-project-database.sql (load_task table, real user-entered forwarder tasks)",
+    "cases": 4,
+    "totalInput": 247,
+    "detail": "REAL-PALLET-14-HAM: 14x PALLET-A 1200x1000x1300 260kg stackable=false forklift HAM (TASK_1c0adc0e rev1); REAL-MULTICUST-16: 14x PALLET-A(cust F39) + 2x PALLET-B 180kg (cust 44C) (TASK_e78dde2c rev10, real history split 2x20GP 9+7); REAL-DOCK-5-20GP: 5x PALLET-A 1200x2000x500 rot=false max=2 dock forklift acceptance (TASK_77f97ed4 rev3); REAL-MULTIPORT-212: 212 units 3-port Hamburg/Rotterdam/Antwerp high-density (TASK_b622c7f8 rev1)"
+  },
+  "scoreFormula": "Score = aggregateUtil - 0.02*max(0,avgMs-80) - 1000*(violations>0?1:0); hard-reject violations>0 or timeout>30s",
+  "termination": {
+    "criterion": "A (perfect loading)",
+    "evidence": "100% loaded (247/247), 0 violations both validators, median 57.13ms <= 80ms (final 3-run; 8-run median 66.9ms); per-case util = input-volume ceiling; determinism double-run identical"
+  },
+  "baseline": {
+    "version": "best_real_v0",
+    "aggregateUtil": 42.824,
+    "loaded": "247/247",
+    "loadRate": 1,
+    "avgMs": 65.47,
+    "maxMs": 155.04,
+    "violations": 0,
+    "validatorHard": 0,
+    "perCase": [
+      {
+        "id": "REAL-PALLET-14-HAM",
+        "util": 28.605,
+        "loaded": "14/14",
+        "ms": 72.9
+      },
+      {
+        "id": "REAL-MULTICUST-16",
+        "util": 31.198,
+        "loaded": "16/16",
+        "ms": 22.74
+      },
+      {
+        "id": "REAL-DOCK-5-20GP",
+        "util": 18.075,
+        "loaded": "5/5",
+        "ms": 11.2
+      },
+      {
+        "id": "REAL-MULTIPORT-212",
+        "util": 79.43,
+        "loaded": "212/212",
+        "ms": 155.04
+      }
+    ]
+  },
+  "best": {
+    "version": "best_real_v1",
+    "aggregateUtil": 42.824,
+    "loaded": "247/247",
+    "loadRate": 1,
+    "avgMsMedian": 57.13,
+    "violations": 0,
+    "validatorHard": 0,
+    "score": 42.824,
+    "avgMsNoiseBand": "56-108 (8 runs)"
+  },
+  "iterations": [
+    {
+      "n": "R1",
+      "status": "SUCCESS",
+      "strategy": "group-level orientation candidate cache in _pickPlannedItem (real data = 212 per-unit groups)",
+      "aggregateUtil": 42.824,
+      "avgMs": null,
+      "violations": 0,
+      "note": "warm 212-case engine 38->32.5ms median; adopted"
+    },
+    {
+      "n": "R2",
+      "status": "SUCCESS",
+      "strategy": "lazy MySQL pool in sandbox config/database.js (engine never touches DB on direct-container path)",
+      "aggregateUtil": 42.824,
+      "avgMs": 58.14,
+      "violations": 0,
+      "note": "cold start -11%, ECONNREFUSED noise removed; adopted"
+    },
+    {
+      "n": "R3",
+      "status": "SUCCESS",
+      "strategy": "pick-pool compaction (globally-exhausted groups pruned, per-slice planned unaffected)",
+      "aggregateUtil": 42.824,
+      "avgMs": 59.97,
+      "violations": 0,
+      "note": "warm 212-case engine -15% more; adopted. median-of-5 avgMs=71.8 -> criterion <=80ms met on median"
+    },
+    {
+      "n": "R4-candidate",
+      "status": "SKIPPED",
+      "strategy": "PlanValidator O(N^2) spatial-hash optimization",
+      "note": "rejected pre-implementation: ~15ms on one case vs gate-correctness risk before delivery"
+    },
+    {
+      "n": "E2E-A",
+      "status": "SUCCESS",
+      "strategy": "LLM/rule container recommendation × 3D engine staged pipeline (ContainerRecommender floor-area adapter wraps native recommendContainers)",
+      "aggregateUtil": 42.824,
+      "avgMs": null,
+      "violations": 0,
+      "note": "5 cases: adapter corrects floor-blind native 20GP recommendations to 40GP for floor-bound pallets; native confirmed for 20GP dock & 40HQ multiport"
+    },
+    {
+      "n": "E2E-B",
+      "status": "SUCCESS",
+      "strategy": "40HQ saturation stress: B1 1.5x / B2 2.0x / B3 LCL merge + e2e-C1 row consolidation (withdrawn) + e2e-C2 colCap guard + e2e-C3 repair loop + e2e-C4 near-full fill support",
+      "aggregateUtil": 42.824,
+      "avgMs": null,
+      "violations": 0,
+      "note": "B1/B2 244 loaded 79.43% util 0 violations 51-59ms (saturation plateau = structural ceiling of this real SKU mix); B3 32/233 floor-bound pallets eat length (single-container LCL physically capped; real answer = multi-container, matches real history)"
+    },
+    {
+      "n": "E2E-R",
+      "status": "SUCCESS",
+      "strategy": "reverse packing: maximal empty space + remaining payload + top-up estimation with LIFO/heavy-bottom verification",
+      "aggregateUtil": null,
+      "avgMs": null,
+      "violations": 0,
+      "note": "5 cases verified: 144/108/231/18/226 cartons loaded, 0 violations, LIFO+heavy-bottom intact; DOCK-5 top-up +362% volume utilization"
+    }
+  ],
+  "patienceCounter": 0,
+  "finishedAt": "2026-10-05T08:31:47.985Z"
+}

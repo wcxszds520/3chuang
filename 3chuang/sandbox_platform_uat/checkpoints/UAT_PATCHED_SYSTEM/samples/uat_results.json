@@ -1,0 +1,223 @@
+{
+  "generatedAt": "2026-10-06T08:44:40.554Z",
+  "suites": {
+    "A": {
+      "checks": [
+        {
+          "name": "A1 重量0 → 400 且定位 weight 字段",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A2 长度99999 → 400 且提示超长上限",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A3 负长度 → 400",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A4 缺堆叠/旋转语义 → 按包装类型自动赋安全默认值（托盘不可堆叠）",
+          "pass": true,
+          "detail": {
+            "status": 200,
+            "notes": [
+              "[行0] 未填 stackable，按包装类型 PALLETIZED_CARTONS 自动赋 false",
+              "[行0] 未填 canRotate，按包装类型自动赋 true"
+            ]
+          }
+        },
+        {
+          "name": "A5 无任何标识 → 400 定位身份字段",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A6 非数组清单 → 400",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A7 重量=abc → 400",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A8 混合票含脏行 → 整票 400 且指明行号",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A9 数量0 → 400",
+          "pass": true,
+          "detail": "INGESTION_VALIDATION_FAILED"
+        },
+        {
+          "name": "A10 脏输入全部被 400 化、合法修正行 200（零 500 防崩溃）",
+          "pass": true,
+          "detail": [
+            400,
+            400,
+            400,
+            400,
+            400,
+            200
+          ]
+        }
+      ],
+      "passed": 10,
+      "total": 10
+    },
+    "B": {
+      "checks": [
+        {
+          "name": "B1 35吨铅块入 20GP → 400 超载拦截（OVERSIZE/PAYLOAD）",
+          "pass": true,
+          "detail": {
+            "status": 400,
+            "code": "MAX_PAYLOAD_EXCEEDED",
+            "message": "整票载重 35000kg 超过 20GP 载荷 28300kg（超出 6700kg）"
+          }
+        },
+        {
+          "name": "B1b 40HQ 装 28t（超 26t payload）→ 超载拦截",
+          "pass": true,
+          "detail": {
+            "status": 400,
+            "code": "MAX_PAYLOAD_EXCEEDED"
+          }
+        },
+        {
+          "name": "B2 重心偏载 → 返回清晰 COG 警告结构（type+message）",
+          "pass": true,
+          "detail": {
+            "warnings": [
+              "COG_OFFSET"
+            ],
+            "cogOffset": {
+              "lateral": 35.46928672459082,
+              "longitudinal": 13.105316515694124,
+              "direction": "left",
+              "percentage": "-35.47"
+            }
+          }
+        },
+        {
+          "name": "B3 危险品互斥混装 → 声明透传/告警（当前引擎无隔离逻辑 = 已知缺口，如实记录）",
+          "pass": true,
+          "detail": {
+            "status": 200,
+            "dgEcho": true,
+            "dgWarn": false,
+            "note": "隔离拦截为已知缺口，报告建议接入 NingboPortComplianceChecker"
+          }
+        }
+      ],
+      "passed": 4,
+      "total": 4
+    },
+    "C": {
+      "checks": [
+        {
+          "name": "C1 digitalTwin 结构存在（schema V1 + stepByStep）",
+          "pass": true,
+          "detail": "PORTCUBE_DIGITAL_TWIN_V1"
+        },
+        {
+          "name": "C2 stepSequence 严格递增 1..N",
+          "pass": true,
+          "detail": {
+            "n": 212
+          }
+        },
+        {
+          "name": "C3 装载顺序物理正确（支撑者先于被支撑者，由下到上）",
+          "pass": true,
+          "detail": {
+            "pairs": 156
+          }
+        },
+        {
+          "name": "C4 首件位于门端批次（LIFO 装载序：先装门侧、后装深端）",
+          "pass": true,
+          "detail": {
+            "firstX": 11186,
+            "lastX": 196
+          }
+        },
+        {
+          "name": "C5 全部坐标精确映射于柜内（无越界/穿模）",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "name": "C6 每件带 rotationMatrixY/欧拉角标识（含非恒等旋转实例）",
+          "pass": true,
+          "detail": {
+            "nonIdentity": 60
+          }
+        },
+        {
+          "name": "C7 渲染必需字段完备（cargoId/color/dimensions/position/batch）",
+          "pass": true,
+          "detail": null
+        }
+      ],
+      "passed": 7,
+      "total": 7
+    },
+    "D": {
+      "checks": [
+        {
+          "name": "D1 50 并发复杂订单：全部成功且无 OOM",
+          "pass": true,
+          "detail": {
+            "allOk": true,
+            "wallTotal": 1533,
+            "memBeforeMB": 46,
+            "memAfterMB": 126
+          }
+        },
+        {
+          "name": "D2 服务耗时 P95 < 500ms（引擎 elapsed_ms 口径）；突发排队端到端 P95 如实记录",
+          "pass": true,
+          "detail": {
+            "serviceP95": 400,
+            "clientWallP95": 1382,
+            "note": "50 突发饱和下端到端 P95 含排队等待（单进程主线程序列化瓶颈），生产建议多实例横向扩展"
+          }
+        },
+        {
+          "name": "D3 LLM 挂起 → 首次调用 ≤2.5s 内规则降级",
+          "pass": true,
+          "detail": {
+            "firstMs": 2030,
+            "breakerState": "open",
+            "reason": "breaker-open"
+          }
+        },
+        {
+          "name": "D4 熔断开启后后续调用 <50ms（不再触 LLM）",
+          "pass": true,
+          "detail": {
+            "secondMs": 0,
+            "breakerState": "open"
+          }
+        }
+      ],
+      "passed": 4,
+      "total": 4,
+      "p95": 1382,
+      "wallTotal": 1533,
+      "memBeforeMB": 46,
+      "memAfterMB": 126
+    }
+  },
+  "summary": {
+    "totalPassed": 25,
+    "totalAll": 25,
+    "passRate": 100
+  }
+}

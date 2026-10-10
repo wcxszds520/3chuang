@@ -1,0 +1,830 @@
+{
+  "generatedAt": "2026-07-10T07:23:21.204Z",
+  "baseUrl": "http://127.0.0.1:5173/",
+  "screenshots": {
+    "dashboard": "docs/final_product_integration/screenshots/final-dashboard.png",
+    "cargo": "docs/final_product_integration/screenshots/final-cargo-input.png",
+    "container": "docs/final_product_integration/screenshots/final-container-recommendation.png",
+    "twin": "docs/final_product_integration/screenshots/final-twin-3d.png",
+    "compliance": "docs/final_product_integration/screenshots/final-compliance-review.png",
+    "report": "docs/final_product_integration/screenshots/final-report-export.png",
+    "final": "docs/final_product_integration/screenshots/final-e2e-end-state.png"
+  },
+  "apiCalls": [
+    {
+      "method": "GET",
+      "url": "/api/tts/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/vlm/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/vlm/status",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/vlm/recognize-cargo",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/cargo/create",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/tts/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/vlm/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/vlm/status",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/packing/generate",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/packing/compliance-check-sync",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/compliance/regulation/solas_vgm",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/compliance/hybrid-search",
+      "status": 200
+    }
+  ],
+  "records": [
+    {
+      "page": "工作台首页",
+      "button": "维护 SKU",
+      "beforeState": "http://127.0.0.1:5173/#dashboard",
+      "afterState": "http://127.0.0.1:5173/#cargo",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "工作台首页",
+      "button": "继续合规复核",
+      "beforeState": "http://127.0.0.1:5173/#dashboard",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "工作台首页",
+      "button": "查看 3D 作业孪生",
+      "beforeState": "http://127.0.0.1:5173/#dashboard",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "工作台首页",
+      "button": "预览装柜报告",
+      "beforeState": "http://127.0.0.1:5173/#dashboard",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "工作台首页",
+      "button": "查看风险详情",
+      "beforeState": "http://127.0.0.1:5173/#dashboard",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "工作台首页",
+      "button": "查看法规证据",
+      "beforeState": "http://127.0.0.1:5173/#dashboard",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "货物录入页",
+      "button": "导入 CSV",
+      "beforeState": "http://127.0.0.1:5173/#cargo",
+      "afterState": "http://127.0.0.1:5173/#cargo",
+      "calledApis": [],
+      "passed": true,
+      "file": "docs/final_product_integration/test-assets/demo-cargo-import.csv",
+      "error": null
+    },
+    {
+      "page": "货物录入页",
+      "button": "VLM 上传识别",
+      "beforeState": "http://127.0.0.1:5173/#cargo",
+      "afterState": "http://127.0.0.1:5173/#cargo",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/vlm/recognize-cargo",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "file": "docs/final_product_integration/test-assets/vlm-online/pallet_wood.jpg",
+      "error": null
+    },
+    {
+      "page": "货物录入页",
+      "button": "重试识别",
+      "beforeState": "http://127.0.0.1:5173/#cargo",
+      "afterState": "http://127.0.0.1:5173/#cargo",
+      "calledApis": [],
+      "passed": true,
+      "skipped": true,
+      "error": "NOT_PRESENT"
+    },
+    {
+      "page": "货物录入页",
+      "button": "添加到订单",
+      "beforeState": "http://127.0.0.1:5173/#cargo",
+      "afterState": "http://127.0.0.1:5173/#cargo",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/cargo/create",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "货物录入页",
+      "button": "AI 校验属性",
+      "beforeState": "http://127.0.0.1:5173/#cargo",
+      "afterState": "http://127.0.0.1:5173/#cargo",
+      "calledApis": [],
+      "passed": true,
+      "skipped": true,
+      "error": "NOT_PRESENT"
+    },
+    {
+      "page": "货物录入页",
+      "button": "重置为标准订单数据",
+      "beforeState": "http://127.0.0.1:5173/#cargo",
+      "afterState": "http://127.0.0.1:5173/#cargo",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "货物录入页",
+      "button": "继续",
+      "beforeState": "http://127.0.0.1:5173/#cargo",
+      "afterState": "http://127.0.0.1:5173/#container",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "柜型推荐页",
+      "button": "20GP",
+      "beforeState": "http://127.0.0.1:5173/#container",
+      "afterState": "http://127.0.0.1:5173/#container",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "柜型推荐页",
+      "button": "40GP",
+      "beforeState": "http://127.0.0.1:5173/#container",
+      "afterState": "http://127.0.0.1:5173/#container",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "柜型推荐页",
+      "button": "40HQ",
+      "beforeState": "http://127.0.0.1:5173/#container",
+      "afterState": "http://127.0.0.1:5173/#container",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "柜型推荐页",
+      "button": "查看推荐解释",
+      "beforeState": "http://127.0.0.1:5173/#container",
+      "afterState": "http://127.0.0.1:5173/#container",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "柜型推荐页",
+      "button": "关闭",
+      "beforeState": "http://127.0.0.1:5173/#container",
+      "afterState": "http://127.0.0.1:5173/#container",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "柜型推荐页",
+      "button": "生成装柜方案",
+      "beforeState": "http://127.0.0.1:5173/#container",
+      "afterState": "http://127.0.0.1:5173/#container",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "播放",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "暂停",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "重置",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "总览",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "门端",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "俯视",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "侧视",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/packing/generate",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "定位当前货物",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "skipped": true,
+      "error": "NOT_PRESENT"
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "确认完成",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "跳过此步",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "查看算法依据",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "关闭",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "进入合规预审",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "3D 作业孪生页",
+      "button": "全屏",
+      "beforeState": "http://127.0.0.1:5173/#twin",
+      "afterState": "http://127.0.0.1:5173/#twin",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "合规预审页",
+      "button": "AI 深度审计",
+      "beforeState": "http://127.0.0.1:5173/#compliance",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/packing/compliance-check-sync",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "合规预审页",
+      "button": "标记当前项已复核",
+      "beforeState": "http://127.0.0.1:5173/#compliance",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "合规预审页",
+      "button": "生成整改清单",
+      "beforeState": "http://127.0.0.1:5173/#compliance",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [],
+      "passed": true,
+      "skipped": true,
+      "error": "NOT_PRESENT"
+    },
+    {
+      "page": "合规预审页",
+      "button": "完成复核并导出",
+      "beforeState": "http://127.0.0.1:5173/#compliance",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "合规预审页",
+      "button": "返回 3D 作业孪生",
+      "beforeState": "http://127.0.0.1:5173/#compliance",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [],
+      "passed": true,
+      "skipped": true,
+      "error": "NOT_PRESENT"
+    },
+    {
+      "page": "合规预审页",
+      "button": "SOLAS VGM 要求",
+      "beforeState": "http://127.0.0.1:5173/#compliance",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [
+        {
+          "method": "GET",
+          "url": "/api/compliance/regulation/solas_vgm",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "合规预审页",
+      "button": "关闭",
+      "beforeState": "http://127.0.0.1:5173/#compliance",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "返回复核",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#compliance",
+      "calledApis": [
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "url": "/api/compliance/hybrid-search",
+          "status": 200
+        }
+      ],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "预览报告",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "下载 HTML 报告",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "file": "docs/final_product_integration/downloads/甬柜易算装柜与合规报告-NB2026-DEMO-01.html",
+      "size": 3823,
+      "contentChecks": [
+        {
+          "needle": "NB2026-DEMO-01",
+          "present": true
+        },
+        {
+          "needle": "40HQ",
+          "present": true
+        },
+        {
+          "needle": "221",
+          "present": true
+        },
+        {
+          "needle": "0",
+          "present": true
+        },
+        {
+          "needle": "84.51",
+          "present": true
+        },
+        {
+          "needle": "100",
+          "present": true
+        },
+        {
+          "needle": "IPPC",
+          "present": true
+        }
+      ],
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "关闭",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "下载 HTML",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "file": "docs/final_product_integration/downloads/甬柜易算装柜与合规报告-NB2026-DEMO-01.html",
+      "size": 3823,
+      "contentChecks": [
+        {
+          "needle": "NB2026-DEMO-01",
+          "present": true
+        },
+        {
+          "needle": "40HQ",
+          "present": true
+        },
+        {
+          "needle": "221",
+          "present": true
+        },
+        {
+          "needle": "0",
+          "present": true
+        },
+        {
+          "needle": "84.51",
+          "present": true
+        },
+        {
+          "needle": "100",
+          "present": true
+        },
+        {
+          "needle": "IPPC",
+          "present": true
+        }
+      ],
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "下载 CSV",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "file": "docs/final_product_integration/downloads/法规证据清单-NB2026-DEMO-01.csv",
+      "size": 742,
+      "contentChecks": [
+        {
+          "needle": "NB2026-DEMO-01",
+          "present": true
+        },
+        {
+          "needle": "40HQ",
+          "present": true
+        },
+        {
+          "needle": "221",
+          "present": true
+        },
+        {
+          "needle": "0",
+          "present": true
+        },
+        {
+          "needle": "84.51",
+          "present": true
+        },
+        {
+          "needle": "100",
+          "present": true
+        },
+        {
+          "needle": "IPPC",
+          "present": true
+        }
+      ],
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "下载 JSON",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "file": "docs/final_product_integration/downloads/甬柜易算演示数据-NB2026-DEMO-01.json",
+      "size": 4060,
+      "contentChecks": [
+        {
+          "needle": "NB2026-DEMO-01",
+          "present": true
+        },
+        {
+          "needle": "40HQ",
+          "present": true
+        },
+        {
+          "needle": "221",
+          "present": true
+        },
+        {
+          "needle": "0",
+          "present": true
+        },
+        {
+          "needle": "84.51",
+          "present": true
+        },
+        {
+          "needle": "100",
+          "present": true
+        },
+        {
+          "needle": "IPPC",
+          "present": true
+        }
+      ],
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "全屏查看",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "error": null
+    },
+    {
+      "page": "报告导出页",
+      "button": "更新导出设置",
+      "beforeState": "http://127.0.0.1:5173/#report",
+      "afterState": "http://127.0.0.1:5173/#report",
+      "calledApis": [],
+      "passed": true,
+      "skipped": true,
+      "error": "NOT_PRESENT"
+    }
+  ],
+  "consoleErrors": [
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x351c001bb400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x351c001bb400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x351c001bb400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x351c001bb400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ],
+  "summary": {
+    "totalRecords": 49,
+    "passed": 49,
+    "failed": 0,
+    "notPresent": 6,
+    "apiCalls": 25,
+    "consoleErrorCount": 4
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "generatedAt": "2026-06-30T02:48:29.171Z",
+  "baseUrl": "http://127.0.0.1:3000/api",
+  "demoCargoSummary": {
+    "skuRows": 5,
+    "totalQuantity": 221,
+    "containerType": "40HQ"
+  },
+  "results": [
+    {
+      "name": "GET /api/health",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/health",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 59,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "message": "服务运行正常",
+        "status": "ok",
+        "service": "甬柜易算后端服务"
+      }
+    },
+    {
+      "name": "POST /api/packing/generate",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/packing/generate",
+      "inputSummary": {
+        "containerType": "40HQ",
+        "cargoSkuRows": 5,
+        "totalQuantity": 221
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 7972,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "message": "Packing plan generated successfully",
+        "loadedCargoLength": 221,
+        "unloadedCargoLength": 0,
+        "hasContainerInfo": true,
+        "hasCog": true,
+        "spaceUtilization": 84.51,
+        "source": "backend"
+      }
+    },
+    {
+      "name": "POST /api/packing/compliance-check-sync",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/packing/compliance-check-sync",
+      "inputSummary": {
+        "containerType": "40HQ",
+        "loadedCargo": 221,
+        "declaredVGM": 12691
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 1715,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "message": "Compliance check completed",
+        "status": "PASS",
+        "score": 100,
+        "model": "deepseek-v4-flash",
+        "aiAdviceSource": "ai",
+        "aiAdviceError": null,
+        "reportRows": 8,
+        "containsVGM": true,
+        "containsLIFO": true,
+        "containsCOG": true,
+        "containsIPPC": true,
+        "containsDocs": true
+      }
+    },
+    {
+      "name": "GET /api/compliance/regulations",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/compliance/regulations",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 7,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "count": 4,
+        "totalSections": 17,
+        "method": "TF-IDF cosine similarity (lightweight RAG)",
+        "docIds": [
+          "ctu_code",
+          "gb40163",
+          "jtt1187",
+          "solas_vgm"
+        ]
+      }
+    },
+    {
+      "name": "GET /api/compliance/regulation/ctu_code",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/compliance/regulation/ctu_code",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 6,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "docId": "ctu_code",
+        "title": "CTU Code 货物运输单元装载实操规则",
+        "sectionCount": 5
+      }
+    },
+    {
+      "name": "GET /api/compliance/regulation/gb40163",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/compliance/regulation/gb40163",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 5,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "docId": "gb40163",
+        "title": "GB 40163-2021 海运危险货物集装箱装箱作业安全技术要求",
+        "sectionCount": 4
+      }
+    },
+    {
+      "name": "GET /api/compliance/regulation/jtt1187",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/compliance/regulation/jtt1187",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 4,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "docId": "jtt1187",
+        "title": "JT/T 1187-2018 港口货物装卸作业安全技术要求",
+        "sectionCount": 4
+      }
+    },
+    {
+      "name": "GET /api/compliance/regulation/solas_vgm",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/compliance/regulation/solas_vgm",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 3,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "docId": "solas_vgm",
+        "title": "SOLAS 公约第VI章 载货集装箱重量验证(VGM)",
+        "sectionCount": 4
+      }
+    },
+    {
+      "name": "POST /api/compliance/search VGM",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/compliance/search",
+      "inputSummary": {
+        "query": "VGM",
+        "topK": 3
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 7,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "query": "VGM",
+        "method": "TF-IDF cosine similarity",
+        "resultCount": 3,
+        "topDocs": [
+          {
+            "docId": "solas_vgm",
+            "section": "VI-2.2 VGM 允许误差",
+            "score": 0.228
+          },
+          {
+            "docId": "solas_vgm",
+            "section": "VI-2.4 违规后果与案例",
+            "score": 0.208
+          },
+          {
+            "docId": "solas_vgm",
+            "section": "VI-2.1 VGM 强制申报",
+            "score": 0.125
+          }
+        ]
+      }
+    },
+    {
+      "name": "POST /api/compliance/search LIFO",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/compliance/search",
+      "inputSummary": {
+        "query": "LIFO",
+        "topK": 3
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 5,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "query": "LIFO",
+        "method": "TF-IDF cosine similarity",
+        "resultCount": 1,
+        "topDocs": [
+          {
+            "docId": "ctu_code",
+            "section": "4.1 装载顺序与可达性",
+            "score": 0.171
+          }
+        ]
+      }
+    },
+    {
+      "name": "POST /api/compliance/search IPPC",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/compliance/search",
+      "inputSummary": {
+        "query": "IPPC",
+        "topK": 3
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 3,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "query": "IPPC",
+        "method": "TF-IDF cosine similarity",
+        "resultCount": 1,
+        "topDocs": [
+          {
+            "docId": "jtt1187",
+            "section": "6.1 木质包装 IPPC",
+            "score": 0.327
+          }
+        ]
+      }
+    },
+    {
+      "name": "POST /api/compliance/search 木包装",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/compliance/search",
+      "inputSummary": {
+        "query": "木包装",
+        "topK": 3
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 4,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "query": "木包装",
+        "method": "TF-IDF cosine similarity",
+        "resultCount": 3,
+        "topDocs": [
+          {
+            "docId": "jtt1187",
+            "section": "6.1 木质包装 IPPC",
+            "score": 0.088
+          },
+          {
+            "docId": "gb40163",
+            "section": "5.3 装箱与封箱操作",
+            "score": 0.041
+          },
+          {
+            "docId": "gb40163",
+            "section": "5.2 装箱前准备",
+            "score": 0.02
+          }
+        ]
+      }
+    },
+    {
+      "name": "POST /api/compliance/search 单证一致性",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/compliance/search",
+      "inputSummary": {
+        "query": "单证一致性",
+        "topK": 3
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 5,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "query": "单证一致性",
+        "method": "TF-IDF cosine similarity",
+        "resultCount": 2,
+        "topDocs": [
+          {
+            "docId": "gb40163",
+            "section": "6.1 记录与单证",
+            "score": 0.119
+          },
+          {
+            "docId": "gb40163",
+            "section": "5.2 装箱前准备",
+            "score": 0.067
+          }
+        ]
+      }
+    },
+    {
+      "name": "POST /api/compliance/search CTU",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/compliance/search",
+      "inputSummary": {
+        "query": "CTU",
+        "topK": 3
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 4,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "query": "CTU",
+        "method": "TF-IDF cosine similarity",
+        "resultCount": 1,
+        "topDocs": [
+          {
+            "docId": "ctu_code",
+            "section": "3.2 CTU 60/50 规则",
+            "score": 0.23
+          }
+        ]
+      }
+    },
+    {
+      "name": "GET /api/vlm/status",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/vlm/status",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 4,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "available": true,
+        "model": "Qwen/Qwen2-VL-72B-Instruct"
+      }
+    },
+    {
+      "name": "POST /api/vlm/recognize-cargo",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/vlm/recognize-cargo",
+      "trueCall": false,
+      "ok": false,
+      "skipped": true,
+      "externalBlocker": "NO_REAL_CARGO_TEST_IMAGE",
+      "error": {
+        "message": "No real cargo image found under docs/final_goal/test-assets. UI screenshot/model-list screenshots were intentionally not used."
+      }
+    },
+    {
+      "name": "GET /api/container/list",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/container/list",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 7,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "message": "查询成功",
+        "count": 3,
+        "types": [
+          "20GP",
+          "40GP",
+          "40HQ"
+        ]
+      }
+    },
+    {
+      "name": "POST /api/cargo/create",
+      "method": "POST",
+      "url": "http://127.0.0.1:3000/api/cargo/create",
+      "inputSummary": {
+        "name": "联调测试货物-1782787709118",
+        "length": 450,
+        "width": 330,
+        "height": 280,
+        "weight": 7.5,
+        "quantity": 2,
+        "stackable": true,
+        "maxStackLayers": 3,
+        "canLayFlat": true,
+        "fragile": false
+      },
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 22,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "message": "货物创建成功",
+        "hasCargoId": true,
+        "cargoId": "cargo_febb4bf4-052a-48c2-8474-68b780fe1b05"
+      }
+    },
+    {
+      "name": "GET /api/cargo/list",
+      "method": "GET",
+      "url": "http://127.0.0.1:3000/api/cargo/list",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 9,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "message": "查询成功",
+        "count": 2
+      }
+    },
+    {
+      "name": "DELETE /api/cargo/delete/:cargoId",
+      "method": "DELETE",
+      "url": "http://127.0.0.1:3000/api/cargo/delete/cargo_febb4bf4-052a-48c2-8474-68b780fe1b05",
+      "inputSummary": null,
+      "trueCall": true,
+      "httpStatus": 200,
+      "elapsedMs": 19,
+      "ok": true,
+      "responseSummary": {
+        "code": 200,
+        "message": "货物删除成功"
+      }
+    }
+  ]
+}

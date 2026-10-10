@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>甬柜易算装柜与合规报告 - NB2026-DEMO-01</title>
+  <style>
+    body { margin: 0; padding: 32px; font-family: "Microsoft YaHei", Arial, sans-serif; color: #17211d; background: #f4f7fb; }
+    main { max-width: 960px; margin: 0 auto; background: #fff; border: 1px solid #dbe5f0; border-radius: 14px; padding: 32px; box-shadow: 0 18px 45px rgba(23,33,29,.08); }
+    h1 { margin: 0 0 8px; color: #1456a0; }
+    h2 { margin: 28px 0 12px; font-size: 18px; }
+    .meta, .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .meta div, .kpis div { border: 1px solid #e3ebf3; border-radius: 10px; padding: 12px; background: #fbfdff; }
+    span { display: block; color: #63716b; font-size: 12px; }
+    strong { display: block; margin-top: 4px; font-size: 18px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+    th, td { border-bottom: 1px solid #e3ebf3; padding: 10px; text-align: left; }
+    th { color: #63716b; background: #f7faff; }
+    .warn { color: #b76210; }
+    .fail { color: #b3231b; }
+    .pass { color: #0f7a3d; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>甬柜易算装柜与合规报告</h1>
+  <p>订单编号 NB2026-DEMO-01 · 宁波港 → 汉堡港 · 40HQ · 真实 AI 审计已通过</p>
+  <section class="kpis">
+    <div><span>装入件数</span><strong>221/221 件</strong></div>
+    <div><span>空间利用率</span><strong>84.51%</strong></div>
+    <div><span>重心偏移</span><strong>横 0.5% / 纵 4.1%</strong></div>
+    <div><span>合规评分</span><strong>100 / 100 · PASS</strong></div>
+  </section>
+  <h2>装柜方案摘要</h2>
+  <p>推荐柜型 40HQ，当前真实装箱结果为已装入 221 件、未装入 0 件，空间利用率 84.51%。未装入尾货建议拆分尾货、更换柜型或复核不可堆叠限制后复算。</p>
+  <h2>SKU 摘要</h2>
+  <table><thead><tr><th>SKU</th><th>货物名称</th><th>目的港</th><th>尺寸</th><th>重量</th><th>数量</th><th>属性</th></tr></thead><tbody><tr><td>SKU-A01</td><td>空调外机</td><td>汉堡港</td><td>780×360×540</td><td>28.5kg</td><td>120</td><td>重货</td></tr><tr><td>SKU-B12</td><td>配件箱</td><td>汉堡港</td><td>420×300×260</td><td>6.2kg</td><td>260</td><td>可堆叠</td></tr><tr><td>SKU-C08</td><td>木托包装件</td><td>汉堡港</td><td>900×700×650</td><td>42kg</td><td>24</td><td>木包装</td></tr><tr><td>SKU-D22</td><td>易碎面板</td><td>汉堡港</td><td>600×400×180</td><td>3.8kg</td><td>96</td><td>易碎</td></tr><tr><td>SKU-E17</td><td>普通纸箱</td><td>汉堡港</td><td>500×380×320</td><td>9.5kg</td><td>364</td><td>可堆叠</td></tr></tbody></table>
+  <h2>合规检查矩阵</h2>
+  <table><thead><tr><th>检查项</th><th>结果</th><th>等级</th><th>触发原因</th><th>复核状态</th></tr></thead><tbody><tr><td>VGM 重量验证</td><td>PASS</td><td>L0</td><td>【PASS】申报 12991kg, 实际约 12991.400000000067kg, 误差 0.0% (合规)</td><td>已复核</td></tr><tr><td>LIFO 卸货顺序</td><td>PASS</td><td>L0</td><td>卸货顺序未检测到阻挡冲突</td><td>已复核</td></tr><tr><td>重心偏移检查</td><td>PASS</td><td>L0</td><td>横 0.5% / 纵 4.1% · 阈值 5% / 10%</td><td>已复核</td></tr><tr><td>木包装 IPPC</td><td>PASS</td><td>L0</td><td>本批次无木质包装</td><td>已复核</td></tr><tr><td>单证一致性</td><td>PASS</td><td>L0</td><td>221/221 件已装入 · 0 件未装货物</td><td>已复核</td></tr><tr><td>危险品资料</td><td>PASS</td><td>L0</td><td>本批次无危险品</td><td>已复核</td></tr></tbody></table>
+  <h2>法规证据清单</h2>
+  <p>SOLAS VGM、CTU Code、IPPC 木包装要求与单证一致性规则已纳入本次报告包。</p>
+</main>
+</body>
+</html>

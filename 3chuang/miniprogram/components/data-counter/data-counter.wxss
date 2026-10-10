@@ -1,0 +1,32 @@
+/**
+ * 数据跳动组件样式
+ * Requirements: 7.4 - 数据跳动动画
+ */
+
+.data-counter {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.data-counter__prefix {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-primary, #1D1D1F);
+}
+
+.data-counter__value {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-primary, #1D1D1F);
+}
+
+.data-counter__suffix {
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--color-text-secondary, #6E6E73);
+  margin-left: 4rpx;
+}

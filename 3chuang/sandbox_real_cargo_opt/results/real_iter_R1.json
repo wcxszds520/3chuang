@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-10-05T08:18:48.987Z",
+  "seed": 42,
+  "suite": "real_forwarder",
+  "results": {
+    "realistic4d-multi-strategy": {
+      "algorithmId": "realistic4d-multi-strategy",
+      "caseCount": 4,
+      "aggregateUtil": 42.824,
+      "totalInput": 247,
+      "totalLoaded": 247,
+      "loadRate": 1,
+      "avgMs": 79.19,
+      "maxMs": 168.72,
+      "violationCount": 0,
+      "violationCodes": [],
+      "validatorHardTotal": 0,
+      "rows": [
+        {
+          "id": "REAL-PALLET-14-HAM",
+          "ok": true,
+          "wallMs": 58.84,
+          "containerVolume": 76351414272,
+          "totalInput": 14,
+          "loadedCount": 14,
+          "loadRate": 1,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 21840000000,
+          "inputVolume": 21840000000,
+          "inputRatio": 0.286,
+          "utilization": 28.605,
+          "violations": [],
+          "validatorHard": 0,
+          "strategyUsed": "fast-block-v1",
+          "cog": {
+            "lateral": 0,
+            "longitudinal": 0.8311170212765957
+          }
+        },
+        {
+          "id": "REAL-MULTICUST-16",
+          "ok": true,
+          "wallMs": 84.36,
+          "containerVolume": 76351414272,
+          "totalInput": 16,
+          "loadedCount": 16,
+          "loadRate": 1,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 23820000000,
+          "inputVolume": 23820000000,
+          "inputRatio": 0.312,
+          "utilization": 31.198,
+          "violations": [],
+          "validatorHard": 0,
+          "strategyUsed": "fast-block-v1",
+          "cog": {
+            "lateral": 0,
+            "longitudinal": 0.2327127659574468
+          }
+        },
+        {
+          "id": "REAL-DOCK-5-20GP",
+          "ok": true,
+          "wallMs": 4.83,
+          "containerVolume": 33195925728,
+          "totalInput": 5,
+          "loadedCount": 5,
+          "loadRate": 1,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 6000000000,
+          "inputVolume": 6000000000,
+          "inputRatio": 0.181,
+          "utilization": 18.075,
+          "violations": [],
+          "validatorHard": 0,
+          "strategyUsed": "fast-block-v1",
+          "cog": {
+            "lateral": 0,
+            "longitudinal": 8.138351983723297
+          }
+        },
+        {
+          "id": "REAL-MULTIPORT-212",
+          "ok": true,
+          "wallMs": 168.72,
+          "containerVolume": 76351414272,
+          "totalInput": 212,
+          "loadedCount": 212,
+          "loadRate": 1,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 60646170000,
+          "inputVolume": 60646170000,
+          "inputRatio": 0.794,
+          "utilization": 79.43,
+          "violations": [],
+          "validatorHard": 0,
+          "strategyUsed": "fast-block",
+          "cog": {
+            "lateral": 0.09330764661192492,
+            "longitudinal": 13.017463115097913
+          }
+        }
+      ]
+    }
+  }
+}

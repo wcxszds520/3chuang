@@ -1,0 +1,852 @@
+{
+  "generatedAt": "2026-10-05T04:55:40.125Z",
+  "suite": "core",
+  "seed": 42,
+  "results": {
+    "realistic4d-multi-strategy": {
+      "algorithmId": "realistic4d-multi-strategy",
+      "caseCount": 26,
+      "aggregateUtil": 19.603,
+      "meanUtil": 16.34,
+      "avgMs": 132.06,
+      "maxMs": 1017.91,
+      "violationCount": 97,
+      "violationCodes": [
+        "FRAGILE_TOP",
+        "LIFO",
+        "ROTATION"
+      ],
+      "validatorHardTotal": 1049,
+      "totalLoadedCount": 824,
+      "rows": [
+        {
+          "id": "DATASET-A-212",
+          "ok": true,
+          "wallMs": 190.16,
+          "containerVolume": 76351414272,
+          "loadedCount": 212,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 60646170000,
+          "utilization": 79.43,
+          "inputVolume": 60646170000,
+          "inputRatio": 0.794,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "DATASET-B-MIXED-69",
+          "ok": true,
+          "wallMs": 1017.91,
+          "containerVolume": 76351414272,
+          "loadedCount": 69,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 19104000000,
+          "utilization": 25.021,
+          "inputVolume": 19104000000,
+          "inputRatio": 0.25,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "DATASET-B-3_3",
+              "message": "rests on fragile DATASET-B-3_2"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "DATASET-B-3_6",
+              "message": "rests on fragile DATASET-B-3_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "DATASET-B-3_7",
+              "message": "rests on fragile DATASET-B-3_4"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "DATASET-B-3_8",
+              "message": "rests on fragile DATASET-B-3_5"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "DATASET-B-2_3",
+              "message": "rests on fragile DATASET-B-2_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "DATASET-B-1_2",
+              "message": "rests on fragile DATASET-B-1_1"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 259
+        },
+        {
+          "id": "PHYSICAL-01",
+          "ok": true,
+          "wallMs": 39.52,
+          "containerVolume": 33195925728,
+          "loadedCount": 11,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 770000000,
+          "utilization": 2.32,
+          "inputVolume": 770000000,
+          "inputRatio": 0.023,
+          "violations": [],
+          "validatorHard": 8
+        },
+        {
+          "id": "PHYSICAL-05",
+          "ok": true,
+          "wallMs": 64.76,
+          "containerVolume": 33195925728,
+          "loadedCount": 18,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 5938440000,
+          "utilization": 17.889,
+          "inputVolume": 5938440000,
+          "inputRatio": 0.179,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-23524-1_4",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 19
+        },
+        {
+          "id": "PHYSICAL-09",
+          "ok": true,
+          "wallMs": 167.31,
+          "containerVolume": 33195925728,
+          "loadedCount": 37,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 6963890000,
+          "utilization": 20.978,
+          "inputVolume": 6963890000,
+          "inputRatio": 0.21,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-24048-2_8",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 66
+        },
+        {
+          "id": "PHYSICAL-13",
+          "ok": true,
+          "wallMs": 105.85,
+          "containerVolume": 33195925728,
+          "loadedCount": 19,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 4251645000,
+          "utilization": 12.808,
+          "inputVolume": 4251645000,
+          "inputRatio": 0.128,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 27
+        },
+        {
+          "id": "PHYSICAL-17",
+          "ok": true,
+          "wallMs": 19.09,
+          "containerVolume": 33195925728,
+          "loadedCount": 6,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 3031720000,
+          "utilization": 9.133,
+          "inputVolume": 3031720000,
+          "inputRatio": 0.091,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 3
+        },
+        {
+          "id": "PHYSICAL-21",
+          "ok": true,
+          "wallMs": 161.6,
+          "containerVolume": 33195925728,
+          "loadedCount": 20,
+          "engineUnloadedCount": 3,
+          "loadedVolume": 8265330000,
+          "utilization": 24.899,
+          "inputVolume": 11181330000,
+          "inputRatio": 0.337,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-25620-5_3",
+              "message": "rests on fragile PP-25620-5_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-25620-3_1",
+              "message": "rests on fragile PP-25620-5_2"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-25620-3_3",
+              "message": "rests on fragile PP-25620-5_3"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-25620-5_1",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-25620-5_3",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 24
+        },
+        {
+          "id": "PHYSICAL-25",
+          "ok": true,
+          "wallMs": 76.06,
+          "containerVolume": 33195925728,
+          "loadedCount": 20,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 3811870000,
+          "utilization": 11.483,
+          "inputVolume": 3811870000,
+          "inputRatio": 0.115,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 25
+        },
+        {
+          "id": "PHYSICAL-29",
+          "ok": true,
+          "wallMs": 122.97,
+          "containerVolume": 33195925728,
+          "loadedCount": 50,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 1835048000,
+          "utilization": 5.528,
+          "inputVolume": 1835048000,
+          "inputRatio": 0.055,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 69
+        },
+        {
+          "id": "PHYSICAL-33",
+          "ok": true,
+          "wallMs": 182.19,
+          "containerVolume": 33195925728,
+          "loadedCount": 24,
+          "engineUnloadedCount": 1,
+          "loadedVolume": 11855310000,
+          "utilization": 35.713,
+          "inputVolume": 12731150000,
+          "inputRatio": 0.384,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-27192-1_3",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-27192-1_4",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 32
+        },
+        {
+          "id": "PHYSICAL-37",
+          "ok": true,
+          "wallMs": 44.98,
+          "containerVolume": 33195925728,
+          "loadedCount": 16,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 2048800000,
+          "utilization": 6.172,
+          "inputVolume": 2048800000,
+          "inputRatio": 0.062,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-27716-1_1",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-27716-1_2",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "PP-27716-1_3",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 29
+        },
+        {
+          "id": "PHYSICAL-41",
+          "ok": true,
+          "wallMs": 64.58,
+          "containerVolume": 33195925728,
+          "loadedCount": 28,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 2756272000,
+          "utilization": 8.303,
+          "inputVolume": 2756272000,
+          "inputRatio": 0.083,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-3_3",
+              "message": "rests on fragile PP-28240-3_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-3_4",
+              "message": "rests on fragile PP-28240-3_2"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-1_3",
+              "message": "rests on fragile PP-28240-1_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-1_4",
+              "message": "rests on fragile PP-28240-1_2"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-3_5",
+              "message": "rests on fragile PP-28240-3_3"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-3_6",
+              "message": "rests on fragile PP-28240-3_4"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-3_7",
+              "message": "rests on fragile PP-28240-3_5"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-3_8",
+              "message": "rests on fragile PP-28240-3_6"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-1_5",
+              "message": "rests on fragile PP-28240-1_3"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-1_6",
+              "message": "rests on fragile PP-28240-1_4"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-1_7",
+              "message": "rests on fragile PP-28240-1_5"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "PP-28240-1_8",
+              "message": "rests on fragile PP-28240-1_6"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 47
+        },
+        {
+          "id": "PHYSICAL-45",
+          "ok": true,
+          "wallMs": 122.32,
+          "containerVolume": 33195925728,
+          "loadedCount": 10,
+          "engineUnloadedCount": 4,
+          "loadedVolume": 10265060000,
+          "utilization": 30.923,
+          "inputVolume": 14645770000,
+          "inputRatio": 0.441,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 10
+        },
+        {
+          "id": "PHYSICAL-49",
+          "ok": true,
+          "wallMs": 100.62,
+          "containerVolume": 33195925728,
+          "loadedCount": 22,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 4153020000,
+          "utilization": 12.511,
+          "inputVolume": 4153020000,
+          "inputRatio": 0.125,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 33
+        },
+        {
+          "id": "PHYSICAL-53",
+          "ok": true,
+          "wallMs": 67.03,
+          "containerVolume": 33195925728,
+          "loadedCount": 22,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 2972160000,
+          "utilization": 8.953,
+          "inputVolume": 2972160000,
+          "inputRatio": 0.09,
+          "violations": [],
+          "validatorHard": 18
+        },
+        {
+          "id": "PHYSICAL-57",
+          "ok": true,
+          "wallMs": 73.32,
+          "containerVolume": 33195925728,
+          "loadedCount": 20,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 4561432000,
+          "utilization": 13.741,
+          "inputVolume": 4561432000,
+          "inputRatio": 0.137,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 23
+        },
+        {
+          "id": "PHYSICAL-61",
+          "ok": true,
+          "wallMs": 66.76,
+          "containerVolume": 33195925728,
+          "loadedCount": 18,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 3815832000,
+          "utilization": 11.495,
+          "inputVolume": 3815832000,
+          "inputRatio": 0.115,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            }
+          ],
+          "validatorHard": 14
+        },
+        {
+          "id": "SYNTHETIC-01",
+          "ok": true,
+          "wallMs": 55.11,
+          "containerVolume": 33195925728,
+          "loadedCount": 23,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 1610000000,
+          "utilization": 4.85,
+          "inputVolume": 1610000000,
+          "inputRatio": 0.048,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_3",
+              "message": "rests on fragile S4100-2_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_4",
+              "message": "rests on fragile S4100-2_2"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_5",
+              "message": "rests on fragile S4100-2_4"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_6",
+              "message": "rests on fragile S4100-2_3"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_7",
+              "message": "rests on fragile S4100-2_5"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_8",
+              "message": "rests on fragile S4100-2_6"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_9",
+              "message": "rests on fragile S4100-2_7"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_10",
+              "message": "rests on fragile S4100-2_8"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S4100-2_11",
+              "message": "rests on fragile S4100-2_9"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 32
+        },
+        {
+          "id": "SYNTHETIC-07",
+          "ok": true,
+          "wallMs": 94.56,
+          "containerVolume": 33195925728,
+          "loadedCount": 17,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 9018000000,
+          "utilization": 27.166,
+          "inputVolume": 9018000000,
+          "inputRatio": 0.272,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 29
+        },
+        {
+          "id": "SYNTHETIC-13",
+          "ok": true,
+          "wallMs": 30.57,
+          "containerVolume": 33195925728,
+          "loadedCount": 22,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 1540000000,
+          "utilization": 4.639,
+          "inputVolume": 1540000000,
+          "inputRatio": 0.046,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S5264-2_3",
+              "message": "rests on fragile S5264-2_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S5264-2_4",
+              "message": "rests on fragile S5264-2_2"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S5264-2_5",
+              "message": "rests on fragile S5264-2_3"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S5264-2_6",
+              "message": "rests on fragile S5264-2_4"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S5264-2_7",
+              "message": "rests on fragile S5264-2_5"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S5264-2_8",
+              "message": "rests on fragile S5264-2_6"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 23
+        },
+        {
+          "id": "SYNTHETIC-19",
+          "ok": true,
+          "wallMs": 136.74,
+          "containerVolume": 33195925728,
+          "loadedCount": 28,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 4369000000,
+          "utilization": 13.161,
+          "inputVolume": 4369000000,
+          "inputRatio": 0.132,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "S5846-1_1",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 48
+        },
+        {
+          "id": "SYNTHETIC-25",
+          "ok": true,
+          "wallMs": 26.83,
+          "containerVolume": 33195925728,
+          "loadedCount": 14,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 980000000,
+          "utilization": 2.952,
+          "inputVolume": 980000000,
+          "inputRatio": 0.03,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S6428-2_3",
+              "message": "rests on fragile S6428-2_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S6428-2_4",
+              "message": "rests on fragile S6428-2_2"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S6428-2_5",
+              "message": "rests on fragile S6428-2_3"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S6428-2_6",
+              "message": "rests on fragile S6428-2_4"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 13
+        },
+        {
+          "id": "SYNTHETIC-31",
+          "ok": true,
+          "wallMs": 176.94,
+          "containerVolume": 33195925728,
+          "loadedCount": 48,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 6055808000,
+          "utilization": 18.243,
+          "inputVolume": 6055808000,
+          "inputRatio": 0.182,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 116
+        },
+        {
+          "id": "SYNTHETIC-37",
+          "ok": true,
+          "wallMs": 89.74,
+          "containerVolume": 33195925728,
+          "loadedCount": 24,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 1680000000,
+          "utilization": 5.061,
+          "inputVolume": 1680000000,
+          "inputRatio": 0.051,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S7592-2_3",
+              "message": "rests on fragile S7592-2_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S7592-2_4",
+              "message": "rests on fragile S7592-2_2"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 34
+        },
+        {
+          "id": "SYNTHETIC-43",
+          "ok": true,
+          "wallMs": 136.15,
+          "containerVolume": 33195925728,
+          "loadedCount": 26,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 3810776000,
+          "utilization": 11.48,
+          "inputVolume": 3810776000,
+          "inputRatio": 0.115,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 48
+        }
+      ]
+    }
+  }
+}

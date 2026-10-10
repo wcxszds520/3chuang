@@ -1,0 +1,4899 @@
+{
+ "taskId": "TASK_77f97ed4-c6bc-4cfb-ac2c-0601126ca792",
+ "revision": 3,
+ "name": "平齐月台叉车 · 5件堆高验收",
+ "rows": [
+  {
+   "sku": "PALLET-A",
+   "name": "堆高托盘 · 测试输入",
+   "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+   "width": 2000,
+   "height": 500,
+   "length": 1200,
+   "weight": 260,
+   "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+   "quantity": 5,
+   "canRotate": false,
+   "forkEntry": "TWO_WAY",
+   "stackable": true,
+   "canLayFlat": false,
+   "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+   "portSequence": 1,
+   "forkEntryAxis": "LENGTH",
+   "packagingType": "PALLETIZED_CARTONS",
+   "sourceCargoId": null,
+   "handlingMethod": "forklift",
+   "maxStackLayers": 2,
+   "destinationPort": "HAM",
+   "palletJackCompatible": false,
+   "maximumSupportedWeightKg": 600
+  }
+ ],
+ "units": [
+  {
+   "eta": null,
+   "sku": "PALLET-A",
+   "name": "堆高托盘 · 测试输入",
+   "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+   "width": 2000,
+   "height": 500,
+   "length": 1200,
+   "source": "USER_INPUT",
+   "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+   "weight": 260,
+   "wooden": true,
+   "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+   "fragile": false,
+   "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+   "service": {
+    "serviceId": "DEMO-NB-HAM",
+    "windowEnd": "2026-09-22",
+    "destination": "HAM",
+    "windowStart": "2026-09-15",
+    "strippingPoint": "HAM-CFS"
+   },
+   "quantity": 1,
+   "canInvert": false,
+   "canRotate": false,
+   "forkEntry": "TWO_WAY",
+   "mixPolicy": "ALLOW",
+   "stackable": true,
+   "unitIndex": 1,
+   "canLayFlat": false,
+   "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+   "customerName": "设备工况测试客户（非实际出运）",
+   "handlingMode": "FORKLIFT",
+   "portSequence": 1,
+   "forkEntryAxis": "LENGTH",
+   "packagingType": "PALLETIZED_CARTONS",
+   "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+   "visualProfile": {
+    "assetKey": "cargo_palletized",
+    "labelMode": "CARGO_NAME",
+    "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+   },
+   "handlingMethod": "forklift",
+   "maxStackLayers": 2,
+   "orderReference": "TEST-FORKLIFT-5",
+   "destinationPort": "HAM",
+   "packagingProfile": {
+    "type": "PALLETIZED_CARTONS",
+    "fragile": false,
+    "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+    "forkEntry": "TWO_WAY",
+    "stackable": true,
+    "handlingMode": "FORKLIFT",
+    "forkEntryAxis": "LENGTH",
+    "schemaVersion": "2.5",
+    "transportUnit": "PALLET",
+    "maxStackLayers": 2,
+    "suggestionSource": null,
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "confirmationStatus": "USER_SUPPLIED",
+    "dataClassification": "CASE_INPUT",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "orientationPolicy": "FIXED_ORIENTATION",
+   "compatibilityGroup": "GENERAL",
+   "incompatibleGroups": [],
+   "maxSupportedWeight": 600,
+   "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+   "cargoPhysicalProfile": {
+    "massKg": 260,
+    "fragile": false,
+    "quantity": 1,
+    "cargoName": "堆高托盘 · 测试输入",
+    "forkEntry": "TWO_WAY",
+    "packaging": {
+     "type": "PALLETIZED_CARTONS",
+     "fragile": false,
+     "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+     "forkEntry": "TWO_WAY",
+     "stackable": true,
+     "handlingMode": "FORKLIFT",
+     "forkEntryAxis": "LENGTH",
+     "schemaVersion": "2.5",
+     "transportUnit": "PALLET",
+     "maxStackLayers": 2,
+     "suggestionSource": null,
+     "orientationPolicy": "FIXED_ORIENTATION",
+     "confirmationStatus": "USER_SUPPLIED",
+     "dataClassification": "CASE_INPUT",
+     "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+     "palletJackCompatible": false,
+     "dangerousGoodsContext": "NOT_DECLARED",
+     "maximumSupportedWeightKg": 600
+    },
+    "stackable": true,
+    "dimensions": {
+     "widthMm": 2000,
+     "heightMm": 500,
+     "lengthMm": 1200
+    },
+    "destination": "HAM",
+    "handlingMode": "FORKLIFT",
+    "portSequence": 1,
+    "forkEntryAxis": "LENGTH",
+    "packagingType": "PALLETIZED_CARTONS",
+    "schemaVersion": "2.5",
+    "visualProfile": {
+     "assetKey": "cargo_palletized",
+     "labelMode": "CARGO_NAME",
+     "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+    },
+    "maxStackLayers": 2,
+    "solverEnvelope": {
+     "fragile": false,
+     "stackable": true,
+     "dimensions": {
+      "widthMm": 2000,
+      "heightMm": 500,
+      "lengthMm": 1200
+     },
+     "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+     "maxStackLayers": 2,
+     "allowedOrientations": [
+      {
+       "h": 500,
+       "l": 1200,
+       "w": 2000,
+       "label": "XYZ"
+      }
+     ],
+     "maximumSupportedWeightKg": 600
+    },
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "palletJackCompatible": false,
+   "dangerousGoodsContext": "NOT_DECLARED",
+   "maximumSupportedWeightKg": 600
+  },
+  {
+   "eta": null,
+   "sku": "PALLET-A",
+   "name": "堆高托盘 · 测试输入",
+   "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+   "width": 2000,
+   "height": 500,
+   "length": 1200,
+   "source": "USER_INPUT",
+   "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+   "weight": 260,
+   "wooden": true,
+   "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+   "fragile": false,
+   "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+   "service": {
+    "serviceId": "DEMO-NB-HAM",
+    "windowEnd": "2026-09-22",
+    "destination": "HAM",
+    "windowStart": "2026-09-15",
+    "strippingPoint": "HAM-CFS"
+   },
+   "quantity": 1,
+   "canInvert": false,
+   "canRotate": false,
+   "forkEntry": "TWO_WAY",
+   "mixPolicy": "ALLOW",
+   "stackable": true,
+   "unitIndex": 2,
+   "canLayFlat": false,
+   "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+   "customerName": "设备工况测试客户（非实际出运）",
+   "handlingMode": "FORKLIFT",
+   "portSequence": 1,
+   "forkEntryAxis": "LENGTH",
+   "packagingType": "PALLETIZED_CARTONS",
+   "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+   "visualProfile": {
+    "assetKey": "cargo_palletized",
+    "labelMode": "CARGO_NAME",
+    "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+   },
+   "handlingMethod": "forklift",
+   "maxStackLayers": 2,
+   "orderReference": "TEST-FORKLIFT-5",
+   "destinationPort": "HAM",
+   "packagingProfile": {
+    "type": "PALLETIZED_CARTONS",
+    "fragile": false,
+    "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+    "forkEntry": "TWO_WAY",
+    "stackable": true,
+    "handlingMode": "FORKLIFT",
+    "forkEntryAxis": "LENGTH",
+    "schemaVersion": "2.5",
+    "transportUnit": "PALLET",
+    "maxStackLayers": 2,
+    "suggestionSource": null,
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "confirmationStatus": "USER_SUPPLIED",
+    "dataClassification": "CASE_INPUT",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "orientationPolicy": "FIXED_ORIENTATION",
+   "compatibilityGroup": "GENERAL",
+   "incompatibleGroups": [],
+   "maxSupportedWeight": 600,
+   "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+   "cargoPhysicalProfile": {
+    "massKg": 260,
+    "fragile": false,
+    "quantity": 1,
+    "cargoName": "堆高托盘 · 测试输入",
+    "forkEntry": "TWO_WAY",
+    "packaging": {
+     "type": "PALLETIZED_CARTONS",
+     "fragile": false,
+     "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+     "forkEntry": "TWO_WAY",
+     "stackable": true,
+     "handlingMode": "FORKLIFT",
+     "forkEntryAxis": "LENGTH",
+     "schemaVersion": "2.5",
+     "transportUnit": "PALLET",
+     "maxStackLayers": 2,
+     "suggestionSource": null,
+     "orientationPolicy": "FIXED_ORIENTATION",
+     "confirmationStatus": "USER_SUPPLIED",
+     "dataClassification": "CASE_INPUT",
+     "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+     "palletJackCompatible": false,
+     "dangerousGoodsContext": "NOT_DECLARED",
+     "maximumSupportedWeightKg": 600
+    },
+    "stackable": true,
+    "dimensions": {
+     "widthMm": 2000,
+     "heightMm": 500,
+     "lengthMm": 1200
+    },
+    "destination": "HAM",
+    "handlingMode": "FORKLIFT",
+    "portSequence": 1,
+    "forkEntryAxis": "LENGTH",
+    "packagingType": "PALLETIZED_CARTONS",
+    "schemaVersion": "2.5",
+    "visualProfile": {
+     "assetKey": "cargo_palletized",
+     "labelMode": "CARGO_NAME",
+     "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+    },
+    "maxStackLayers": 2,
+    "solverEnvelope": {
+     "fragile": false,
+     "stackable": true,
+     "dimensions": {
+      "widthMm": 2000,
+      "heightMm": 500,
+      "lengthMm": 1200
+     },
+     "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+     "maxStackLayers": 2,
+     "allowedOrientations": [
+      {
+       "h": 500,
+       "l": 1200,
+       "w": 2000,
+       "label": "XYZ"
+      }
+     ],
+     "maximumSupportedWeightKg": 600
+    },
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "palletJackCompatible": false,
+   "dangerousGoodsContext": "NOT_DECLARED",
+   "maximumSupportedWeightKg": 600
+  },
+  {
+   "eta": null,
+   "sku": "PALLET-A",
+   "name": "堆高托盘 · 测试输入",
+   "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+   "width": 2000,
+   "height": 500,
+   "length": 1200,
+   "source": "USER_INPUT",
+   "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+   "weight": 260,
+   "wooden": true,
+   "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+   "fragile": false,
+   "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+   "service": {
+    "serviceId": "DEMO-NB-HAM",
+    "windowEnd": "2026-09-22",
+    "destination": "HAM",
+    "windowStart": "2026-09-15",
+    "strippingPoint": "HAM-CFS"
+   },
+   "quantity": 1,
+   "canInvert": false,
+   "canRotate": false,
+   "forkEntry": "TWO_WAY",
+   "mixPolicy": "ALLOW",
+   "stackable": true,
+   "unitIndex": 3,
+   "canLayFlat": false,
+   "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+   "customerName": "设备工况测试客户（非实际出运）",
+   "handlingMode": "FORKLIFT",
+   "portSequence": 1,
+   "forkEntryAxis": "LENGTH",
+   "packagingType": "PALLETIZED_CARTONS",
+   "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+   "visualProfile": {
+    "assetKey": "cargo_palletized",
+    "labelMode": "CARGO_NAME",
+    "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+   },
+   "handlingMethod": "forklift",
+   "maxStackLayers": 2,
+   "orderReference": "TEST-FORKLIFT-5",
+   "destinationPort": "HAM",
+   "packagingProfile": {
+    "type": "PALLETIZED_CARTONS",
+    "fragile": false,
+    "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+    "forkEntry": "TWO_WAY",
+    "stackable": true,
+    "handlingMode": "FORKLIFT",
+    "forkEntryAxis": "LENGTH",
+    "schemaVersion": "2.5",
+    "transportUnit": "PALLET",
+    "maxStackLayers": 2,
+    "suggestionSource": null,
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "confirmationStatus": "USER_SUPPLIED",
+    "dataClassification": "CASE_INPUT",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "orientationPolicy": "FIXED_ORIENTATION",
+   "compatibilityGroup": "GENERAL",
+   "incompatibleGroups": [],
+   "maxSupportedWeight": 600,
+   "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+   "cargoPhysicalProfile": {
+    "massKg": 260,
+    "fragile": false,
+    "quantity": 1,
+    "cargoName": "堆高托盘 · 测试输入",
+    "forkEntry": "TWO_WAY",
+    "packaging": {
+     "type": "PALLETIZED_CARTONS",
+     "fragile": false,
+     "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+     "forkEntry": "TWO_WAY",
+     "stackable": true,
+     "handlingMode": "FORKLIFT",
+     "forkEntryAxis": "LENGTH",
+     "schemaVersion": "2.5",
+     "transportUnit": "PALLET",
+     "maxStackLayers": 2,
+     "suggestionSource": null,
+     "orientationPolicy": "FIXED_ORIENTATION",
+     "confirmationStatus": "USER_SUPPLIED",
+     "dataClassification": "CASE_INPUT",
+     "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+     "palletJackCompatible": false,
+     "dangerousGoodsContext": "NOT_DECLARED",
+     "maximumSupportedWeightKg": 600
+    },
+    "stackable": true,
+    "dimensions": {
+     "widthMm": 2000,
+     "heightMm": 500,
+     "lengthMm": 1200
+    },
+    "destination": "HAM",
+    "handlingMode": "FORKLIFT",
+    "portSequence": 1,
+    "forkEntryAxis": "LENGTH",
+    "packagingType": "PALLETIZED_CARTONS",
+    "schemaVersion": "2.5",
+    "visualProfile": {
+     "assetKey": "cargo_palletized",
+     "labelMode": "CARGO_NAME",
+     "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+    },
+    "maxStackLayers": 2,
+    "solverEnvelope": {
+     "fragile": false,
+     "stackable": true,
+     "dimensions": {
+      "widthMm": 2000,
+      "heightMm": 500,
+      "lengthMm": 1200
+     },
+     "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+     "maxStackLayers": 2,
+     "allowedOrientations": [
+      {
+       "h": 500,
+       "l": 1200,
+       "w": 2000,
+       "label": "XYZ"
+      }
+     ],
+     "maximumSupportedWeightKg": 600
+    },
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "palletJackCompatible": false,
+   "dangerousGoodsContext": "NOT_DECLARED",
+   "maximumSupportedWeightKg": 600
+  },
+  {
+   "eta": null,
+   "sku": "PALLET-A",
+   "name": "堆高托盘 · 测试输入",
+   "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+   "width": 2000,
+   "height": 500,
+   "length": 1200,
+   "source": "USER_INPUT",
+   "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+   "weight": 260,
+   "wooden": true,
+   "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+   "fragile": false,
+   "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+   "service": {
+    "serviceId": "DEMO-NB-HAM",
+    "windowEnd": "2026-09-22",
+    "destination": "HAM",
+    "windowStart": "2026-09-15",
+    "strippingPoint": "HAM-CFS"
+   },
+   "quantity": 1,
+   "canInvert": false,
+   "canRotate": false,
+   "forkEntry": "TWO_WAY",
+   "mixPolicy": "ALLOW",
+   "stackable": true,
+   "unitIndex": 4,
+   "canLayFlat": false,
+   "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+   "customerName": "设备工况测试客户（非实际出运）",
+   "handlingMode": "FORKLIFT",
+   "portSequence": 1,
+   "forkEntryAxis": "LENGTH",
+   "packagingType": "PALLETIZED_CARTONS",
+   "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+   "visualProfile": {
+    "assetKey": "cargo_palletized",
+    "labelMode": "CARGO_NAME",
+    "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+   },
+   "handlingMethod": "forklift",
+   "maxStackLayers": 2,
+   "orderReference": "TEST-FORKLIFT-5",
+   "destinationPort": "HAM",
+   "packagingProfile": {
+    "type": "PALLETIZED_CARTONS",
+    "fragile": false,
+    "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+    "forkEntry": "TWO_WAY",
+    "stackable": true,
+    "handlingMode": "FORKLIFT",
+    "forkEntryAxis": "LENGTH",
+    "schemaVersion": "2.5",
+    "transportUnit": "PALLET",
+    "maxStackLayers": 2,
+    "suggestionSource": null,
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "confirmationStatus": "USER_SUPPLIED",
+    "dataClassification": "CASE_INPUT",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "orientationPolicy": "FIXED_ORIENTATION",
+   "compatibilityGroup": "GENERAL",
+   "incompatibleGroups": [],
+   "maxSupportedWeight": 600,
+   "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+   "cargoPhysicalProfile": {
+    "massKg": 260,
+    "fragile": false,
+    "quantity": 1,
+    "cargoName": "堆高托盘 · 测试输入",
+    "forkEntry": "TWO_WAY",
+    "packaging": {
+     "type": "PALLETIZED_CARTONS",
+     "fragile": false,
+     "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+     "forkEntry": "TWO_WAY",
+     "stackable": true,
+     "handlingMode": "FORKLIFT",
+     "forkEntryAxis": "LENGTH",
+     "schemaVersion": "2.5",
+     "transportUnit": "PALLET",
+     "maxStackLayers": 2,
+     "suggestionSource": null,
+     "orientationPolicy": "FIXED_ORIENTATION",
+     "confirmationStatus": "USER_SUPPLIED",
+     "dataClassification": "CASE_INPUT",
+     "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+     "palletJackCompatible": false,
+     "dangerousGoodsContext": "NOT_DECLARED",
+     "maximumSupportedWeightKg": 600
+    },
+    "stackable": true,
+    "dimensions": {
+     "widthMm": 2000,
+     "heightMm": 500,
+     "lengthMm": 1200
+    },
+    "destination": "HAM",
+    "handlingMode": "FORKLIFT",
+    "portSequence": 1,
+    "forkEntryAxis": "LENGTH",
+    "packagingType": "PALLETIZED_CARTONS",
+    "schemaVersion": "2.5",
+    "visualProfile": {
+     "assetKey": "cargo_palletized",
+     "labelMode": "CARGO_NAME",
+     "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+    },
+    "maxStackLayers": 2,
+    "solverEnvelope": {
+     "fragile": false,
+     "stackable": true,
+     "dimensions": {
+      "widthMm": 2000,
+      "heightMm": 500,
+      "lengthMm": 1200
+     },
+     "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+     "maxStackLayers": 2,
+     "allowedOrientations": [
+      {
+       "h": 500,
+       "l": 1200,
+       "w": 2000,
+       "label": "XYZ"
+      }
+     ],
+     "maximumSupportedWeightKg": 600
+    },
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "palletJackCompatible": false,
+   "dangerousGoodsContext": "NOT_DECLARED",
+   "maximumSupportedWeightKg": 600
+  },
+  {
+   "eta": null,
+   "sku": "PALLET-A",
+   "name": "堆高托盘 · 测试输入",
+   "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+   "width": 2000,
+   "height": 500,
+   "length": 1200,
+   "source": "USER_INPUT",
+   "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+   "weight": 260,
+   "wooden": true,
+   "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+   "fragile": false,
+   "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+   "service": {
+    "serviceId": "DEMO-NB-HAM",
+    "windowEnd": "2026-09-22",
+    "destination": "HAM",
+    "windowStart": "2026-09-15",
+    "strippingPoint": "HAM-CFS"
+   },
+   "quantity": 1,
+   "canInvert": false,
+   "canRotate": false,
+   "forkEntry": "TWO_WAY",
+   "mixPolicy": "ALLOW",
+   "stackable": true,
+   "unitIndex": 5,
+   "canLayFlat": false,
+   "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+   "customerName": "设备工况测试客户（非实际出运）",
+   "handlingMode": "FORKLIFT",
+   "portSequence": 1,
+   "forkEntryAxis": "LENGTH",
+   "packagingType": "PALLETIZED_CARTONS",
+   "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+   "visualProfile": {
+    "assetKey": "cargo_palletized",
+    "labelMode": "CARGO_NAME",
+    "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+   },
+   "handlingMethod": "forklift",
+   "maxStackLayers": 2,
+   "orderReference": "TEST-FORKLIFT-5",
+   "destinationPort": "HAM",
+   "packagingProfile": {
+    "type": "PALLETIZED_CARTONS",
+    "fragile": false,
+    "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+    "forkEntry": "TWO_WAY",
+    "stackable": true,
+    "handlingMode": "FORKLIFT",
+    "forkEntryAxis": "LENGTH",
+    "schemaVersion": "2.5",
+    "transportUnit": "PALLET",
+    "maxStackLayers": 2,
+    "suggestionSource": null,
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "confirmationStatus": "USER_SUPPLIED",
+    "dataClassification": "CASE_INPUT",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "orientationPolicy": "FIXED_ORIENTATION",
+   "compatibilityGroup": "GENERAL",
+   "incompatibleGroups": [],
+   "maxSupportedWeight": 600,
+   "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+   "cargoPhysicalProfile": {
+    "massKg": 260,
+    "fragile": false,
+    "quantity": 1,
+    "cargoName": "堆高托盘 · 测试输入",
+    "forkEntry": "TWO_WAY",
+    "packaging": {
+     "type": "PALLETIZED_CARTONS",
+     "fragile": false,
+     "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+     "forkEntry": "TWO_WAY",
+     "stackable": true,
+     "handlingMode": "FORKLIFT",
+     "forkEntryAxis": "LENGTH",
+     "schemaVersion": "2.5",
+     "transportUnit": "PALLET",
+     "maxStackLayers": 2,
+     "suggestionSource": null,
+     "orientationPolicy": "FIXED_ORIENTATION",
+     "confirmationStatus": "USER_SUPPLIED",
+     "dataClassification": "CASE_INPUT",
+     "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+     "palletJackCompatible": false,
+     "dangerousGoodsContext": "NOT_DECLARED",
+     "maximumSupportedWeightKg": 600
+    },
+    "stackable": true,
+    "dimensions": {
+     "widthMm": 2000,
+     "heightMm": 500,
+     "lengthMm": 1200
+    },
+    "destination": "HAM",
+    "handlingMode": "FORKLIFT",
+    "portSequence": 1,
+    "forkEntryAxis": "LENGTH",
+    "packagingType": "PALLETIZED_CARTONS",
+    "schemaVersion": "2.5",
+    "visualProfile": {
+     "assetKey": "cargo_palletized",
+     "labelMode": "CARGO_NAME",
+     "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+    },
+    "maxStackLayers": 2,
+    "solverEnvelope": {
+     "fragile": false,
+     "stackable": true,
+     "dimensions": {
+      "widthMm": 2000,
+      "heightMm": 500,
+      "lengthMm": 1200
+     },
+     "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+     "maxStackLayers": 2,
+     "allowedOrientations": [
+      {
+       "h": 500,
+       "l": 1200,
+       "w": 2000,
+       "label": "XYZ"
+      }
+     ],
+     "maximumSupportedWeightKg": 600
+    },
+    "orientationPolicy": "FIXED_ORIENTATION",
+    "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+    "palletJackCompatible": false,
+    "dangerousGoodsContext": "NOT_DECLARED",
+    "maximumSupportedWeightKg": 600
+   },
+   "palletJackCompatible": false,
+   "dangerousGoodsContext": "NOT_DECLARED",
+   "maximumSupportedWeightKg": 600
+  }
+ ],
+ "containers": [
+  {
+   "plan": {
+    "cog": {
+     "x": 2654.1,
+     "y": 450,
+     "z": 1176
+    },
+    "planId": "PLAN_657fcee3-2555-468f-a158-1be5ab84289a",
+    "source": "BACKEND_SOLVED",
+    "metrics": {
+     "cog": {
+      "x": 2654.1,
+      "y": 450,
+      "z": 1176,
+      "lateral": 0,
+      "offsetMm": {
+       "lateral": 0,
+       "longitudinal": -294.9000000000001
+      },
+      "longitudinal": 5.000000000000002,
+      "withinPolicy": true,
+      "denominatorMm": {
+       "lateral": 2352,
+       "longitudinal": 5898
+      },
+      "normalization": "CARGO_COG_FULL_INNER_SPAN_V1",
+      "recommendationStatus": "WITHIN_GENERAL_GUIDANCE",
+      "legacyHalfSpanPercent": {
+       "lateral": 0,
+       "longitudinal": 10.000000000000004
+      }
+     },
+     "solveMs": 0,
+     "securing": {
+      "model": "PORTCUBE_SECURING_REQUIREMENT_V2_3",
+      "zones": [
+       {
+        "id": "SECURING-ZONE-1",
+        "axis": "x",
+        "type": "BLOCKING_PLANE_REQUIRED",
+        "reason": "rear 方向存在超过 150 mm 的未约束边界空区",
+        "position": 614.1,
+        "direction": "rear",
+        "reserveGap": 614.1,
+        "exposedArea": 1000000,
+        "classification": "PROJECT_GUIDANCE"
+       },
+       {
+        "id": "SECURING-ZONE-2",
+        "axis": "x",
+        "type": "BLOCKING_PLANE_REQUIRED",
+        "reason": "door 方向存在超过 150 mm 的未约束边界空区",
+        "position": 4214.1,
+        "direction": "door",
+        "reserveGap": 1683.8999999999996,
+        "exposedArea": 2000000,
+        "classification": "PROJECT_GUIDANCE"
+       },
+       {
+        "id": "SECURING-ZONE-3",
+        "axis": "z",
+        "type": "BLOCKING_PLANE_REQUIRED",
+        "reason": "left 方向存在超过 150 mm 的未约束边界空区",
+        "position": 176,
+        "direction": "left",
+        "reserveGap": 176,
+        "exposedArea": 3000000,
+        "classification": "PROJECT_GUIDANCE"
+       },
+       {
+        "id": "SECURING-ZONE-4",
+        "axis": "z",
+        "type": "BLOCKING_PLANE_REQUIRED",
+        "reason": "right 方向存在超过 150 mm 的未约束边界空区",
+        "position": 2176,
+        "direction": "right",
+        "reserveGap": 176,
+        "exposedArea": 3000000,
+        "classification": "PROJECT_GUIDANCE"
+       }
+      ],
+      "policy": {
+       "statement": "PORTCUBE project guidance; actual securing depends on cargo and the selected blocking/bracing/dunnage method.",
+       "contactGapToleranceMm": 30,
+       "unsecuredGapThresholdMm": 150
+      },
+      "status": "SECURING_UNRESOLVED",
+      "required": true,
+      "limitations": [
+       "no friction coefficient",
+       "no lashing tension",
+       "no ship-motion simulation",
+       "no material deformation"
+      ],
+      "requiredCargoIds": [
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+      ],
+      "dataClassification": "PROJECT_POLICY",
+      "securingPlaneCount": 4,
+      "exposedCargoFaceArea": 10000000,
+      "securingRequiredCount": 5,
+      "fragmentedSecuringZones": 4
+     },
+     "strategy": "SPACE",
+     "algorithm": "hybrid-v2.5",
+     "operation": {
+      "totalCost": 31.5,
+      "insertionTravel": 0.55,
+      "portFragmentation": 1,
+      "actualBlockedCount": 0,
+      "handlingDifficulty": 1,
+      "actualOperationPass": true,
+      "handlingSwitchCount": 0
+     },
+     "stability": {
+      "model": "PORTCUBE_UNSECURED_PACKING_V2_1",
+      "policy": {
+       "voidVoxelMm": 250,
+       "heightSliceMm": 200,
+       "supportRatioMin": 0.75,
+       "narrowVoidWidthMm": 300,
+       "strongContactRatio": 0.6,
+       "warningSlenderness": 2.5,
+       "contactGapToleranceMm": 30,
+       "meaningfulContactRatio": 0.35,
+       "verticalContactToleranceMm": 2,
+       "hardUnrestrainedSlenderness": 3.5
+      },
+      "status": "STABLE",
+      "invalidCount": 0,
+      "warningCount": 0,
+      "contactQuality": 0.7200000000000001,
+      "heightVariation": 500,
+      "minSupportRatio": 1,
+      "minSupportMargin": 600,
+      "narrowVoidVolume": 0,
+      "enclosedVoidVolume": 0,
+      "residualRegionCount": 1,
+      "heightSmoothnessScore": 0.9883920694618564,
+      "largestResidualVolume": 26164675728,
+      "minStackSupportMargin": 600,
+      "unrestrainedTallStacks": 0
+     },
+     "tightStow": {
+      "model": "PORTCUBE_TIGHT_STOW_V2_5",
+      "contactRatio": 0.3,
+      "operationCost": 31.5,
+      "securingStatus": "SECURING_UNRESOLVED",
+      "crossSectionP10": 0.17767240619607644,
+      "internalVoidVolume": 0,
+      "maxUnexplainedGapMm": 1200,
+      "lowFillInteriorSlices": 36,
+      "unexplainedVoidVolume": 0
+     },
+     "compactness": {
+      "occupiedDepth": 3600.0000000000005,
+      "boundingCompactness": 0.8333333333333333,
+      "residualRegionCount": 11,
+      "largestResidualVolume": 9477554990.399998,
+      "residualPartitionMethod": "axis-aligned-disjoint-split"
+     },
+     "loadedCount": 5,
+     "loadedVolume": 6000000000,
+     "loadedWeight": 1300,
+     "layoutQuality": {
+      "model": "PORTCUBE_LAYOUT_QUALITY_V2_3",
+      "bounds": {
+       "maxX": 4214.1,
+       "maxY": 1000,
+       "maxZ": 2176,
+       "minX": 614.1,
+       "minY": 0,
+       "minZ": 176
+      },
+      "policy": {
+       "lowFillThreshold": 0.65,
+       "crossSectionSliceMm": 100,
+       "occupancyGridCellMm": 125,
+       "contactGapToleranceMm": 30,
+       "interiorGapThresholdMm": 150,
+       "fragmentationValleyThreshold": 0.03
+      },
+      "voidRegions": {
+       "reserve": [
+        {
+         "volume": 27195925728,
+         "boundsMm": {
+          "maxX": 5898,
+          "maxY": 2393,
+          "maxZ": 2352,
+          "minX": 0,
+          "minY": 0,
+          "minZ": 0
+         },
+         "dimensions": {
+          "h": 2393,
+          "l": 5898,
+          "w": 2352
+         },
+         "touchesTop": true,
+         "canFitCargo": true,
+         "touchesDoor": true
+        }
+       ],
+       "internal": []
+      },
+      "analysisNotes": [
+       "Internal void is free grid volume below the local cargo envelope and inside the occupied length/lateral span.",
+       "Reserve excludes cells classified as internal fragmented void.",
+       "All thresholds are PORTCUBE project policy, not statutory limits."
+      ],
+      "occupiedDepth": 3600.0000000000005,
+      "reserveVolume": 27195925728,
+      "maxInteriorGap": 1200,
+      "meanInteriorGap": 1200,
+      "contactRatioMean": 0.3,
+      "narrowVoidVolume": 0,
+      "wallContactRatio": 0,
+      "exactVoidGeometry": {
+       "model": "EXACT_FACE_SLAB_VOID_V1",
+       "definition": "Exact empty volume below each occupied depth slab maximum cargo height and between its actual lateral bounds; proven no-stack headspace is separately integrated.",
+       "headspaceByCargo": {},
+       "internalVoidVolume": 0,
+       "unexplainedVoidVolume": 0,
+       "nonStackableHeadspaceVolume": 0
+      },
+      "interiorGapVolume": 1200000000,
+      "internalVoidRatio": 0,
+      "crossSectionReport": [
+       {
+        "sliceEnd": 100,
+        "fillRatio": 0,
+        "sliceIndex": 0,
+        "sliceStart": 0,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 50
+       },
+       {
+        "sliceEnd": 200,
+        "fillRatio": 0,
+        "sliceIndex": 1,
+        "sliceStart": 100,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 150
+       },
+       {
+        "sliceEnd": 300,
+        "fillRatio": 0,
+        "sliceIndex": 2,
+        "sliceStart": 200,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 250
+       },
+       {
+        "sliceEnd": 400,
+        "fillRatio": 0,
+        "sliceIndex": 3,
+        "sliceStart": 300,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 350
+       },
+       {
+        "sliceEnd": 500,
+        "fillRatio": 0,
+        "sliceIndex": 4,
+        "sliceStart": 400,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 450
+       },
+       {
+        "sliceEnd": 600,
+        "fillRatio": 0,
+        "sliceIndex": 5,
+        "sliceStart": 500,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 550
+       },
+       {
+        "sliceEnd": 700,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 6,
+        "sliceStart": 600,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 650,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 800,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 7,
+        "sliceStart": 700,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 750,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 900,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 8,
+        "sliceStart": 800,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 850,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1000,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 9,
+        "sliceStart": 900,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 950,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1100,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 10,
+        "sliceStart": 1000,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1050,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1200,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 11,
+        "sliceStart": 1100,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1150,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1300,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 12,
+        "sliceStart": 1200,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1250,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1400,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 13,
+        "sliceStart": 1300,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1350,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1500,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 14,
+        "sliceStart": 1400,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1450,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1600,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 15,
+        "sliceStart": 1500,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1550,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1700,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 16,
+        "sliceStart": 1600,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1650,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1800,
+        "fillRatio": 0.17767240619607644,
+        "sliceIndex": 17,
+        "sliceStart": 1700,
+        "internalVoid": 0,
+        "occupiedArea": 1000000,
+        "slicePosition": 1750,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 1900,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 18,
+        "sliceStart": 1800,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 1850,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2000,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 19,
+        "sliceStart": 1900,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 1950,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2100,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 20,
+        "sliceStart": 2000,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2050,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2200,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 21,
+        "sliceStart": 2100,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2150,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2300,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 22,
+        "sliceStart": 2200,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2250,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2400,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 23,
+        "sliceStart": 2300,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2350,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2500,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 24,
+        "sliceStart": 2400,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2450,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2600,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 25,
+        "sliceStart": 2500,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2550,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2700,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 26,
+        "sliceStart": 2600,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2650,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2800,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 27,
+        "sliceStart": 2700,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2750,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 2900,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 28,
+        "sliceStart": 2800,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2850,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3000,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 29,
+        "sliceStart": 2900,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 2950,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3100,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 30,
+        "sliceStart": 3000,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3050,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3200,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 31,
+        "sliceStart": 3100,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3150,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3300,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 32,
+        "sliceStart": 3200,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3250,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3400,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 33,
+        "sliceStart": 3300,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3350,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3500,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 34,
+        "sliceStart": 3400,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3450,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3600,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 35,
+        "sliceStart": 3500,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3550,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3700,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 36,
+        "sliceStart": 3600,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3650,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3800,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 37,
+        "sliceStart": 3700,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3750,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 3900,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 38,
+        "sliceStart": 3800,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3850,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 4000,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 39,
+        "sliceStart": 3900,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 3950,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 4100,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 40,
+        "sliceStart": 4000,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 4050,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 4200,
+        "fillRatio": 0.3553448123921529,
+        "sliceIndex": 41,
+        "sliceStart": 4100,
+        "internalVoid": 0,
+        "occupiedArea": 2000000,
+        "slicePosition": 4150,
+        "fragmentationDelta": 0
+       },
+       {
+        "sliceEnd": 4300,
+        "fillRatio": 0,
+        "sliceIndex": 42,
+        "sliceStart": 4200,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4250
+       },
+       {
+        "sliceEnd": 4400,
+        "fillRatio": 0,
+        "sliceIndex": 43,
+        "sliceStart": 4300,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4350
+       },
+       {
+        "sliceEnd": 4500,
+        "fillRatio": 0,
+        "sliceIndex": 44,
+        "sliceStart": 4400,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4450
+       },
+       {
+        "sliceEnd": 4600,
+        "fillRatio": 0,
+        "sliceIndex": 45,
+        "sliceStart": 4500,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4550
+       },
+       {
+        "sliceEnd": 4700,
+        "fillRatio": 0,
+        "sliceIndex": 46,
+        "sliceStart": 4600,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4650
+       },
+       {
+        "sliceEnd": 4800,
+        "fillRatio": 0,
+        "sliceIndex": 47,
+        "sliceStart": 4700,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4750
+       },
+       {
+        "sliceEnd": 4900,
+        "fillRatio": 0,
+        "sliceIndex": 48,
+        "sliceStart": 4800,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4850
+       },
+       {
+        "sliceEnd": 5000,
+        "fillRatio": 0,
+        "sliceIndex": 49,
+        "sliceStart": 4900,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 4950
+       },
+       {
+        "sliceEnd": 5100,
+        "fillRatio": 0,
+        "sliceIndex": 50,
+        "sliceStart": 5000,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5050
+       },
+       {
+        "sliceEnd": 5200,
+        "fillRatio": 0,
+        "sliceIndex": 51,
+        "sliceStart": 5100,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5150
+       },
+       {
+        "sliceEnd": 5300,
+        "fillRatio": 0,
+        "sliceIndex": 52,
+        "sliceStart": 5200,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5250
+       },
+       {
+        "sliceEnd": 5400,
+        "fillRatio": 0,
+        "sliceIndex": 53,
+        "sliceStart": 5300,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5350
+       },
+       {
+        "sliceEnd": 5500,
+        "fillRatio": 0,
+        "sliceIndex": 54,
+        "sliceStart": 5400,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5450
+       },
+       {
+        "sliceEnd": 5600,
+        "fillRatio": 0,
+        "sliceIndex": 55,
+        "sliceStart": 5500,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5550
+       },
+       {
+        "sliceEnd": 5700,
+        "fillRatio": 0,
+        "sliceIndex": 56,
+        "sliceStart": 5600,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5650
+       },
+       {
+        "sliceEnd": 5800,
+        "fillRatio": 0,
+        "sliceIndex": 57,
+        "sliceStart": 5700,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5750
+       },
+       {
+        "sliceEnd": 5898,
+        "fillRatio": 0,
+        "sliceIndex": 58,
+        "sliceStart": 5800,
+        "internalVoid": 0,
+        "occupiedArea": 0,
+        "slicePosition": 5849
+       }
+      ],
+      "dataClassification": "PROJECT_POLICY",
+      "enclosedVoidVolume": 0,
+      "gapClassifications": [
+       {
+        "gap": 1200,
+        "area": 1000000,
+        "axis": "x",
+        "policy": "PROJECT_POLICY",
+        "volume": 1200000000,
+        "cargoIds": [
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+        ],
+        "classification": "INTERIOR_GAP"
+       }
+      ],
+      "internalVoidVolume": 0,
+      "occupiedDepthRatio": 0.6103763987792473,
+      "reserveRegionCount": 1,
+      "crossSectionFillP10": 0.17767240619607644,
+      "occupiedLengthRatio": 0.6103763987792473,
+      "residualRegionCount": 1,
+      "crossSectionFillMean": 0.29612067699346073,
+      "cargoContactRatioMean": 0.3,
+      "voxelEstimateRevision": "VOXEL_AND_SLICE_ESTIMATE_V2_3",
+      "crossSectionSmoothness": 0.994923645537255,
+      "internalVoidRegionCount": 0,
+      "largestContiguousReserve": 27195925728,
+      "maxInteriorHorizontalGap": 1200,
+      "lowFillInteriorSliceCount": 36,
+      "meanInteriorHorizontalGap": 1200,
+      "crossSectionFillMinimumInterior": 0.17767240619607644
+     },
+     "solverVersion": "2.5",
+     "unloadedCount": 0,
+     "sourceRuntimeMs": 0,
+     "voidJustification": {
+      "model": "PORTCUBE_VOID_JUSTIFICATION_V2_5",
+      "zones": [
+       {
+        "id": "VOID-R-001",
+        "label": "外部连通余隙 · 用途未核实",
+        "reason": "与外部连通的未占用空间；连通区域的外接框不等于可用空箱，尚无证据将整区认定为港序通道、系固预留或可补货空间。",
+        "volume": 27195925728,
+        "isLarge": true,
+        "boundsMm": {
+         "maxX": 5898,
+         "maxY": 2393,
+         "maxZ": 2352,
+         "minX": 0,
+         "minY": 0,
+         "minZ": 0
+        },
+        "volumeM3": 27.196,
+        "dimensions": {
+         "h": 2393,
+         "l": 5898,
+         "w": 2352
+        },
+        "touchesTop": true,
+        "touchesDoor": true,
+        "securingNeed": null,
+        "classification": "UNASSESSED_RESERVE",
+        "linkedCargoIds": [
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+        ],
+        "refillPotential": {
+         "reason": "UNASSESSED_RESERVE",
+         "status": "NOT_TARGETED"
+        },
+        "dataClassification": "DETERMINISTIC_GEOMETRIC_ANALYSIS"
+       }
+      ],
+      "policy": {
+       "doorSide": "HIGH_X",
+       "minimumLargeVolume": 25000000,
+       "minimumReportedVolume": 1000000
+      },
+      "byClass": {
+       "PORT_ACCESS": {
+        "count": 0,
+        "label": "港序作业通道",
+        "volume": 0,
+        "classification": "PORT_ACCESS"
+       },
+       "DOOR_CLEARANCE": {
+        "count": 0,
+        "label": "门区净空",
+        "volume": 0,
+        "classification": "DOOR_CLEARANCE"
+       },
+       "SECURING_SPACE": {
+        "count": 0,
+        "label": "系固作业区",
+        "volume": 0,
+        "classification": "SECURING_SPACE"
+       },
+       "USABLE_RESERVE": {
+        "count": 0,
+        "label": "可用预留",
+        "volume": 0,
+        "classification": "USABLE_RESERVE"
+       },
+       "UNEXPLAINED_VOID": {
+        "count": 0,
+        "label": "未解释剩余空间",
+        "volume": 0,
+        "classification": "UNEXPLAINED_VOID"
+       },
+       "GEOMETRIC_RESIDUAL": {
+        "count": 0,
+        "label": "几何余隙",
+        "volume": 0,
+        "classification": "GEOMETRIC_RESIDUAL"
+       },
+       "UNASSESSED_RESERVE": {
+        "count": 1,
+        "label": "外部连通余隙 · 用途未核实",
+        "volume": 27195925728,
+        "classification": "UNASSESSED_RESERVE"
+       },
+       "STRUCTURAL_CLEARANCE": {
+        "count": 0,
+        "label": "结构净空",
+        "volume": 0,
+        "classification": "STRUCTURAL_CLEARANCE"
+       },
+       "NON_STACKABLE_HEADSPACE": {
+        "count": 0,
+        "label": "不可堆叠货物上方空间",
+        "volume": 0,
+        "classification": "NON_STACKABLE_HEADSPACE"
+       }
+      },
+      "verdict": "ALL_MATERIAL_VOIDS_EXPLAINED",
+      "zoneCount": 1,
+      "exactGeometry": {
+       "model": "EXACT_FACE_SLAB_VOID_V1",
+       "definition": "Exact empty volume below each occupied depth slab maximum cargo height and between its actual lateral bounds; proven no-stack headspace is separately integrated.",
+       "headspaceByCargo": {},
+       "internalVoidVolume": 0,
+       "unexplainedVoidVolume": 0,
+       "nonStackableHeadspaceVolume": 0
+      },
+      "largeVoidCount": 1,
+      "analysisRevision": "2.5.1-constraint-headspace",
+      "dataClassification": "PROJECT_GEOMETRIC_ANALYSIS",
+      "explainedVoidVolume": 0,
+      "maxUnexplainedGapMm": 1200,
+      "unexplainedVoidRatio": 0,
+      "unexplainedVoidVolume": 0,
+      "allLargeVoidsJustified": false,
+      "largestUnexplainedZone": null,
+      "repairCandidateCargoIds": [],
+      "unassessedReserveVolume": 27195925728
+     },
+     "volumeUtilization": 18.07450724273412,
+     "operationFeasibility": {
+      "model": "PORTCUBE_CANONICAL_OPERATION_GEOMETRY_V2_3",
+      "policy": {
+       "top": 35,
+       "side": 30,
+       "bottom": 5,
+       "collision": 2,
+       "dataClassification": "PROJECT_POLICY"
+      },
+      "reasons": [],
+      "doorSide": "higher x coordinate",
+      "widthAxis": "z",
+      "lengthAxis": "x",
+      "gravityAxis": "y",
+      "blockedCount": 0,
+      "blockedCargoIds": [],
+      "loadingSequence": [
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2"
+      ],
+      "forkApproachPass": true,
+      "doorClearancePass": true,
+      "operationPathPass": true,
+      "cargoInsertionPass": true
+     },
+     "selectedCandidateAlgorithm": "hybrid-v2.6-multi-container"
+    },
+    "securing": {
+     "model": "PORTCUBE_SECURING_REQUIREMENT_V2_3",
+     "zones": [
+      {
+       "id": "SECURING-ZONE-1",
+       "axis": "x",
+       "type": "BLOCKING_PLANE_REQUIRED",
+       "reason": "rear 方向存在超过 150 mm 的未约束边界空区",
+       "position": 614.1,
+       "direction": "rear",
+       "reserveGap": 614.1,
+       "exposedArea": 1000000,
+       "classification": "PROJECT_GUIDANCE"
+      },
+      {
+       "id": "SECURING-ZONE-2",
+       "axis": "x",
+       "type": "BLOCKING_PLANE_REQUIRED",
+       "reason": "door 方向存在超过 150 mm 的未约束边界空区",
+       "position": 4214.1,
+       "direction": "door",
+       "reserveGap": 1683.8999999999996,
+       "exposedArea": 2000000,
+       "classification": "PROJECT_GUIDANCE"
+      },
+      {
+       "id": "SECURING-ZONE-3",
+       "axis": "z",
+       "type": "BLOCKING_PLANE_REQUIRED",
+       "reason": "left 方向存在超过 150 mm 的未约束边界空区",
+       "position": 176,
+       "direction": "left",
+       "reserveGap": 176,
+       "exposedArea": 3000000,
+       "classification": "PROJECT_GUIDANCE"
+      },
+      {
+       "id": "SECURING-ZONE-4",
+       "axis": "z",
+       "type": "BLOCKING_PLANE_REQUIRED",
+       "reason": "right 方向存在超过 150 mm 的未约束边界空区",
+       "position": 2176,
+       "direction": "right",
+       "reserveGap": 176,
+       "exposedArea": 3000000,
+       "classification": "PROJECT_GUIDANCE"
+      }
+     ],
+     "policy": {
+      "statement": "PORTCUBE project guidance; actual securing depends on cargo and the selected blocking/bracing/dunnage method.",
+      "contactGapToleranceMm": 30,
+      "unsecuredGapThresholdMm": 150
+     },
+     "status": "SECURING_UNRESOLVED",
+     "required": true,
+     "limitations": [
+      "no friction coefficient",
+      "no lashing tension",
+      "no ship-motion simulation",
+      "no material deformation"
+     ],
+     "requiredCargoIds": [
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+     ],
+     "dataClassification": "PROJECT_POLICY",
+     "securingPlaneCount": 4,
+     "exposedCargoFaceArea": 10000000,
+     "securingRequiredCount": 5,
+     "fragmentedSecuringZones": 4
+    },
+    "taskGate": {
+     "balanced": true,
+     "eligible": true,
+     "doorFailures": [],
+     "geometryPass": true,
+     "centreOfGravityPolicy": "全内长/宽5%项目选择门槛"
+    },
+    "warnings": [],
+    "cogOffset": {
+     "lateral": 0,
+     "direction": "right",
+     "percentage": "0.00",
+     "longitudinal": 5.000000000000002
+    },
+    "tightStow": {
+     "model": "PORTCUBE_TIGHT_STOW_V2_5",
+     "contactRatio": 0.3,
+     "operationCost": 31.5,
+     "securingStatus": "SECURING_UNRESOLVED",
+     "crossSectionP10": 0.17767240619607644,
+     "internalVoidVolume": 0,
+     "maxUnexplainedGapMm": 1200,
+     "lowFillInteriorSlices": 36,
+     "unexplainedVoidVolume": 0
+    },
+    "validator": {
+     "valid": true,
+     "checks": {
+      "cog": {
+       "lateral": 0,
+       "longitudinal": 5.000000000000002,
+       "withinPolicy": true,
+       "dataClassification": "PROJECT_POLICY"
+      },
+      "lifo": true,
+      "stack": true,
+      "bounds": true,
+      "fragile": true,
+      "payload": true,
+      "support": true,
+      "carrying": true,
+      "collision": true,
+      "insertion": true,
+      "stability": true,
+      "orientation": true
+     },
+     "status": "VALID",
+     "totals": {
+      "placements": 5,
+      "loadedVolume": 6000000000,
+      "loadedWeight": 1300
+     },
+     "warnings": [],
+     "stability": {
+      "cargo": {
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1": {
+        "cargoCoG": {
+         "x": 3614.1,
+         "y": 250,
+         "z": 1176,
+         "source": "UNIFORM_DENSITY_GEOMETRIC_CENTER"
+        },
+        "restraint": {
+         "left": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "rear": {
+          "gap": 0,
+          "source": "CARGO",
+          "status": "CARGO_RESTRAINED",
+          "strength": "STRONG",
+          "contactRatio": 1,
+          "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3"
+         },
+         "front": {
+          "gap": 1683.8999999999996,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "right": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         }
+        },
+        "riskStatus": "LOW_RESTRAINT",
+        "slenderness": {
+         "width": 0.5,
+         "length": 0.27777777777777773,
+         "stackHeight": 1000,
+         "effectiveBaseWidth": 2000,
+         "effectiveBaseLength": 3600.0000000000005
+        },
+        "supportRatio": 1,
+        "supportMargin": 600,
+        "supportStatus": "PASS",
+        "stackStability": {
+         "cogX": 3614.1,
+         "cogY": 500,
+         "cogZ": 1176,
+         "status": "PASS",
+         "totalMass": 520,
+         "supportMargin": 600,
+         "supportedCargoIds": [
+          "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2"
+         ]
+        },
+        "supportPolygon": [
+         {
+          "x": 3014.1,
+          "z": 176
+         },
+         {
+          "x": 4214.1,
+          "z": 176
+         },
+         {
+          "x": 4214.1,
+          "z": 2176
+         },
+         {
+          "x": 3014.1,
+          "z": 2176
+         }
+        ],
+        "supportCargoIds": []
+       },
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2": {
+        "cargoCoG": {
+         "x": 3614.1,
+         "y": 750,
+         "z": 1176,
+         "source": "UNIFORM_DENSITY_GEOMETRIC_CENTER"
+        },
+        "restraint": {
+         "left": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "rear": {
+          "gap": 0,
+          "source": "CARGO",
+          "status": "CARGO_RESTRAINED",
+          "strength": "STRONG",
+          "contactRatio": 1,
+          "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4"
+         },
+         "front": {
+          "gap": 1683.8999999999996,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "right": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         }
+        },
+        "riskStatus": "LOW_RESTRAINT",
+        "slenderness": null,
+        "supportRatio": 1.0000000000000004,
+        "supportMargin": 600,
+        "supportStatus": "PASS",
+        "stackStability": null,
+        "supportPolygon": [
+         {
+          "x": 3014.1,
+          "z": 176
+         },
+         {
+          "x": 4214.1,
+          "z": 176
+         },
+         {
+          "x": 4214.1,
+          "z": 2176
+         },
+         {
+          "x": 3014.1,
+          "z": 2176
+         }
+        ],
+        "supportCargoIds": [
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1"
+        ]
+       },
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3": {
+        "cargoCoG": {
+         "x": 2414.1,
+         "y": 250,
+         "z": 1176,
+         "source": "UNIFORM_DENSITY_GEOMETRIC_CENTER"
+        },
+        "restraint": {
+         "left": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "rear": {
+          "gap": 0,
+          "source": "CARGO",
+          "status": "CARGO_RESTRAINED",
+          "strength": "STRONG",
+          "contactRatio": 1,
+          "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+         },
+         "front": {
+          "gap": 0,
+          "source": "CARGO",
+          "status": "CARGO_RESTRAINED",
+          "strength": "STRONG",
+          "contactRatio": 1,
+          "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1"
+         },
+         "right": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         }
+        },
+        "riskStatus": "STABLE",
+        "slenderness": {
+         "width": 0.5,
+         "length": 0.27777777777777773,
+         "stackHeight": 1000,
+         "effectiveBaseWidth": 2000,
+         "effectiveBaseLength": 3600.0000000000005
+        },
+        "supportRatio": 1,
+        "supportMargin": 600,
+        "supportStatus": "PASS",
+        "stackStability": {
+         "cogX": 2414.1,
+         "cogY": 500,
+         "cogZ": 1176,
+         "status": "PASS",
+         "totalMass": 520,
+         "supportMargin": 600,
+         "supportedCargoIds": [
+          "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4"
+         ]
+        },
+        "supportPolygon": [
+         {
+          "x": 1814.1,
+          "z": 176
+         },
+         {
+          "x": 3014.1,
+          "z": 176
+         },
+         {
+          "x": 3014.1,
+          "z": 2176
+         },
+         {
+          "x": 1814.1,
+          "z": 2176
+         }
+        ],
+        "supportCargoIds": []
+       },
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4": {
+        "cargoCoG": {
+         "x": 2414.1,
+         "y": 750,
+         "z": 1176,
+         "source": "UNIFORM_DENSITY_GEOMETRIC_CENTER"
+        },
+        "restraint": {
+         "left": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "rear": {
+          "gap": 1814.1,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "front": {
+          "gap": 0,
+          "source": "CARGO",
+          "status": "CARGO_RESTRAINED",
+          "strength": "STRONG",
+          "contactRatio": 1,
+          "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2"
+         },
+         "right": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         }
+        },
+        "riskStatus": "LOW_RESTRAINT",
+        "slenderness": null,
+        "supportRatio": 1,
+        "supportMargin": 600,
+        "supportStatus": "PASS",
+        "stackStability": null,
+        "supportPolygon": [
+         {
+          "x": 1814.1,
+          "z": 176
+         },
+         {
+          "x": 3014.1,
+          "z": 176
+         },
+         {
+          "x": 3014.1,
+          "z": 2176
+         },
+         {
+          "x": 1814.1,
+          "z": 2176
+         }
+        ],
+        "supportCargoIds": [
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3"
+        ]
+       },
+       "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5": {
+        "cargoCoG": {
+         "x": 1214.1,
+         "y": 250,
+         "z": 1176,
+         "source": "UNIFORM_DENSITY_GEOMETRIC_CENTER"
+        },
+        "restraint": {
+         "left": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "rear": {
+          "gap": 614.1,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         },
+         "front": {
+          "gap": 0,
+          "source": "CARGO",
+          "status": "CARGO_RESTRAINED",
+          "strength": "STRONG",
+          "contactRatio": 1,
+          "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3"
+         },
+         "right": {
+          "gap": 176,
+          "source": "WALL",
+          "status": "FREE",
+          "strength": "NONE",
+          "contactRatio": 1,
+          "sourceCargoId": null
+         }
+        },
+        "riskStatus": "LOW_RESTRAINT",
+        "slenderness": {
+         "width": 0.5,
+         "length": 0.27777777777777773,
+         "stackHeight": 1000,
+         "effectiveBaseWidth": 2000,
+         "effectiveBaseLength": 3600.0000000000005
+        },
+        "supportRatio": 1,
+        "supportMargin": 599.9999999999999,
+        "supportStatus": "PASS",
+        "stackStability": null,
+        "supportPolygon": [
+         {
+          "x": 614.1,
+          "z": 176
+         },
+         {
+          "x": 1814.1,
+          "z": 176
+         },
+         {
+          "x": 1814.1,
+          "z": 2176
+         },
+         {
+          "x": 614.1,
+          "z": 2176
+         }
+        ],
+        "supportCargoIds": []
+       }
+      },
+      "model": "PORTCUBE_UNSECURED_PACKING_V2_1",
+      "policy": {
+       "voidVoxelMm": 250,
+       "heightSliceMm": 200,
+       "supportRatioMin": 0.75,
+       "narrowVoidWidthMm": 300,
+       "strongContactRatio": 0.6,
+       "warningSlenderness": 2.5,
+       "contactGapToleranceMm": 30,
+       "meaningfulContactRatio": 0.35,
+       "verticalContactToleranceMm": 2,
+       "hardUnrestrainedSlenderness": 3.5
+      },
+      "stacks": [
+       {
+        "status": "STABLE",
+        "cargoIds": [
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+        ],
+        "restraint": {
+         "left": false,
+         "rear": false,
+         "front": false,
+         "right": false,
+         "lateralBilateral": false,
+         "longitudinalBilateral": false
+        },
+        "rootCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+        "slenderness": {
+         "width": 0.5,
+         "length": 0.27777777777777773,
+         "stackHeight": 1000,
+         "effectiveBaseWidth": 2000,
+         "effectiveBaseLength": 3600.0000000000005
+        },
+        "rootCargoIds": [
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+         "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+        ],
+        "lateralContactClusterSize": 3
+       }
+      ],
+      "status": "STABLE",
+      "summary": {
+       "contactQuality": 0.7200000000000001,
+       "heightVariation": 500,
+       "minSupportRatio": 1,
+       "minSupportMargin": 600,
+       "narrowVoidVolume": 0,
+       "enclosedVoidVolume": 0,
+       "residualRegionCount": 1,
+       "heightSmoothnessScore": 0.9883920694618564,
+       "largestResidualVolume": 26164675728,
+       "minStackSupportMargin": 600,
+       "unrestrainedTallStacks": 0
+      },
+      "warnings": [],
+      "violations": [],
+      "invalidCount": 0,
+      "supportGraph": {
+       "edges": [
+        {
+         "area": 2400000.000000001,
+         "supportedId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+         "supporterId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1"
+        },
+        {
+         "area": 2400000,
+         "supportedId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+         "supporterId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3"
+        }
+       ]
+      },
+      "voidTopology": {
+       "method": "deterministic-voxel-door-connectivity",
+       "voxelMm": 250,
+       "narrowVoidVolume": 0,
+       "enclosedVoidVolume": 0,
+       "residualRegionCount": 1,
+       "largestResidualVolume": 26164675728,
+       "doorConnectedRegionCount": 1
+      },
+      "warningCount": 0,
+      "heightProfile": {
+       "heights": [
+        0,
+        0,
+        0,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       "sliceWidth": 200,
+       "heightVariation": 500,
+       "occupiedSliceRange": [
+        3,
+        21
+       ],
+       "heightSmoothnessScore": 0.9883920694618564
+      },
+      "dataClassification": "PROJECT_POLICY"
+     },
+     "violations": [],
+     "supportLoads": {
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1": 260,
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3": 260
+     },
+     "supportLoadModel": "CONTACT_AREA_TRANSITIVE_LOAD_V1",
+     "hardViolationCount": 0
+    },
+    "sourceCode": "BACKEND_SOLVED",
+    "candidateId": "PLAN_657fcee3-2555-468f-a158-1be5ab84289a",
+    "loadedCargo": [
+     {
+      "h": 500,
+      "l": 1200,
+      "w": 2000,
+      "x": 3014.1,
+      "y": 0,
+      "z": 176,
+      "eta": null,
+      "sku": "PALLET-A",
+      "name": "堆高托盘 · 测试输入",
+      "type": "heavy",
+      "color": "#9B51E0",
+      "heavy": true,
+      "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+      "width": 2000,
+      "height": 500,
+      "length": 1200,
+      "source": "USER_INPUT",
+      "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+      "weight": 260,
+      "wooden": true,
+      "batchId": "batch_1",
+      "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+      "fragile": false,
+      "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+      "service": {
+       "serviceId": "DEMO-NB-HAM",
+       "windowEnd": "2026-09-22",
+       "destination": "HAM",
+       "windowStart": "2026-09-15",
+       "strippingPoint": "HAM-CFS"
+      },
+      "batchKey": "batch_1",
+      "inverted": false,
+      "quantity": 1,
+      "canInvert": false,
+      "canRotate": false,
+      "dangerous": false,
+      "forkEntry": "TWO_WAY",
+      "mixPolicy": "ALLOW",
+      "restraint": {
+       "left": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "rear": {
+        "gap": 0,
+        "source": "CARGO",
+        "status": "CARGO_RESTRAINED",
+        "strength": "STRONG",
+        "contactRatio": 1,
+        "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3"
+       },
+       "front": {
+        "gap": 1683.8999999999996,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "right": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       }
+      },
+      "riskNotes": [],
+      "stackable": true,
+      "unitIndex": 1,
+      "batchLabel": "HAM",
+      "canLayFlat": false,
+      "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+      "riskStatus": "LOW_RESTRAINT",
+      "stackLevel": 1,
+      "orientation": "XYZ",
+      "slenderness": {
+       "width": 0.5,
+       "length": 0.27777777777777773,
+       "stackHeight": 1000,
+       "effectiveBaseWidth": 2000,
+       "effectiveBaseLength": 3600.0000000000005
+      },
+      "customerName": "设备工况测试客户（非实际出运）",
+      "handlingMode": "FORKLIFT",
+      "loadingIndex": 4,
+      "portSequence": 1,
+      "supportRatio": 1,
+      "algorithmMeta": {
+       "strategy": "SPACE",
+       "algorithm": "hybrid-v2",
+       "spaceKind": "main",
+       "fillPacked": false,
+       "blockPacked": true,
+       "localRepair": true,
+       "orientation": "XYZ",
+       "handlingMode": "forklift",
+       "placementMode": "floor-or-block",
+       "candidateSource": "BLOCK",
+       "securingRequired": "dunnage-or-lashing",
+       "globalAxisRepairMm": -534.9000000000001,
+       "longitudinalCentered": true,
+       "blockCandidateBaseline": "fast-block-v1",
+       "endGapCompactionShiftX": -294.9,
+       "v24GlobalBalanceShiftX": 294.9,
+       "v24GlobalBalanceShiftZ": 0
+      },
+      "forkEntryAxis": "LENGTH",
+      "packagingType": "PALLETIZED_CARTONS",
+      "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+      "supportMargin": 600,
+      "visualProfile": {
+       "assetKey": "cargo_palletized",
+       "labelMode": "CARGO_NAME",
+       "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+      },
+      "candidateTrace": {
+       "accepted": {
+        "score": 0.8708958545269583,
+        "source": "BLOCK",
+        "status": "SELECTED",
+        "position": {
+         "x": 3014.1,
+         "y": 0,
+         "z": 176
+        },
+        "components": {
+         "balance": 0.9825,
+         "futureFit": 0.85,
+         "operation": 0.7870218718209563,
+         "compactness": 0.8290946083418107
+        },
+        "orientation": "XYZ"
+       },
+       "rejected": [
+        {
+         "reason": "LOW_SCORE",
+         "source": "BLOCK",
+         "status": "VALID_NOT_SELECTED",
+         "position": {
+          "x": 3549,
+          "y": 0,
+          "z": 176
+         },
+         "orientation": "XYZ"
+        }
+       ]
+      },
+      "handlingMethod": "forklift",
+      "handlingPolicy": "derived",
+      "maxStackLayers": 2,
+      "orderReference": "TEST-FORKLIFT-5",
+      "stackStability": {
+       "cogX": 3614.1,
+       "cogY": 500,
+       "cogZ": 1176,
+       "status": "PASS",
+       "totalMass": 520,
+       "supportMargin": 600,
+       "supportedCargoIds": [
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2"
+       ]
+      },
+      "destinationPort": "HAM",
+      "placementReason": {
+       "block": "main",
+       "layer": 1,
+       "strategy": "SPACE",
+       "statement": "BLOCK 候选通过全部硬约束；空间紧凑度 83%，保留连续剩余空间",
+       "components": {
+        "balance": 0.9825,
+        "futureFit": 0.85,
+        "operation": 0.7870218718209563,
+        "compactness": 0.8290946083418107
+       },
+       "localRepair": {
+        "type": "GLOBAL_AXIS_REPAIR",
+        "deltaX": -534.9000000000001
+       },
+       "orientation": "XYZ",
+       "unloadingGroup": 1,
+       "candidateSource": "BLOCK",
+       "balanceInfluence": {
+        "lateralPercent": 0,
+        "longitudinalPercent": 79.65412004069175
+       },
+       "rejectedConstraintsBeforePlacement": []
+      },
+      "packagingProfile": {
+       "type": "PALLETIZED_CARTONS",
+       "fragile": false,
+       "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+       "forkEntry": "TWO_WAY",
+       "stackable": true,
+       "handlingMode": "FORKLIFT",
+       "forkEntryAxis": "LENGTH",
+       "schemaVersion": "2.5",
+       "transportUnit": "PALLET",
+       "maxStackLayers": 2,
+       "suggestionSource": null,
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "confirmationStatus": "USER_SUPPLIED",
+       "dataClassification": "CASE_INPUT",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "orientationPolicy": "FIXED_ORIENTATION",
+      "compatibilityGroup": "GENERAL",
+      "incompatibleGroups": [],
+      "maxSupportedWeight": 600,
+      "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+      "cargoPhysicalProfile": {
+       "massKg": 260,
+       "fragile": false,
+       "quantity": 1,
+       "cargoName": "堆高托盘 · 测试输入",
+       "forkEntry": "TWO_WAY",
+       "packaging": {
+        "type": "PALLETIZED_CARTONS",
+        "fragile": false,
+        "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+        "forkEntry": "TWO_WAY",
+        "stackable": true,
+        "handlingMode": "FORKLIFT",
+        "forkEntryAxis": "LENGTH",
+        "schemaVersion": "2.5",
+        "transportUnit": "PALLET",
+        "maxStackLayers": 2,
+        "suggestionSource": null,
+        "orientationPolicy": "FIXED_ORIENTATION",
+        "confirmationStatus": "USER_SUPPLIED",
+        "dataClassification": "CASE_INPUT",
+        "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+        "palletJackCompatible": false,
+        "dangerousGoodsContext": "NOT_DECLARED",
+        "maximumSupportedWeightKg": 600
+       },
+       "stackable": true,
+       "dimensions": {
+        "widthMm": 2000,
+        "heightMm": 500,
+        "lengthMm": 1200
+       },
+       "destination": "HAM",
+       "handlingMode": "FORKLIFT",
+       "portSequence": 1,
+       "forkEntryAxis": "LENGTH",
+       "packagingType": "PALLETIZED_CARTONS",
+       "schemaVersion": "2.5",
+       "visualProfile": {
+        "assetKey": "cargo_palletized",
+        "labelMode": "CARGO_NAME",
+        "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+       },
+       "maxStackLayers": 2,
+       "solverEnvelope": {
+        "fragile": false,
+        "stackable": true,
+        "dimensions": {
+         "widthMm": 2000,
+         "heightMm": 500,
+         "lengthMm": 1200
+        },
+        "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+        "maxStackLayers": 2,
+        "allowedOrientations": [
+         {
+          "h": 500,
+          "l": 1200,
+          "w": 2000,
+          "label": "XYZ"
+         }
+        ],
+        "maximumSupportedWeightKg": 600
+       },
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "palletJackCompatible": false,
+      "dangerousGoodsContext": "NOT_DECLARED",
+      "maximumSupportedWeightKg": 600
+     },
+     {
+      "h": 500,
+      "l": 1200,
+      "w": 2000,
+      "x": 3014.1,
+      "y": 500,
+      "z": 176,
+      "eta": null,
+      "sku": "PALLET-A",
+      "name": "堆高托盘 · 测试输入",
+      "type": "heavy",
+      "color": "#9B51E0",
+      "heavy": true,
+      "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+      "width": 2000,
+      "height": 500,
+      "length": 1200,
+      "source": "USER_INPUT",
+      "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+      "weight": 260,
+      "wooden": true,
+      "batchId": "batch_1",
+      "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+      "fragile": false,
+      "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+      "service": {
+       "serviceId": "DEMO-NB-HAM",
+       "windowEnd": "2026-09-22",
+       "destination": "HAM",
+       "windowStart": "2026-09-15",
+       "strippingPoint": "HAM-CFS"
+      },
+      "batchKey": "batch_1",
+      "inverted": false,
+      "quantity": 1,
+      "canInvert": false,
+      "canRotate": false,
+      "dangerous": false,
+      "forkEntry": "TWO_WAY",
+      "mixPolicy": "ALLOW",
+      "restraint": {
+       "left": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "rear": {
+        "gap": 0,
+        "source": "CARGO",
+        "status": "CARGO_RESTRAINED",
+        "strength": "STRONG",
+        "contactRatio": 1,
+        "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4"
+       },
+       "front": {
+        "gap": 1683.8999999999996,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "right": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       }
+      },
+      "riskNotes": [],
+      "stackable": true,
+      "unitIndex": 2,
+      "batchLabel": "HAM",
+      "canLayFlat": false,
+      "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+      "riskStatus": "LOW_RESTRAINT",
+      "stackLevel": 2,
+      "orientation": "XYZ",
+      "slenderness": null,
+      "customerName": "设备工况测试客户（非实际出运）",
+      "handlingMode": "FORKLIFT",
+      "loadingIndex": 5,
+      "portSequence": 1,
+      "supportRatio": 1.0000000000000004,
+      "algorithmMeta": {
+       "strategy": "SPACE",
+       "algorithm": "hybrid-v2",
+       "spaceKind": "main",
+       "fillPacked": false,
+       "blockPacked": true,
+       "localRepair": true,
+       "orientation": "XYZ",
+       "handlingMode": "forklift",
+       "placementMode": "floor-or-block",
+       "candidateSource": "BLOCK",
+       "securingRequired": "dunnage-or-lashing",
+       "globalAxisRepairMm": -534.9000000000001,
+       "longitudinalCentered": true,
+       "blockCandidateBaseline": "fast-block-v1",
+       "endGapCompactionShiftX": -294.9,
+       "v24GlobalBalanceShiftX": 294.9,
+       "v24GlobalBalanceShiftZ": 0
+      },
+      "forkEntryAxis": "LENGTH",
+      "packagingType": "PALLETIZED_CARTONS",
+      "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+      "supportMargin": 600,
+      "visualProfile": {
+       "assetKey": "cargo_palletized",
+       "labelMode": "CARGO_NAME",
+       "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+      },
+      "candidateTrace": {
+       "accepted": {
+        "score": 0.8708958545269583,
+        "source": "BLOCK",
+        "status": "SELECTED",
+        "position": {
+         "x": 3014.1,
+         "y": 500,
+         "z": 176
+        },
+        "components": {
+         "balance": 0.9825,
+         "futureFit": 0.85,
+         "operation": 0.7870218718209563,
+         "compactness": 0.8290946083418107
+        },
+        "orientation": "XYZ"
+       },
+       "rejected": [
+        {
+         "reason": "LOW_SCORE",
+         "source": "BLOCK",
+         "status": "VALID_NOT_SELECTED",
+         "position": {
+          "x": 3549,
+          "y": 500,
+          "z": 176
+         },
+         "orientation": "XYZ"
+        }
+       ]
+      },
+      "handlingMethod": "forklift",
+      "handlingPolicy": "derived",
+      "maxStackLayers": 2,
+      "orderReference": "TEST-FORKLIFT-5",
+      "stackStability": null,
+      "destinationPort": "HAM",
+      "placementReason": {
+       "block": "main",
+       "layer": 2,
+       "strategy": "SPACE",
+       "statement": "BLOCK 候选通过全部硬约束；空间紧凑度 83%，保留连续剩余空间",
+       "components": {
+        "balance": 0.9825,
+        "futureFit": 0.85,
+        "operation": 0.7870218718209563,
+        "compactness": 0.8290946083418107
+       },
+       "localRepair": {
+        "type": "GLOBAL_AXIS_REPAIR",
+        "deltaX": -534.9000000000001
+       },
+       "orientation": "XYZ",
+       "unloadingGroup": 1,
+       "candidateSource": "BLOCK",
+       "balanceInfluence": {
+        "lateralPercent": 0,
+        "longitudinalPercent": 79.65412004069175
+       },
+       "rejectedConstraintsBeforePlacement": []
+      },
+      "packagingProfile": {
+       "type": "PALLETIZED_CARTONS",
+       "fragile": false,
+       "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+       "forkEntry": "TWO_WAY",
+       "stackable": true,
+       "handlingMode": "FORKLIFT",
+       "forkEntryAxis": "LENGTH",
+       "schemaVersion": "2.5",
+       "transportUnit": "PALLET",
+       "maxStackLayers": 2,
+       "suggestionSource": null,
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "confirmationStatus": "USER_SUPPLIED",
+       "dataClassification": "CASE_INPUT",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "orientationPolicy": "FIXED_ORIENTATION",
+      "compatibilityGroup": "GENERAL",
+      "incompatibleGroups": [],
+      "maxSupportedWeight": 600,
+      "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+      "cargoPhysicalProfile": {
+       "massKg": 260,
+       "fragile": false,
+       "quantity": 1,
+       "cargoName": "堆高托盘 · 测试输入",
+       "forkEntry": "TWO_WAY",
+       "packaging": {
+        "type": "PALLETIZED_CARTONS",
+        "fragile": false,
+        "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+        "forkEntry": "TWO_WAY",
+        "stackable": true,
+        "handlingMode": "FORKLIFT",
+        "forkEntryAxis": "LENGTH",
+        "schemaVersion": "2.5",
+        "transportUnit": "PALLET",
+        "maxStackLayers": 2,
+        "suggestionSource": null,
+        "orientationPolicy": "FIXED_ORIENTATION",
+        "confirmationStatus": "USER_SUPPLIED",
+        "dataClassification": "CASE_INPUT",
+        "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+        "palletJackCompatible": false,
+        "dangerousGoodsContext": "NOT_DECLARED",
+        "maximumSupportedWeightKg": 600
+       },
+       "stackable": true,
+       "dimensions": {
+        "widthMm": 2000,
+        "heightMm": 500,
+        "lengthMm": 1200
+       },
+       "destination": "HAM",
+       "handlingMode": "FORKLIFT",
+       "portSequence": 1,
+       "forkEntryAxis": "LENGTH",
+       "packagingType": "PALLETIZED_CARTONS",
+       "schemaVersion": "2.5",
+       "visualProfile": {
+        "assetKey": "cargo_palletized",
+        "labelMode": "CARGO_NAME",
+        "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+       },
+       "maxStackLayers": 2,
+       "solverEnvelope": {
+        "fragile": false,
+        "stackable": true,
+        "dimensions": {
+         "widthMm": 2000,
+         "heightMm": 500,
+         "lengthMm": 1200
+        },
+        "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+        "maxStackLayers": 2,
+        "allowedOrientations": [
+         {
+          "h": 500,
+          "l": 1200,
+          "w": 2000,
+          "label": "XYZ"
+         }
+        ],
+        "maximumSupportedWeightKg": 600
+       },
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "palletJackCompatible": false,
+      "dangerousGoodsContext": "NOT_DECLARED",
+      "maximumSupportedWeightKg": 600
+     },
+     {
+      "h": 500,
+      "l": 1200,
+      "w": 2000,
+      "x": 1814.1,
+      "y": 0,
+      "z": 176,
+      "eta": null,
+      "sku": "PALLET-A",
+      "name": "堆高托盘 · 测试输入",
+      "type": "heavy",
+      "color": "#9B51E0",
+      "heavy": true,
+      "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+      "width": 2000,
+      "height": 500,
+      "length": 1200,
+      "source": "USER_INPUT",
+      "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+      "weight": 260,
+      "wooden": true,
+      "batchId": "batch_1",
+      "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+      "fragile": false,
+      "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+      "service": {
+       "serviceId": "DEMO-NB-HAM",
+       "windowEnd": "2026-09-22",
+       "destination": "HAM",
+       "windowStart": "2026-09-15",
+       "strippingPoint": "HAM-CFS"
+      },
+      "batchKey": "batch_1",
+      "inverted": false,
+      "quantity": 1,
+      "canInvert": false,
+      "canRotate": false,
+      "dangerous": false,
+      "forkEntry": "TWO_WAY",
+      "mixPolicy": "ALLOW",
+      "restraint": {
+       "left": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "rear": {
+        "gap": 0,
+        "source": "CARGO",
+        "status": "CARGO_RESTRAINED",
+        "strength": "STRONG",
+        "contactRatio": 1,
+        "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+       },
+       "front": {
+        "gap": 0,
+        "source": "CARGO",
+        "status": "CARGO_RESTRAINED",
+        "strength": "STRONG",
+        "contactRatio": 1,
+        "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1"
+       },
+       "right": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       }
+      },
+      "riskNotes": [],
+      "stackable": true,
+      "unitIndex": 3,
+      "batchLabel": "HAM",
+      "canLayFlat": false,
+      "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+      "riskStatus": "STABLE",
+      "stackLevel": 1,
+      "orientation": "XYZ",
+      "slenderness": {
+       "width": 0.5,
+       "length": 0.27777777777777773,
+       "stackHeight": 1000,
+       "effectiveBaseWidth": 2000,
+       "effectiveBaseLength": 3600.0000000000005
+      },
+      "customerName": "设备工况测试客户（非实际出运）",
+      "handlingMode": "FORKLIFT",
+      "loadingIndex": 2,
+      "portSequence": 1,
+      "supportRatio": 1,
+      "algorithmMeta": {
+       "strategy": "SPACE",
+       "algorithm": "hybrid-v2",
+       "spaceKind": "main",
+       "fillPacked": false,
+       "blockPacked": true,
+       "localRepair": true,
+       "orientation": "XYZ",
+       "handlingMode": "forklift",
+       "placementMode": "floor-or-block",
+       "candidateSource": "BLOCK",
+       "securingRequired": "dunnage-or-lashing",
+       "globalAxisRepairMm": -534.9000000000001,
+       "longitudinalCentered": true,
+       "blockCandidateBaseline": "fast-block-v1",
+       "endGapCompactionShiftX": -294.9,
+       "v24GlobalBalanceShiftX": 294.9,
+       "v24GlobalBalanceShiftZ": 0
+      },
+      "forkEntryAxis": "LENGTH",
+      "packagingType": "PALLETIZED_CARTONS",
+      "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+      "supportMargin": 600,
+      "visualProfile": {
+       "assetKey": "cargo_palletized",
+       "labelMode": "CARGO_NAME",
+       "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+      },
+      "candidateTrace": {
+       "accepted": {
+        "score": 0.854110503560529,
+        "source": "BLOCK",
+        "status": "SELECTED",
+        "position": {
+         "x": 1814.1,
+         "y": 0,
+         "z": 176
+        },
+        "components": {
+         "balance": 0.9825,
+         "futureFit": 0.85,
+         "operation": 0.6751195320447609,
+         "compactness": 0.8290946083418107
+        },
+        "orientation": "XYZ"
+       },
+       "rejected": [
+        {
+         "reason": "LOW_SCORE",
+         "source": "BLOCK",
+         "status": "VALID_NOT_SELECTED",
+         "position": {
+          "x": 2349,
+          "y": 0,
+          "z": 176
+         },
+         "orientation": "XYZ"
+        }
+       ]
+      },
+      "handlingMethod": "forklift",
+      "handlingPolicy": "derived",
+      "maxStackLayers": 2,
+      "orderReference": "TEST-FORKLIFT-5",
+      "stackStability": {
+       "cogX": 2414.1,
+       "cogY": 500,
+       "cogZ": 1176,
+       "status": "PASS",
+       "totalMass": 520,
+       "supportMargin": 600,
+       "supportedCargoIds": [
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4"
+       ]
+      },
+      "destinationPort": "HAM",
+      "placementReason": {
+       "block": "main",
+       "layer": 1,
+       "strategy": "SPACE",
+       "statement": "BLOCK 候选通过全部硬约束；空间紧凑度 83%，保留连续剩余空间",
+       "components": {
+        "balance": 0.9825,
+        "futureFit": 0.85,
+        "operation": 0.6751195320447609,
+        "compactness": 0.8290946083418107
+       },
+       "localRepair": {
+        "type": "GLOBAL_AXIS_REPAIR",
+        "deltaX": -534.9000000000001
+       },
+       "orientation": "XYZ",
+       "unloadingGroup": 1,
+       "candidateSource": "BLOCK",
+       "balanceInfluence": {
+        "lateralPercent": 0,
+        "longitudinalPercent": 66.09020006781961
+       },
+       "rejectedConstraintsBeforePlacement": []
+      },
+      "packagingProfile": {
+       "type": "PALLETIZED_CARTONS",
+       "fragile": false,
+       "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+       "forkEntry": "TWO_WAY",
+       "stackable": true,
+       "handlingMode": "FORKLIFT",
+       "forkEntryAxis": "LENGTH",
+       "schemaVersion": "2.5",
+       "transportUnit": "PALLET",
+       "maxStackLayers": 2,
+       "suggestionSource": null,
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "confirmationStatus": "USER_SUPPLIED",
+       "dataClassification": "CASE_INPUT",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "orientationPolicy": "FIXED_ORIENTATION",
+      "compatibilityGroup": "GENERAL",
+      "incompatibleGroups": [],
+      "maxSupportedWeight": 600,
+      "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+      "cargoPhysicalProfile": {
+       "massKg": 260,
+       "fragile": false,
+       "quantity": 1,
+       "cargoName": "堆高托盘 · 测试输入",
+       "forkEntry": "TWO_WAY",
+       "packaging": {
+        "type": "PALLETIZED_CARTONS",
+        "fragile": false,
+        "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+        "forkEntry": "TWO_WAY",
+        "stackable": true,
+        "handlingMode": "FORKLIFT",
+        "forkEntryAxis": "LENGTH",
+        "schemaVersion": "2.5",
+        "transportUnit": "PALLET",
+        "maxStackLayers": 2,
+        "suggestionSource": null,
+        "orientationPolicy": "FIXED_ORIENTATION",
+        "confirmationStatus": "USER_SUPPLIED",
+        "dataClassification": "CASE_INPUT",
+        "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+        "palletJackCompatible": false,
+        "dangerousGoodsContext": "NOT_DECLARED",
+        "maximumSupportedWeightKg": 600
+       },
+       "stackable": true,
+       "dimensions": {
+        "widthMm": 2000,
+        "heightMm": 500,
+        "lengthMm": 1200
+       },
+       "destination": "HAM",
+       "handlingMode": "FORKLIFT",
+       "portSequence": 1,
+       "forkEntryAxis": "LENGTH",
+       "packagingType": "PALLETIZED_CARTONS",
+       "schemaVersion": "2.5",
+       "visualProfile": {
+        "assetKey": "cargo_palletized",
+        "labelMode": "CARGO_NAME",
+        "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+       },
+       "maxStackLayers": 2,
+       "solverEnvelope": {
+        "fragile": false,
+        "stackable": true,
+        "dimensions": {
+         "widthMm": 2000,
+         "heightMm": 500,
+         "lengthMm": 1200
+        },
+        "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+        "maxStackLayers": 2,
+        "allowedOrientations": [
+         {
+          "h": 500,
+          "l": 1200,
+          "w": 2000,
+          "label": "XYZ"
+         }
+        ],
+        "maximumSupportedWeightKg": 600
+       },
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "palletJackCompatible": false,
+      "dangerousGoodsContext": "NOT_DECLARED",
+      "maximumSupportedWeightKg": 600
+     },
+     {
+      "h": 500,
+      "l": 1200,
+      "w": 2000,
+      "x": 1814.1,
+      "y": 500,
+      "z": 176,
+      "eta": null,
+      "sku": "PALLET-A",
+      "name": "堆高托盘 · 测试输入",
+      "type": "heavy",
+      "color": "#9B51E0",
+      "heavy": true,
+      "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+      "width": 2000,
+      "height": 500,
+      "length": 1200,
+      "source": "USER_INPUT",
+      "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+      "weight": 260,
+      "wooden": true,
+      "batchId": "batch_1",
+      "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+      "fragile": false,
+      "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+      "service": {
+       "serviceId": "DEMO-NB-HAM",
+       "windowEnd": "2026-09-22",
+       "destination": "HAM",
+       "windowStart": "2026-09-15",
+       "strippingPoint": "HAM-CFS"
+      },
+      "batchKey": "batch_1",
+      "inverted": false,
+      "quantity": 1,
+      "canInvert": false,
+      "canRotate": false,
+      "dangerous": false,
+      "forkEntry": "TWO_WAY",
+      "mixPolicy": "ALLOW",
+      "restraint": {
+       "left": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "rear": {
+        "gap": 1814.1,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "front": {
+        "gap": 0,
+        "source": "CARGO",
+        "status": "CARGO_RESTRAINED",
+        "strength": "STRONG",
+        "contactRatio": 1,
+        "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2"
+       },
+       "right": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       }
+      },
+      "riskNotes": [],
+      "stackable": true,
+      "unitIndex": 4,
+      "batchLabel": "HAM",
+      "canLayFlat": false,
+      "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+      "riskStatus": "LOW_RESTRAINT",
+      "stackLevel": 2,
+      "orientation": "XYZ",
+      "slenderness": null,
+      "customerName": "设备工况测试客户（非实际出运）",
+      "handlingMode": "FORKLIFT",
+      "loadingIndex": 3,
+      "portSequence": 1,
+      "supportRatio": 1,
+      "algorithmMeta": {
+       "strategy": "SPACE",
+       "algorithm": "hybrid-v2",
+       "spaceKind": "main",
+       "fillPacked": false,
+       "blockPacked": true,
+       "localRepair": true,
+       "orientation": "XYZ",
+       "handlingMode": "forklift",
+       "placementMode": "floor-or-block",
+       "candidateSource": "BLOCK",
+       "securingRequired": "dunnage-or-lashing",
+       "globalAxisRepairMm": -534.9000000000001,
+       "longitudinalCentered": true,
+       "blockCandidateBaseline": "fast-block-v1",
+       "endGapCompactionShiftX": -294.9,
+       "v24GlobalBalanceShiftX": 294.9,
+       "v24GlobalBalanceShiftZ": 0
+      },
+      "forkEntryAxis": "LENGTH",
+      "packagingType": "PALLETIZED_CARTONS",
+      "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+      "supportMargin": 600,
+      "visualProfile": {
+       "assetKey": "cargo_palletized",
+       "labelMode": "CARGO_NAME",
+       "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+      },
+      "candidateTrace": {
+       "accepted": {
+        "score": 0.854110503560529,
+        "source": "BLOCK",
+        "status": "SELECTED",
+        "position": {
+         "x": 1814.1,
+         "y": 500,
+         "z": 176
+        },
+        "components": {
+         "balance": 0.9825,
+         "futureFit": 0.85,
+         "operation": 0.6751195320447609,
+         "compactness": 0.8290946083418107
+        },
+        "orientation": "XYZ"
+       },
+       "rejected": [
+        {
+         "reason": "LOW_SCORE",
+         "source": "BLOCK",
+         "status": "VALID_NOT_SELECTED",
+         "position": {
+          "x": 2349,
+          "y": 500,
+          "z": 176
+         },
+         "orientation": "XYZ"
+        }
+       ]
+      },
+      "handlingMethod": "forklift",
+      "handlingPolicy": "derived",
+      "maxStackLayers": 2,
+      "orderReference": "TEST-FORKLIFT-5",
+      "stackStability": null,
+      "destinationPort": "HAM",
+      "placementReason": {
+       "block": "main",
+       "layer": 2,
+       "strategy": "SPACE",
+       "statement": "BLOCK 候选通过全部硬约束；空间紧凑度 83%，保留连续剩余空间",
+       "components": {
+        "balance": 0.9825,
+        "futureFit": 0.85,
+        "operation": 0.6751195320447609,
+        "compactness": 0.8290946083418107
+       },
+       "localRepair": {
+        "type": "GLOBAL_AXIS_REPAIR",
+        "deltaX": -534.9000000000001
+       },
+       "orientation": "XYZ",
+       "unloadingGroup": 1,
+       "candidateSource": "BLOCK",
+       "balanceInfluence": {
+        "lateralPercent": 0,
+        "longitudinalPercent": 59.30824008138352
+       },
+       "rejectedConstraintsBeforePlacement": []
+      },
+      "packagingProfile": {
+       "type": "PALLETIZED_CARTONS",
+       "fragile": false,
+       "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+       "forkEntry": "TWO_WAY",
+       "stackable": true,
+       "handlingMode": "FORKLIFT",
+       "forkEntryAxis": "LENGTH",
+       "schemaVersion": "2.5",
+       "transportUnit": "PALLET",
+       "maxStackLayers": 2,
+       "suggestionSource": null,
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "confirmationStatus": "USER_SUPPLIED",
+       "dataClassification": "CASE_INPUT",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "orientationPolicy": "FIXED_ORIENTATION",
+      "compatibilityGroup": "GENERAL",
+      "incompatibleGroups": [],
+      "maxSupportedWeight": 600,
+      "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+      "cargoPhysicalProfile": {
+       "massKg": 260,
+       "fragile": false,
+       "quantity": 1,
+       "cargoName": "堆高托盘 · 测试输入",
+       "forkEntry": "TWO_WAY",
+       "packaging": {
+        "type": "PALLETIZED_CARTONS",
+        "fragile": false,
+        "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+        "forkEntry": "TWO_WAY",
+        "stackable": true,
+        "handlingMode": "FORKLIFT",
+        "forkEntryAxis": "LENGTH",
+        "schemaVersion": "2.5",
+        "transportUnit": "PALLET",
+        "maxStackLayers": 2,
+        "suggestionSource": null,
+        "orientationPolicy": "FIXED_ORIENTATION",
+        "confirmationStatus": "USER_SUPPLIED",
+        "dataClassification": "CASE_INPUT",
+        "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+        "palletJackCompatible": false,
+        "dangerousGoodsContext": "NOT_DECLARED",
+        "maximumSupportedWeightKg": 600
+       },
+       "stackable": true,
+       "dimensions": {
+        "widthMm": 2000,
+        "heightMm": 500,
+        "lengthMm": 1200
+       },
+       "destination": "HAM",
+       "handlingMode": "FORKLIFT",
+       "portSequence": 1,
+       "forkEntryAxis": "LENGTH",
+       "packagingType": "PALLETIZED_CARTONS",
+       "schemaVersion": "2.5",
+       "visualProfile": {
+        "assetKey": "cargo_palletized",
+        "labelMode": "CARGO_NAME",
+        "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+       },
+       "maxStackLayers": 2,
+       "solverEnvelope": {
+        "fragile": false,
+        "stackable": true,
+        "dimensions": {
+         "widthMm": 2000,
+         "heightMm": 500,
+         "lengthMm": 1200
+        },
+        "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+        "maxStackLayers": 2,
+        "allowedOrientations": [
+         {
+          "h": 500,
+          "l": 1200,
+          "w": 2000,
+          "label": "XYZ"
+         }
+        ],
+        "maximumSupportedWeightKg": 600
+       },
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "palletJackCompatible": false,
+      "dangerousGoodsContext": "NOT_DECLARED",
+      "maximumSupportedWeightKg": 600
+     },
+     {
+      "h": 500,
+      "l": 1200,
+      "w": 2000,
+      "x": 614.1,
+      "y": 0,
+      "z": 176,
+      "eta": null,
+      "sku": "PALLET-A",
+      "name": "堆高托盘 · 测试输入",
+      "type": "heavy",
+      "color": "#9B51E0",
+      "heavy": true,
+      "rowId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454",
+      "width": 2000,
+      "height": 500,
+      "length": 1200,
+      "source": "USER_INPUT",
+      "unitId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+      "weight": 260,
+      "wooden": true,
+      "batchId": "batch_1",
+      "cargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+      "fragile": false,
+      "orderId": "ORDER_4d7e4598-dce1-4348-a649-30e0659aefdb",
+      "service": {
+       "serviceId": "DEMO-NB-HAM",
+       "windowEnd": "2026-09-22",
+       "destination": "HAM",
+       "windowStart": "2026-09-15",
+       "strippingPoint": "HAM-CFS"
+      },
+      "batchKey": "batch_1",
+      "inverted": false,
+      "quantity": 1,
+      "canInvert": false,
+      "canRotate": false,
+      "dangerous": false,
+      "forkEntry": "TWO_WAY",
+      "mixPolicy": "ALLOW",
+      "restraint": {
+       "left": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "rear": {
+        "gap": 614.1,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       },
+       "front": {
+        "gap": 0,
+        "source": "CARGO",
+        "status": "CARGO_RESTRAINED",
+        "strength": "STRONG",
+        "contactRatio": 1,
+        "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3"
+       },
+       "right": {
+        "gap": 176,
+        "source": "WALL",
+        "status": "FREE",
+        "strength": "NONE",
+        "contactRatio": 1,
+        "sourceCargoId": null
+       }
+      },
+      "riskNotes": [],
+      "stackable": true,
+      "unitIndex": 5,
+      "batchLabel": "HAM",
+      "canLayFlat": false,
+      "customerId": "CUSTOMER_b87fed3a-8556-44fa-9278-6b1983a209c9",
+      "riskStatus": "LOW_RESTRAINT",
+      "stackLevel": 1,
+      "orientation": "XYZ",
+      "slenderness": {
+       "width": 0.5,
+       "length": 0.27777777777777773,
+       "stackHeight": 1000,
+       "effectiveBaseWidth": 2000,
+       "effectiveBaseLength": 3600.0000000000005
+      },
+      "customerName": "设备工况测试客户（非实际出运）",
+      "handlingMode": "FORKLIFT",
+      "loadingIndex": 1,
+      "portSequence": 1,
+      "supportRatio": 1,
+      "algorithmMeta": {
+       "strategy": "SPACE",
+       "algorithm": "hybrid-v2",
+       "spaceKind": "main",
+       "fillPacked": false,
+       "blockPacked": true,
+       "localRepair": true,
+       "orientation": "XYZ",
+       "handlingMode": "forklift",
+       "placementMode": "floor-or-block",
+       "candidateSource": "BLOCK",
+       "securingRequired": "dunnage-or-lashing",
+       "globalAxisRepairMm": -534.9000000000001,
+       "longitudinalCentered": true,
+       "blockCandidateBaseline": "fast-block-v1",
+       "endGapCompactionShiftX": -294.9,
+       "v24GlobalBalanceShiftX": 294.9,
+       "v24GlobalBalanceShiftZ": 0
+      },
+      "forkEntryAxis": "LENGTH",
+      "packagingType": "PALLETIZED_CARTONS",
+      "sourceCargoId": "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+      "supportMargin": 599.9999999999999,
+      "visualProfile": {
+       "assetKey": "cargo_palletized",
+       "labelMode": "CARGO_NAME",
+       "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+      },
+      "candidateTrace": {
+       "accepted": {
+        "score": 0.8373251525940997,
+        "source": "BLOCK",
+        "status": "SELECTED",
+        "position": {
+         "x": 614.0999999999999,
+         "y": 0,
+         "z": 176
+        },
+        "components": {
+         "balance": 0.9825,
+         "futureFit": 0.85,
+         "operation": 0.5632171922685656,
+         "compactness": 0.8290946083418107
+        },
+        "orientation": "XYZ"
+       },
+       "rejected": [
+        {
+         "reason": "LOW_SCORE",
+         "source": "BLOCK",
+         "status": "VALID_NOT_SELECTED",
+         "position": {
+          "x": 1149,
+          "y": 0,
+          "z": 176
+         },
+         "orientation": "XYZ"
+        }
+       ]
+      },
+      "handlingMethod": "forklift",
+      "handlingPolicy": "derived",
+      "maxStackLayers": 2,
+      "orderReference": "TEST-FORKLIFT-5",
+      "stackStability": null,
+      "destinationPort": "HAM",
+      "placementReason": {
+       "block": "main",
+       "layer": 1,
+       "strategy": "SPACE",
+       "statement": "BLOCK 候选通过全部硬约束；空间紧凑度 83%，保留连续剩余空间",
+       "components": {
+        "balance": 0.9825,
+        "futureFit": 0.85,
+        "operation": 0.5632171922685656,
+        "compactness": 0.8290946083418107
+       },
+       "localRepair": {
+        "type": "GLOBAL_AXIS_REPAIR",
+        "deltaX": -534.9000000000001
+       },
+       "orientation": "XYZ",
+       "unloadingGroup": 1,
+       "candidateSource": "BLOCK",
+       "balanceInfluence": {
+        "lateralPercent": 0,
+        "longitudinalPercent": 47.10071210579858
+       },
+       "rejectedConstraintsBeforePlacement": []
+      },
+      "packagingProfile": {
+       "type": "PALLETIZED_CARTONS",
+       "fragile": false,
+       "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+       "forkEntry": "TWO_WAY",
+       "stackable": true,
+       "handlingMode": "FORKLIFT",
+       "forkEntryAxis": "LENGTH",
+       "schemaVersion": "2.5",
+       "transportUnit": "PALLET",
+       "maxStackLayers": 2,
+       "suggestionSource": null,
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "confirmationStatus": "USER_SUPPLIED",
+       "dataClassification": "CASE_INPUT",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "orientationPolicy": "FIXED_ORIENTATION",
+      "compatibilityGroup": "GENERAL",
+      "incompatibleGroups": [],
+      "maxSupportedWeight": 600,
+      "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+      "cargoPhysicalProfile": {
+       "massKg": 260,
+       "fragile": false,
+       "quantity": 1,
+       "cargoName": "堆高托盘 · 测试输入",
+       "forkEntry": "TWO_WAY",
+       "packaging": {
+        "type": "PALLETIZED_CARTONS",
+        "fragile": false,
+        "material": "CORRUGATED_FIBREBOARD_ON_PALLET",
+        "forkEntry": "TWO_WAY",
+        "stackable": true,
+        "handlingMode": "FORKLIFT",
+        "forkEntryAxis": "LENGTH",
+        "schemaVersion": "2.5",
+        "transportUnit": "PALLET",
+        "maxStackLayers": 2,
+        "suggestionSource": null,
+        "orientationPolicy": "FIXED_ORIENTATION",
+        "confirmationStatus": "USER_SUPPLIED",
+        "dataClassification": "CASE_INPUT",
+        "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+        "palletJackCompatible": false,
+        "dangerousGoodsContext": "NOT_DECLARED",
+        "maximumSupportedWeightKg": 600
+       },
+       "stackable": true,
+       "dimensions": {
+        "widthMm": 2000,
+        "heightMm": 500,
+        "lengthMm": 1200
+       },
+       "destination": "HAM",
+       "handlingMode": "FORKLIFT",
+       "portSequence": 1,
+       "forkEntryAxis": "LENGTH",
+       "packagingType": "PALLETIZED_CARTONS",
+       "schemaVersion": "2.5",
+       "visualProfile": {
+        "assetKey": "cargo_palletized",
+        "labelMode": "CARGO_NAME",
+        "materialFamily": "CORRUGATED_FIBREBOARD_ON_PALLET"
+       },
+       "maxStackLayers": 2,
+       "solverEnvelope": {
+        "fragile": false,
+        "stackable": true,
+        "dimensions": {
+         "widthMm": 2000,
+         "heightMm": 500,
+         "lengthMm": 1200
+        },
+        "truthModel": "AXIS_ALIGNED_PHYSICAL_ENVELOPE",
+        "maxStackLayers": 2,
+        "allowedOrientations": [
+         {
+          "h": 500,
+          "l": 1200,
+          "w": 2000,
+          "label": "XYZ"
+         }
+        ],
+        "maximumSupportedWeightKg": 600
+       },
+       "orientationPolicy": "FIXED_ORIENTATION",
+       "woodPackagingClass": "PALLET_WOOD_STATUS_REQUIRED",
+       "palletJackCompatible": false,
+       "dangerousGoodsContext": "NOT_DECLARED",
+       "maximumSupportedWeightKg": 600
+      },
+      "palletJackCompatible": false,
+      "dangerousGoodsContext": "NOT_DECLARED",
+      "maximumSupportedWeightKg": 600
+     }
+    ],
+    "totalWeight": 1300,
+    "containerInfo": {
+     "mode": "REFERENCE_PROFILE",
+     "name": "20GP dry container",
+     "tare": 2180,
+     "source": {
+      "url": "https://www.maersk.com/~/media_sc9/maersk/local-information/files/europe/greece/import/equipment-flyer.pdf",
+      "authority": "Maersk",
+      "verifiedAt": "2026-08-24",
+      "classification": "CARRIER_REFERENCE"
+     },
+     "typeId": "20GP",
+     "payload": 28300,
+     "maxGross": 30480,
+     "doorWidth": 2340,
+     "maxWeight": 28300,
+     "capacityM3": 33.2,
+     "doorHeight": 2280,
+     "innerWidth": 2352,
+     "limitation": "Reference profile only. The released unit, CSC plate, carrier booking and terminal acceptance control.",
+     "innerHeight": 2393,
+     "innerLength": 5898,
+     "isoTypeCode": "22G1"
+    },
+    "evidenceScope": "三维规划、支撑、门洞、质量矩及取放路径计算；现场设备和出运放行仍使用准备度证据流程",
+    "layoutQuality": {
+     "model": "PORTCUBE_LAYOUT_QUALITY_V2_3",
+     "bounds": {
+      "maxX": 4214.1,
+      "maxY": 1000,
+      "maxZ": 2176,
+      "minX": 614.1,
+      "minY": 0,
+      "minZ": 176
+     },
+     "policy": {
+      "lowFillThreshold": 0.65,
+      "crossSectionSliceMm": 100,
+      "occupancyGridCellMm": 125,
+      "contactGapToleranceMm": 30,
+      "interiorGapThresholdMm": 150,
+      "fragmentationValleyThreshold": 0.03
+     },
+     "voidRegions": {
+      "reserve": [
+       {
+        "volume": 27195925728,
+        "boundsMm": {
+         "maxX": 5898,
+         "maxY": 2393,
+         "maxZ": 2352,
+         "minX": 0,
+         "minY": 0,
+         "minZ": 0
+        },
+        "dimensions": {
+         "h": 2393,
+         "l": 5898,
+         "w": 2352
+        },
+        "touchesTop": true,
+        "canFitCargo": true,
+        "touchesDoor": true
+       }
+      ],
+      "internal": []
+     },
+     "analysisNotes": [
+      "Internal void is free grid volume below the local cargo envelope and inside the occupied length/lateral span.",
+      "Reserve excludes cells classified as internal fragmented void.",
+      "All thresholds are PORTCUBE project policy, not statutory limits."
+     ],
+     "occupiedDepth": 3600.0000000000005,
+     "reserveVolume": 27195925728,
+     "maxInteriorGap": 1200,
+     "meanInteriorGap": 1200,
+     "contactRatioMean": 0.3,
+     "narrowVoidVolume": 0,
+     "wallContactRatio": 0,
+     "exactVoidGeometry": {
+      "model": "EXACT_FACE_SLAB_VOID_V1",
+      "definition": "Exact empty volume below each occupied depth slab maximum cargo height and between its actual lateral bounds; proven no-stack headspace is separately integrated.",
+      "headspaceByCargo": {},
+      "internalVoidVolume": 0,
+      "unexplainedVoidVolume": 0,
+      "nonStackableHeadspaceVolume": 0
+     },
+     "interiorGapVolume": 1200000000,
+     "internalVoidRatio": 0,
+     "crossSectionReport": [
+      {
+       "sliceEnd": 100,
+       "fillRatio": 0,
+       "sliceIndex": 0,
+       "sliceStart": 0,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 50
+      },
+      {
+       "sliceEnd": 200,
+       "fillRatio": 0,
+       "sliceIndex": 1,
+       "sliceStart": 100,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 150
+      },
+      {
+       "sliceEnd": 300,
+       "fillRatio": 0,
+       "sliceIndex": 2,
+       "sliceStart": 200,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 250
+      },
+      {
+       "sliceEnd": 400,
+       "fillRatio": 0,
+       "sliceIndex": 3,
+       "sliceStart": 300,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 350
+      },
+      {
+       "sliceEnd": 500,
+       "fillRatio": 0,
+       "sliceIndex": 4,
+       "sliceStart": 400,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 450
+      },
+      {
+       "sliceEnd": 600,
+       "fillRatio": 0,
+       "sliceIndex": 5,
+       "sliceStart": 500,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 550
+      },
+      {
+       "sliceEnd": 700,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 6,
+       "sliceStart": 600,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 650,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 800,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 7,
+       "sliceStart": 700,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 750,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 900,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 8,
+       "sliceStart": 800,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 850,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1000,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 9,
+       "sliceStart": 900,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 950,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1100,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 10,
+       "sliceStart": 1000,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1050,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1200,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 11,
+       "sliceStart": 1100,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1150,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1300,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 12,
+       "sliceStart": 1200,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1250,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1400,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 13,
+       "sliceStart": 1300,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1350,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1500,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 14,
+       "sliceStart": 1400,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1450,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1600,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 15,
+       "sliceStart": 1500,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1550,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1700,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 16,
+       "sliceStart": 1600,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1650,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1800,
+       "fillRatio": 0.17767240619607644,
+       "sliceIndex": 17,
+       "sliceStart": 1700,
+       "internalVoid": 0,
+       "occupiedArea": 1000000,
+       "slicePosition": 1750,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 1900,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 18,
+       "sliceStart": 1800,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 1850,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2000,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 19,
+       "sliceStart": 1900,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 1950,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2100,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 20,
+       "sliceStart": 2000,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2050,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2200,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 21,
+       "sliceStart": 2100,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2150,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2300,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 22,
+       "sliceStart": 2200,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2250,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2400,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 23,
+       "sliceStart": 2300,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2350,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2500,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 24,
+       "sliceStart": 2400,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2450,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2600,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 25,
+       "sliceStart": 2500,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2550,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2700,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 26,
+       "sliceStart": 2600,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2650,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2800,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 27,
+       "sliceStart": 2700,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2750,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 2900,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 28,
+       "sliceStart": 2800,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2850,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3000,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 29,
+       "sliceStart": 2900,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 2950,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3100,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 30,
+       "sliceStart": 3000,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3050,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3200,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 31,
+       "sliceStart": 3100,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3150,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3300,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 32,
+       "sliceStart": 3200,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3250,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3400,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 33,
+       "sliceStart": 3300,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3350,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3500,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 34,
+       "sliceStart": 3400,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3450,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3600,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 35,
+       "sliceStart": 3500,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3550,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3700,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 36,
+       "sliceStart": 3600,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3650,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3800,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 37,
+       "sliceStart": 3700,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3750,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 3900,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 38,
+       "sliceStart": 3800,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3850,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 4000,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 39,
+       "sliceStart": 3900,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 3950,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 4100,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 40,
+       "sliceStart": 4000,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 4050,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 4200,
+       "fillRatio": 0.3553448123921529,
+       "sliceIndex": 41,
+       "sliceStart": 4100,
+       "internalVoid": 0,
+       "occupiedArea": 2000000,
+       "slicePosition": 4150,
+       "fragmentationDelta": 0
+      },
+      {
+       "sliceEnd": 4300,
+       "fillRatio": 0,
+       "sliceIndex": 42,
+       "sliceStart": 4200,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4250
+      },
+      {
+       "sliceEnd": 4400,
+       "fillRatio": 0,
+       "sliceIndex": 43,
+       "sliceStart": 4300,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4350
+      },
+      {
+       "sliceEnd": 4500,
+       "fillRatio": 0,
+       "sliceIndex": 44,
+       "sliceStart": 4400,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4450
+      },
+      {
+       "sliceEnd": 4600,
+       "fillRatio": 0,
+       "sliceIndex": 45,
+       "sliceStart": 4500,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4550
+      },
+      {
+       "sliceEnd": 4700,
+       "fillRatio": 0,
+       "sliceIndex": 46,
+       "sliceStart": 4600,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4650
+      },
+      {
+       "sliceEnd": 4800,
+       "fillRatio": 0,
+       "sliceIndex": 47,
+       "sliceStart": 4700,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4750
+      },
+      {
+       "sliceEnd": 4900,
+       "fillRatio": 0,
+       "sliceIndex": 48,
+       "sliceStart": 4800,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4850
+      },
+      {
+       "sliceEnd": 5000,
+       "fillRatio": 0,
+       "sliceIndex": 49,
+       "sliceStart": 4900,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 4950
+      },
+      {
+       "sliceEnd": 5100,
+       "fillRatio": 0,
+       "sliceIndex": 50,
+       "sliceStart": 5000,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5050
+      },
+      {
+       "sliceEnd": 5200,
+       "fillRatio": 0,
+       "sliceIndex": 51,
+       "sliceStart": 5100,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5150
+      },
+      {
+       "sliceEnd": 5300,
+       "fillRatio": 0,
+       "sliceIndex": 52,
+       "sliceStart": 5200,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5250
+      },
+      {
+       "sliceEnd": 5400,
+       "fillRatio": 0,
+       "sliceIndex": 53,
+       "sliceStart": 5300,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5350
+      },
+      {
+       "sliceEnd": 5500,
+       "fillRatio": 0,
+       "sliceIndex": 54,
+       "sliceStart": 5400,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5450
+      },
+      {
+       "sliceEnd": 5600,
+       "fillRatio": 0,
+       "sliceIndex": 55,
+       "sliceStart": 5500,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5550
+      },
+      {
+       "sliceEnd": 5700,
+       "fillRatio": 0,
+       "sliceIndex": 56,
+       "sliceStart": 5600,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5650
+      },
+      {
+       "sliceEnd": 5800,
+       "fillRatio": 0,
+       "sliceIndex": 57,
+       "sliceStart": 5700,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5750
+      },
+      {
+       "sliceEnd": 5898,
+       "fillRatio": 0,
+       "sliceIndex": 58,
+       "sliceStart": 5800,
+       "internalVoid": 0,
+       "occupiedArea": 0,
+       "slicePosition": 5849
+      }
+     ],
+     "dataClassification": "PROJECT_POLICY",
+     "enclosedVoidVolume": 0,
+     "gapClassifications": [
+      {
+       "gap": 1200,
+       "area": 1000000,
+       "axis": "x",
+       "policy": "PROJECT_POLICY",
+       "volume": 1200000000,
+       "cargoIds": [
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+       ],
+       "classification": "INTERIOR_GAP"
+      }
+     ],
+     "internalVoidVolume": 0,
+     "occupiedDepthRatio": 0.6103763987792473,
+     "reserveRegionCount": 1,
+     "crossSectionFillP10": 0.17767240619607644,
+     "occupiedLengthRatio": 0.6103763987792473,
+     "residualRegionCount": 1,
+     "crossSectionFillMean": 0.29612067699346073,
+     "cargoContactRatioMean": 0.3,
+     "voxelEstimateRevision": "VOXEL_AND_SLICE_ESTIMATE_V2_3",
+     "crossSectionSmoothness": 0.994923645537255,
+     "internalVoidRegionCount": 0,
+     "largestContiguousReserve": 27195925728,
+     "maxInteriorHorizontalGap": 1200,
+     "lowFillInteriorSliceCount": 36,
+     "meanInteriorHorizontalGap": 1200,
+     "crossSectionFillMinimumInterior": 0.17767240619607644
+    },
+    "placementHash": "c90a38a22b078c66",
+    "solverVersion": "2.6.0-rebuild",
+    "unloadedCargo": [],
+    "constraintMeta": {
+     "translation": {
+      "mode": "UNCHANGED",
+      "shiftX": 0,
+      "shiftZ": 0
+     }
+    },
+    "generationPhase": "TASK_CONTAINER_VALIDATION",
+    "sourceAlgorithm": "hybrid-v2.6-multi-container",
+    "sourceRuntimeMs": 0,
+    "totalCargoCount": 5,
+    "totalCargoInput": 5,
+    "loadDistribution": {
+     "claim": "ENGINEERING_GUIDANCE",
+     "model": "PORTCUBE_LOAD_DISTRIBUTION_FULL_SPAN_V1",
+     "rules": [
+      {
+       "id": "CTU-2014-PACKING-COG",
+       "level": "ENGINEERING_GUIDANCE",
+       "title": "CTU Code packing and centre-of-gravity guidance",
+       "clause": "Annex 7, section 3; general ±5%, particular circumstances up to ±10%",
+       "sourceUrl": "https://wiki.unece.org/spaces/TransportSustainableCTUCode/pages/23102046/3%2BPrinciples%2Bof%2Bpacking"
+      },
+      {
+       "id": "CTU-2014-CONCENTRATED-LOAD",
+       "level": "ENGINEERING_GUIDANCE",
+       "title": "Concentrated floor load requires CTU operator consultation",
+       "clause": "Specific packing and securing calculations",
+       "sourceUrl": "https://wiki.unece.org/spaces/TransportSustainableCTUCode/pages/23102061/Appendix%2B4.%2BSpecific%2Bpacking%2Band%2Bsecuring%2Bcalculations"
+      }
+     ],
+     "status": "WITHIN_GUIDANCE",
+     "segments": {
+      "transverse": [
+       {
+        "toMm": 784,
+        "index": 1,
+        "fromMm": 0,
+        "massKg": 395.2
+       },
+       {
+        "toMm": 1568,
+        "index": 2,
+        "fromMm": 784,
+        "massKg": 509.6
+       },
+       {
+        "toMm": 2352,
+        "index": 3,
+        "fromMm": 1568,
+        "massKg": 395.2
+       }
+      ],
+      "longitudinal": [
+       {
+        "toMm": 983,
+        "index": 1,
+        "fromMm": 0,
+        "massKg": 79.928
+       },
+       {
+        "toMm": 1966,
+        "index": 2,
+        "fromMm": 983,
+        "massKg": 245.895
+       },
+       {
+        "toMm": 2949,
+        "index": 3,
+        "fromMm": 1966,
+        "massKg": 425.967
+       },
+       {
+        "toMm": 3932,
+        "index": 4,
+        "fromMm": 2949,
+        "massKg": 425.967
+       },
+       {
+        "toMm": 4915,
+        "index": 5,
+        "fromMm": 3932,
+        "massKg": 122.243
+       },
+       {
+        "toMm": 5898,
+        "index": 6,
+        "fromMm": 4915,
+        "massKg": 0
+       }
+      ]
+     },
+     "totalMassKg": 1300,
+     "centreOfGravity": {
+      "xMm": 2654.1,
+      "yMm": 450,
+      "zMm": 1176,
+      "offsetMm": {
+       "lateral": 0,
+       "longitudinal": -294.9000000000001
+      },
+      "denominatorMm": {
+       "lateral": 2352,
+       "longitudinal": 5898
+      },
+      "normalization": "CARGO_COG_FULL_INNER_SPAN_V1",
+      "guidanceStatus": "WITHIN_GENERAL_GUIDANCE",
+      "lateralOffsetPercent": 0,
+      "legacyHalfSpanPercent": {
+       "lateral": 0,
+       "longitudinal": 10.000000000000004
+      },
+      "longitudinalOffsetPercent": 5
+     },
+     "concentratedLoad": {
+      "status": "NO_TRIGGER_IDENTIFIED",
+      "trigger": "item mass >= 25% of recorded payload or explicit cargo flag",
+      "candidates": [],
+      "envelopeFailures": [],
+      "operatorEnvelope": null,
+      "specificEnvelopeStatus": "SPECIFIC_ENVELOPE_NOT_AVAILABLE"
+     }
+    },
+    "spaceUtilization": 18.07450724273412,
+    "portAccessibility": {
+     "calls": [
+      {
+       "blocked": [],
+       "portCode": "PORT-1",
+       "afterCount": 0,
+       "beforeCount": 5,
+       "blockedCount": 0,
+       "portSequence": 1,
+       "removedCount": 5,
+       "scheduledCount": 5,
+       "removedCargoIds": [
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+       ],
+       "postUnloadStability": {
+        "status": "EMPTY_CTU",
+        "violations": [],
+        "invalidCount": 0,
+        "warningCount": 0
+       },
+       "futureCargoRehandleCount": 0,
+       "postUnloadLoadDistribution": {
+        "status": "EMPTY_CTU",
+        "centreOfGravity": {
+         "xMm": 0,
+         "yMm": 0,
+         "zMm": 0,
+         "guidanceStatus": "WITHIN_GENERAL_GUIDANCE",
+         "lateralOffsetPercent": 0,
+         "longitudinalOffsetPercent": 0
+        }
+       }
+      }
+     ],
+     "model": "PORTCUBE_FULL_PORT_UNLOAD_REPLAY_V2_4",
+     "policy": {
+      "doorSide": "higher x coordinate",
+      "dataClassification": "PROJECT_POLICY",
+      "samePortReorderAllowed": true,
+      "futurePortRehandleAllowed": false
+     },
+     "status": "FULL_UNLOAD_PASS",
+     "accessPass": true,
+     "unloadOrder": [
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+     ],
+     "blockedCount": 0,
+     "rehandleCount": 0,
+     "rehandleCargoIds": [],
+     "postUnloadStabilityPass": true
+    },
+    "voidJustification": {
+     "model": "PORTCUBE_VOID_JUSTIFICATION_V2_5",
+     "zones": [
+      {
+       "id": "VOID-R-001",
+       "label": "外部连通余隙 · 用途未核实",
+       "reason": "与外部连通的未占用空间；连通区域的外接框不等于可用空箱，尚无证据将整区认定为港序通道、系固预留或可补货空间。",
+       "volume": 27195925728,
+       "isLarge": true,
+       "boundsMm": {
+        "maxX": 5898,
+        "maxY": 2393,
+        "maxZ": 2352,
+        "minX": 0,
+        "minY": 0,
+        "minZ": 0
+       },
+       "volumeM3": 27.196,
+       "dimensions": {
+        "h": 2393,
+        "l": 5898,
+        "w": 2352
+       },
+       "touchesTop": true,
+       "touchesDoor": true,
+       "securingNeed": null,
+       "classification": "UNASSESSED_RESERVE",
+       "linkedCargoIds": [
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+        "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5"
+       ],
+       "refillPotential": {
+        "reason": "UNASSESSED_RESERVE",
+        "status": "NOT_TARGETED"
+       },
+       "dataClassification": "DETERMINISTIC_GEOMETRIC_ANALYSIS"
+      }
+     ],
+     "policy": {
+      "doorSide": "HIGH_X",
+      "minimumLargeVolume": 25000000,
+      "minimumReportedVolume": 1000000
+     },
+     "byClass": {
+      "PORT_ACCESS": {
+       "count": 0,
+       "label": "港序作业通道",
+       "volume": 0,
+       "classification": "PORT_ACCESS"
+      },
+      "DOOR_CLEARANCE": {
+       "count": 0,
+       "label": "门区净空",
+       "volume": 0,
+       "classification": "DOOR_CLEARANCE"
+      },
+      "SECURING_SPACE": {
+       "count": 0,
+       "label": "系固作业区",
+       "volume": 0,
+       "classification": "SECURING_SPACE"
+      },
+      "USABLE_RESERVE": {
+       "count": 0,
+       "label": "可用预留",
+       "volume": 0,
+       "classification": "USABLE_RESERVE"
+      },
+      "UNEXPLAINED_VOID": {
+       "count": 0,
+       "label": "未解释剩余空间",
+       "volume": 0,
+       "classification": "UNEXPLAINED_VOID"
+      },
+      "GEOMETRIC_RESIDUAL": {
+       "count": 0,
+       "label": "几何余隙",
+       "volume": 0,
+       "classification": "GEOMETRIC_RESIDUAL"
+      },
+      "UNASSESSED_RESERVE": {
+       "count": 1,
+       "label": "外部连通余隙 · 用途未核实",
+       "volume": 27195925728,
+       "classification": "UNASSESSED_RESERVE"
+      },
+      "STRUCTURAL_CLEARANCE": {
+       "count": 0,
+       "label": "结构净空",
+       "volume": 0,
+       "classification": "STRUCTURAL_CLEARANCE"
+      },
+      "NON_STACKABLE_HEADSPACE": {
+       "count": 0,
+       "label": "不可堆叠货物上方空间",
+       "volume": 0,
+       "classification": "NON_STACKABLE_HEADSPACE"
+      }
+     },
+     "verdict": "ALL_MATERIAL_VOIDS_EXPLAINED",
+     "zoneCount": 1,
+     "exactGeometry": {
+      "model": "EXACT_FACE_SLAB_VOID_V1",
+      "definition": "Exact empty volume below each occupied depth slab maximum cargo height and between its actual lateral bounds; proven no-stack headspace is separately integrated.",
+      "headspaceByCargo": {},
+      "internalVoidVolume": 0,
+      "unexplainedVoidVolume": 0,
+      "nonStackableHeadspaceVolume": 0
+     },
+     "largeVoidCount": 1,
+     "analysisRevision": "2.5.1-constraint-headspace",
+     "dataClassification": "PROJECT_GEOMETRIC_ANALYSIS",
+     "explainedVoidVolume": 0,
+     "maxUnexplainedGapMm": 1200,
+     "unexplainedVoidRatio": 0,
+     "unexplainedVoidVolume": 0,
+     "allLargeVoidsJustified": false,
+     "largestUnexplainedZone": null,
+     "repairCandidateCargoIds": [],
+     "unassessedReserveVolume": 27195925728
+    },
+    "handlingAssumptions": [],
+    "operationFeasibility": {
+     "model": "PORTCUBE_CANONICAL_OPERATION_GEOMETRY_V2_3",
+     "policy": {
+      "top": 35,
+      "side": 30,
+      "bottom": 5,
+      "collision": 2,
+      "dataClassification": "PROJECT_POLICY"
+     },
+     "reasons": [],
+     "doorSide": "higher x coordinate",
+     "widthAxis": "z",
+     "lengthAxis": "x",
+     "gravityAxis": "y",
+     "blockedCount": 0,
+     "blockedCargoIds": [],
+     "loadingSequence": [
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U5",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U3",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U4",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U1",
+      "ROW_ff9026f4-71dd-4399-a1c2-40558f74b454:U2"
+     ],
+     "forkApproachPass": true,
+     "doorClearancePass": true,
+     "operationPathPass": true,
+     "cargoInsertionPass": true
+    },
+    "runtimeTieBreakClass": 0,
+    "mandatoryGateViolationCount": 0
+   },
+   "label": "柜 1",
+   "status": "DRAFT",
+   "equipment": {
+    "mode": "REFERENCE_PROFILE",
+    "name": "20GP dry container",
+    "tare": 2180,
+    "source": {
+     "url": "https://www.maersk.com/~/media_sc9/maersk/local-information/files/europe/greece/import/equipment-flyer.pdf",
+     "authority": "Maersk",
+     "verifiedAt": "2026-08-24",
+     "classification": "CARRIER_REFERENCE"
+    },
+    "typeId": "20GP",
+    "payload": 28300,
+    "maxGross": 30480,
+    "doorWidth": 2340,
+    "maxWeight": 28300,
+    "capacityM3": 33.2,
+    "doorHeight": 2280,
+    "innerWidth": 2352,
+    "limitation": "Reference profile only. The released unit, CSC plate, carrier booking and terminal acceptance control.",
+    "innerHeight": 2393,
+    "innerLength": 5898,
+    "isoTypeCode": "22G1"
+   },
+   "containerId": "CTU_910eefae-0730-4245-9a7f-82bfa3dc5c2f",
+   "planVersion": 1,
+   "lockedUnitIds": [],
+   "equipmentConfiguration": {
+    "source": "REFERENCE_PROFILE",
+    "handlingEvidence": null
+   }
+  }
+ ],
+ "container": null,
+ "containerSpec": null
+}

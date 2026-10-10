@@ -1,0 +1,612 @@
+{
+  "generatedAt": "2026-06-30T10:11:54.109Z",
+  "baseUrl": "http://127.0.0.1:3000/api",
+  "imageDir": "docs/final_product_integration/test-assets/vlm-online",
+  "status": {
+    "available": true,
+    "model": "Qwen/Qwen3-VL-32B-Instruct",
+    "timeoutMs": 45000,
+    "maxAttempts": 2
+  },
+  "images": [
+    {
+      "fileName": "carton_box.jpg",
+      "bytes": 2614646,
+      "attempts": [
+        {
+          "fileName": "carton_box.jpg",
+          "attemptNo": 1,
+          "httpStatus": 200,
+          "elapsedMs": 90242,
+          "passed": false,
+          "code": 502,
+          "message": "VLM recognition failed, manual input required",
+          "errorCode": "VLM_TIMEOUT",
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": false,
+              "elapsedMs": 0,
+              "model": "Qwen/Qwen3-VL-32B-Instruct",
+              "httpStatus": null,
+              "errorCode": "VLM_TIMEOUT",
+              "message": "timeout of 45000ms exceeded"
+            },
+            {
+              "attempt": 2,
+              "ok": false,
+              "elapsedMs": 0,
+              "model": "Qwen/Qwen3-VL-32B-Instruct",
+              "httpStatus": null,
+              "errorCode": "VLM_TIMEOUT",
+              "message": "timeout of 45000ms exceeded"
+            }
+          ],
+          "completeness": 0,
+          "presentFields": [],
+          "extracted": null
+        },
+        {
+          "fileName": "carton_box.jpg",
+          "attemptNo": 2,
+          "httpStatus": 200,
+          "elapsedMs": 32204,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 32131,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "纸箱装衣物及家居用品",
+            "possible_sku": "",
+            "packaging_type": "carton",
+            "material": "cardboard",
+            "is_wood_packaging": false,
+            "is_fragile": false,
+            "is_stackable": true,
+            "visible_label_text": "ALFA MOVING, OVERSEAS, www.skovdestadsbud.se, Innehåll/Content, Lampskärmar, FILTAR, MÖSSOR, LEGO EDVIN, HANDDUKAR, GARD",
+            "risk_flags": [],
+            "confidence": 0.9,
+            "manual_review_required": false,
+            "length": 500,
+            "width": 400,
+            "height": 400,
+            "weight": 5
+          }
+        }
+      ],
+      "classification": {
+        "label": "BACKUP_CANDIDATE",
+        "score": 8.6
+      }
+    },
+    {
+      "fileName": "labeled_carton.jpg",
+      "bytes": 742594,
+      "attempts": [
+        {
+          "fileName": "labeled_carton.jpg",
+          "attemptNo": 1,
+          "httpStatus": 200,
+          "elapsedMs": 27024,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 26992,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "minikura Library 储物箱",
+            "possible_sku": "",
+            "packaging_type": "carton",
+            "material": "cardboard",
+            "is_wood_packaging": false,
+            "is_fragile": true,
+            "is_stackable": true,
+            "visible_label_text": "minikura Library\n・お預かりできる重さは1ボックスにつき、20kgまでです\n・重量を超過した場合、超過料金が発生いたします\n詳しくは預け入れページをご確認ください。\nお預かり可能なもの\nCD・DVD\nファイル\n楽譜\nお預かり",
+            "risk_flags": [
+              "fragile"
+            ],
+            "confidence": 0.85,
+            "manual_review_required": true,
+            "length": 450,
+            "width": 350,
+            "height": 300,
+            "weight": 5
+          }
+        },
+        {
+          "fileName": "labeled_carton.jpg",
+          "attemptNo": 2,
+          "httpStatus": 200,
+          "elapsedMs": 14232,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 14190,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "minikura Library 储物箱",
+            "possible_sku": "",
+            "packaging_type": "carton",
+            "material": "cardboard",
+            "is_wood_packaging": false,
+            "is_fragile": true,
+            "is_stackable": true,
+            "visible_label_text": "minikura Library\n・お預かりできる重さは1ボックスにつき、20kgまでです\n・重量を超過した場合、超過料金が発生いたします\n詳しくは預け入れページをご確認ください。\nお預かり可能なもの\nCD・DVD・ゲームソフト\nファイル\n",
+            "risk_flags": [
+              "fragile"
+            ],
+            "confidence": 0.9,
+            "manual_review_required": true,
+            "length": 500,
+            "width": 350,
+            "height": 300,
+            "weight": 5
+          }
+        }
+      ],
+      "classification": {
+        "label": "BEST_CANDIDATE",
+        "score": 9.8
+      }
+    },
+    {
+      "fileName": "pallet_wood.jpg",
+      "bytes": 267320,
+      "attempts": [
+        {
+          "fileName": "pallet_wood.jpg",
+          "attemptNo": 1,
+          "httpStatus": 200,
+          "elapsedMs": 11476,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 11461,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "木托盘",
+            "possible_sku": "",
+            "packaging_type": "pallet",
+            "material": "wood",
+            "is_wood_packaging": true,
+            "is_fragile": false,
+            "is_stackable": true,
+            "visible_label_text": "RE 303",
+            "risk_flags": [
+              "wood_packaging_missing_ippc"
+            ],
+            "confidence": 0.85,
+            "manual_review_required": true,
+            "length": 1200,
+            "width": 800,
+            "height": 140,
+            "weight": 15
+          }
+        },
+        {
+          "fileName": "pallet_wood.jpg",
+          "attemptNo": 2,
+          "httpStatus": 200,
+          "elapsedMs": 8986,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 8963,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "木托盘",
+            "possible_sku": "",
+            "packaging_type": "pallet",
+            "material": "wood",
+            "is_wood_packaging": true,
+            "is_fragile": false,
+            "is_stackable": true,
+            "visible_label_text": "RE 303",
+            "risk_flags": [
+              "wood_packaging_missing_ippc"
+            ],
+            "confidence": 0.85,
+            "manual_review_required": true,
+            "length": 1200,
+            "width": 800,
+            "height": 140,
+            "weight": 15
+          }
+        }
+      ],
+      "classification": {
+        "label": "BEST_CANDIDATE",
+        "score": 9.7
+      }
+    },
+    {
+      "fileName": "warehouse_mixed_goods.jpg",
+      "bytes": 856880,
+      "attempts": [
+        {
+          "fileName": "warehouse_mixed_goods.jpg",
+          "attemptNo": 1,
+          "httpStatus": 200,
+          "elapsedMs": 15824,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 15784,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "纸箱装货物",
+            "possible_sku": "",
+            "packaging_type": "carton",
+            "material": "cardboard",
+            "is_wood_packaging": false,
+            "is_fragile": false,
+            "is_stackable": true,
+            "visible_label_text": "",
+            "risk_flags": [],
+            "confidence": 0.4,
+            "manual_review_required": true,
+            "length": 400,
+            "width": 300,
+            "height": 250,
+            "weight": 5
+          }
+        },
+        {
+          "fileName": "warehouse_mixed_goods.jpg",
+          "attemptNo": 2,
+          "httpStatus": 200,
+          "elapsedMs": 24102,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 24061,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "纸箱装货物",
+            "possible_sku": "",
+            "packaging_type": "carton",
+            "material": "cardboard",
+            "is_wood_packaging": false,
+            "is_fragile": false,
+            "is_stackable": true,
+            "visible_label_text": "",
+            "risk_flags": [],
+            "confidence": 0.4,
+            "manual_review_required": true,
+            "length": 400,
+            "width": 300,
+            "height": 250,
+            "weight": 5
+          }
+        }
+      ],
+      "classification": {
+        "label": "BEST_CANDIDATE",
+        "score": 8.8
+      }
+    },
+    {
+      "fileName": "wrapped_pallet.jpg",
+      "bytes": 899348,
+      "attempts": [
+        {
+          "fileName": "wrapped_pallet.jpg",
+          "attemptNo": 1,
+          "httpStatus": 200,
+          "elapsedMs": 16912,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 16862,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "果汁瓶装饮料及杂货混合货物",
+            "possible_sku": "",
+            "packaging_type": "mixed",
+            "material": "mixed",
+            "is_wood_packaging": true,
+            "is_fragile": true,
+            "is_stackable": true,
+            "visible_label_text": "Tropicana, PROMOTION, HESSING, EPAL, 02-5756-10",
+            "risk_flags": [
+              "wood_packaging_missing_ippc",
+              "fragile"
+            ],
+            "confidence": 0.6,
+            "manual_review_required": true,
+            "length": 1200,
+            "width": 800,
+            "height": 600,
+            "weight": 15
+          }
+        },
+        {
+          "fileName": "wrapped_pallet.jpg",
+          "attemptNo": 2,
+          "httpStatus": 200,
+          "elapsedMs": 10432,
+          "passed": true,
+          "code": 200,
+          "message": "Cargo recognized by VLM",
+          "errorCode": null,
+          "model": "Qwen/Qwen3-VL-32B-Instruct",
+          "serviceAttempts": [
+            {
+              "attempt": 1,
+              "ok": true,
+              "elapsedMs": 10409,
+              "model": "Qwen/Qwen3-VL-32B-Instruct"
+            }
+          ],
+          "completeness": 1,
+          "presentFields": [
+            "cargo_name",
+            "possible_sku",
+            "packaging_type",
+            "material",
+            "is_wood_packaging",
+            "is_fragile",
+            "is_stackable",
+            "visible_label_text",
+            "risk_flags",
+            "confidence",
+            "manual_review_required",
+            "length",
+            "width",
+            "height",
+            "weight"
+          ],
+          "extracted": {
+            "cargo_name": "果汁瓶装饮料及杂货混合货物",
+            "possible_sku": "",
+            "packaging_type": "mixed",
+            "material": "mixed",
+            "is_wood_packaging": true,
+            "is_fragile": false,
+            "is_stackable": true,
+            "visible_label_text": "Tropicana, PROMOTION, HESSING, EPAL, 02-5756-10",
+            "risk_flags": [
+              "wood_packaging_missing_ippc"
+            ],
+            "confidence": 0.6,
+            "manual_review_required": true,
+            "length": 1200,
+            "width": 800,
+            "height": 600,
+            "weight": 150
+          }
+        }
+      ],
+      "classification": {
+        "label": "BEST_CANDIDATE",
+        "score": 9.2
+      }
+    }
+  ],
+  "frontendUploadSummary": "最近一次 Playwright 记录：PASS，文件 docs/final_product_integration/test-assets/vlm-online/pallet_wood.jpg，接口调用 1 次。",
+  "summary": {
+    "backendTestedImages": 5,
+    "backendPassedImages": 5,
+    "backendStableImages": 4,
+    "bestImage": "labeled_carton.jpg",
+    "backupImages": [
+      "pallet_wood.jpg",
+      "wrapped_pallet.jpg",
+      "warehouse_mixed_goods.jpg",
+      "carton_box.jpg"
+    ],
+    "notRecommendedImages": [],
+    "fakeSuccessFound": false,
+    "usableForRecording": true
+  }
+}

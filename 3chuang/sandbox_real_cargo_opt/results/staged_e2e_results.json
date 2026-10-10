@@ -1,0 +1,520 @@
+{
+  "generatedAt": "2026-10-06T07:25:16.008Z",
+  "seed": 42,
+  "stages": {
+    "testA": [
+      {
+        "caseId": "REAL-PALLET-14-HAM",
+        "label": "真实托盘任务 · 14 件设备托盘 260kg 不可堆叠 · HAM",
+        "recommendation": {
+          "provenance": "adapter-override (native recommendation geometrically infeasible)",
+          "nativeTop": {
+            "typeId": "20GP",
+            "name": "20尺标准柜",
+            "score": 92,
+            "reason": "货物总体积21.8m³、总重3640kg，20尺柜容量匹配度最高，经济性最优"
+          },
+          "chosen": {
+            "typeId": "40GP",
+            "volumeUtil": 0.323,
+            "floorUtil": 0.594,
+            "feasible": true
+          },
+          "overrideReason": "原生推荐 20GP 不可行：有效地板需求 16.80m² 超地板 13.87m²",
+          "nativeFallback": true
+        },
+        "packed": {
+          "loaded": 14,
+          "totalInput": 14,
+          "loadRate": 1,
+          "utilization": 32.25,
+          "inputRatio": 32.25,
+          "loadedVolumeM3": 21.84,
+          "containerVolumeM3": 67.72,
+          "wallMs": 46.21,
+          "violations": [],
+          "violationCodes": [],
+          "validatorHard": 0,
+          "validatorStatus": "VALID",
+          "unloaded": 0,
+          "totalWeight": 3640,
+          "cog": {
+            "lateral": 0,
+            "longitudinal": 0.8311170212765957
+          }
+        },
+        "baseline40HQ": {
+          "utilization": 28.6,
+          "loaded": 14,
+          "totalInput": 14,
+          "wallMs": 81.46
+        },
+        "violations0": true
+      },
+      {
+        "caseId": "REAL-MULTICUST-16",
+        "label": "真实多客户任务 · 14×PALLET-A(客户F39) + 2×PALLET-B(客户44C)",
+        "recommendation": {
+          "provenance": "adapter-override (native recommendation geometrically infeasible)",
+          "nativeTop": {
+            "typeId": "20GP",
+            "name": "20尺标准柜",
+            "score": 92,
+            "reason": "货物总体积23.8m³、总重4000kg，20尺柜容量匹配度最高，经济性最优"
+          },
+          "chosen": {
+            "typeId": "40GP",
+            "volumeUtil": 0.352,
+            "floorUtil": 0.657,
+            "feasible": true
+          },
+          "overrideReason": "原生推荐 20GP 不可行：有效地板需求 18.60m² 超地板 13.87m²",
+          "nativeFallback": true
+        },
+        "packed": {
+          "loaded": 16,
+          "totalInput": 16,
+          "loadRate": 1,
+          "utilization": 35.17,
+          "inputRatio": 35.17,
+          "loadedVolumeM3": 23.82,
+          "containerVolumeM3": 67.72,
+          "wallMs": 7.29,
+          "violations": [],
+          "violationCodes": [],
+          "validatorHard": 0,
+          "validatorStatus": "VALID",
+          "unloaded": 0,
+          "totalWeight": 4000,
+          "cog": {
+            "lateral": 0,
+            "longitudinal": 0.2327127659574468
+          }
+        },
+        "baseline40HQ": {
+          "utilization": 31.2,
+          "loaded": 16,
+          "totalInput": 16,
+          "wallMs": 7.16
+        },
+        "violations0": true
+      },
+      {
+        "caseId": "REAL-DOCK-5-20GP",
+        "label": "真实月台叉车验收 · 5 件 1200x2000x500 禁旋转托盘",
+        "recommendation": {
+          "provenance": "native-rule-fallback (floor-verified)",
+          "nativeTop": {
+            "typeId": "20GP",
+            "name": "20尺标准柜",
+            "score": 92,
+            "reason": "货物总体积6.0m³、总重1300kg，20尺柜容量匹配度最高，经济性最优"
+          },
+          "chosen": {
+            "typeId": "20GP",
+            "volumeUtil": 0.181,
+            "floorUtil": 0.433,
+            "feasible": true
+          },
+          "overrideReason": null,
+          "nativeFallback": true
+        },
+        "packed": {
+          "loaded": 5,
+          "totalInput": 5,
+          "loadRate": 1,
+          "utilization": 18.07,
+          "inputRatio": 18.07,
+          "loadedVolumeM3": 6,
+          "containerVolumeM3": 33.2,
+          "wallMs": 5.13,
+          "violations": [],
+          "violationCodes": [],
+          "validatorHard": 0,
+          "validatorStatus": "VALID",
+          "unloaded": 0,
+          "totalWeight": 1300,
+          "cog": {
+            "lateral": 0,
+            "longitudinal": 8.138351983723297
+          }
+        },
+        "baseline40HQ": {
+          "utilization": 7.86,
+          "loaded": 5,
+          "totalInput": 5,
+          "wallMs": 4.49
+        },
+        "violations0": true
+      },
+      {
+        "caseId": "REAL-MULTIPORT-212",
+        "label": "真实多港任务 · 212 件 3 港卸货序（HAM/RTM/ANR）高密度约束",
+        "recommendation": {
+          "provenance": "native-rule-fallback (floor-verified)",
+          "nativeTop": {
+            "typeId": "40HQ",
+            "name": "40尺高柜",
+            "score": 92,
+            "reason": "货物体积较大需要40尺高柜，额外高度提供更多装载空间，避免超限"
+          },
+          "chosen": {
+            "typeId": "40HQ",
+            "volumeUtil": 0.794,
+            "floorUtil": 0.917,
+            "feasible": true
+          },
+          "overrideReason": null,
+          "nativeFallback": true
+        },
+        "packed": {
+          "loaded": 212,
+          "totalInput": 212,
+          "loadRate": 1,
+          "utilization": 79.43,
+          "inputRatio": 79.43,
+          "loadedVolumeM3": 60.65,
+          "containerVolumeM3": 76.35,
+          "wallMs": 160.66,
+          "violations": [],
+          "violationCodes": [],
+          "validatorHard": 0,
+          "validatorStatus": "VALID",
+          "unloaded": 0,
+          "totalWeight": 8623,
+          "cog": {
+            "lateral": 0.09330764661192492,
+            "longitudinal": 13.017463115097913
+          }
+        },
+        "baseline40HQ": {
+          "utilization": 79.43,
+          "loaded": 212,
+          "totalInput": 212,
+          "wallMs": 45.62
+        },
+        "violations0": true
+      },
+      {
+        "caseId": "REAL-DENSE-20GP",
+        "label": "真实货代凑整单 · 多 SKU 混装至 20GP ~90% 容积（LLM 小柜推荐场景）",
+        "recommendation": {
+          "provenance": "native-rule-fallback (floor-verified)",
+          "nativeTop": {
+            "typeId": "40GP",
+            "name": "40尺标准柜",
+            "score": 92,
+            "reason": "货物总体积30.1m³适合40尺柜，标准高度满足需求，性价比最优"
+          },
+          "chosen": {
+            "typeId": "40GP",
+            "volumeUtil": 0.445,
+            "floorUtil": 0.66,
+            "feasible": true
+          },
+          "overrideReason": null,
+          "nativeFallback": true
+        },
+        "packed": {
+          "loaded": 97,
+          "totalInput": 97,
+          "loadRate": 1,
+          "utilization": 44.47,
+          "inputRatio": 44.47,
+          "loadedVolumeM3": 30.11,
+          "containerVolumeM3": 67.72,
+          "wallMs": 33,
+          "violations": [],
+          "violationCodes": [],
+          "validatorHard": 0,
+          "validatorStatus": "VALID",
+          "unloaded": 0,
+          "totalWeight": 4748,
+          "cog": {
+            "lateral": 0,
+            "longitudinal": 2.1404414120615214
+          }
+        },
+        "baseline40HQ": {
+          "utilization": 39.44,
+          "loaded": 97,
+          "totalInput": 97,
+          "wallMs": 34.76
+        },
+        "violations0": true
+      }
+    ],
+    "testB": [
+      {
+        "caseId": "B1-1.5x",
+        "label": "真实 SKU 1.5 倍扩增（整件复制）",
+        "loaded": 244,
+        "totalInput": 424,
+        "loadRate": 0.575,
+        "utilization": 79.43,
+        "inputRatio": 158.86,
+        "loadedVolumeM3": 60.65,
+        "containerVolumeM3": 76.35,
+        "wallMs": 57.09,
+        "violations": [],
+        "violationCodes": [],
+        "validatorHard": 0,
+        "validatorStatus": "VALID",
+        "unloaded": 180,
+        "totalWeight": 6392,
+        "cog": {
+          "lateral": 0.7349748410002324,
+          "longitudinal": 9.869852691529307
+        }
+      },
+      {
+        "caseId": "B2-2.0x",
+        "label": "真实 SKU 2.0 倍饱和压榨",
+        "loaded": 244,
+        "totalInput": 424,
+        "loadRate": 0.575,
+        "utilization": 79.43,
+        "inputRatio": 158.86,
+        "loadedVolumeM3": 60.65,
+        "containerVolumeM3": 76.35,
+        "wallMs": 59.58,
+        "violations": [],
+        "violationCodes": [],
+        "validatorHard": 0,
+        "validatorStatus": "VALID",
+        "unloaded": 180,
+        "totalWeight": 6392,
+        "cog": {
+          "lateral": 0.7349748410002324,
+          "longitudinal": 9.869852691529307
+        }
+      },
+      {
+        "caseId": "B3-LCL",
+        "label": "多任务真实拼箱 LCL（托盘任务×2 + 多港任务，3 任务合并）",
+        "loaded": 32,
+        "totalInput": 233,
+        "loadRate": 0.137,
+        "utilization": 39.88,
+        "inputRatio": 118.49,
+        "loadedVolumeM3": 30.45,
+        "containerVolumeM3": 76.35,
+        "wallMs": 9.59,
+        "violations": [],
+        "violationCodes": [],
+        "validatorHard": 0,
+        "validatorStatus": "VALID",
+        "unloaded": 201,
+        "totalWeight": 5100,
+        "cog": {
+          "lateral": 2.524343070561563,
+          "longitudinal": 1.020155402586561
+        }
+      },
+      {
+        "caseId": "B3b-LCL-4task",
+        "label": "对照：4 任务全合并（含 14 件托盘任务，地板物理极限演示）",
+        "loaded": 20,
+        "totalInput": 247,
+        "loadRate": 0.081,
+        "utilization": 40.86,
+        "inputRatio": 147.09,
+        "loadedVolumeM3": 31.2,
+        "containerVolumeM3": 76.35,
+        "wallMs": 10.89,
+        "violations": [],
+        "violationCodes": [],
+        "validatorHard": 0,
+        "validatorStatus": "VALID",
+        "unloaded": 227,
+        "totalWeight": 5200,
+        "cog": {
+          "lateral": 0,
+          "longitudinal": 0.8311170212765957
+        }
+      }
+    ],
+    "reversePacking": [
+      {
+        "caseId": "REAL-PALLET-14-HAM",
+        "container": "40GP",
+        "residual": {
+          "maximalEmptySpace": {
+            "x": [
+              0,
+              0
+            ],
+            "z": [
+              0,
+              0
+            ],
+            "clearHeight": 0,
+            "volumeM3": 0
+          },
+          "totalFreeVolumeM3": 41.88,
+          "remainingPayloadKg": 22360
+        },
+        "estimate": {
+          "byVolume": 837,
+          "byMaximalEmptySpace": 0,
+          "byPayload": 1490,
+          "estimate": 502
+        },
+        "verification": {
+          "cartonsOffered": 502,
+          "cartonsLoaded": 144,
+          "totalLoaded": 158,
+          "violations": 0,
+          "violationCodes": [],
+          "validatorHard": 0,
+          "lifoIntact": true,
+          "heavyBottomIntact": true
+        }
+      },
+      {
+        "caseId": "REAL-MULTICUST-16",
+        "container": "40GP",
+        "residual": {
+          "maximalEmptySpace": {
+            "x": [
+              0,
+              0
+            ],
+            "z": [
+              0,
+              0
+            ],
+            "clearHeight": 0,
+            "volumeM3": 0
+          },
+          "totalFreeVolumeM3": 39.7,
+          "remainingPayloadKg": 22000
+        },
+        "estimate": {
+          "byVolume": 794,
+          "byMaximalEmptySpace": 0,
+          "byPayload": 1466,
+          "estimate": 476
+        },
+        "verification": {
+          "cartonsOffered": 476,
+          "cartonsLoaded": 108,
+          "totalLoaded": 124,
+          "violations": 0,
+          "violationCodes": [],
+          "validatorHard": 0,
+          "lifoIntact": true,
+          "heavyBottomIntact": true
+        }
+      },
+      {
+        "caseId": "REAL-DOCK-5-20GP",
+        "container": "20GP",
+        "residual": {
+          "maximalEmptySpace": {
+            "x": [
+              0,
+              0
+            ],
+            "z": [
+              0,
+              0
+            ],
+            "clearHeight": 0,
+            "volumeM3": 0
+          },
+          "totalFreeVolumeM3": 25.41,
+          "remainingPayloadKg": 27000
+        },
+        "estimate": {
+          "byVolume": 508,
+          "byMaximalEmptySpace": 0,
+          "byPayload": 1800,
+          "estimate": 304
+        },
+        "verification": {
+          "cartonsOffered": 304,
+          "cartonsLoaded": 64,
+          "totalLoaded": 69,
+          "violations": 0,
+          "violationCodes": [],
+          "validatorHard": 0,
+          "lifoIntact": true,
+          "heavyBottomIntact": true
+        }
+      },
+      {
+        "caseId": "REAL-MULTIPORT-212",
+        "container": "40HQ",
+        "residual": {
+          "maximalEmptySpace": {
+            "x": [
+              0,
+              0
+            ],
+            "z": [
+              0,
+              0
+            ],
+            "clearHeight": 0,
+            "volumeM3": 0
+          },
+          "totalFreeVolumeM3": 9.33,
+          "remainingPayloadKg": 17377
+        },
+        "estimate": {
+          "byVolume": 186,
+          "byMaximalEmptySpace": 0,
+          "byPayload": 1158,
+          "estimate": 111
+        },
+        "verification": {
+          "cartonsOffered": 111,
+          "cartonsLoaded": 18,
+          "totalLoaded": 230,
+          "violations": 0,
+          "violationCodes": [],
+          "validatorHard": 0,
+          "lifoIntact": true,
+          "heavyBottomIntact": true
+        }
+      },
+      {
+        "caseId": "REAL-DENSE-20GP",
+        "container": "40GP",
+        "residual": {
+          "maximalEmptySpace": {
+            "x": [
+              0,
+              0
+            ],
+            "z": [
+              0,
+              0
+            ],
+            "clearHeight": 0,
+            "volumeM3": 0
+          },
+          "totalFreeVolumeM3": 34.36,
+          "remainingPayloadKg": 21252
+        },
+        "estimate": {
+          "byVolume": 687,
+          "byMaximalEmptySpace": 0,
+          "byPayload": 1416,
+          "estimate": 412
+        },
+        "verification": {
+          "cartonsOffered": 412,
+          "cartonsLoaded": 226,
+          "totalLoaded": 323,
+          "violations": 0,
+          "violationCodes": [],
+          "validatorHard": 0,
+          "lifoIntact": true,
+          "heavyBottomIntact": true
+        }
+      }
+    ]
+  }
+}

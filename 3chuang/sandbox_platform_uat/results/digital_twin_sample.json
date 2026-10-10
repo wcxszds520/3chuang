@@ -1,0 +1,144 @@
+{
+ "schema": "PORTCUBE_DIGITAL_TWIN_V1",
+ "containerFrame": {
+  "axes": {
+   "x": "length(0=deep end, innerLength=door)",
+   "y": "height(0=floor, up)",
+   "z": "width"
+  },
+  "units": "mm",
+  "doorSide": "max-x",
+  "gravityAxis": "y",
+  "upVector": [
+   0,
+   1,
+   0
+  ],
+  "spec": {
+   "typeId": "40HQ",
+   "innerLength": 12032,
+   "innerWidth": 2352,
+   "innerHeight": 2698,
+   "maxWeight": 26000
+  }
+ },
+ "summary": {
+  "totalSteps": 16,
+  "utilizationPct": 31.2,
+  "totalWeightKg": 4000,
+  "cog": {
+   "x": 6002,
+   "y": 641,
+   "z": 1176
+  },
+  "cogOffset": {
+   "lateral": 0,
+   "longitudinal": 0.2327127659574468,
+   "direction": "left",
+   "percentage": "0.00"
+  },
+  "algorithm": "fast-block-v1",
+  "strategy": "fast-block-v1",
+  "solveMs": 45
+ },
+ "firstTwoSteps": [
+  {
+   "stepSequence": 1,
+   "cargoId": "ROW_165c00af-4a5b-4060-aea3-c5789687ac10:U1",
+   "unitId": "ROW_165c00af-4a5b-4060-aea3-c5789687ac10:U1",
+   "sku": "PALLET-A",
+   "name": "标准设备托盘",
+   "position": {
+    "x": 9466,
+    "y": 0,
+    "z": 30.5
+   },
+   "dimensions": {
+    "l": 1000,
+    "w": 1200,
+    "h": 1300
+   },
+   "weightKg": 260,
+   "orientation": "YXZ",
+   "inverted": false,
+   "rotation": {
+    "yawDeg": 90,
+    "rollDeg": 0,
+    "rotationMatrixY": [
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     -1,
+     0,
+     0
+    ]
+   },
+   "color": "#9B51E0",
+   "type": "heavy",
+   "fragile": false,
+   "heavy": true,
+   "stackLevel": 1,
+   "batchId": "batch_1",
+   "batchLabel": "HAM · 2026-09-15",
+   "portSequence": 1,
+   "destinationPort": "HAM",
+   "handling": {
+    "method": "forklift",
+    "forkEntry": null
+   },
+   "source": "main-column"
+  },
+  {
+   "stepSequence": 2,
+   "cargoId": "ROW_165c00af-4a5b-4060-aea3-c5789687ac10:U2",
+   "unitId": "ROW_165c00af-4a5b-4060-aea3-c5789687ac10:U2",
+   "sku": "PALLET-A",
+   "name": "标准设备托盘",
+   "position": {
+    "x": 9466,
+    "y": 0,
+    "z": 1230.5
+   },
+   "dimensions": {
+    "l": 1200,
+    "w": 1000,
+    "h": 1300
+   },
+   "weightKg": 260,
+   "orientation": "XYZ",
+   "inverted": false,
+   "rotation": {
+    "yawDeg": 0,
+    "rollDeg": 0,
+    "rotationMatrixY": [
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "color": "#9B51E0",
+   "type": "heavy",
+   "fragile": false,
+   "heavy": true,
+   "stackLevel": 1,
+   "batchId": "batch_1",
+   "batchLabel": "HAM · 2026-09-15",
+   "portSequence": 1,
+   "destinationPort": "HAM",
+   "handling": {
+    "method": "forklift",
+    "forkEntry": null
+   },
+   "source": "main-column"
+  }
+ ]
+}

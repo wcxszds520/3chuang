@@ -1,0 +1,518 @@
+{
+  "generatedAt": "2026-10-05T05:04:51.872Z",
+  "suite": "core",
+  "seed": 42,
+  "results": {
+    "realistic4d-multi-strategy": {
+      "algorithmId": "realistic4d-multi-strategy",
+      "caseCount": 26,
+      "aggregateUtil": 17.015,
+      "meanUtil": 13.688,
+      "avgMs": 178.63,
+      "maxMs": 1441.93,
+      "violationCount": 26,
+      "violationCodes": [
+        "ROTATION",
+        "LIFO",
+        "FRAGILE_TOP"
+      ],
+      "validatorHardTotal": 150,
+      "totalLoadedCount": 683,
+      "rows": [
+        {
+          "id": "DATASET-A-212",
+          "ok": true,
+          "wallMs": 110,
+          "containerVolume": 76351414272,
+          "loadedCount": 212,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 60646170000,
+          "utilization": 79.43,
+          "inputVolume": 60646170000,
+          "inputRatio": 0.794,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "DATASET-B-MIXED-69",
+          "ok": true,
+          "wallMs": 1441.93,
+          "containerVolume": 76351414272,
+          "loadedCount": 38,
+          "engineUnloadedCount": 31,
+          "loadedVolume": 16128000000,
+          "utilization": 21.123,
+          "inputVolume": 19104000000,
+          "inputRatio": 0.25,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-01",
+          "ok": true,
+          "wallMs": 6.34,
+          "containerVolume": 33195925728,
+          "loadedCount": 11,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 770000000,
+          "utilization": 2.32,
+          "inputVolume": 770000000,
+          "inputRatio": 0.023,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-05",
+          "ok": true,
+          "wallMs": 10.34,
+          "containerVolume": 33195925728,
+          "loadedCount": 18,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 5938440000,
+          "utilization": 17.889,
+          "inputVolume": 5938440000,
+          "inputRatio": 0.179,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-09",
+          "ok": true,
+          "wallMs": 345.23,
+          "containerVolume": 33195925728,
+          "loadedCount": 26,
+          "engineUnloadedCount": 11,
+          "loadedVolume": 4878920000,
+          "utilization": 14.697,
+          "inputVolume": 6963890000,
+          "inputRatio": 0.21,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-13",
+          "ok": true,
+          "wallMs": 154.68,
+          "containerVolume": 33195925728,
+          "loadedCount": 11,
+          "engineUnloadedCount": 8,
+          "loadedVolume": 3519900000,
+          "utilization": 10.603,
+          "inputVolume": 4251645000,
+          "inputRatio": 0.128,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-17",
+          "ok": true,
+          "wallMs": 1.69,
+          "containerVolume": 33195925728,
+          "loadedCount": 6,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 3031720000,
+          "utilization": 9.133,
+          "inputVolume": 3031720000,
+          "inputRatio": 0.091,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-21",
+          "ok": true,
+          "wallMs": 264.56,
+          "containerVolume": 33195925728,
+          "loadedCount": 11,
+          "engineUnloadedCount": 12,
+          "loadedVolume": 4391370000,
+          "utilization": 13.229,
+          "inputVolume": 11181330000,
+          "inputRatio": 0.337,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-25",
+          "ok": true,
+          "wallMs": 156.5,
+          "containerVolume": 33195925728,
+          "loadedCount": 10,
+          "engineUnloadedCount": 10,
+          "loadedVolume": 2410390000,
+          "utilization": 7.261,
+          "inputVolume": 3811870000,
+          "inputRatio": 0.115,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-29",
+          "ok": true,
+          "wallMs": 210.66,
+          "containerVolume": 33195925728,
+          "loadedCount": 38,
+          "engineUnloadedCount": 12,
+          "loadedVolume": 1416240000,
+          "utilization": 4.266,
+          "inputVolume": 1835048000,
+          "inputRatio": 0.055,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-33",
+          "ok": true,
+          "wallMs": 304.11,
+          "containerVolume": 33195925728,
+          "loadedCount": 4,
+          "engineUnloadedCount": 21,
+          "loadedVolume": 3503360000,
+          "utilization": 10.554,
+          "inputVolume": 12731150000,
+          "inputRatio": 0.384,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-37",
+          "ok": true,
+          "wallMs": 1.77,
+          "containerVolume": 33195925728,
+          "loadedCount": 16,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 2048800000,
+          "utilization": 6.172,
+          "inputVolume": 2048800000,
+          "inputRatio": 0.062,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-41",
+          "ok": true,
+          "wallMs": 128.99,
+          "containerVolume": 33195925728,
+          "loadedCount": 26,
+          "engineUnloadedCount": 2,
+          "loadedVolume": 2616272000,
+          "utilization": 7.881,
+          "inputVolume": 2756272000,
+          "inputRatio": 0.083,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-45",
+          "ok": true,
+          "wallMs": 228,
+          "containerVolume": 33195925728,
+          "loadedCount": 11,
+          "engineUnloadedCount": 3,
+          "loadedVolume": 12003130000,
+          "utilization": 36.158,
+          "inputVolume": 14645770000,
+          "inputRatio": 0.441,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-49",
+          "ok": true,
+          "wallMs": 160.72,
+          "containerVolume": 33195925728,
+          "loadedCount": 10,
+          "engineUnloadedCount": 12,
+          "loadedVolume": 1912040000,
+          "utilization": 5.76,
+          "inputVolume": 4153020000,
+          "inputRatio": 0.125,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-53",
+          "ok": true,
+          "wallMs": 1.87,
+          "containerVolume": 33195925728,
+          "loadedCount": 22,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 2972160000,
+          "utilization": 8.953,
+          "inputVolume": 2972160000,
+          "inputRatio": 0.09,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-57",
+          "ok": true,
+          "wallMs": 144.23,
+          "containerVolume": 33195925728,
+          "loadedCount": 8,
+          "engineUnloadedCount": 12,
+          "loadedVolume": 1630984000,
+          "utilization": 4.913,
+          "inputVolume": 4561432000,
+          "inputRatio": 0.137,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "PHYSICAL-61",
+          "ok": true,
+          "wallMs": 111.65,
+          "containerVolume": 33195925728,
+          "loadedCount": 11,
+          "engineUnloadedCount": 7,
+          "loadedVolume": 3363048000,
+          "utilization": 10.131,
+          "inputVolume": 3815832000,
+          "inputRatio": 0.115,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "SYNTHETIC-01",
+          "ok": true,
+          "wallMs": 80.56,
+          "containerVolume": 33195925728,
+          "loadedCount": 23,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 1610000000,
+          "utilization": 4.85,
+          "inputVolume": 1610000000,
+          "inputRatio": 0.048,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "S4100-1_1",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S4100-1_2",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S4100-1_3",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S4100-1_4",
+              "message": "canRotate=false but orientation changed"
+            }
+          ],
+          "validatorHard": 0
+        },
+        {
+          "id": "SYNTHETIC-07",
+          "ok": true,
+          "wallMs": 1.69,
+          "containerVolume": 33195925728,
+          "loadedCount": 17,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 9018000000,
+          "utilization": 27.166,
+          "inputVolume": 9018000000,
+          "inputRatio": 0.272,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "SYNTHETIC-13",
+          "ok": true,
+          "wallMs": 60.28,
+          "containerVolume": 33195925728,
+          "loadedCount": 22,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 1540000000,
+          "utilization": 4.639,
+          "inputVolume": 1540000000,
+          "inputRatio": 0.046,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_1",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_2",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_3",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_4",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_5",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_6",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_7",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_8",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S5264-1_9",
+              "message": "canRotate=false but orientation changed"
+            }
+          ],
+          "validatorHard": 0
+        },
+        {
+          "id": "SYNTHETIC-19",
+          "ok": true,
+          "wallMs": 228.73,
+          "containerVolume": 33195925728,
+          "loadedCount": 20,
+          "engineUnloadedCount": 8,
+          "loadedVolume": 3661000000,
+          "utilization": 11.028,
+          "inputVolume": 4369000000,
+          "inputRatio": 0.132,
+          "violations": [],
+          "validatorHard": 0
+        },
+        {
+          "id": "SYNTHETIC-25",
+          "ok": true,
+          "wallMs": 40.66,
+          "containerVolume": 33195925728,
+          "loadedCount": 14,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 980000000,
+          "utilization": 2.952,
+          "inputVolume": 980000000,
+          "inputRatio": 0.03,
+          "violations": [
+            {
+              "code": "ROTATION",
+              "cargoId": "S6428-1_1",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S6428-1_2",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S6428-1_3",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S6428-1_4",
+              "message": "canRotate=false but orientation changed"
+            },
+            {
+              "code": "ROTATION",
+              "cargoId": "S6428-1_5",
+              "message": "canRotate=false but orientation changed"
+            }
+          ],
+          "validatorHard": 0
+        },
+        {
+          "id": "SYNTHETIC-31",
+          "ok": true,
+          "wallMs": 323.92,
+          "containerVolume": 33195925728,
+          "loadedCount": 48,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 6055808000,
+          "utilization": 18.243,
+          "inputVolume": 6055808000,
+          "inputRatio": 0.182,
+          "violations": [
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 116
+        },
+        {
+          "id": "SYNTHETIC-37",
+          "ok": true,
+          "wallMs": 122.3,
+          "containerVolume": 33195925728,
+          "loadedCount": 24,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 1680000000,
+          "utilization": 5.061,
+          "inputVolume": 1680000000,
+          "inputRatio": 0.051,
+          "violations": [
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S7592-2_3",
+              "message": "rests on fragile S7592-2_1"
+            },
+            {
+              "code": "FRAGILE_TOP",
+              "cargoId": "S7592-2_4",
+              "message": "rests on fragile S7592-2_2"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 2 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 1 zone"
+            },
+            {
+              "code": "LIFO",
+              "message": "port 3 (earlier unload) extends into port 2 zone"
+            }
+          ],
+          "validatorHard": 34
+        },
+        {
+          "id": "SYNTHETIC-43",
+          "ok": true,
+          "wallMs": 2.96,
+          "containerVolume": 33195925728,
+          "loadedCount": 26,
+          "engineUnloadedCount": 0,
+          "loadedVolume": 3810776000,
+          "utilization": 11.48,
+          "inputVolume": 3810776000,
+          "inputRatio": 0.115,
+          "violations": [],
+          "validatorHard": 0
+        }
+      ]
+    }
+  }
+}

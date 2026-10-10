@@ -1,0 +1,35 @@
+<!--
+  优雅 Loading 组件
+  科技风旋转/脉冲光环 + 可选进度条
+  Requirements: 7.6 (Loading 态), 8.2 (视觉反馈), 8.3 (进度动画)
+-->
+<view class="elegant-loading-overlay" wx:if="{{show}}">
+  <view class="elegant-loading-backdrop"></view>
+  <view class="elegant-loading-center">
+    <!-- 旋转光环 + 脉冲核心 -->
+    <view class="elegant-ring-container">
+      <view class="elegant-ring-outer"></view>
+      <view class="elegant-ring-middle"></view>
+      <view class="elegant-ring-core"></view>
+    </view>
+
+    <!-- 加载文字 -->
+    <view class="elegant-loading-text" wx:if="{{text}}">{{text}}</view>
+
+    <!-- 外部控制进度条 -->
+    <view class="elegant-progress-section" wx:if="{{progress >= 0}}">
+      <view class="elegant-progress-bar">
+        <view class="elegant-progress-fill" style="width: {{progress}}%;"></view>
+      </view>
+      <view class="elegant-progress-label">{{progress}}%</view>
+    </view>
+
+    <!-- 自动进度条（长时间处理 > 2000ms） -->
+    <view class="elegant-progress-section" wx:elif="{{_showAutoProgress}}">
+      <view class="elegant-progress-bar">
+        <view class="elegant-progress-fill" style="width: {{_autoProgressValue}}%;"></view>
+      </view>
+      <view class="elegant-progress-label">{{_autoProgressText}}</view>
+    </view>
+  </view>
+</view>
