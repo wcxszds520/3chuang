@@ -1,0 +1,87 @@
+/* B1 typography and temporary color cascade. Existing page geometry is migrated later. */
+:root[data-theme] body { margin: 0; background: var(--canvas); color: var(--ink); font-family: var(--font-body); font-size: var(--fs-body); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+:root[data-theme] :is(h1, h2, h3) { font-family: var(--font-display); }
+:root[data-theme] :is(.mono, .num, [data-num], .kpi-value) { font-family: var(--font-mono); font-feature-settings: "tnum" 1, "zero" 1; font-variant-numeric: tabular-nums; }
+:root[data-theme] :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+:root[data-theme] ::selection { background: var(--accent-dim); color: var(--ink); }
+.app-header *, .app-header *::before, .app-header *::after, .app-drawer *, .app-drawer *::before, .app-drawer *::after { box-sizing: border-box; }
+.app-header svg, .app-drawer svg { display: block; flex: none; }
+
+/* Compatibility skin only; these selectors disappear with the B3–B6 migrations. */
+:root[data-theme] :is(.workspace-shell, .pc-landing, .review-page) { color: var(--ink); background: var(--canvas); font-family: var(--font-body); }
+:root[data-theme] :is(.workspace-context, .runtime-status) { background: var(--surface); border-color: var(--line); color: var(--secondary); }
+:root[data-theme] :is(.global-context__identity strong, .workspace-context .global-context__meta strong) { color: var(--ink); }
+:root[data-theme] :is(.workspace-main .page-header p, .workspace-main .page-kicker) { color: var(--secondary); }
+:root[data-theme] :is(.button--primary, .review-primary) { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+:root[data-theme] :is(.button--primary, .review-primary):hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+:root[data-theme] :is(.workspace-shell--twin, [data-testid="external-hero-entry"]) .button--primary { background: var(--surface); border-color: var(--line); color: var(--ink); }
+:root[data-theme] :is(.button--secondary, .button--ghost) { background: var(--surface); border-color: var(--line); color: var(--ink); }
+:root[data-theme] :is(.container-compare-stage, .container-visual-selector) { background: var(--tint-neutral); }
+:root[data-theme] :is(.brief-hero, .brief-kpis, .readiness-domain, .commerce-panel, .decision-recommendation, .plan-versions, .plan-diff) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme] :is(.brief-hero__decision, .readiness-rail, .demo-flow, .empty-readiness, .assistant-facts, .cargo-editor-preview, .cargo-editor-preview__asset, .packaging-profile-editor) { background: var(--tint-neutral); color: var(--ink); border-color: var(--line); }
+:root[data-theme] :is(.brief-hero__decision, .brief-kpis, .readiness-rail, .readiness-domain, .demo-flow, .decision-recommendation) :is(h2, h3, strong, b) { color: var(--ink); }
+:root[data-theme] :is(.brief-hero__decision, .readiness-rail, .readiness-domain, .demo-flow, .decision-recommendation) :is(p, small) { color: var(--secondary); }
+:root[data-theme] .readiness-domain--warning { border-top-color: var(--warning); }
+:root[data-theme] :is(.brief-risk, .plan-stale-notice) { background: color-mix(in srgb, var(--warning) 14%, var(--surface)); color: var(--warning); border-color: var(--warning); }
+:root[data-theme] .workspace-main :is(.search-field, input:not([type="checkbox"]), select, textarea) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme] .cargo-table--stage3 :is(.check-column, .action-column, th:nth-child(2), td:nth-child(2)) { background: var(--surface); }
+:root[data-theme] .cargo-table--stage3 th { background: var(--tint-neutral); color: var(--secondary); }
+:root[data-theme] .container-page .page-header__actions .button--primary { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme] .workspace-shell--twin .page-kicker { color: var(--tertiary); }
+:root[data-theme] :is(.context-assistant, .drawer, .dialog) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme] .context-assistant { max-width: 100%; }
+:root[data-theme] :is(.context-assistant__context, .context-assistant__prompts button, .context-assistant__source) { background: var(--tint-neutral); color: var(--ink); border-color: var(--line); }
+:root[data-theme] .context-assistant :is(p, small, label, header span) { color: var(--secondary); }
+:root[data-theme] .context-assistant :is(form, textarea) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme] .context-assistant form button { background: var(--accent); color: var(--on-accent); }
+:root[data-theme] .context-assistant :is(.context-assistant__links button, .context-assistant__notice) { color: var(--accent-text); }
+body:has(.app-header--compact) .context-assistant { top: var(--nav-h-compact); }
+
+/* Keep the existing copilot card's intended narrow-screen column after font swap. */
+@media (max-width: 1100px) {
+  :root[data-theme] .decision-recommendation--copilot { grid-template-columns: minmax(0, 1fr); }
+  :root[data-theme] .decision-recommendation--copilot > * { min-width: 0; }
+  :root[data-theme] .decision-recommendation__facts { flex-wrap: wrap; }
+}
+
+:root[data-theme] :is(.pc-hero, .pc-section) { color: var(--ink); }
+:root[data-theme] .pc-hero { background: var(--tint-neutral); }
+:root[data-theme] .pc-hero :is(h1, h1 span, .pc-callout b, .pc-callout strong) { color: var(--ink); }
+:root[data-theme] .pc-hero :is(p, .pc-hero__proof span, .pc-callout small) { color: var(--secondary); }
+:root[data-theme] .pc-callout { background: var(--overlay); color: var(--ink); border-color: var(--line); }
+:root[data-theme] .pc-section { background: var(--surface); }
+:root[data-theme] .pc-why { background: var(--tint-warm); }
+:root[data-theme] .pc-space { background: var(--tint-cool); }
+:root[data-theme] .pc-verify { background: var(--tint-mint); }
+:root[data-theme] :is(.pc-hero__eyebrow, .pc-kicker) { color: var(--accent-text); }
+:root[data-theme] :is(.pc-button--primary, .pc-header__cta) { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+:root[data-theme] :is(.pc-section, .pc-final) .pc-button--primary { background: transparent; border-color: var(--line); color: var(--ink); }
+:root[data-theme] :is(.pc-button--secondary, .pc-button--ghost) { background: transparent; border-color: var(--line); color: var(--ink); }
+:root[data-theme] .pc-landing :is(input, select, textarea) { color: var(--ink); background: var(--surface); border-color: var(--line); }
+:root[data-theme] .pc-landing :is(.pc-cargo-card, .pc-verify-card) { color: var(--ink); border-color: var(--line); background: var(--surface); }
+
+/* Review is preserved; this bridge changes only its existing colors and font. */
+:root[data-theme] .review-page :is(.review-nav, .review-steps li) { background: var(--surface); border-color: var(--line); }
+:root[data-theme] .review-page :is(.review-section, .review-tags span, .review-proof-list article, .review-steps button) { border-color: var(--line); }
+:root[data-theme] .review-page :is(.review-nav strong span, .review-intro > p, .review-section-title > p, .review-steps p, .review-claims p, .review-claims small, .review-proof-list small, .review-live dt, .review-footer) { color: var(--secondary); }
+:root[data-theme] .review-page :is(.review-nav button, .review-text-link, .review-kicker, .review-section-title > span, .review-step-number, .review-steps button, .review-proof-list a, .review-footer a) { color: var(--accent-text); }
+:root[data-theme] .review-page .review-claims article { border-color: var(--line); }
+:root[data-theme] .review-page .review-proof-list article > svg { color: var(--success); }
+:root[data-theme] .review-page .review-limits { background: var(--tint-neutral); }
+
+/* Independent review fixtures retain their original layout and WebGL scene. */
+html[data-portcube-independent] body { background: var(--canvas); color: var(--ink); font-family: var(--font-body); }
+html[data-portcube-independent] :is(header, .bar) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+html[data-portcube-independent] :is(small, footer, #caption p, .caption p) { color: var(--secondary); }
+html[data-portcube-independent] :is(button, select) { background: var(--surface); color: var(--ink); border-color: var(--line); }
+html[data-portcube-independent] button[aria-pressed="true"] { background: var(--accent-dim); color: var(--accent-text); border-color: var(--accent-text); }
+html[data-portcube-independent] :is(a, footer a) { color: var(--accent-text); }
+html[data-portcube-independent] :is(#error, .error) { color: var(--danger); }
+html[data-portcube-independent] :is(details[open] > p) { background: var(--raised); color: var(--ink); border-color: var(--line); }
+html[data-portcube-independent] :is(#caption, .caption) { color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  :is(button, a, [role="button"], .card, .pc-cargo-card):is(:hover, :active) { transform: none !important; }
+}
