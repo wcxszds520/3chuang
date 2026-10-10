@@ -1,0 +1,9 @@
+const fs=require('fs');const path=require('path');const crypto=require('crypto');const cp=require('child_process');
+const root='D:/cixing/3chuang_RECOVERED_20260911-003253';
+function walk(p){return fs.readdirSync(p,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(path.join(p,x.name)):[path.join(p,x.name)])}
+const source=walk(path.join(root,'web-dashboard/src')).filter(x=>/\.(js|jsx|css)$/.test(x)&&!x.includes('.test.'));
+const refs=new Set();for(const f of source){const t=fs.readFileSync(f,'utf8');for(const m of t.matchAll(/['"`]((?:\/assets\/)[^'"`]+)['"`]/g)){if(!m[1].includes('${'))refs.add(m[1])}}
+const missing=[...refs].filter(p=>!fs.existsSync(path.join(root,'web-dashboard/public',p)));
+const glbs=[...walk(path.join(root,'web-dashboard/public')),...walk(path.join(root,'assets-src'))].filter(p=>p.endsWith('.glb'));
+const records=glbs.map(p=>{const b=fs.readFileSync(p);const rel=path.relative(root,p).replaceAll('\\','/');const git=cp.spawnSync('git',['-C',root,'rev-parse','HEAD:'+rel],{encoding:'utf8',windowsHide:true});const oid=crypto.createHash('sha1').update('blob '+b.length+'\0').update(b).digest('hex');return {path:rel,bytes:b.length,validGlb:b.toString('ascii',0,4)==='glTF'&&b.readUInt32LE(4)===2&&b.readUInt32LE(8)===b.length,source:git.status===0?'BASELINE_GIT':'SNAPSHOT_ZIP',gitObjectMatch:git.status===0?oid===git.stdout.trim():null}});
+const report={missingLiteralAssetPaths:missing,glbFiles:records,blendFiles:walk(path.join(root,'assets-src')).filter(x=>x.endsWith('.blend')).map(x=>path.relative(root,x))};fs.writeFileSync(path.join(__dirname,'asset-verification.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({glbCount:glbs.length,blendCount:report.blendFiles.length,invalidGlb:records.filter(x=>!x.validGlb),gitAssetMismatch:records.filter(x=>x.gitObjectMatch===false),missing}));

@@ -1,0 +1,17 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+import {normalizeBackendPlan} from '../3chuang_RECOVERED_20260911-003253/web-dashboard/src/services/packingApi.js';
+import {cargoFingerprint} from '../3chuang_RECOVERED_20260911-003253/web-dashboard/src/domain/cargo/cargo.js';
+import {loadSession,saveSession} from '../3chuang_RECOVERED_20260911-003253/web-dashboard/src/app/session/sessionStorage.js';
+const dir=path.dirname(fileURLToPath(import.meta.url));
+const baseline=JSON.parse(fs.readFileSync('../3chuang_PRESERVED_20260911-003253/project/tmp/rebuild-start-20260910-172656/legacy-212-before.json','utf8'));
+const response=await fetch('http://127.0.0.1:13000/api/packing/plans/REQ_1789015704635');if(!response.ok)throw new Error('Historical record unavailable');
+const payload=await response.json();const data=payload.data;
+const canonical=rows=>rows.map(c=>Object.fromEntries(['cargoId','x','y','z','l','w','h','weight'].map(k=>[k,c[k]]))).sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b)));
+const exactPlacementMatch=JSON.stringify(canonical(data.loadedCargo))===JSON.stringify(canonical(baseline.plan.loadedCargo));
+if(data.ext_placementHash!==baseline.plan.placementHash||!exactPlacementMatch||data.totalWeight!==baseline.plan.totalWeight||data.loadedCargo.length!==212)throw new Error('Historical plan does not match archived placements');
+const session=loadSession({getItem:()=>JSON.stringify(baseline.session)});const plan=normalizeBackendPlan(payload,{containerType:session.selectedContainerType,cargoList:session.cargo});
+const restored={...session,backendPlan:plan,backendPlanFingerprint:cargoFingerprint(session.cargo,session.selectedContainerType),planStatus:'ready',dataSource:{...session.dataSource,plan:'BACKEND_SOLVED'}};
+let key,serialized;saveSession(restored,{setItem(k,v){key=k;serialized=v}});if(!serialized)throw new Error('Historical session serialization failed');
+fs.writeFileSync(path.join(dir,'historical-212-storage.json'),JSON.stringify({key,value:serialized}));
+fs.writeFileSync(path.join(dir,'historical-212-session-provenance.json'),JSON.stringify({restoredAt:new Date().toISOString(),originalBrowserSessionRecovered:false,assembledFrom:['snapshot legacy-212-before.json session','existing database record REQ_1789015704635'],recordCreatedAt:data.createdAt,placementHash:plan.placementHash,exactPlacementMatch,loaded:plan.loadedCargo.length,weight:plan.totalWeight,solverExecuted:false,adapter:'unchanged old loadSession, normalizeBackendPlan and saveSession',loaderNormalization:'Old loadSession adds palletJackCompatible=false to packagingProfile and cargoPhysicalProfile.packaging. Dimensions, quantities, weights and constraints otherwise unchanged.'},null,2));
+console.log(JSON.stringify({planId:plan.planId,createdAt:data.createdAt,placementHash:plan.placementHash,exactPlacementMatch,loaded:plan.loadedCargo.length,weight:plan.totalWeight}));

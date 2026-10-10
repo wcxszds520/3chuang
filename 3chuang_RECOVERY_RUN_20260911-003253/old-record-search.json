@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-09-10T16:50:14.589Z",
+  "database": "portcube_recovery_20260911_003253",
+  "old212Records": [
+    {
+      "plan_id": "REQ_1789017022182",
+      "created_at": "2026-09-10T05:11:33.000Z",
+      "placement_hash": "a088b3a91d299f0f"
+    },
+    {
+      "plan_id": "REQ_1789017022151",
+      "created_at": "2026-09-10T05:10:49.000Z",
+      "placement_hash": "a088b3a91d299f0f"
+    },
+    {
+      "plan_id": "REQ_1789015704635",
+      "created_at": "2026-09-10T04:49:21.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    },
+    {
+      "plan_id": "REQ_1789015704614",
+      "created_at": "2026-09-10T04:48:47.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    },
+    {
+      "plan_id": "REQ_1788976950701",
+      "created_at": "2026-09-09T18:03:01.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    },
+    {
+      "plan_id": "REQ_1788976950699",
+      "created_at": "2026-09-09T18:02:51.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    },
+    {
+      "plan_id": "REQ_1788976950695",
+      "created_at": "2026-09-09T18:02:41.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    },
+    {
+      "plan_id": "REQ_1788974732163",
+      "created_at": "2026-09-09T17:26:06.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    },
+    {
+      "plan_id": "REQ_1788974732148",
+      "created_at": "2026-09-09T17:25:45.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    },
+    {
+      "plan_id": "REQ_1788971265796",
+      "created_at": "2026-09-09T16:28:18.000Z",
+      "placement_hash": "155f34bf236fc0c8"
+    }
+  ],
+  "matchingHistoricalPlanIds": [
+    "REQ_1789015704635",
+    "REQ_1789015704614",
+    "REQ_1788976950701",
+    "REQ_1788976950699",
+    "REQ_1788976950695",
+    "REQ_1788974732163",
+    "REQ_1788974732148",
+    "REQ_1788971265796",
+    "REQ_1788971265789",
+    "REQ_1788971265782"
+  ],
+  "isolatedPrivileges": [
+    {
+      "Grants for pc_restore_0911_003253@localhost": "GRANT USAGE ON *.* TO `pc_restore_0911_003253`@`localhost`"
+    },
+    {
+      "Grants for pc_restore_0911_003253@localhost": "GRANT ALL PRIVILEGES ON `portcube_recovery_20260911_003253`.* TO `pc_restore_0911_003253`@`localhost`"
+    }
+  ]
+}
