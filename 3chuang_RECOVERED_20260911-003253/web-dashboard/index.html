@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (() => {
+        let theme = 'light';
+        try { const saved = localStorage.getItem('portcube.theme'); if (saved === 'dark' || saved === 'light') theme = saved; } catch {}
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://cdn.fontshare.com/wf/FPDAZ2S6SW4QMSRIIKNNGTPM6VIXYMKO/5HNPQ453FRLIQWV2FNOBUU3FKTDZQVSG/Z3MGHFHX6DCTLQ55LJYRJ5MDCZPMFZU6.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://cdn.fontshare.com/wf/MFQT7HFGCR2L5ULQTW6YXYZXXHMPKLJ3/YWQ244D6TACUX5JBKATPOW5I5MGJ3G73/7YY3ZAAE3TRV2LANYOLXNHTPHLXVWTKH.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d6fe0'/%3E%3Cpath d='M16 6l8 4.5v10L16 25l-8-4.5v-10L16 6zm0 2.4l-5.8 3.2 5.8 3.2 5.8-3.2L16 8.4zm-6 5.1v5.8l5 2.8v-5.8l-5-2.8zm7 8.6l5-2.8v-5.8l-5 2.8v5.8z' fill='white'/%3E%3C/svg%3E" />
+    <meta name="description" content="智港立方 PortCube —— 集装箱装载数字孪生可视化平台：真实装箱数据驱动的三维作业孪生、六模式装载分析与合规交付。" />
+    <title>智港立方 PortCube · 集装箱装载数字孪生可视化平台</title>
+    <script>
+      (() => {
+        const params = new URLSearchParams(location.search);
+        if (!params.has('perf')) return;
+        const probe = { label: params.get('perf') || 'run', lcpMs: null, firstContentfulPaintMs: null, contentReadyMs: null, cls: 0, fpsSamples: [], frameDeltas: [], navigation: null, resources: null, visibilityState: document.visibilityState, errors: [] };
+        const publish = () => {
+          const resources = performance.getEntriesByType('resource');
+          probe.resources = {
+            count: resources.length,
+            transferBytes: resources.reduce((total, entry) => total + (entry.transferSize || entry.encodedBodySize || 0), 0)
+          };
+          document.documentElement.dataset.portcubePerf = JSON.stringify(probe);
+        };
+        try {
+          new PerformanceObserver((list) => {
+            const latest = list.getEntries().at(-1);
+            if (latest) probe.lcpMs = latest.startTime;
+            publish();
+          }).observe({ type: 'largest-contentful-paint', buffered: true });
+          new PerformanceObserver((list) => {
+            list.getEntries().forEach((entry) => { if (!entry.hadRecentInput) probe.cls += entry.value; });
+            publish();
+          }).observe({ type: 'layout-shift', buffered: true });
+        } catch (error) {
+          // Older engines still publish navigation and frame timing below.
+          probe.errors.push(String(error && error.message ? error.message : error));
+        }
+        let lastFrame = performance.now();
+        let sampleStartedAt = lastFrame;
+        let sampleFrames = 0;
+        const sampleFrame = (now) => {
+          const delta = now - lastFrame;
+          if (delta > 0 && delta < 1000) {
+            probe.frameDeltas.push(delta);
+            if (probe.frameDeltas.length > 600) probe.frameDeltas.shift();
+          }
+          lastFrame = now;
+          sampleFrames += 1;
+          if (now - sampleStartedAt >= 500) {
+            probe.fpsSamples.push(sampleFrames * 1000 / (now - sampleStartedAt));
+            if (probe.fpsSamples.length > 60) probe.fpsSamples.shift();
+            sampleFrames = 0;
+            sampleStartedAt = now;
+            publish();
+          }
+          requestAnimationFrame(sampleFrame);
+        };
+        requestAnimationFrame(sampleFrame);
+        addEventListener('load', () => {
+          setTimeout(() => {
+            const nav = performance.getEntriesByType('navigation')[0];
+            const paints = performance.getEntriesByType('paint');
+            const fcp = paints.find((entry) => entry.name === 'first-contentful-paint');
+            probe.firstContentfulPaintMs = fcp ? fcp.startTime : null;
+            probe.navigation = nav ? {
+              ttfbMs: nav.responseStart,
+              domContentLoadedMs: nav.domContentLoadedEventEnd,
+              loadMs: nav.loadEventEnd
+            } : null;
+            probe.contentReadyMs = performance.now();
+            probe.visibilityState = document.visibilityState;
+            publish();
+          }, 0);
+        }, { once: true });
+        publish();
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
