@@ -1,0 +1,33 @@
+import { createRequire } from 'node:module';
+import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import assert from 'node:assert/strict';
+import { createInitialSession } from '../web-dashboard/src/domain/session/initialSession.js';
+import { CONTAINER_CATALOG } from '../web-dashboard/src/domain/container/catalog.js';
+import { normalizeCargo } from '../web-dashboard/src/domain/cargo/cargo.js';
+const require=createRequire(import.meta.url);
+const {calculateCoG}=require('../backend/services/packing/PlanMetrics');
+const dir=new URL('../artifacts/rebuild/',import.meta.url);
+mkdirSync(dir,{recursive:true});
+const session=createInitialSession({dataset:'legacy'});
+const input={order:session.order.orderNo,cargo:session.cargo,container:CONTAINER_CATALOG['40HQ'],caseContext:session.caseContext};
+const fingerprint=createHash('sha256').update(JSON.stringify(input)).digest('hex');
+const inputFile=new URL('original-212-input.json',dir);
+if(existsSync(inputFile))assert.equal(JSON.parse(readFileSync(inputFile)).fingerprint,fingerprint,'Original input changed');
+else writeFileSync(inputFile,JSON.stringify({fingerprint,...input},null,2));
+const old=JSON.parse(readFileSync(new URL('../tmp/rebuild-start-20260910-172656/legacy-212-before.json',import.meta.url)));
+assert.equal(session.cargo.reduce((n,c)=>n+c.quantity,0),212);
+assert.equal(session.cargo.reduce((n,c)=>n+c.quantity*c.weight,0),8623);
+// The old snapshot predates the explicit false palletJackCompatible field.
+// Compare both through the same normalizer, without changing physical facts.
+assert.equal(JSON.stringify(old.session.cargo.map(normalizeCargo))===JSON.stringify(session.cargo),true,'Historical and current normalized cargo facts differ');
+const p=old.plan, placements=p.loadedCargo,container=input.container;
+const weight=placements.reduce((n,c)=>n+c.weight,0);
+const moments=placements.reduce((a,c)=>({x:a.x+c.weight*(c.x+c.l/2),y:a.y+c.weight*(c.y+c.h/2),z:a.z+c.weight*(c.z+c.w/2)}),{x:0,y:0,z:0});
+const cog={x:moments.x/weight,y:moments.y/weight,z:moments.z/weight};
+const raw={centreMm:cog,offsetMm:{longitudinal:cog.x-container.innerLength/2,lateral:cog.z-container.innerWidth/2},denominatorMm:{longitudinal:container.innerLength,lateral:container.innerWidth}};
+const summary={fingerprint,order:input.order,count:placements.length,weightKg:weight,placementHash:p.placementHash,oldSolver:p.constraintMeta.solverRevision,deepGapMm:Math.min(...placements.map(c=>c.x)),unexplainedVoidM3:p.voidJustification.unexplainedVoidVolume/1e9,...raw,fullSpanPercent:{longitudinal:Math.abs(raw.offsetMm.longitudinal)/container.innerLength*100,lateral:Math.abs(raw.offsetMm.lateral)/container.innerWidth*100},halfSpanPercent:p.cogOffset,currentMetric:calculateCoG(placements,container),translationCheck:{distanceMm:772,fullSpanDeltaPercent:772/container.innerLength*100,halfSpanDeltaPercent:772/(container.innerLength/2)*100}};
+const baselineFile=new URL('original-212-baseline.json',dir);
+if(!existsSync(baselineFile))writeFileSync(baselineFile,JSON.stringify({inputFingerprint:fingerprint,plan:p,audit:summary},null,2));
+writeFileSync(new URL('cog-audit.json',dir),JSON.stringify(summary,null,2));
+console.log(JSON.stringify(summary,null,2));

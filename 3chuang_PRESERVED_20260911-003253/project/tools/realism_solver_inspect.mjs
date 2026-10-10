@@ -1,0 +1,12 @@
+import { createRequire } from 'node:module';
+import { writeFileSync, readFileSync } from 'node:fs';
+import { createInitialSession } from '../web-dashboard/src/domain/session/initialSession.js';
+import { CONTAINER_CATALOG } from '../web-dashboard/src/domain/container/catalog.js';
+const require = createRequire(import.meta.url);
+const Solver = require('../backend/services/HybridConstraintPackingSolverV25.js');
+const session = createInitialSession({ dataset:'legacy' });
+const plan = process.argv.includes('--saved') ? JSON.parse(readFileSync(new URL('../tmp/realism-baseline.json', import.meta.url))).plan : await new Solver().generatePackingPlan(session.cargo, CONTAINER_CATALOG['40HQ'], { strategy: 'SPACE', caseContext: session.caseContext, inputSource: 'DEMO_DATA' });
+writeFileSync(new URL('../tmp/realism-baseline.json', import.meta.url), JSON.stringify({ session, container: CONTAINER_CATALOG['40HQ'], plan }, null, 2));
+const rows = {};
+for (const c of plan.loadedCargo) (rows[`${c.portSequence}|${c.x}|${c.l}`] ||= []).push(c);
+console.log(JSON.stringify({candidate:plan.candidateId, hash:plan.placementHash, count:plan.loadedCargo.length, cog:plan.cogOffset, gates:{hard:plan.validator.hardViolationCount, operation:plan.operationFeasibility.blockedCount, port:plan.portAccessibility.blockedCount, rehandle:plan.portAccessibility.rehandleCount, stability:plan.metrics.stability.invalidCount}, repair:plan.constraintMeta.portfolio.loadBalanceRepair, gap:Math.min(...plan.loadedCargo.map(c=>c.x)), rows:Object.values(rows).map(row=>({port:row[0].portSequence,x:row[0].x,l:row[0].l, weight:row.reduce((s,c)=>s+c.weight,0), items:row.map(c=>`${c.cargoId}:${c.weight}@${c.y},${c.z}/${c.l},${c.w},${c.h}`)}))},null,2));
