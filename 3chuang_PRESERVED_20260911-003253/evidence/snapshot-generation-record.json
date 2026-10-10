@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-10T09:26:53.618Z",
+  "ordinal": 2912,
+  "type": "response_item",
+  "payload": {
+    "type": "custom_tool_call",
+    "id": "ctc_037411e5e55a9e9f016aa277d2258487d09d6a8ce9ba056d6f",
+    "status": "completed",
+    "call_id": "call_n88XyANnTJcZIQ5V6r8mHEd2",
+    "name": "exec",
+    "input": "text(await tools.exec_command({cmd:\"$rebuildSnapshot = Join-Path (Get-Location).Path ('tmp/rebuild-start-' + (Get-Date -Format 'yyyyMMdd-HHmmss')); New-Item -ItemType Directory -Path $rebuildSnapshot -Force | Out-Null; git rev-parse HEAD | Set-Content -LiteralPath (Join-Path $rebuildSnapshot 'HEAD.txt') -Encoding utf8; git status --short | Set-Content -LiteralPath (Join-Path $rebuildSnapshot 'status.txt') -Encoding utf8; git -c core.quotepath=false diff --binary | Set-Content -LiteralPath (Join-Path $rebuildSnapshot 'tracked.patch') -Encoding utf8; $rebuildPaths = @(@(git -c core.quotepath=false diff --name-only --diff-filter=ACMRT); @(git -c core.quotepath=false ls-files --others --exclude-standard)) | Sort-Object -Unique; Add-Type -AssemblyName System.IO.Compression.FileSystem; $rebuildArchive = [System.IO.Compression.ZipFile]::Open((Join-Path $rebuildSnapshot 'worktree-files.zip'),[System.IO.Compression.ZipArchiveMode]::Create); try { foreach($rebuildPath in $rebuildPaths){ if(Test-Path -LiteralPath $rebuildPath -PathType Leaf){ [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($rebuildArchive,(Join-Path (Get-Location).Path $rebuildPath),$rebuildPath,[System.IO.Compression.CompressionLevel]::Optimal) | Out-Null } } } finally {$rebuildArchive.Dispose()}; Copy-Item -LiteralPath 'tmp/realism-baseline.json' -Destination (Join-Path $rebuildSnapshot 'legacy-212-before.json'); Write-Output $rebuildSnapshot; Get-Item -LiteralPath (Join-Path $rebuildSnapshot 'worktree-files.zip') | Select-Object Length\",\"yield_time_ms\":10000,\"max_output_tokens\":500}));\ntext(await tools.web__run({find:[{ref_id:\"turn0view0\",pattern:\"3.1.4\"},{ref_id:\"turn0view0\",pattern:\"eccentricity\"}],screenshot:[{ref_id:\"turn0view0\",pageno:102}],response_length:\"short\"}));\n",
+    "internal_chat_message_metadata_passthrough": {
+      "turn_id": "01a08aa1-8f27-77c1-8615-de19cece22f4",
+      "create_time": 1789032389.469255
+    }
+  }
+}

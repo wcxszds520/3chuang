@@ -1,0 +1,22 @@
+const fs=require('fs');
+const path=require('path');
+const {createRequire}=require('module');
+const {spawnSync}=require('child_process');
+const req=createRequire('D:/cixing/3chuang/backend/package.json');
+const cfg=req('dotenv').parse(fs.readFileSync('D:/cixing/3chuang/backend/.env'));
+const root=path.resolve(__dirname,'..');
+(async()=>{
+ const conn=await req('mysql2/promise').createConnection({host:cfg.DB_HOST||'localhost',port:Number(cfg.DB_PORT||3306),user:cfg.DB_USER||'root',password:cfg.DB_PASSWORD||'',database:cfg.DB_NAME||'ningbo_port_packing'});
+ const [rows]=await conn.query('SELECT TABLE_NAME,TABLE_TYPE,ENGINE,TABLE_ROWS,DATA_LENGTH,INDEX_LENGTH FROM information_schema.tables WHERE table_schema=DATABASE()');
+ fs.writeFileSync(path.join(root,'database','current-db-inventory.json'),JSON.stringify({capturedAt:new Date().toISOString(),tables:rows},null,2));
+ await conn.end();
+ const quote=x=>'"'+String(x).replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'"';
+ const defaults=path.join(root,'database','local-mysql.cnf');
+ fs.writeFileSync(defaults,'[client]\nhost='+quote(cfg.DB_HOST||'localhost')+'\nport='+Number(cfg.DB_PORT||3306)+'\nuser='+quote(cfg.DB_USER||'root')+'\npassword='+quote(cfg.DB_PASSWORD||'')+'\n');
+ const outfile=path.join(root,'database','current-project-database.sql');
+ const fd=fs.openSync(outfile,'wx'); const err=fs.openSync(path.join(root,'database','dump.stderr.log'),'wx');
+ const proc=spawnSync('C:/Program Files/MySQL/MySQL Server 9.4/bin/mysqldump.exe',['--defaults-extra-file='+defaults,'--single-transaction','--routines','--triggers','--events','--hex-blob','--no-tablespaces','--set-gtid-purged=OFF',cfg.DB_NAME||'ningbo_port_packing'],{stdio:['ignore',fd,err],windowsHide:true});
+ fs.closeSync(fd);fs.closeSync(err);
+ if(proc.status!==0)throw new Error('Database dump failed; see local stderr file');
+ console.log(JSON.stringify({tableCount:rows.length,estimatedBytes:rows.reduce((s,r)=>s+Number(r.DATA_LENGTH||0)+Number(r.INDEX_LENGTH||0),0),dumpBytes:fs.statSync(outfile).size,engines:[...new Set(rows.map(x=>x.ENGINE))]}));
+})().catch(()=>{console.error('Local database preservation failed. Details remain local.');process.exitCode=1});
