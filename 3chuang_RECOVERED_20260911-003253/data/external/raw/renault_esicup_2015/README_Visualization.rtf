@@ -1,0 +1,23 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl560\sa321\partightenfactor0
+
+\f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Visualization tool\
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\b0\fs24 \cf2 The visualization tool (version v1.3 of Oct 6th 2014) : {\field{\*\fldinst{HYPERLINK "http://challenge-esicup-2015.org/doc/visualization.zip"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 zip}}\
+v1.3 : the volume displayed is now the volume of the stacks (with the lost volume inside the stacks). Before, it was the volume of the layers (without the lost volume inside the stacks).\
+v1.2 : bug correction\
+The tool runs only on windows environments. You have to set the rigth pathname for root directory of the set of instances in the scritps "ESICUPChallengeLoader.bat" and "ESICUPChallengeDisplay.bat".\
+Procedure : you have to run first the script "ESICUPChallengeLoader.bat". When the message "Init Serveur LOAD OK" is displayed in the command windows, then you can run the second script "ESICUPChallengeDisplay.bat". Afterwards, the loading configuration should be displayed.\
+/instances_directory\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 list_instances.csv\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 /instance1 \u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 /instance2\u8232 The file \'ab\'a0list_instances.csv\'a0\'bb contains the list of instances to check. The visualization tool expects to find input and results files in each instance directory (as shown below). In addition, results files must be controlled by the solution checker before being used in the visualization tool. In case results files are declared incorrect by the checker, the visualization tool may not work properly.\
+/instances_directory\
+/instance1\
+input_bin.csv\uc0\u8232 input_items.csv\u8232 bins.csv\u8232 items.csv\u8232 layers.csv\u8232 parameters.txt\u8232 rows.csv\u8232 stacks.csv\
+/instance2\
+input_bin.csv\uc0\u8232 input_items.csv\u8232 bins.csv\u8232 items.csv\u8232 layers.csv\u8232 parameters.txt\u8232 rows.csv\u8232 stacks.csv\
+}

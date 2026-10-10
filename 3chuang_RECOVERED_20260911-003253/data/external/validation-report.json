@@ -1,0 +1,616 @@
+{
+  "generatedAt": "2026-09-11T07:39:12.535Z",
+  "result": "PASS",
+  "checkCount": 27,
+  "failed": [],
+  "checks": [
+    {
+      "source": "atlas_copco",
+      "instance": "provenance",
+      "item": "all raw files",
+      "fields": {
+        "fileCount": 0,
+        "sha256": "MATCH"
+      },
+      "pass": true
+    },
+    {
+      "source": "beantech",
+      "instance": "provenance",
+      "item": "all raw files",
+      "fields": {
+        "fileCount": 2,
+        "sha256": "MATCH"
+      },
+      "pass": true
+    },
+    {
+      "source": "esicup_irregular",
+      "instance": "provenance",
+      "item": "all raw files",
+      "fields": {
+        "fileCount": 35,
+        "sha256": "MATCH"
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_thpack",
+      "instance": "provenance",
+      "item": "all raw files",
+      "fields": {
+        "fileCount": 10,
+        "sha256": "MATCH"
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_wtpack",
+      "instance": "provenance",
+      "item": "all raw files",
+      "fields": {
+        "fileCount": 8,
+        "sha256": "MATCH"
+      },
+      "pass": true
+    },
+    {
+      "source": "ortec_alonso_2019",
+      "instance": "provenance",
+      "item": "all raw files",
+      "fields": {
+        "fileCount": 112,
+        "sha256": "MATCH"
+      },
+      "pass": true
+    },
+    {
+      "source": "renault_esicup_2015",
+      "instance": "provenance",
+      "item": "all raw files",
+      "fields": {
+        "fileCount": 184,
+        "sha256": "MATCH"
+      },
+      "pass": true
+    },
+    {
+      "source": "renault_esicup_2015",
+      "instance": "instancesA-ARG_BUR_STK_container",
+      "item": "214940046RA",
+      "fields": {
+        "raw": {
+          "length": 1200,
+          "width": 1000,
+          "height": 750,
+          "weight": 45.4,
+          "quantity": 1
+        },
+        "normalized": {
+          "length": 1200,
+          "width": 1000,
+          "height": 750,
+          "weight": 45.4,
+          "quantity": 1
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "renault_esicup_2015",
+      "instance": "instancesA-ARG_BUR_STK_container",
+      "item": "809940032RA",
+      "fields": {
+        "raw": {
+          "length": 1140,
+          "width": 950,
+          "height": 640,
+          "weight": 490.49,
+          "quantity": 2
+        },
+        "normalized": {
+          "length": 1140,
+          "width": 950,
+          "height": 640,
+          "weight": 490.49,
+          "quantity": 2
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "renault_esicup_2015",
+      "instance": "instancesA-ARG_BUR_STK_container",
+      "item": "751110025RA",
+      "fields": {
+        "raw": {
+          "length": 1450,
+          "width": 1140,
+          "height": 850,
+          "weight": 453.7,
+          "quantity": 3
+        },
+        "normalized": {
+          "length": 1450,
+          "width": 1140,
+          "height": 850,
+          "weight": 453.7,
+          "quantity": 3
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "renault_esicup_2015",
+      "instance": "instancesA-ARG_BUR_STK_container",
+      "item": "781400063RA",
+      "fields": {
+        "raw": {
+          "length": 1140,
+          "width": 475,
+          "height": 640,
+          "weight": 287.6,
+          "quantity": 1
+        },
+        "normalized": {
+          "length": 1140,
+          "width": 475,
+          "height": 640,
+          "weight": 287.6,
+          "quantity": 1
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "renault_esicup_2015",
+      "instance": "instancesA-ARG_BUR_STK_container",
+      "item": "663000012RA",
+      "fields": {
+        "raw": {
+          "length": 1720,
+          "width": 1120,
+          "height": 740,
+          "weight": 186.85,
+          "quantity": 2
+        },
+        "normalized": {
+          "length": 1720,
+          "width": 1120,
+          "height": 740,
+          "weight": 186.85,
+          "quantity": 2
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "ortec_alonso_2019",
+      "instance": "ortec-inst3d1",
+      "item": "13",
+      "fields": {
+        "raw": [
+          13,
+          0,
+          52,
+          186,
+          254,
+          171,
+          4.63,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          13
+        ],
+        "normalized": {
+          "length": 254,
+          "width": 186,
+          "height": 171,
+          "weight": 4.63,
+          "quantity": 52,
+          "orientation": {
+            "x": true,
+            "y": true,
+            "z": true
+          },
+          "maxStackLayers": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "ortec_alonso_2019",
+      "instance": "ortec-inst3d1",
+      "item": "66",
+      "fields": {
+        "raw": [
+          66,
+          2,
+          78,
+          186,
+          254,
+          171,
+          4.63,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          66
+        ],
+        "normalized": {
+          "length": 254,
+          "width": 186,
+          "height": 171,
+          "weight": 4.63,
+          "quantity": 78,
+          "orientation": {
+            "x": true,
+            "y": true,
+            "z": true
+          },
+          "maxStackLayers": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "ortec_alonso_2019",
+      "instance": "ortec-inst3d1",
+      "item": "67",
+      "fields": {
+        "raw": [
+          67,
+          0,
+          52,
+          186,
+          254,
+          171,
+          4.63,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          67
+        ],
+        "normalized": {
+          "length": 254,
+          "width": 186,
+          "height": 171,
+          "weight": 4.63,
+          "quantity": 52,
+          "orientation": {
+            "x": true,
+            "y": true,
+            "z": true
+          },
+          "maxStackLayers": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "ortec_alonso_2019",
+      "instance": "ortec-inst3d1",
+      "item": "71",
+      "fields": {
+        "raw": [
+          71,
+          1,
+          78,
+          186,
+          254,
+          171,
+          4.63,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          71
+        ],
+        "normalized": {
+          "length": 254,
+          "width": 186,
+          "height": 171,
+          "weight": 4.63,
+          "quantity": 78,
+          "orientation": {
+            "x": true,
+            "y": true,
+            "z": true
+          },
+          "maxStackLayers": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "ortec_alonso_2019",
+      "instance": "ortec-inst3d1",
+      "item": "162",
+      "fields": {
+        "raw": [
+          162,
+          2,
+          78,
+          179,
+          238,
+          185,
+          5.08,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          162
+        ],
+        "normalized": {
+          "length": 238,
+          "width": 179,
+          "height": 185,
+          "weight": 5.08,
+          "quantity": 78,
+          "orientation": {
+            "x": true,
+            "y": true,
+            "z": true
+          },
+          "maxStackLayers": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_thpack",
+      "instance": "thpack1-1",
+      "item": "1",
+      "fields": {
+        "raw": [
+          1,
+          108,
+          0,
+          76,
+          0,
+          30,
+          1,
+          40
+        ],
+        "normalized": {
+          "lengthMm": 1080,
+          "widthMm": 760,
+          "heightMm": 300,
+          "weightKg": null,
+          "quantity": 40,
+          "orientation": {
+            "lengthVertical": false,
+            "widthVertical": false,
+            "heightVertical": true
+          }
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_thpack",
+      "instance": "thpack1-1",
+      "item": "2",
+      "fields": {
+        "raw": [
+          2,
+          110,
+          0,
+          43,
+          1,
+          25,
+          1,
+          33
+        ],
+        "normalized": {
+          "lengthMm": 1100,
+          "widthMm": 430,
+          "heightMm": 250,
+          "weightKg": null,
+          "quantity": 33,
+          "orientation": {
+            "lengthVertical": false,
+            "widthVertical": true,
+            "heightVertical": true
+          }
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_thpack",
+      "instance": "thpack1-1",
+      "item": "3",
+      "fields": {
+        "raw": [
+          3,
+          92,
+          1,
+          81,
+          1,
+          55,
+          1,
+          39
+        ],
+        "normalized": {
+          "lengthMm": 920,
+          "widthMm": 810,
+          "heightMm": 550,
+          "weightKg": null,
+          "quantity": 39,
+          "orientation": {
+            "lengthVertical": true,
+            "widthVertical": true,
+            "heightVertical": true
+          }
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_wtpack",
+      "instance": "wtpack1-1",
+      "item": "1",
+      "fields": {
+        "raw": [
+          108,
+          0,
+          76,
+          0,
+          30,
+          1,
+          40,
+          246.24,
+          0.0767,
+          0.15648,
+          0.03365
+        ],
+        "normalized": {
+          "lengthMm": 1080,
+          "widthMm": 760,
+          "heightMm": 300,
+          "weightKg": 246.24,
+          "quantity": 40,
+          "loadBearing": {
+            "lengthUpright": 0.0767,
+            "widthUpright": 0.15648,
+            "heightUpright": 0.03365
+          },
+          "loadBearingUnit": "kg/cm²",
+          "normalizedLoadBearingKg": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_wtpack",
+      "instance": "wtpack1-1",
+      "item": "2",
+      "fields": {
+        "raw": [
+          110,
+          0,
+          43,
+          1,
+          25,
+          1,
+          33,
+          118.25,
+          0.06576,
+          0.08464,
+          0.06213
+        ],
+        "normalized": {
+          "lengthMm": 1100,
+          "widthMm": 430,
+          "heightMm": 250,
+          "weightKg": 118.25,
+          "quantity": 33,
+          "loadBearing": {
+            "lengthUpright": 0.06576,
+            "widthUpright": 0.08464,
+            "heightUpright": 0.06213
+          },
+          "loadBearingUnit": "kg/cm²",
+          "normalizedLoadBearingKg": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "orlib_wtpack",
+      "instance": "wtpack1-1",
+      "item": "3",
+      "fields": {
+        "raw": [
+          92,
+          1,
+          81,
+          1,
+          55,
+          1,
+          39,
+          409.86,
+          0.16416,
+          0.11937,
+          0.02165
+        ],
+        "normalized": {
+          "lengthMm": 920,
+          "widthMm": 810,
+          "heightMm": 550,
+          "weightKg": 409.86,
+          "quantity": 39,
+          "loadBearing": {
+            "lengthUpright": 0.16416,
+            "widthUpright": 0.11937,
+            "heightUpright": 0.02165
+          },
+          "loadBearingUnit": "kg/cm²",
+          "normalizedLoadBearingKg": null
+        }
+      },
+      "pass": true
+    },
+    {
+      "source": "esicup_irregular",
+      "instance": "irregular-liu-2015",
+      "item": "1",
+      "fields": {
+        "geometryAsset": "liu_2015/tetrahedron.obj",
+        "bytes": 481,
+        "weightKg": null,
+        "stackability": "UNKNOWN"
+      },
+      "pass": true
+    },
+    {
+      "source": "esicup_irregular",
+      "instance": "irregular-stoyan-2004",
+      "item": "1",
+      "fields": {
+        "geometryAsset": "stoyan_2004_nonconvex/sanitized/polytope1.obj",
+        "bytes": 687,
+        "weightKg": null,
+        "stackability": "UNKNOWN"
+      },
+      "pass": true
+    },
+    {
+      "source": "esicup_irregular",
+      "instance": "irregular-egeblad-2009",
+      "item": "1",
+      "fields": {
+        "geometryAsset": "egeblad_2009_long_thin/Merged/Block1.stl",
+        "bytes": 3286,
+        "weightKg": null,
+        "stackability": "UNKNOWN"
+      },
+      "pass": true
+    },
+    {
+      "source": "esicup_irregular",
+      "instance": "irregular-silva-2021",
+      "item": "1",
+      "fields": {
+        "geometryAsset": "silva_2021_industrial_shape/banana.stl",
+        "bytes": 54028,
+        "weightKg": null,
+        "stackability": "UNKNOWN"
+      },
+      "pass": true
+    }
+  ]
+}

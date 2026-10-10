@@ -1,0 +1,52 @@
+{
+  "validatedAt": "2026-09-11T15:36:00+08:00",
+  "method": "real Chromium browser interaction on /workspace/cargo with Playwright CLI",
+  "baseUrl": "http://127.0.0.1:14174",
+  "result": "PASS",
+  "sourceBrowserChecks": [
+    {"source":"renault_esicup_2015","instance":"instancesA / ARG_BUR_STK_container","verifiedFields":["Chinese source/class","free orientation","container-axis warning","missing facts"],"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/01-renault.png"},
+    {"source":"ortec_alonso_2019","instance":"inst3d1","verifiedFields":["road-vehicle classification","axis permissions","stacking group","top/bottom support status","no sea-port projection"],"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/02-ortec-inst3d1.png"},
+    {"source":"orlib_wtpack","instance":"wtpack1-1","verifiedFields":["kg/cm² retained","adapter warning","no total-load conversion"],"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/03-wtpack-problem1.png"},
+    {"source":"esicup_irregular","verifiedFields":["mesh provenance","source-coordinate bounds","task creation disabled"],"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/04-irregular.png"},
+    {"source":"orlib_thpack","group":"thpack1","verifiedFields":["normal dataset browsing","Chinese group label"],"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/05-thpack-normal.png"},
+    {"source":"orlib_thpack","group":"thpack8","verifiedFields":["restricted warning","task creation disabled"],"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/06-thpack8-restricted.png"},
+    {"source":"orlib_thpack","group":"thpack9","verifiedFields":["restricted warning","task creation disabled"],"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/07-thpack9-restricted.png"},
+    {"source":"atlas_copco","status":"pending","createTaskButtonCount":0,"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/08-atlas-pending.png"},
+    {"source":"beantech","status":"pending","createTaskButtonCount":0,"screenshot":"web-dashboard/output/playwright/schema-zh-2026-09-11/09-beantech-pending.png"}
+  ],
+  "taskCreation": {
+    "source": "orlib_wtpack",
+    "instance": "wtpack1-1",
+    "unsupportedConstraintWarningVisibleBeforeCreate": true,
+    "expandedPieceCount": 112,
+    "unknownFactsRemainNullAndDisplayAsSourceNotProvided": true,
+    "pressureUnit": "kg/cm²",
+    "survivesBrowserReloadWithoutDefaultFabrication": true,
+    "screenshots": [
+      "web-dashboard/output/playwright/schema-zh-2026-09-11/10-wtpack-task-created.png",
+      "web-dashboard/output/playwright/schema-zh-2026-09-11/11-wtpack-task-after-reload.png"
+    ]
+  },
+  "freightBusinessContextBrowserChecks": [
+    {"source":"renault_esicup_2015","instance":"instancesA / ARG_BUR_STK_container","pieceCount":219,"customers":3,"orders":3,"unloadGroups":3,"pod":"Hamburg","unknownHandlingVisible":true,"screenshots":["web-dashboard/output/playwright/external-freight-context-2026-09-11/02-renault-context-step.png","web-dashboard/output/playwright/external-freight-context-2026-09-11/03-renault-task.png"]},
+    {"source":"orlib_wtpack","instance":"wtpack1 / problem 1","pieceCount":112,"customers":3,"orders":3,"unloadGroups":3,"pod":"Hamburg","pressureUnit":"kg/cm²","screenshots":["web-dashboard/output/playwright/external-freight-context-2026-09-11/04-wtpack-context-step.png","web-dashboard/output/playwright/external-freight-context-2026-09-11/05-wtpack-task.png"]},
+    {"source":"ortec_alonso_2019","instance":"inst3d1","pieceCount":25022,"customers":3,"orders":3,"unloadGroups":3,"pod":"Hamburg","deliveryDaySourceValue":0,"deliveryDaySeparatedFromPortSequence":true,"screenshots":["web-dashboard/output/playwright/external-freight-context-2026-09-11/06-ortec-source-technical.png","web-dashboard/output/playwright/external-freight-context-2026-09-11/07-ortec-task.png"]}
+  ],
+  "packagingHandlingProfileChecks": {
+    "profileAudit": {"instances":1633,"items":26452,"sourceFactsPreserved":true,"hardHandlingMethodRemainsNull":true,"palletJackWithoutEvidence":0,"artifact":"artifacts/external-packaging-handling/after-profile-audit.json"},
+    "browser": [
+      {"source":"ortec_alonso_2019","instances":["inst3d1","inst3d57","inst3d76"],"verified":["small","standard","heavy","long","manual candidate","mechanical assist","forklift preferred","rotation","stacking group"],"screenshots":["web-dashboard/output/playwright/external-packaging-handling-2026-09-11/01-ortec-inst3d1-profile.png","web-dashboard/output/playwright/external-packaging-handling-2026-09-11/02-ortec-light-heavy-profile.png","web-dashboard/output/playwright/external-packaging-handling-2026-09-11/03-ortec-small-standard-long.png"]},
+      {"source":"renault_esicup_2015","instance":"instancesA / ARG_BUR_STK_container","skuCount":73,"pieceCount":219,"minimumSkusInspected":8,"verified":["CARDBOARD as source fact","WOOD as source fact","axis alignment","fork interface remains unknown"],"screenshot":"web-dashboard/output/playwright/external-packaging-handling-2026-09-11/04-renault-source-materials.png"},
+      {"source":"orlib_wtpack","instance":"wtpack1 / problem 1","skuCount":3,"weightsKg":[246.24,118.25,409.86],"verified":["all three are non-manual","vertical indicators","kg/cm² retained","fork interface remains unknown","pallet-jack compatibility not invented"],"screenshot":"web-dashboard/output/playwright/external-packaging-handling-2026-09-11/05-wtpack-three-profiles.png"},
+      {"source":"orlib_thpack","instance":"thpack1 / problem 1","verified":["three different box dimensions","vertical indicators","material remains unknown","creation remains blocked because source weight is absent"],"screenshot":"web-dashboard/output/playwright/external-packaging-handling-2026-09-11/06-thpack-source-boxes.png"},
+      {"source":"esicup_irregular","instance":"Liu 2015","verified":["OBJ mesh paths retained","irregular source stays BROWSE_ONLY","no carton fallback"],"screenshot":"web-dashboard/output/playwright/external-packaging-handling-2026-09-11/07-irregular-source-mesh.png"},
+      {"source":"original_212","verified":["10 SKU","212 pieces","8623 kg","original manual/forklift fields","Hamburg/Rotterdam/Antwerp and port sequence"],"screenshot":"web-dashboard/output/playwright/external-packaging-handling-2026-09-11/08-original-212-regression.png"}
+    ],
+    "browserReloadAfterBackendStart":"PASS"
+  },
+  "rawIntegrity": {"filesComparedToStartBackup":351,"sha256MismatchCount":0,"validatorChecks":27,"validatorResult":"PASS","rawAndNormalizedFileCount":365},
+  "original212Regression": {"orderNo":"NB2026-0824-001","skuCount":10,"pieceCount":212,"weightKg":8623,"fingerprint40HQ":"c427d060","unchanged":true},
+  "focusedTests": {"files":7,"tests":33,"passed":33,"productionBuild":"PASS","externalDatasetValidatorChecks":27,"externalDatasetValidatorResult":"PASS"},
+  "browserConsole": {"errorsAfterFinalReload":0,"externalDatasetErrors":0},
+  "serviceHealth": {"frontend":{"url":"http://127.0.0.1:14174/workspace/cargo","httpStatus":200},"backend":{"url":"http://127.0.0.1:3000/api/health","httpStatus":200,"dataStatus":"ok"}}
+}

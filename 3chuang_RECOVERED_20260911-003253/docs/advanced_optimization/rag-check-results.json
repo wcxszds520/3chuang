@@ -1,0 +1,351 @@
+{
+  "generatedAt": "2026-06-30T10:15:44.017Z",
+  "baseUrl": "http://127.0.0.1:3000/api",
+  "tavilyConfigured": false,
+  "localRows": [
+    {
+      "keyword": "VGM",
+      "passed": true,
+      "elapsedMs": 199,
+      "resultCount": 3,
+      "topDoc": "solas_vgm",
+      "topSection": "VI-2.2 VGM 允许误差",
+      "topScore": 0.302,
+      "error": ""
+    },
+    {
+      "keyword": "SOLAS",
+      "passed": true,
+      "elapsedMs": 17,
+      "resultCount": 3,
+      "topDoc": "solas_vgm",
+      "topSection": "VI-2.1 VGM 强制申报",
+      "topScore": 0.164,
+      "error": ""
+    },
+    {
+      "keyword": "CTU",
+      "passed": true,
+      "elapsedMs": 11,
+      "resultCount": 3,
+      "topDoc": "ctu_code",
+      "topSection": "3.2 CTU 60/50 规则",
+      "topScore": 0.19,
+      "error": ""
+    },
+    {
+      "keyword": "LIFO",
+      "passed": true,
+      "elapsedMs": 8,
+      "resultCount": 1,
+      "topDoc": "ctu_code",
+      "topSection": "4.1 装载顺序与可达性",
+      "topScore": 0.163,
+      "error": ""
+    },
+    {
+      "keyword": "重心",
+      "passed": true,
+      "elapsedMs": 10,
+      "resultCount": 2,
+      "topDoc": "ctu_code",
+      "topSection": "3.1 重量分布原则",
+      "topScore": 0.332,
+      "error": ""
+    },
+    {
+      "keyword": "IPPC",
+      "passed": true,
+      "elapsedMs": 11,
+      "resultCount": 1,
+      "topDoc": "jtt1187",
+      "topSection": "6.1 木质包装 IPPC",
+      "topScore": 0.31,
+      "error": ""
+    },
+    {
+      "keyword": "木包装",
+      "passed": true,
+      "elapsedMs": 8,
+      "resultCount": 3,
+      "topDoc": "jtt1187",
+      "topSection": "6.1 木质包装 IPPC",
+      "topScore": 0.084,
+      "error": ""
+    },
+    {
+      "keyword": "单证一致性",
+      "passed": true,
+      "elapsedMs": 10,
+      "resultCount": 3,
+      "topDoc": "gb40163",
+      "topSection": "6.1 记录与单证",
+      "topScore": 0.07,
+      "error": ""
+    },
+    {
+      "keyword": "危险品",
+      "passed": true,
+      "elapsedMs": 8,
+      "resultCount": 3,
+      "topDoc": "gb40163",
+      "topSection": "5.3 装箱与封箱操作",
+      "topScore": 0.221,
+      "error": ""
+    }
+  ],
+  "hybridRows": [
+    {
+      "query": "SOLAS VGM",
+      "passed": true,
+      "elapsedMs": 12,
+      "localCount": 3,
+      "webCount": 1,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 1
+      },
+      "topWeb": [
+        {
+          "title": "Verification of the gross mass of a packed container",
+          "domain": "imo.org",
+          "credibility": "official",
+          "url": "https://www.imo.org/en/OurWork/Safety/Pages/Verification-of-the-gross-mass.aspx"
+        }
+      ]
+    },
+    {
+      "query": "CTU Code container packing",
+      "passed": true,
+      "elapsedMs": 10,
+      "localCount": 3,
+      "webCount": 3,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 2,
+        "industry": 1
+      },
+      "topWeb": [
+        {
+          "title": "IMO/ILO/UNECE Code of Practice for Packing of Cargo Transport Units",
+          "domain": "imo.org",
+          "credibility": "official",
+          "url": "https://www.imo.org/en/ourwork/safety/pages/ctu-code.aspx"
+        },
+        {
+          "title": "IMO/ILO/UNECE Code of Practice for Packing of Cargo Transport Units",
+          "domain": "unece.org",
+          "credibility": "official",
+          "url": "https://unece.org/transport/intermodal-transport/imoilounece-code-practice-packing-cargo-transport-units-ctu-code"
+        }
+      ]
+    },
+    {
+      "query": "IPPC wood packaging ISPM 15",
+      "passed": true,
+      "elapsedMs": 8,
+      "localCount": 3,
+      "webCount": 2,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 2
+      },
+      "topWeb": [
+        {
+          "title": "Explanatory document for ISPM 15",
+          "domain": "ippc.int",
+          "credibility": "official",
+          "url": "https://www.ippc.int/static/media/files/publication/en/2017/02/ISPM_15_ED_En_2017-02-10.pdf"
+        },
+        {
+          "title": "Import and Export Requirements for Wood Packaging Material",
+          "domain": "help.cbp.gov",
+          "credibility": "official",
+          "url": "https://www.help.cbp.gov/s/article/Article-1200?language=en_US"
+        }
+      ]
+    },
+    {
+      "query": "container weight distribution center of gravity",
+      "passed": true,
+      "elapsedMs": 8,
+      "localCount": 3,
+      "webCount": 2,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 1,
+        "industry": 1
+      },
+      "topWeb": [
+        {
+          "title": "CTU Code - Principles of packing",
+          "domain": "wiki.unece.org",
+          "credibility": "official",
+          "url": "https://wiki.unece.org/spaces/TransportSustainableCTUCode/pages/23102046/3%2BPrinciples%2Bof%2Bpacking"
+        },
+        {
+          "title": "Best Practices Packing Container",
+          "domain": "cma-cgm.com",
+          "credibility": "industry",
+          "url": "https://www.cma-cgm.com/assets/public/pdf/Lashing.pdf"
+        }
+      ]
+    },
+    {
+      "query": "container packing dangerous goods",
+      "passed": true,
+      "elapsedMs": 10,
+      "localCount": 3,
+      "webCount": 2,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 2
+      },
+      "topWeb": [
+        {
+          "title": "IMO/ILO/UNECE Code of Practice for Packing of Cargo Transport Units",
+          "domain": "imo.org",
+          "credibility": "official",
+          "url": "https://www.imo.org/en/ourwork/safety/pages/ctu-code.aspx"
+        },
+        {
+          "title": "IMO/ILO/UNECE Code of Practice for Packing of Cargo Transport Units",
+          "domain": "unece.org",
+          "credibility": "official",
+          "url": "https://unece.org/transport/intermodal-transport/imoilounece-code-practice-packing-cargo-transport-units-ctu-code"
+        }
+      ]
+    },
+    {
+      "query": "集装箱 装箱 单证 一致性",
+      "passed": true,
+      "elapsedMs": 10,
+      "localCount": 3,
+      "webCount": 2,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 2
+      },
+      "topWeb": [
+        {
+          "title": "Verification of the gross mass of a packed container",
+          "domain": "imo.org",
+          "credibility": "official",
+          "url": "https://www.imo.org/en/OurWork/Safety/Pages/Verification-of-the-gross-mass.aspx"
+        },
+        {
+          "title": "IMO/ILO/UNECE Code of Practice for Packing of Cargo Transport Units",
+          "domain": "imo.org",
+          "credibility": "official",
+          "url": "https://www.imo.org/en/ourwork/safety/pages/ctu-code.aspx"
+        }
+      ]
+    },
+    {
+      "query": "木包装 IPPC 熏蒸 标识",
+      "passed": true,
+      "elapsedMs": 9,
+      "localCount": 3,
+      "webCount": 2,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 2
+      },
+      "topWeb": [
+        {
+          "title": "Explanatory document for ISPM 15",
+          "domain": "ippc.int",
+          "credibility": "official",
+          "url": "https://www.ippc.int/static/media/files/publication/en/2017/02/ISPM_15_ED_En_2017-02-10.pdf"
+        },
+        {
+          "title": "Import and Export Requirements for Wood Packaging Material",
+          "domain": "help.cbp.gov",
+          "credibility": "official",
+          "url": "https://www.help.cbp.gov/s/article/Article-1200?language=en_US"
+        }
+      ]
+    },
+    {
+      "query": "集装箱 偏载 重心",
+      "passed": true,
+      "elapsedMs": 6,
+      "localCount": 3,
+      "webCount": 2,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 1,
+        "industry": 1
+      },
+      "topWeb": [
+        {
+          "title": "CTU Code - Principles of packing",
+          "domain": "wiki.unece.org",
+          "credibility": "official",
+          "url": "https://wiki.unece.org/spaces/TransportSustainableCTUCode/pages/23102046/3%2BPrinciples%2Bof%2Bpacking"
+        },
+        {
+          "title": "Best Practices Packing Container",
+          "domain": "cma-cgm.com",
+          "credibility": "industry",
+          "url": "https://www.cma-cgm.com/assets/public/pdf/Lashing.pdf"
+        }
+      ]
+    },
+    {
+      "query": "VGM 申报 误差",
+      "passed": true,
+      "elapsedMs": 8,
+      "localCount": 3,
+      "webCount": 1,
+      "webAvailable": true,
+      "cacheUsed": true,
+      "webSource": "curated_public_web_cache",
+      "webError": "",
+      "credibility": {
+        "official": 1
+      },
+      "topWeb": [
+        {
+          "title": "Verification of the gross mass of a packed container",
+          "domain": "imo.org",
+          "credibility": "official",
+          "url": "https://www.imo.org/en/OurWork/Safety/Pages/Verification-of-the-gross-mass.aspx"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "localPassed": 9,
+    "localTotal": 9,
+    "hybridPassed": 9,
+    "hybridTotal": 9,
+    "hybridWithWebRefs": 9,
+    "cacheUsedRows": 9,
+    "tavilyConfigured": false
+  }
+}
