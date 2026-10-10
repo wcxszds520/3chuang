@@ -1,0 +1,490 @@
+{
+  "generatedAt": "2026-07-10T07:32:04.076Z",
+  "baseUrl": "http://127.0.0.1:5173/",
+  "passed": true,
+  "results": [
+    {
+      "page": "dashboard",
+      "viewport": "1672x941",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "港前装柜智能工作台"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=19"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "任务型首页标题",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "四步业务流程",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "当前方案与风险入口",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "不暴露内部表名",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "不展示系统运维标语",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1672-dashboard.png"
+    },
+    {
+      "page": "cargo",
+      "viewport": "1672x941",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "货物录入与 SKU 管理"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=22"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "显示数据完整度",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "不显示过期演示指标",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "SKU 状态与操作列存在",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "SKU 表格可横向查看",
+          "passed": true,
+          "details": "{\"overflowX\":\"auto\",\"clientWidth\":652,\"scrollWidth\":652}"
+        },
+        {
+          "name": "桌面端状态与操作列一屏可见",
+          "passed": true,
+          "details": "{\"overflowX\":\"auto\",\"clientWidth\":652,\"scrollWidth\":652}"
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1672-cargo.png"
+    },
+    {
+      "page": "container",
+      "viewport": "1672x941",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "柜型推荐与装柜决策"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=15"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "使用真实 3D 装柜预估",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1672-container.png"
+    },
+    {
+      "page": "twin",
+      "viewport": "1672x941",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "3D 作业孪生与装柜过程"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=30"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "Three canvas 存在",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "Three canvas 非空尺寸",
+          "passed": true,
+          "details": "{\"width\":1036,\"height\":657,\"clientWidth\":1036,\"clientHeight\":657}"
+        },
+        {
+          "name": "Three canvas 像素非空且具有场景层次",
+          "passed": true,
+          "details": "{\"sampleCount\":96,\"uniqueColors\":31,\"coloredSamples\":96}"
+        },
+        {
+          "name": "桌面端 3D 双栏",
+          "passed": true,
+          "details": "1038px 360px"
+        },
+        {
+          "name": "四个 3D 视角可切换并成像",
+          "passed": true,
+          "details": "{\"门端\":\"docs/design_reviews/product-redesign/screenshots/1672-twin-门端.png\",\"俯视\":\"docs/design_reviews/product-redesign/screenshots/1672-twin-俯视.png\",\"侧视\":\"docs/design_reviews/product-redesign/screenshots/1672-twin-侧视.png\",\"总览\":\"docs/design_reviews/product-redesign/screenshots/1672-twin-总览.png\"}"
+        },
+        {
+          "name": "3D 播放状态可切换",
+          "passed": true,
+          "details": "playButtonCount=1"
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1672-twin.png",
+      "viewScreenshots": {
+        "门端": "docs/design_reviews/product-redesign/screenshots/1672-twin-门端.png",
+        "俯视": "docs/design_reviews/product-redesign/screenshots/1672-twin-俯视.png",
+        "侧视": "docs/design_reviews/product-redesign/screenshots/1672-twin-侧视.png",
+        "总览": "docs/design_reviews/product-redesign/screenshots/1672-twin-总览.png"
+      }
+    },
+    {
+      "page": "compliance",
+      "viewport": "1672x941",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "合规预审与法规溯源"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=17"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "规则 AI 人工三层清晰",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1672-compliance.png"
+    },
+    {
+      "page": "report",
+      "viewport": "1672x941",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "报告导出与成果中心"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=17"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "报告预览包含真实方案缩略",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "仅显示真实导出格式",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1672-report.png"
+    },
+    {
+      "page": "dashboard",
+      "viewport": "1280x720",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "港前装柜智能工作台"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=19"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "任务型首页标题",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "四步业务流程",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "当前方案与风险入口",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "不暴露内部表名",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "不展示系统运维标语",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1280-dashboard.png"
+    },
+    {
+      "page": "cargo",
+      "viewport": "1280x720",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "货物录入与 SKU 管理"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=22"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "显示数据完整度",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "不显示过期演示指标",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "SKU 状态与操作列存在",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "SKU 表格可横向查看",
+          "passed": true,
+          "details": "{\"overflowX\":\"auto\",\"clientWidth\":650,\"scrollWidth\":650}"
+        },
+        {
+          "name": "桌面端状态与操作列一屏可见",
+          "passed": true,
+          "details": "{\"overflowX\":\"auto\",\"clientWidth\":650,\"scrollWidth\":650}"
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1280-cargo.png"
+    },
+    {
+      "page": "container",
+      "viewport": "1280x720",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "柜型推荐与装柜决策"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=15"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "使用真实 3D 装柜预估",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1280-container.png"
+    },
+    {
+      "page": "twin",
+      "viewport": "1280x720",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "3D 作业孪生与装柜过程"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=30"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "Three canvas 存在",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "Three canvas 非空尺寸",
+          "passed": true,
+          "details": "{\"width\":684,\"height\":558,\"clientWidth\":684,\"clientHeight\":558}"
+        },
+        {
+          "name": "Three canvas 像素非空且具有场景层次",
+          "passed": true,
+          "details": "{\"sampleCount\":96,\"uniqueColors\":27,\"coloredSamples\":96}"
+        },
+        {
+          "name": "四个 3D 视角可切换并成像",
+          "passed": true,
+          "details": "{\"门端\":\"docs/design_reviews/product-redesign/screenshots/1280-twin-门端.png\",\"俯视\":\"docs/design_reviews/product-redesign/screenshots/1280-twin-俯视.png\",\"侧视\":\"docs/design_reviews/product-redesign/screenshots/1280-twin-侧视.png\",\"总览\":\"docs/design_reviews/product-redesign/screenshots/1280-twin-总览.png\"}"
+        },
+        {
+          "name": "3D 播放状态可切换",
+          "passed": true,
+          "details": "playButtonCount=1"
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1280-twin.png",
+      "viewScreenshots": {
+        "门端": "docs/design_reviews/product-redesign/screenshots/1280-twin-门端.png",
+        "俯视": "docs/design_reviews/product-redesign/screenshots/1280-twin-俯视.png",
+        "侧视": "docs/design_reviews/product-redesign/screenshots/1280-twin-侧视.png",
+        "总览": "docs/design_reviews/product-redesign/screenshots/1280-twin-总览.png"
+      }
+    },
+    {
+      "page": "compliance",
+      "viewport": "1280x720",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "合规预审与法规溯源"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=17"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "规则 AI 人工三层清晰",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1280-compliance.png"
+    },
+    {
+      "page": "report",
+      "viewport": "1280x720",
+      "passed": true,
+      "checks": [
+        {
+          "name": "主标题可见",
+          "passed": true,
+          "details": "报告导出与成果中心"
+        },
+        {
+          "name": "存在可操作控件",
+          "passed": true,
+          "details": "buttons=17"
+        },
+        {
+          "name": "壳层不使用装饰渐变或全局网格",
+          "passed": true,
+          "details": "{\"sidebarBackgroundImage\":\"none\",\"workspaceBackgroundImage\":\"none\"}"
+        },
+        {
+          "name": "报告预览包含真实方案缩略",
+          "passed": true,
+          "details": ""
+        },
+        {
+          "name": "仅显示真实导出格式",
+          "passed": true,
+          "details": ""
+        }
+      ],
+      "screenshot": "docs/design_reviews/product-redesign/screenshots/1280-report.png"
+    }
+  ]
+}

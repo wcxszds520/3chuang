@@ -1,0 +1,63 @@
+# ── Dependencies ──
+node_modules/
+**/node_modules/
+
+# ── Generated / build output (do NOT commit) ──
+output/
+outputs/*
+!outputs/KIMI-K3-前端与3D升级提示词.md
+tmp/
+
+# ── Python caches ──
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Logs & AI session artifacts ──
+*.log
+.codex/
+.codex-*
+
+# ── Editor / OS ──
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Blender automatic backups ──
+assets-src/blender/*.blend1
+
+# ── Assistant internal state ──
+.workbuddy/
+
+# ===== ↑ 以上同步自 .gitignore（「从 .gitignore 同步」只重写以上部分）=====
+.git/
+.hg/
+.svn/
+bower_components/
+jspm_packages/
+__pycache__/
+site-packages/
+venv/
+coverage/
+htmlcov/
+lcov-report/
+cmakefiles/
+cmake-build-*/
+bazel-*/
+pods/
+deriveddata/
+storybook-static/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+cdk.out/
+*.egg-info/
+*.dist-info/
+eggs/
+pip-wheel-metadata/
+wheels/
+# ----- ↑ 以上为 ZCode 默认排除规则（自定义规则请写在本行下方，不会被同步/恢复改动）-----
+# 自定义规则写在下方（本行提示可删除）

@@ -1,0 +1,32 @@
+# ── Dependencies ──
+node_modules/
+**/node_modules/
+
+# ── Generated / build output (do NOT commit) ──
+output/
+outputs/*
+!outputs/KIMI-K3-前端与3D升级提示词.md
+tmp/
+
+# ── Python caches ──
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Logs & AI session artifacts ──
+*.log
+.codex/
+.codex-*
+
+# ── Editor / OS ──
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Blender automatic backups ──
+assets-src/blender/*.blend1
+
+# ── Assistant internal state ──
+.workbuddy/
