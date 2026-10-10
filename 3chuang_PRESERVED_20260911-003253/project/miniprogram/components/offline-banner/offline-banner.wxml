@@ -1,0 +1,5 @@
+<!--离线模式横幅 (Req 13.4)-->
+<view class="offline-banner" wx:if="{{isOffline || show}}">
+  <view class="offline-banner__icon">⚡</view>
+  <view class="offline-banner__text">离线模式 · 使用本地预录数据</view>
+</view>

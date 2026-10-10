@@ -1,0 +1,218 @@
+/**
+ * 优雅 Loading 组件样式
+ * 科技风旋转/脉冲光环 + 进度条
+ * 使用 Design Token CSS 变量
+ * 
+ * Requirements: 7.6, 8.2, 8.3
+ */
+
+@import '/styles/theme.wxss';
+
+/* ============================================================
+   遮罩层
+   ============================================================ */
+.elegant-loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elegant-loading-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: elegantBackdropIn var(--duration-normal, 300ms) var(--ease-enter, ease-out) forwards;
+}
+
+@keyframes elegantBackdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================================================
+   中心内容区
+   ============================================================ */
+.elegant-loading-center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48rpx;
+  animation: elegantCenterIn var(--duration-normal, 300ms) var(--ease-enter, ease-out) forwards;
+}
+
+@keyframes elegantCenterIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================================
+   三层旋转光环
+   ============================================================ */
+.elegant-ring-container {
+  position: relative;
+  width: 140rpx;
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 外圈 - 慢速旋转 */
+.elegant-ring-outer {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 4rpx solid var(--color-primary-alpha-10, rgba(0, 122, 255, 0.10));
+  border-top-color: var(--color-primary, #007AFF);
+  animation: elegantRotate 1400ms linear infinite;
+}
+
+/* 中圈 - 反向旋转 */
+.elegant-ring-middle {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 3rpx solid transparent;
+  border-bottom-color: var(--color-primary-alpha-50, rgba(0, 122, 255, 0.50));
+  border-left-color: var(--color-primary-alpha-20, rgba(0, 122, 255, 0.20));
+  animation: elegantRotateReverse 1000ms linear infinite;
+}
+
+/* 核心 - 脉冲发光 */
+.elegant-ring-core {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: var(--color-primary, #007AFF);
+  box-shadow: 0 0 20rpx var(--color-primary-alpha-50, rgba(0, 122, 255, 0.50)),
+              0 0 40rpx var(--color-primary-alpha-20, rgba(0, 122, 255, 0.20));
+  animation: elegantPulse 1600ms var(--ease-standard, ease) infinite;
+}
+
+@keyframes elegantRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes elegantRotateReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes elegantPulse {
+  0%, 100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   加载文字
+   ============================================================ */
+.elegant-loading-text {
+  font-size: var(--font-size-md, 28rpx);
+  color: var(--color-text-secondary, #6E6E73);
+  font-weight: var(--font-weight-medium, 500);
+  text-align: center;
+  max-width: 500rpx;
+  animation: elegantTextBreath 2.5s var(--ease-standard, ease) infinite;
+}
+
+@keyframes elegantTextBreath {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+/* ============================================================
+   进度条
+   ============================================================ */
+.elegant-progress-section {
+  width: 420rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16rpx;
+  animation: elegantProgressIn var(--duration-normal, 300ms) var(--ease-enter, ease-out) forwards;
+  opacity: 0;
+}
+
+@keyframes elegantProgressIn {
+  from {
+    opacity: 0;
+    transform: translateY(16rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.elegant-progress-bar {
+  width: 100%;
+  height: 8rpx;
+  background-color: var(--color-primary-alpha-10, rgba(0, 122, 255, 0.10));
+  border-radius: 9999rpx;
+  overflow: hidden;
+}
+
+.elegant-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, 
+    var(--color-primary, #007AFF), 
+    var(--color-primary-light, #4DA2FF));
+  border-radius: 9999rpx;
+  transition: width 400ms var(--ease-standard, ease);
+  position: relative;
+}
+
+.elegant-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  animation: elegantShimmer 1.8s infinite;
+}
+
+@keyframes elegantShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.elegant-progress-label {
+  font-size: var(--font-size-sm, 24rpx);
+  color: var(--color-text-tertiary, #AEAEB2);
+  text-align: center;
+}

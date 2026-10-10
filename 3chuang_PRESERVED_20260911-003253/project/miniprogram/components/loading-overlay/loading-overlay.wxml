@@ -1,0 +1,24 @@
+<!--
+  自定义 Loading 组件
+  替代微信默认 loading，提供科技风脉冲光环
+  Requirements: 7.6 (Loading 态), 8.2 (优雅加载), 8.3 (进度动画)
+-->
+<view class="loading-overlay" wx:if="{{visible}}">
+  <view class="loading-backdrop"></view>
+  <view class="loading-center">
+    <!-- 旋转光环 -->
+    <view class="loading-ring-container">
+      <view class="loading-ring"></view>
+      <view class="loading-ring-inner"></view>
+    </view>
+    <!-- 加载文字 -->
+    <view class="loading-label" wx:if="{{text}}">{{text}}</view>
+    <!-- 进度条（长时间处理 > 2000ms 时显示，外部控制或自动触发） -->
+    <view class="loading-progress" wx:if="{{showProgress || _autoShowProgress}}">
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{progress}}%;"></view>
+      </view>
+      <view class="progress-text">{{progressText || '处理中...'}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,172 @@
+/**
+ * 自定义 Loading 组件样式
+ * 科技风脉冲光环 + 进度条
+ * Requirements: 7.6, 8.2, 8.3
+ */
+
+@import '/styles/theme.wxss';
+
+/* 遮罩层 */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: backdropFadeIn var(--duration-normal) var(--ease-enter) forwards;
+}
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 中心内容 */
+.loading-center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+  animation: loadingEnter var(--duration-normal) var(--ease-enter) forwards;
+}
+
+@keyframes loadingEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 旋转光环容器 */
+.loading-ring-container {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 外圈旋转 */
+.loading-ring {
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: var(--radius-full);
+  border: 6rpx solid var(--color-primary-alpha-10);
+  border-top-color: var(--color-primary);
+  border-right-color: var(--color-primary-alpha-50);
+  animation: ringRotate 1200ms linear infinite;
+}
+
+/* 内圈脉冲 */
+.loading-ring-inner {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  animation: ringPulse 1500ms var(--ease-standard) infinite;
+  box-shadow: 0 0 24rpx var(--color-primary-alpha-50);
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ringPulse {
+  0%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 加载文字 */
+.loading-label {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  animation: textFade 2s var(--ease-standard) infinite;
+}
+
+@keyframes textFade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* 进度条区域 */
+.loading-progress {
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8rpx;
+  background-color: var(--color-primary-alpha-10);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  border-radius: var(--radius-full);
+  transition: width 300ms var(--ease-standard);
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.progress-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}

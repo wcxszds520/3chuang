@@ -1,0 +1,111 @@
+{
+  "screenshots": {
+    "dashboard": {
+      "file": "dashboard-after.png",
+      "label": "工作台首页",
+      "captured": true
+    },
+    "cargo": {
+      "file": "cargo-after.png",
+      "label": "货物录入 / VLM",
+      "captured": true
+    },
+    "container": {
+      "file": "container-after.png",
+      "label": "柜型推荐",
+      "captured": true
+    },
+    "twin": {
+      "file": "twin-after.png",
+      "label": "3D 作业孪生",
+      "captured": true
+    },
+    "compliance": {
+      "file": "compliance-after.png",
+      "label": "合规预审 / RAG",
+      "captured": true
+    },
+    "report": {
+      "file": "report-after.png",
+      "label": "报告导出",
+      "captured": true
+    }
+  },
+  "canvasCheck": {
+    "found": true,
+    "count": 1,
+    "width": 940,
+    "height": 1146,
+    "nonEmpty": true
+  },
+  "buttonTest": {
+    "maintainSku": {
+      "clicked": true,
+      "navigatedTo": "#cargo",
+      "passed": true
+    },
+    "generatePlan": {
+      "clicked": true,
+      "beforeText": "生成装柜方案",
+      "afterText": "生成装柜方案",
+      "passed": true
+    }
+  },
+  "e2eMainPath": {
+    "steps": [
+      {
+        "step": "dashboard",
+        "hash": "#dashboard",
+        "pageRendered": true,
+        "passed": true
+      },
+      {
+        "step": "container",
+        "hash": "#container",
+        "pageRendered": true,
+        "passed": true
+      },
+      {
+        "step": "twin",
+        "hash": "#twin",
+        "pageRendered": true,
+        "passed": true
+      },
+      {
+        "step": "compliance",
+        "hash": "#compliance",
+        "pageRendered": true,
+        "passed": true
+      },
+      {
+        "step": "report",
+        "hash": "#report",
+        "pageRendered": true,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "securityCheck": {
+    "keyLeakCount": 0,
+    "samples": [],
+    "envLeak": false
+  },
+  "errors": [],
+  "dataConsistency": {
+    "barText": "订单号NB2026-DEMO-01航线宁波港 -> 汉堡港柜型40HQ装入件数221/221空间利用率84.51%合规评分86 分当前步骤工作台",
+    "metricText": "空间利用率84.51%装入件数221/221重心偏移横0.0% / 纵19.3%合规状态WARNING · 86 分未装入尾货420 件",
+    "hasHardcodedPass": false
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "consoleErrorCount": 8
+}

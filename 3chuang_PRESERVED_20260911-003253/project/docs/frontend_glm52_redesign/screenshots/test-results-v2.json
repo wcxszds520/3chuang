@@ -1,0 +1,148 @@
+{
+  "screenshots": {
+    "dashboard": {
+      "file": "dashboard-after-v2.png",
+      "captured": true
+    },
+    "cargo": {
+      "file": "cargo-after-v2.png",
+      "captured": true
+    },
+    "container": {
+      "file": "container-after-v2.png",
+      "captured": true
+    },
+    "twin": {
+      "file": "twin-after-v2.png",
+      "captured": true
+    },
+    "compliance": {
+      "file": "compliance-after-v2.png",
+      "captured": true
+    },
+    "report": {
+      "file": "report-after-v2.png",
+      "captured": true
+    }
+  },
+  "canvasCheck": {
+    "found": true,
+    "count": 1,
+    "width": 940,
+    "height": 1146,
+    "nonEmpty": true
+  },
+  "threeDTests": {
+    "play": {
+      "passed": true,
+      "note": "播放按钮点击后出现暂停按钮"
+    },
+    "viewSwitch": {
+      "passed": false,
+      "error": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.viewer-toolbar button:has-text(\"俯视\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" type=\"button\">俯视</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n"
+    },
+    "layerButtons": {
+      "passed": false,
+      "error": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.layer-groups button').first()\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" type=\"button\" title=\"点击聚焦该图层\">叉车路径</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n"
+    },
+    "algorithmBasis": {
+      "passed": true,
+      "modalVisible": true
+    }
+  },
+  "complianceTests": {
+    "aiAudit": {
+      "passed": true,
+      "beforeText": "AI 深度审计",
+      "afterText": "AI 深度审计",
+      "buttonExists": true
+    },
+    "ragEvidence": {
+      "passed": false,
+      "blockCount": 4,
+      "localLib": {},
+      "onlineRef": {},
+      "aiExplain": {},
+      "manualReview": {}
+    }
+  },
+  "reportTests": {
+    "preview": {
+      "passed": true,
+      "modalVisible": true
+    },
+    "download": {
+      "jsonAll": {
+        "passed": true,
+        "buttonExists": true
+      },
+      "fileTable": {
+        "passed": true,
+        "rows": 4,
+        "disabledButtons": 2
+      }
+    }
+  },
+  "dataConsistency": {
+    "passed": false,
+    "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/#dashboard\", waiting until \"networkidle\"\u001b[22m\n"
+  },
+  "api500Errors": [
+    {
+      "url": "http://127.0.0.1:5173/api/tts/status",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/vlm/status",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/vlm/status",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/compliance/hybrid-search",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/compliance/hybrid-search",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/compliance/hybrid-search",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/compliance/hybrid-search",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/packing/compliance-check-sync",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    }
+  ],
+  "securityCheck": {
+    "error": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/#dashboard\", waiting until \"networkidle\"\u001b[22m\n"
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "errors": [],
+  "consoleErrorCount": 8,
+  "api500Count": 8
+}

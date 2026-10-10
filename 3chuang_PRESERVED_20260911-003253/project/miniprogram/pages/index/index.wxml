@@ -1,0 +1,41 @@
+<view class="companion-page">
+  <view class="hero">
+    <text class="eyebrow">ON-SITE COMPANION</text>
+    <text class="title">现场装载助手</text>
+    <text class="subtitle">查看同一批货物、方案、装载顺序和风险；不展示未经接入的港口实时数据。</text>
+  </view>
+
+  <view class="operation-card">
+    <view class="operation-head">
+      <view><text class="label">当前步骤</text><text class="step">{{currentStep}}</text></view>
+      <text class="source source--{{planSourceCode}}">{{strategyName}} · {{planSource}}</text>
+    </view>
+    <view class="metrics">
+      <view><text>SKU</text><strong>{{stat.skuCount}}</strong></view>
+      <view><text>件数</text><strong>{{stat.totalQty}}</strong></view>
+      <view><text>柜型</text><strong>{{stat.containerName}}</strong></view>
+      <view><text>已装</text><strong>{{stat.loadedCount}}</strong></view>
+      <view><text>利用率</text><strong>{{stat.utilization}}%</strong></view>
+    </view>
+  </view>
+
+  <view class="case-reader">
+    <view class="case-reader__heading"><text>打开 Web 已保存任务</text><text wx:if="{{currentCase}}">{{currentCase.status}}</text></view>
+    <view class="case-reader__input"><input value="{{caseIdInput}}" bindinput="onCaseIdInput" placeholder="输入 Case ID，例如 NB2026-..." /><button bindtap="scanCase">扫码</button></view>
+    <view class="case-error" wx:if="{{caseError}}">{{caseError}}。本机已有数据不会丢失，请检查 API 地址后重试。</view>
+    <button class="case-load" bindtap="loadCurrentCase" loading="{{caseLoading}}" disabled="{{caseLoading}}">{{caseLoading ? '读取中' : '读取同一 Case'}}</button>
+    <view class="case-meta" wx:if="{{currentCase}}"><text>CASE {{currentCase.caseId}}</text><text>PLAN {{currentCase.packingPlanId || 'NONE'}}</text><text>SOURCE {{caseSourceCode}}</text><text>UPDATED {{currentCase.updatedAt}}</text></view>
+    <view class="case-meta" wx:if="{{complianceSemantics}}"><text>RULE STATUS {{complianceSemantics.ruleStatus}}</text><text>HUMAN REVIEW {{complianceSemantics.humanReview}}</text><text>WORKFLOW DECISION {{complianceSemantics.workflowDecision}}</text></view>
+    <view class="case-meta" wx:if="{{admissionStatus}}"><text>ADMISSION {{admissionStatus}}</text><text>PRE-CHECK ONLY · EXTERNAL ACCEPTANCE NOT IMPLIED</text></view>
+  </view>
+
+  <button class="continue-operation" bindtap="continueOperation">Continue Operation</button>
+
+  <view class="action-list">
+    <view class="action" bindtap="goToCargoInput"><view><text class="action-title">货物确认</text><text class="action-desc">核对现场货物；复杂编辑请使用 Web 工作台</text></view><text>›</text></view>
+    <view class="action" bindtap="goToContainerSelect"><view><text class="action-title">柜型与方案</text><text class="action-desc">选择柜型并请求后端正式求解</text></view><text>›</text></view>
+    <view class="action" bindtap="goToPackingResult"><view><text class="action-title">装载顺序</text><text class="action-desc">查看 3D、当前步骤和已知风险</text></view><text>›</text></view>
+  </view>
+
+  <view class="truth-note"><text>数据说明</text><text>页面只读取本机已录入数据和真实接口返回；离线方案会明确标为 OFFLINE_DEMO。</text></view>
+</view>
