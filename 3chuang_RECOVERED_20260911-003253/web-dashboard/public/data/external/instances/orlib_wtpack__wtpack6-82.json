@@ -1,0 +1,1490 @@
+{
+  "schema": "PORTCUBE_EXTERNAL_CARGO/1.0",
+  "source": "orlib_wtpack",
+  "displayName": "WTPACK 重量与承压基准",
+  "dataClassification": "ACADEMIC_BENCHMARK",
+  "sourceNotice": "学术基准；承压原值为 kg/cm²，不等同于可承载总重量 kg",
+  "id": "wtpack6-82",
+  "label": "wtpack6 / problem 82",
+  "family": "wtpack6",
+  "rawPath": "wtpack6.txt",
+  "items": [
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "1",
+      "name": "WTPACK box 1",
+      "packagingType": null,
+      "lengthMm": 650,
+      "widthMm": 510,
+      "heightMm": 500,
+      "weightKg": 165.75,
+      "quantity": 7,
+      "orientationConstraints": {
+        "lengthVertical": true,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.01842,
+        "widthUpright": 0.01873,
+        "heightUpright": 0.09164
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 65,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 51,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 50,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          1,
+          1,
+          1
+        ],
+        "quantity": 7,
+        "weight": {
+          "originalValue": 165.75,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.01842,
+            0.01873,
+            0.09164
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "2",
+      "name": "WTPACK box 2",
+      "packagingType": null,
+      "lengthMm": 1130,
+      "widthMm": 780,
+      "heightMm": 280,
+      "weightKg": 246.79,
+      "quantity": 10,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": false,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.115,
+        "widthUpright": 0.23807,
+        "heightUpright": 0.18879
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 113,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 78,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 28,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          0,
+          1
+        ],
+        "quantity": 10,
+        "weight": {
+          "originalValue": 246.79,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.115,
+            0.23807,
+            0.18879
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "3",
+      "name": "WTPACK box 3",
+      "packagingType": null,
+      "lengthMm": 1200,
+      "widthMm": 350,
+      "heightMm": 320,
+      "weightKg": 134.4,
+      "quantity": 10,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.28087,
+        "widthUpright": 0.23399,
+        "heightUpright": 0.15993
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 120,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 35,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 32,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          1,
+          1
+        ],
+        "quantity": 10,
+        "weight": {
+          "originalValue": 134.4,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.28087,
+            0.23399,
+            0.15993
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "4",
+      "name": "WTPACK box 4",
+      "packagingType": null,
+      "lengthMm": 710,
+      "widthMm": 530,
+      "heightMm": 200,
+      "weightKg": 75.26,
+      "quantity": 9,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": false,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.00236,
+        "widthUpright": 0.15746,
+        "heightUpright": 0.09868
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 71,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 53,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 20,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          0,
+          1
+        ],
+        "quantity": 9,
+        "weight": {
+          "originalValue": 75.26,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.00236,
+            0.15746,
+            0.09868
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "5",
+      "name": "WTPACK box 5",
+      "packagingType": null,
+      "lengthMm": 940,
+      "widthMm": 700,
+      "heightMm": 640,
+      "weightKg": 421.12,
+      "quantity": 8,
+      "orientationConstraints": {
+        "lengthVertical": true,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.1471,
+        "widthUpright": 0.26701,
+        "heightUpright": 0.1554
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 94,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 70,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 64,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          1,
+          1,
+          1
+        ],
+        "quantity": 8,
+        "weight": {
+          "originalValue": 421.12,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.1471,
+            0.26701,
+            0.1554
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "6",
+      "name": "WTPACK box 6",
+      "packagingType": null,
+      "lengthMm": 640,
+      "widthMm": 330,
+      "heightMm": 320,
+      "weightKg": 67.58,
+      "quantity": 9,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.15688,
+        "widthUpright": 0.24754,
+        "heightUpright": 0.26616
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 64,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 33,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 32,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          1,
+          1
+        ],
+        "quantity": 9,
+        "weight": {
+          "originalValue": 67.58,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.15688,
+            0.24754,
+            0.26616
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "7",
+      "name": "WTPACK box 7",
+      "packagingType": null,
+      "lengthMm": 710,
+      "widthMm": 350,
+      "heightMm": 210,
+      "weightKg": 52.19,
+      "quantity": 11,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.25363,
+        "widthUpright": 0.10799,
+        "heightUpright": 0.26095
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 71,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 35,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 21,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          1,
+          1
+        ],
+        "quantity": 11,
+        "weight": {
+          "originalValue": 52.19,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.25363,
+            0.10799,
+            0.26095
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "8",
+      "name": "WTPACK box 8",
+      "packagingType": null,
+      "lengthMm": 850,
+      "widthMm": 590,
+      "heightMm": 490,
+      "weightKg": 245.74,
+      "quantity": 8,
+      "orientationConstraints": {
+        "lengthVertical": true,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.14759,
+        "widthUpright": 0.12055,
+        "heightUpright": 0.23316
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 85,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 59,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 49,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          1,
+          1,
+          1
+        ],
+        "quantity": 8,
+        "weight": {
+          "originalValue": 245.74,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.14759,
+            0.12055,
+            0.23316
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "9",
+      "name": "WTPACK box 9",
+      "packagingType": null,
+      "lengthMm": 1080,
+      "widthMm": 620,
+      "heightMm": 530,
+      "weightKg": 354.89,
+      "quantity": 9,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.24978,
+        "widthUpright": 0.19913,
+        "heightUpright": 0.21244
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 108,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 62,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 53,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          1,
+          1
+        ],
+        "quantity": 9,
+        "weight": {
+          "originalValue": 354.89,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.24978,
+            0.19913,
+            0.21244
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "10",
+      "name": "WTPACK box 10",
+      "packagingType": null,
+      "lengthMm": 1160,
+      "widthMm": 560,
+      "heightMm": 250,
+      "weightKg": 162.4,
+      "quantity": 8,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": false,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.06909,
+        "widthUpright": 0.2078,
+        "heightUpright": 0.27636
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 116,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 56,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 25,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          0,
+          1
+        ],
+        "quantity": 8,
+        "weight": {
+          "originalValue": 162.4,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.06909,
+            0.2078,
+            0.27636
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "11",
+      "name": "WTPACK box 11",
+      "packagingType": null,
+      "lengthMm": 750,
+      "widthMm": 690,
+      "heightMm": 350,
+      "weightKg": 181.13,
+      "quantity": 11,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.19163,
+        "widthUpright": 0.07808,
+        "heightUpright": 0.07286
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 75,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 69,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 35,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          1,
+          1
+        ],
+        "quantity": 11,
+        "weight": {
+          "originalValue": 181.13,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.19163,
+            0.07808,
+            0.07286
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "12",
+      "name": "WTPACK box 12",
+      "packagingType": null,
+      "lengthMm": 1140,
+      "widthMm": 850,
+      "heightMm": 530,
+      "weightKg": 513.57,
+      "quantity": 10,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.04936,
+        "widthUpright": 0.25002,
+        "heightUpright": 0.06313
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 114,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 85,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 53,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          1,
+          1
+        ],
+        "quantity": 10,
+        "weight": {
+          "originalValue": 513.57,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.04936,
+            0.25002,
+            0.06313
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "13",
+      "name": "WTPACK box 13",
+      "packagingType": null,
+      "lengthMm": 550,
+      "widthMm": 350,
+      "heightMm": 200,
+      "weightKg": 38.5,
+      "quantity": 11,
+      "orientationConstraints": {
+        "lengthVertical": false,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.12873,
+        "widthUpright": 0.13941,
+        "heightUpright": 0.18085
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 55,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 35,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 20,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          0,
+          1,
+          1
+        ],
+        "quantity": 11,
+        "weight": {
+          "originalValue": 38.5,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.12873,
+            0.13941,
+            0.18085
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "14",
+      "name": "WTPACK box 14",
+      "packagingType": null,
+      "lengthMm": 890,
+      "widthMm": 720,
+      "heightMm": 660,
+      "weightKg": 422.93,
+      "quantity": 4,
+      "orientationConstraints": {
+        "lengthVertical": true,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.13663,
+        "widthUpright": 0.04317,
+        "heightUpright": 0.0014
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 89,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 72,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 66,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          1,
+          1,
+          1
+        ],
+        "quantity": 4,
+        "weight": {
+          "originalValue": 422.93,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.13663,
+            0.04317,
+            0.0014
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    },
+    {
+      "externalSource": "OR-Library WTPACK",
+      "externalDataset": "wtpack6",
+      "externalInstance": "82",
+      "externalItemId": "15",
+      "name": "WTPACK box 15",
+      "packagingType": null,
+      "lengthMm": 920,
+      "widthMm": 620,
+      "heightMm": 470,
+      "weightKg": 268.09,
+      "quantity": 14,
+      "orientationConstraints": {
+        "lengthVertical": true,
+        "widthVertical": true,
+        "heightVertical": true
+      },
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": {
+        "lengthUpright": 0.10522,
+        "widthUpright": 0.01786,
+        "heightUpright": 0.18198
+      },
+      "loadBearingUnit": "kg/cm²",
+      "loadBearingSourceDefinition": "Load bearing ability in kg/cm² for each dimension placed upright; not total supported weight.",
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "BOX",
+      "geometryAsset": null,
+      "boundingBox": null,
+      "sourceGeometryMetadata": null,
+      "containerDefinition": {
+        "length": {
+          "originalValue": 587,
+          "originalUnit": "cm"
+        },
+        "width": {
+          "originalValue": 233,
+          "originalUnit": "cm"
+        },
+        "height": {
+          "originalValue": 220,
+          "originalUnit": "cm"
+        }
+      },
+      "sourceFields": {
+        "dimensions": [
+          {
+            "originalValue": 92,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 62,
+            "originalUnit": "cm"
+          },
+          {
+            "originalValue": 47,
+            "originalUnit": "cm"
+          }
+        ],
+        "indicators": [
+          1,
+          1,
+          1
+        ],
+        "quantity": 14,
+        "weight": {
+          "originalValue": 268.09,
+          "originalUnit": "kg"
+        },
+        "pressure": {
+          "values": [
+            0.10522,
+            0.01786,
+            0.18198
+          ],
+          "originalUnit": "kg/cm²",
+          "definition": "orientation-dependent load bearing ability"
+        }
+      },
+      "unknownFields": [
+        "packagingType",
+        "stackability",
+        "maxStackLayers",
+        "hazardous",
+        "palletAttached",
+        "destination",
+        "deliveryStage",
+        "normalizedLoadBearingKg"
+      ]
+    }
+  ],
+  "container": {
+    "length": {
+      "originalValue": 587,
+      "originalUnit": "cm"
+    },
+    "width": {
+      "originalValue": 233,
+      "originalUnit": "cm"
+    },
+    "height": {
+      "originalValue": 220,
+      "originalUnit": "cm"
+    }
+  },
+  "totalCargoVolumeM3": 29.6563506,
+  "completeness": 62,
+  "missingFields": [
+    "packagingType",
+    "stackability",
+    "destination",
+    "normalizedLoadBearingKg"
+  ]
+}
