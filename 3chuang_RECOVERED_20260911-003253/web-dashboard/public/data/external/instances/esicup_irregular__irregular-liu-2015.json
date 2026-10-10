@@ -1,0 +1,466 @@
+{
+  "schema": "PORTCUBE_EXTERNAL_CARGO/1.0",
+  "source": "esicup_irregular",
+  "displayName": "ESICUP 异形三维几何基准",
+  "dataClassification": "IRREGULAR_GEOMETRY_BENCHMARK",
+  "sourceNotice": "仅验证几何资产可读；本批不支持任意 mesh 求解",
+  "id": "irregular-liu-2015",
+  "label": "Liu 2015 · 混合异形 OBJ",
+  "rawPath": "liu_2015/Experiment1.json",
+  "items": [
+    {
+      "externalSource": "ESICUP 3D Irregular",
+      "externalDataset": "industrial-shaped object",
+      "externalInstance": "irregular-liu-2015",
+      "externalItemId": "1",
+      "name": "tetrahedron.obj",
+      "packagingType": null,
+      "lengthMm": null,
+      "widthMm": null,
+      "heightMm": null,
+      "weightKg": null,
+      "quantity": 8,
+      "orientationConstraints": null,
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": null,
+      "loadBearingUnit": null,
+      "loadBearingSourceDefinition": null,
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "MESH",
+      "geometryAsset": "liu_2015/tetrahedron.obj",
+      "boundingBox": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          10,
+          8.6603,
+          10
+        ],
+        "size": [
+          10,
+          8.6603,
+          10
+        ],
+        "originalUnit": "NOT_PROVIDED"
+      },
+      "sourceGeometryMetadata": {
+        "format": "OBJ",
+        "bytes": 481,
+        "readable": true,
+        "vertexCount": 4,
+        "boundingBoxOriginal": {
+          "min": [
+            0,
+            0,
+            0
+          ],
+          "max": [
+            10,
+            8.6603,
+            10
+          ],
+          "size": [
+            10,
+            8.6603,
+            10
+          ],
+          "originalUnit": "NOT_PROVIDED"
+        }
+      },
+      "containerDefinition": null,
+      "sourceFields": {
+        "demand": 8,
+        "sourcePath": "Liu et al. 2015/tetrahedron.obj",
+        "bytes": 481,
+        "readable": true,
+        "geometryFormat": "OBJ"
+      },
+      "unknownFields": [
+        "lengthMm",
+        "widthMm",
+        "heightMm",
+        "weightKg",
+        "packagingType",
+        "stackability",
+        "loadBearing",
+        "handling",
+        "normalizedBoundingBoxMm"
+      ]
+    },
+    {
+      "externalSource": "ESICUP 3D Irregular",
+      "externalDataset": "industrial-shaped object",
+      "externalInstance": "irregular-liu-2015",
+      "externalItemId": "2",
+      "name": "star.obj",
+      "packagingType": null,
+      "lengthMm": null,
+      "widthMm": null,
+      "heightMm": null,
+      "weightKg": null,
+      "quantity": 8,
+      "orientationConstraints": null,
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": null,
+      "loadBearingUnit": null,
+      "loadBearingSourceDefinition": null,
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "MESH",
+      "geometryAsset": "liu_2015/star.obj",
+      "boundingBox": {
+        "min": [
+          -6,
+          -6,
+          0
+        ],
+        "max": [
+          6,
+          6,
+          3
+        ],
+        "size": [
+          12,
+          12,
+          3
+        ],
+        "originalUnit": "NOT_PROVIDED"
+      },
+      "sourceGeometryMetadata": {
+        "format": "OBJ",
+        "bytes": 797,
+        "readable": true,
+        "vertexCount": 16,
+        "boundingBoxOriginal": {
+          "min": [
+            -6,
+            -6,
+            0
+          ],
+          "max": [
+            6,
+            6,
+            3
+          ],
+          "size": [
+            12,
+            12,
+            3
+          ],
+          "originalUnit": "NOT_PROVIDED"
+        }
+      },
+      "containerDefinition": null,
+      "sourceFields": {
+        "demand": 8,
+        "sourcePath": "Liu et al. 2015/star.obj",
+        "bytes": 797,
+        "readable": true,
+        "geometryFormat": "OBJ"
+      },
+      "unknownFields": [
+        "lengthMm",
+        "widthMm",
+        "heightMm",
+        "weightKg",
+        "packagingType",
+        "stackability",
+        "loadBearing",
+        "handling",
+        "normalizedBoundingBoxMm"
+      ]
+    },
+    {
+      "externalSource": "ESICUP 3D Irregular",
+      "externalDataset": "industrial-shaped object",
+      "externalInstance": "irregular-liu-2015",
+      "externalItemId": "3",
+      "name": "arrow.obj",
+      "packagingType": null,
+      "lengthMm": null,
+      "widthMm": null,
+      "heightMm": null,
+      "weightKg": null,
+      "quantity": 8,
+      "orientationConstraints": null,
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": null,
+      "loadBearingUnit": null,
+      "loadBearingSourceDefinition": null,
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "MESH",
+      "geometryAsset": "liu_2015/arrow.obj",
+      "boundingBox": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          10,
+          10,
+          5
+        ],
+        "size": [
+          10,
+          10,
+          5
+        ],
+        "originalUnit": "NOT_PROVIDED"
+      },
+      "sourceGeometryMetadata": {
+        "format": "OBJ",
+        "bytes": 526,
+        "readable": true,
+        "vertexCount": 8,
+        "boundingBoxOriginal": {
+          "min": [
+            0,
+            0,
+            0
+          ],
+          "max": [
+            10,
+            10,
+            5
+          ],
+          "size": [
+            10,
+            10,
+            5
+          ],
+          "originalUnit": "NOT_PROVIDED"
+        }
+      },
+      "containerDefinition": null,
+      "sourceFields": {
+        "demand": 8,
+        "sourcePath": "Liu et al. 2015/arrow.obj",
+        "bytes": 526,
+        "readable": true,
+        "geometryFormat": "OBJ"
+      },
+      "unknownFields": [
+        "lengthMm",
+        "widthMm",
+        "heightMm",
+        "weightKg",
+        "packagingType",
+        "stackability",
+        "loadBearing",
+        "handling",
+        "normalizedBoundingBoxMm"
+      ]
+    },
+    {
+      "externalSource": "ESICUP 3D Irregular",
+      "externalDataset": "industrial-shaped object",
+      "externalInstance": "irregular-liu-2015",
+      "externalItemId": "4",
+      "name": "cube.obj",
+      "packagingType": null,
+      "lengthMm": null,
+      "widthMm": null,
+      "heightMm": null,
+      "weightKg": null,
+      "quantity": 8,
+      "orientationConstraints": null,
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": null,
+      "loadBearingUnit": null,
+      "loadBearingSourceDefinition": null,
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "MESH",
+      "geometryAsset": "liu_2015/cube.obj",
+      "boundingBox": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          2,
+          4,
+          6
+        ],
+        "size": [
+          2,
+          4,
+          6
+        ],
+        "originalUnit": "NOT_PROVIDED"
+      },
+      "sourceGeometryMetadata": {
+        "format": "OBJ",
+        "bytes": 518,
+        "readable": true,
+        "vertexCount": 8,
+        "boundingBoxOriginal": {
+          "min": [
+            0,
+            0,
+            0
+          ],
+          "max": [
+            2,
+            4,
+            6
+          ],
+          "size": [
+            2,
+            4,
+            6
+          ],
+          "originalUnit": "NOT_PROVIDED"
+        }
+      },
+      "containerDefinition": null,
+      "sourceFields": {
+        "demand": 8,
+        "sourcePath": "Liu et al. 2015/cube.obj",
+        "bytes": 518,
+        "readable": true,
+        "geometryFormat": "OBJ"
+      },
+      "unknownFields": [
+        "lengthMm",
+        "widthMm",
+        "heightMm",
+        "weightKg",
+        "packagingType",
+        "stackability",
+        "loadBearing",
+        "handling",
+        "normalizedBoundingBoxMm"
+      ]
+    },
+    {
+      "externalSource": "ESICUP 3D Irregular",
+      "externalDataset": "industrial-shaped object",
+      "externalInstance": "irregular-liu-2015",
+      "externalItemId": "5",
+      "name": "ring.obj",
+      "packagingType": null,
+      "lengthMm": null,
+      "widthMm": null,
+      "heightMm": null,
+      "weightKg": null,
+      "quantity": 4,
+      "orientationConstraints": null,
+      "stackability": "UNKNOWN",
+      "maxStackLayers": null,
+      "loadBearing": null,
+      "loadBearingUnit": null,
+      "loadBearingSourceDefinition": null,
+      "alwaysOnTop": null,
+      "alwaysOnBottom": null,
+      "stackingGroup": null,
+      "hazardous": null,
+      "palletAttached": null,
+      "destination": null,
+      "deliveryStage": null,
+      "geometryType": "MESH",
+      "geometryAsset": "liu_2015/ring.obj",
+      "boundingBox": {
+        "min": [
+          -6,
+          -6,
+          0
+        ],
+        "max": [
+          6,
+          6,
+          3
+        ],
+        "size": [
+          12,
+          12,
+          3
+        ],
+        "originalUnit": "NOT_PROVIDED"
+      },
+      "sourceGeometryMetadata": {
+        "format": "OBJ",
+        "bytes": 748,
+        "readable": true,
+        "vertexCount": 16,
+        "boundingBoxOriginal": {
+          "min": [
+            -6,
+            -6,
+            0
+          ],
+          "max": [
+            6,
+            6,
+            3
+          ],
+          "size": [
+            12,
+            12,
+            3
+          ],
+          "originalUnit": "NOT_PROVIDED"
+        }
+      },
+      "containerDefinition": null,
+      "sourceFields": {
+        "demand": 4,
+        "sourcePath": "Liu et al. 2015/ring.obj",
+        "bytes": 748,
+        "readable": true,
+        "geometryFormat": "OBJ"
+      },
+      "unknownFields": [
+        "lengthMm",
+        "widthMm",
+        "heightMm",
+        "weightKg",
+        "packagingType",
+        "stackability",
+        "loadBearing",
+        "handling",
+        "normalizedBoundingBoxMm"
+      ]
+    }
+  ],
+  "completeness": 23,
+  "missingFields": [
+    "dimensions",
+    "weight",
+    "stackability",
+    "loadBearing",
+    "handling"
+  ],
+  "geometryReadability": "VERIFIED"
+}
