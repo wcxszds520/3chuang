@@ -1,0 +1,31 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');
+const {solveCommerce}=require('../services/CommercePackingService');
+const {auditCommerce}=require('../services/packing/CommerceAudit');
+const {mechanics}=require('../services/packing/SourceConstraintValidator');
+const {loadDataset,buildExternalTask}=require('../services/external/ExternalTaskRuntime');
+const ctx={enabled:true,lifo:true,planAt:'2026-09-16T11:00:00+08:00'};
+const item=(id,rank,arrivedAt='2026-09-16T09:00:00+08:00')=>({cargoId:id,sku:id,name:'零售配件',length:600,width:400,height:400,weight:10,quantity:2,stackable:true,maxStackLayers:4,maxSupportedWeight:30,customerId:'A',lotId:'L',unloadSequence:rank,portSequence:rank,arrivedAt,packagingType:'CARTON',orientationConstraints:{lengthVertical:false,widthVertical:false,heightVertical:true}});
+test('same SKU layer scope permits mixed top cargo but preserves top load and source semantics',()=>{
+ const a={cargoId:'a',sku:'A',x:0,y:0,z:0,l:1000,w:1000,h:500,weight:10,maxStackLayers:1,maxSupportedWeight:15,stackLayerScope:'SAME_SKU'};
+ const b={cargoId:'b',sku:'B',x:0,y:500,z:0,l:1000,w:1000,h:500,weight:10};
+ const check=(base,top,flag=true)=>mechanics([base,top],new Map([[base.cargoId,base],[top.cargoId,top]]),{supportRatio:1,weightKnown:true,declaredTopLoad:flag});
+ assert.equal(check(a,b).violations.length,0);
+ assert(check(a,{...b,sku:'A'}).violations.some(v=>v.code==='STACK_LIMIT'));
+ assert(check(a,{...b,weight:20}).violations.some(v=>v.code==='DECLARED_TOP_LOAD'));
+ assert(check(a,b,false).violations.some(v=>v.code==='STACK_LIMIT'));
+ assert(check({...a,stackLayerScope:'ALL_PACKAGES'},b).violations.some(v=>v.code==='STACK_LIMIT'));
+});
+test('future arrivals stay outside the container and input is immutable',async()=>{const body={containerType:'20GP',cargoList:[item('first',2),item('late',1,'2026-09-16T14:00:00+08:00')],caseContext:{commerce:ctx},timeLimitMs:1000};const saved=JSON.stringify(body);const p=await solveCommerce(body);assert.equal(JSON.stringify(body),saved);assert.equal(p.loadedCargo.length,2);assert.equal(p.totalCargoInput,4);assert.equal(p.containerInfo.innerLength,5898);assert.equal(p.unloadedCargo.filter(p=>p.reason==='NOT_ARRIVED').length,2);assert.equal(p.businessAudit.unloadEvents.length,2);assert.equal(p.hardConstraintsPass,true);});
+test('LIFO audit rejects a later delivery blocking the door corridor',()=>{const rear={...item('early',1),x:0,y:0,z:0,l:600,w:400,h:400};const front={...item('later',2),x:600,y:0,z:0,l:600,w:400,h:400};assert.equal(auditCommerce([rear,front],[],ctx).valid,false);assert.equal(auditCommerce([{...rear,unloadSequence:2},{...front,unloadSequence:1}],[],ctx).valid,true);});
+test('top load propagates over exact support contact and rejects overload',()=>{const bottom={cargoId:'bottom',x:0,y:0,z:0,l:1000,w:1000,h:500,weight:10,maxSupportedWeight:15};const top={cargoId:'top',x:0,y:500,z:0,l:1000,w:1000,h:500,weight:20};const rules={supportRatio:1,weightKnown:true,declaredTopLoad:true};assert(mechanics([bottom,top],new Map([['bottom',bottom],['top',top]]),rules).violations.some(v=>v.code==='DECLARED_TOP_LOAD'));});
+test('locked positions persist when late units arrive',async()=>{const a=item('A',2),b=item('B',1,'2026-09-16T14:00:00+08:00');const first=await solveCommerce({containerType:'20GP',cargoList:[a,b],caseContext:{commerce:ctx},timeLimitMs:1000});const next=await solveCommerce({containerType:'20GP',cargoList:[a,b],caseContext:{commerce:{...ctx,planAt:'2026-09-16T14:00:00+08:00',lockedPlacements:first.loadedCargo}},timeLimitMs:1000});for(const old of first.loadedCargo){const p=next.loadedCargo.find(p=>p.cargoId===old.cargoId);for(const k of ['x','y','z','l','w','h'])assert.equal(p[k],old[k]);}assert.equal(next.loadedCargo.length,4);});
+test('malformed arrival date is rejected',async()=>{await assert.rejects(solveCommerce({containerType:'20GP',cargoList:[item('x',1,'yesterday')],caseContext:{commerce:ctx}}),/到仓时间无效/);});
+test('readiness keeps port separate from handover and never passes missing stability or unexplained voids',async()=>{
+ const p=await solveCommerce({containerType:'20GP',cargoList:[{...item('A',2),portSequence:1},{...item('B',1),portSequence:1}],caseContext:{commerce:ctx},timeLimitMs:1000});
+ assert.deepEqual(p.shipmentReadiness.contextResolver.resolvedFacts.portSequences,[1]);
+ assert(p.loadedCargo.every(c=>c.portSequence===1&&c.maxSupportedWeight===30));
+ assert.equal(p.shipmentReadiness.evidence.find(e=>e.id==='LOAD-STABILITY').status,'DATA_REQUIRED');
+ assert.equal(p.shipmentReadiness.evidence.find(e=>e.id==='SPACE-VOID').status,'REVIEW_REQUIRED');
+});
+test('external dimensions cannot be silently replaced by packaging configuration',async()=>{const source='orlib_wtpack';const data=loadDataset(source);assert(data.instances.length>0);const instanceId=data.instances[0].id;const task=await buildExternalTask({source,instanceId});const input={containerType:'40HQ',externalDataset:{source,instanceId},cargoList:task.cargoList.map(c=>({...c,unloadSequence:1,arrivedAt:ctx.planAt})),caseContext:{commerce:ctx},timeLimitMs:1000};input.cargoList[0].length+=1;await assert.rejects(solveCommerce(input),/来源尺寸、数量或重量发生变化/);});
+test('external source facts survive successful configured business solving',async()=>{const source='orlib_wtpack',instanceId=loadDataset(source).instances[0].id;const task=await buildExternalTask({source,instanceId});const before=JSON.stringify(task.cargoList);const result=await solveCommerce({externalDataset:{source,instanceId},cargoList:task.cargoList.map(c=>({...c,unloadSequence:1,arrivedAt:ctx.planAt})),caseContext:{commerce:ctx},timeLimitMs:1000});assert.equal(result.hardConstraintsPass,true);assert.equal(JSON.stringify(task.cargoList),before);assert.equal(result.loadedCargo.length+result.unloadedCargo.length,task.cargoList.reduce((s,c)=>s+c.quantity,0));assert.equal(result.containerInfo.innerLength,task.container.innerLength);});

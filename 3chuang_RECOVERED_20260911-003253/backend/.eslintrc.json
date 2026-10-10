@@ -1,0 +1,25 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2021": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022
+  },
+  "rules": {
+    "no-undef": "error",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "no-redeclare": "error",
+    "no-dupe-keys": "error",
+    "no-unreachable": "error",
+    "no-constant-condition": "error",
+    "no-duplicate-case": "error",
+    "valid-typeof": "error"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "scripts/_archive/"
+  ]
+}

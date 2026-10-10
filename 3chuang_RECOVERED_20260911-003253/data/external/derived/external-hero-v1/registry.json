@@ -1,0 +1,1248 @@
+{
+  "schema": "DERIVED_SINGLE_CONTAINER_DEMO/1",
+  "derivedDemoId": "RENAULT_HERO_NSA_40HQ_C12",
+  "source": "renault_esicup_2015",
+  "instanceId": "instancesA-NSA_BUR_STK_container",
+  "taskType": "RENAULT_DERIVED_SINGLE_CONTAINER_DEMO",
+  "container": {
+    "typeId": "HERO_40HQ_V1",
+    "name": "40HQ · 工业数据单柜演示",
+    "shortName": "40HQ",
+    "innerLength": 12032,
+    "innerWidth": 2352,
+    "innerHeight": 2698,
+    "maxWeight": 28690,
+    "payload": 28690,
+    "capacityM3": 76.351414272,
+    "source": "PORTCUBE existing 40HQ reference profile",
+    "mode": "DERIVED_SINGLE_CONTAINER_DEMO",
+    "index": 0,
+    "standardType": "40HQ"
+  },
+  "rows": [
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 37,
+      "sourceItemCode": "92",
+      "sourceCargoId": "119233042RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_119233042RN",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "119233042RN",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_long_flat",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1200,
+        1000,
+        295
+      ],
+      "originalWeightKg": 154.8,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 16,
+      "sourceItemCode": "19",
+      "sourceCargoId": "215011670RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_215011670RN",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "215011670RN",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#b29673",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        850
+      ],
+      "originalWeightKg": 64.28,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 28,
+      "sourceItemCode": "58",
+      "sourceCargoId": "215030863RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_215030863RN",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "215030863RN",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1200,
+        1000,
+        1045
+      ],
+      "originalWeightKg": 116.3,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 1,
+      "sourceItemCode": "0",
+      "sourceCargoId": "625113585RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_625113585RN",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "625113585RN",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_strapped",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        475,
+        640
+      ],
+      "originalWeightKg": 225.75,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 29,
+      "sourceItemCode": "59",
+      "sourceCargoId": "731125493RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_731125493RN",
+      "originalQuantity": 4,
+      "selectedQuantity": 4,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "731125493RN",
+        "sourceMaterial": "WOOD",
+        "presentationFamily": "WOOD_CRATE",
+        "structuralVariant": "crate_reinforced",
+        "colorVariant": "#9d835c",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Wood058",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1450,
+        1140,
+        1215
+      ],
+      "originalWeightKg": 272.44,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 14,
+      "sourceItemCode": "17",
+      "sourceCargoId": "747612153RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_747612153RN",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "747612153RN",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        850
+      ],
+      "originalWeightKg": 126,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 20,
+      "sourceItemCode": "29",
+      "sourceCargoId": "791025210RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_791025210RN",
+      "originalQuantity": 2,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "791025210RN",
+        "sourceMaterial": "WOOD",
+        "presentationFamily": "WOOD_CRATE",
+        "structuralVariant": "crate_reinforced",
+        "colorVariant": "#ad946d",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Wood058",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1500,
+        1140,
+        1700
+      ],
+      "originalWeightKg": 264.576,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 6,
+      "sourceItemCode": "6",
+      "sourceCargoId": "8200211232N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200211232N",
+      "originalQuantity": 6,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200211232N",
+        "sourceMaterial": "WOOD",
+        "presentationFamily": "WOOD_CRATE",
+        "structuralVariant": "crate_reinforced",
+        "colorVariant": "#a58d66",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Wood058",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1720,
+        1140,
+        1550
+      ],
+      "originalWeightKg": 353.76,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 7,
+      "sourceItemCode": "7",
+      "sourceCargoId": "8200412223N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200412223N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200412223N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        850
+      ],
+      "originalWeightKg": 186.5,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 38,
+      "sourceItemCode": "94",
+      "sourceCargoId": "8200492912N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200492912N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200492912N",
+        "sourceMaterial": "WOOD",
+        "presentationFamily": "WOOD_CRATE",
+        "structuralVariant": "crate",
+        "colorVariant": "#ad946d",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Wood058",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1200,
+        1000,
+        750
+      ],
+      "originalWeightKg": 116.7,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 30,
+      "sourceItemCode": "66",
+      "sourceCargoId": "8200569507N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200569507N",
+      "originalQuantity": 3,
+      "selectedQuantity": 3,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200569507N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_strapped",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        475,
+        640
+      ],
+      "originalWeightKg": 119.28,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 21,
+      "sourceItemCode": "33",
+      "sourceCargoId": "8200569508N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200569508N",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200569508N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_strapped",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        475,
+        640
+      ],
+      "originalWeightKg": 119.28,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 8,
+      "sourceItemCode": "8",
+      "sourceCargoId": "8200569536N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200569536N",
+      "originalQuantity": 3,
+      "selectedQuantity": 3,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200569536N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 329.3,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 9,
+      "sourceItemCode": "11",
+      "sourceCargoId": "8200569537N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200569537N",
+      "originalQuantity": 3,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200569537N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#b29673",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 330.1,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 43,
+      "sourceItemCode": "103",
+      "sourceCargoId": "8200570855N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200570855N",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200570855N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        475,
+        640
+      ],
+      "originalWeightKg": 284.9,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 10,
+      "sourceItemCode": "13",
+      "sourceCargoId": "8200571847N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200571847N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200571847N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        475,
+        640
+      ],
+      "originalWeightKg": 309,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 23,
+      "sourceItemCode": "35",
+      "sourceCargoId": "8200574599N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200574599N",
+      "originalQuantity": 9,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200574599N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_strapped",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1740,
+        1140,
+        850
+      ],
+      "originalWeightKg": 82.198,
+      "orientationConstraints": {
+        "containerAxisAlignment": "LENGTHWISE",
+        "mappingStatus": "CORE_EXTENSION_PENDING_SOLVER_SUPPORT"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 24,
+      "sourceItemCode": "40",
+      "sourceCargoId": "8200574600N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200574600N",
+      "originalQuantity": 11,
+      "selectedQuantity": 4,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200574600N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_strapped",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1740,
+        1140,
+        850
+      ],
+      "originalWeightKg": 82.198,
+      "orientationConstraints": {
+        "containerAxisAlignment": "LENGTHWISE",
+        "mappingStatus": "CORE_EXTENSION_PENDING_SOLVER_SUPPORT"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 33,
+      "sourceItemCode": "73",
+      "sourceCargoId": "8200574601N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200574601N",
+      "originalQuantity": 4,
+      "selectedQuantity": 3,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200574601N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#b29673",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1450,
+        1140,
+        640
+      ],
+      "originalWeightKg": 73.02,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 34,
+      "sourceItemCode": "77",
+      "sourceCargoId": "8200574646N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200574646N",
+      "originalQuantity": 5,
+      "selectedQuantity": 5,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200574646N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        555
+      ],
+      "originalWeightKg": 54.29,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 35,
+      "sourceItemCode": "82",
+      "sourceCargoId": "8200574649N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200574649N",
+      "originalQuantity": 4,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200574649N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#b29673",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1450,
+        1140,
+        640
+      ],
+      "originalWeightKg": 61.572,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 12,
+      "sourceItemCode": "15",
+      "sourceCargoId": "8200616821N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200616821N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200616821N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_strapped",
+        "colorVariant": "#b29673",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        475,
+        640
+      ],
+      "originalWeightKg": 215,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 25,
+      "sourceItemCode": "49",
+      "sourceCargoId": "8200624988N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200624988N",
+      "originalQuantity": 2,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200624988N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#b29673",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 302.6,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 13,
+      "sourceItemCode": "16",
+      "sourceCargoId": "8200624989N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200624989N",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200624989N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 302.6,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 2,
+      "sourceItemCode": "2",
+      "sourceCargoId": "8200733825N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200733825N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200733825N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 73.044,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 3,
+      "sourceItemCode": "3",
+      "sourceCargoId": "8200733826N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200733826N",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200733826N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 74.132,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 4,
+      "sourceItemCode": "4",
+      "sourceCargoId": "8200733829N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200733829N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200733829N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#b29673",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 118.108,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 17,
+      "sourceItemCode": "21",
+      "sourceCargoId": "8200733830N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200733830N",
+      "originalQuantity": 3,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200733830N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 77.308,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 18,
+      "sourceItemCode": "22",
+      "sourceCargoId": "8200733831N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200733831N",
+      "originalQuantity": 3,
+      "selectedQuantity": 3,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200733831N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 77.308,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 5,
+      "sourceItemCode": "5",
+      "sourceCargoId": "8200745723N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200745723N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200745723N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        640
+      ],
+      "originalWeightKg": 299,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 39,
+      "sourceItemCode": "95",
+      "sourceCargoId": "8200750020N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200750020N",
+      "originalQuantity": 2,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200750020N",
+        "sourceMaterial": "WOOD",
+        "presentationFamily": "WOOD_CRATE",
+        "structuralVariant": "crate",
+        "colorVariant": "#ad946d",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Wood058",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1200,
+        1000,
+        1050
+      ],
+      "originalWeightKg": 75,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 26,
+      "sourceItemCode": "51",
+      "sourceCargoId": "8200802875N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200802875N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200802875N",
+        "sourceMaterial": "METAL",
+        "presentationFamily": "METAL_CASE",
+        "structuralVariant": "equipment_case_reinforced",
+        "colorVariant": "#626e74",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "powder-coated-with-hardware",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        2270,
+        1170,
+        1270
+      ],
+      "originalWeightKg": 1549.71,
+      "orientationConstraints": {
+        "containerAxisAlignment": "WIDTHWISE",
+        "mappingStatus": "CORE_EXTENSION_PENDING_SOLVER_SUPPORT"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 27,
+      "sourceItemCode": "52",
+      "sourceCargoId": "8200832231N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200832231N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200832231N",
+        "sourceMaterial": "METAL",
+        "presentationFamily": "METAL_CASE",
+        "structuralVariant": "equipment_case",
+        "colorVariant": "#64777b",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "powder-coated-with-hardware",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        2270,
+        1170,
+        1270
+      ],
+      "originalWeightKg": 542.88,
+      "orientationConstraints": {
+        "containerAxisAlignment": "WIDTHWISE",
+        "mappingStatus": "CORE_EXTENSION_PENDING_SOLVER_SUPPORT"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 40,
+      "sourceItemCode": "97",
+      "sourceCargoId": "8200904900N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200904900N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200904900N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#aa8760",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1250,
+        1050,
+        850
+      ],
+      "originalWeightKg": 449.5,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 15,
+      "sourceItemCode": "18",
+      "sourceCargoId": "8200933753N",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_8200933753N",
+      "originalQuantity": 1,
+      "selectedQuantity": 1,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "8200933753N",
+        "sourceMaterial": "CARDBOARD",
+        "presentationFamily": "CARTON",
+        "structuralVariant": "carton_reinforced",
+        "colorVariant": "#a58967",
+        "labelStyle": "restrained-1",
+        "surfaceVariant": "ambientCG-Cardboard004",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1140,
+        950,
+        850
+      ],
+      "originalWeightKg": 290.9,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    },
+    {
+      "sourceDataset": "renault_esicup_2015",
+      "sourceInstance": "instancesA-NSA_BUR_STK_container",
+      "sourceRow": 36,
+      "sourceItemCode": "87",
+      "sourceCargoId": "934125375RN",
+      "runtimeCargoId": "ext_Renault___ESICUP_Challenge_2015_NSA_BUR_STK_container_934125375RN",
+      "originalQuantity": 5,
+      "selectedQuantity": 2,
+      "derivedTaskId": "RENAULT_HERO_NSA_40HQ_C12",
+      "derivedReason": "Predeclared bounded source-composition design; highest valid loaded volume retaining cardboard, wood and metal. All unladen items retained.",
+      "containerType": "40HQ",
+      "presentationProfile": {
+        "version": "external-hero-v1",
+        "sourceCargoId": "934125375RN",
+        "sourceMaterial": "WOOD",
+        "presentationFamily": "WOOD_CRATE",
+        "structuralVariant": "crate_reinforced",
+        "colorVariant": "#ad946d",
+        "labelStyle": "restrained-0",
+        "surfaceVariant": "ambientCG-Wood058",
+        "businessFactMutation": false
+      },
+      "originalDimensionsMm": [
+        1450,
+        1140,
+        835
+      ],
+      "originalWeightKg": 142.368,
+      "orientationConstraints": {
+        "mode": "FREE",
+        "mappingStatus": "SUPPORTED"
+      }
+    }
+  ]
+}

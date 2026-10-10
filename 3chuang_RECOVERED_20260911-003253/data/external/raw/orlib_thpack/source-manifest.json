@@ -1,0 +1,95 @@
+{
+  "sourceName": "THPACK 3D Container Loading Benchmark",
+  "sourceType": "HTTP files",
+  "canonicalUrls": [
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/thpackinfo.html",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/"
+  ],
+  "actualDownloadUrls": [
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack1.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack2.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack3.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack4.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack5.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack6.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack7.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack8.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/thpack9.txt"
+  ],
+  "repository": null,
+  "commitOrVersion": "OR-Library files dated 2004-09-07",
+  "retrievedAt": "2026-09-11T05:38:55.201Z",
+  "licenseOrUsageNotes": "Public academic benchmark files; preserve OR-Library and publication attribution.",
+  "rawFiles": [
+    {
+      "path": "thpack1.txt",
+      "bytes": 9188,
+      "sha256": "d6f0b99b4cc6e51c5753565b175a778a40422dc92cffee3204bf16cc1d23f341"
+    },
+    {
+      "path": "thpack2.txt",
+      "bytes": 13427,
+      "sha256": "a31e6400d46926574068524172b1e38495cfd5ad6725f92c58a0af8d92721700"
+    },
+    {
+      "path": "thpack3.txt",
+      "bytes": 19743,
+      "sha256": "3359b278aa20a6874d5a63467be6064e8d489014df45f5410a7d85a852ef876d"
+    },
+    {
+      "path": "thpack4.txt",
+      "bytes": 24040,
+      "sha256": "9668bae0abd2ad513c6f8bcb5ed8845c4526f08b452f1b7fa9426b6990fbc4d6"
+    },
+    {
+      "path": "thpack5.txt",
+      "bytes": 28261,
+      "sha256": "5ece29990ab5034d75728c7ee777379475b16b9218fa9dded17f327de7fa126f"
+    },
+    {
+      "path": "thpack6.txt",
+      "bytes": 34430,
+      "sha256": "5c3604cad7a47f7ee38c3c6a4e74c0e846db1eea9ca4ac637106843311abe196"
+    },
+    {
+      "path": "thpack7.txt",
+      "bytes": 44743,
+      "sha256": "43fc06212473bbb12ec575678232e444e021642cec7b649be1d43282edec7f2a"
+    },
+    {
+      "path": "thpack8.txt",
+      "bytes": 2963,
+      "sha256": "fcda8cfac55592c41095efcab55f362bb3866eb25ad2d7192e6bfdce9629eae2"
+    },
+    {
+      "path": "thpack9.txt",
+      "bytes": 3818,
+      "sha256": "a4f5e3a748709217cdc749f7d27940f15b9f2a31b3e840e725642237036f82cc"
+    },
+    {
+      "path": "thpackinfo.html",
+      "bytes": 4401,
+      "sha256": "4be7fb516208f0ea73f35b1e8ea8fc3ade7337f01eb49b0b9debdfa9c3a931ac"
+    }
+  ],
+  "sha256": "Each rawFiles entry contains its SHA256",
+  "units": {
+    "thpack1To7Dimensions": "cm (cross-referenced by canonical WTPACK description)",
+    "thpack8To9Dimensions": "NOT_PROVIDED",
+    "weight": "NOT_PROVIDED"
+  },
+  "originalFieldDefinitions": [
+    "problem and optional seed",
+    "container dimensions",
+    "box type",
+    "three dimensions and vertical-orientation indicators",
+    "quantity"
+  ],
+  "adapterVersion": "1.0.0",
+  "dataClassification": "ACADEMIC_BENCHMARK",
+  "downloadStatus": "DOWNLOADED",
+  "notes": [
+    "No weight values are synthesized.",
+    "THPACK8/9 dimensions remain unnormalized because the canonical description does not provide a unit."
+  ]
+}

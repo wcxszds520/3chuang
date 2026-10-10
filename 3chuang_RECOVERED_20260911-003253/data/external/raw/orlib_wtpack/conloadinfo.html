@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Container loading with weight restrictions</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.04Gold (WinNT; I) [Netscape]">
+   <META NAME="AUTHOR" CONTENT="J E Beasley">
+   <META NAME="keywords" CONTENT="Container loading with weight restrictions problems">
+</HEAD>
+<BODY>
+
+<H1>OR-Library</H1>
+
+<H2><A HREF="http://people.brunel.ac.uk/~mastjjb/jeb/jeb.html">J
+E Beasley</A> </H2>
+
+<P>OR-Library is a collection of test data sets for a variety of OR problems.</P>
+
+<P>A full list of the test data sets available in OR-Library can be found
+<A HREF="http://people.brunel.ac.uk/~mastjjb/jeb/info.html">here</A>.
+</P>
+
+<P>
+<HR></P>
+
+<H2>Container loading with weight restrictions</H2>
+
+<PRE>There are currently 7 data files.
+
+All of these files were contributed by E.E. Bischoff (e.lydiard@swansea.ac.uk).
+
+The files are called wtpack1,wtpack2,...,wtpack7
+
+These files were generated and used in:
+
+[1]  M.S.W. Ratcliff and E.E. Bischoff, &quot;Allowing for weight considerations in
+     container loading&quot;, Operations Research Spektrum, Vol. 20 (1998), pp 65-71.
+and
+[2]  E.E.Bischoff, &quot;Three-dimensional packing of items with limited load 
+     bearing strength&quot;, European Journal of Operational Research, 
+     In press (2005) 
+
+The procedure used to create these test problems is described in reference [1]. 
+
+These problems are single container loading problems, the objective being to 
+maximise the volume utilisation of the container subject to limits on the load
+bearing strength of individual items. As far as the dimensions of the container
+and the cargo are concerned, these are identical to the ones which can be found
+in files thpack1,thpack2,...,thpack3 in the general <A HREF="http://people.brunel.ac.uk/~mastjjb/jeb/orlib/thpackinfo.html">Container Loading</A> section
+of the OR-Library.
+
+Each file contains 100 test problems. File wtpack1 contains problems with n=3 
+different types of boxes. The other six files relate to n=5,8,10,12,15,20, 
+respectively.
+
+For each problem the data has the format
+shown in the following example:
+
+    587    233    220          container length, width, height (in cm)
+   10       29.8200845000      no. of box types n, total volume of cargo (m3)
+    78  1    49  1    47  1    9   179.63  0.19527  0.18970  0.14661
+    46  1    45  1    43  1   15    89.01  0.30357  0.09628  0.06765
+    98  0    44  1    36  1   13   155.23  0.06698  0.13777  0.13664
+   ......    where there is one line for each box type (for n lines)
+
+The line for each box type contains 11 numbers:                         
+box length (cm), 0/1 indicator
+box width (cm), 0/1 indicator
+box height (cm), 0/1 indicator
+number of boxes of this type 
+weight of box (kg) (which is derived from the product of the 3 dimensions) 
+load bearing ability (kg/cm2) if box length placed upright
+load bearing ability (kg/cm2) if box width placed upright
+load bearing ability (kg/cm2) if box height placed upright.
+
+The 0/1 after each box dimension indicates whether placement in the 
+vertical orientation is permissible (=1) or not (=0).
+
+The largest file is wtpack7 of size 140Kb (approximately).
+The entire set of files is of size 550Kb (approximately).</PRE>
+
+<P>Click <A HREF="http://people.brunel.ac.uk/~mastjjb/jeb/orlib/files">here</A>
+to access these files</P>
+
+</BODY>
+</HTML>

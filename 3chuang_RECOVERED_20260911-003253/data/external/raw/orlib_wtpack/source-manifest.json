@@ -1,0 +1,82 @@
+{
+  "sourceName": "WTPACK 重量与承压基准",
+  "sourceType": "HTTP files",
+  "canonicalUrls": [
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/conloadinfo.html",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/"
+  ],
+  "actualDownloadUrls": [
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/wtpack1.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/wtpack2.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/wtpack3.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/wtpack4.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/wtpack5.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/wtpack6.txt",
+    "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/wtpack7.txt"
+  ],
+  "repository": null,
+  "commitOrVersion": "OR-Library files dated 2004-09-10",
+  "retrievedAt": "2026-09-11T05:38:55.201Z",
+  "licenseOrUsageNotes": "Public academic benchmark files; preserve OR-Library and publication attribution.",
+  "rawFiles": [
+    {
+      "path": "conloadinfo.html",
+      "bytes": 3466,
+      "sha256": "8d1ffb4b830129562ad8bd1cdc8f547d6f130417c413b9b7cd227c3821ad2a3e"
+    },
+    {
+      "path": "wtpack1.txt",
+      "bytes": 26000,
+      "sha256": "5113c10c1d5a6a313dfad1a62ebfadfc3adbeb40670ac346698b9f40a779f7a2"
+    },
+    {
+      "path": "wtpack2.txt",
+      "bytes": 40000,
+      "sha256": "ad48e04e02aab88d89e9a3ce2a1925b6e5f8f12a96c23cfeaa837359df2d7584"
+    },
+    {
+      "path": "wtpack3.txt",
+      "bytes": 61000,
+      "sha256": "e722466fb94b4081ef01e1b9d32a172e238b26d14e609cc5f012b2034d8be812"
+    },
+    {
+      "path": "wtpack4.txt",
+      "bytes": 75000,
+      "sha256": "bd96c40739abc7d78504516d868bcdb1aadcbf9e298224a8d5e518fc324e9f95"
+    },
+    {
+      "path": "wtpack5.txt",
+      "bytes": 89000,
+      "sha256": "045c12c8825e096a5a8f1a6e3e0483ea939ffdc832fb597388355fa5267c9e34"
+    },
+    {
+      "path": "wtpack6.txt",
+      "bytes": 110000,
+      "sha256": "47deeb22bd4ede14610f8f34914e54cbb326e1c320f38c452fff7645c57e2f77"
+    },
+    {
+      "path": "wtpack7.txt",
+      "bytes": 145000,
+      "sha256": "5ea4482d32fab087d37a42841d0a74c00bad781c4a7177e40f11f2ee5c1e4de0"
+    }
+  ],
+  "sha256": "Each rawFiles entry contains its SHA256",
+  "units": {
+    "dimensions": "cm",
+    "weight": "kg",
+    "loadBearing": "kg/cm²"
+  },
+  "originalFieldDefinitions": [
+    "container length/width/height",
+    "box dimensions and vertical-orientation indicators",
+    "quantity",
+    "weight kg",
+    "orientation-dependent load bearing kg/cm²"
+  ],
+  "adapterVersion": "1.0.0",
+  "dataClassification": "ACADEMIC_BENCHMARK",
+  "downloadStatus": "DOWNLOADED",
+  "notes": [
+    "Pressure values are preserved and never converted to PORTCUBE maximumSupportedWeightKg."
+  ]
+}

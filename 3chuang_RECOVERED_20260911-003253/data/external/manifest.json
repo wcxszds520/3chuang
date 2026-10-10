@@ -1,0 +1,70 @@
+{
+  "schema": "PORTCUBE_EXTERNAL_MANIFEST/1.0",
+  "generatedAt": "2026-09-11T05:38:55.201Z",
+  "adapterVersion": "1.0.0",
+  "sources": [
+    {
+      "source": "renault_esicup_2015",
+      "displayName": "Renault / ESICUP 多集装箱工业基准",
+      "dataClassification": "INDUSTRIAL_SUPPLIED_BENCHMARK",
+      "instanceCount": 56,
+      "downloadStatus": "DOWNLOADED",
+      "sourceManifest": "raw/renault_esicup_2015/source-manifest.json",
+      "normalized": "normalized/renault_esicup_2015/instances.json"
+    },
+    {
+      "source": "ortec_alonso_2019",
+      "displayName": "ORTEC 真实工业物流实例（111组）",
+      "dataClassification": "REAL_INDUSTRIAL_LOGISTICS",
+      "instanceCount": 111,
+      "downloadStatus": "DOWNLOADED",
+      "sourceManifest": "raw/ortec_alonso_2019/source-manifest.json",
+      "normalized": "normalized/ortec_alonso_2019/instances.json"
+    },
+    {
+      "source": "orlib_thpack",
+      "displayName": "THPACK 3D Container Loading Benchmark",
+      "dataClassification": "ACADEMIC_BENCHMARK",
+      "instanceCount": 762,
+      "downloadStatus": "DOWNLOADED",
+      "sourceManifest": "raw/orlib_thpack/source-manifest.json",
+      "normalized": "normalized/orlib_thpack/instances.json"
+    },
+    {
+      "source": "orlib_wtpack",
+      "displayName": "WTPACK 重量与承压基准",
+      "dataClassification": "ACADEMIC_BENCHMARK",
+      "instanceCount": 700,
+      "downloadStatus": "DOWNLOADED",
+      "sourceManifest": "raw/orlib_wtpack/source-manifest.json",
+      "normalized": "normalized/orlib_wtpack/instances.json"
+    },
+    {
+      "source": "esicup_irregular",
+      "displayName": "ESICUP 异形三维几何基准",
+      "dataClassification": "IRREGULAR_GEOMETRY_BENCHMARK",
+      "instanceCount": 4,
+      "downloadStatus": "DOWNLOADED",
+      "sourceManifest": "raw/esicup_irregular/source-manifest.json",
+      "normalized": "normalized/esicup_irregular/instances.json"
+    },
+    {
+      "source": "atlas_copco",
+      "displayName": "Atlas Copco 真实海运集装箱业务",
+      "dataClassification": "PENDING_EXTERNAL_SOURCE",
+      "instanceCount": 0,
+      "downloadStatus": "METADATA_AVAILABLE_DATAFILE_NOT_PUBLICLY_RETRIEVED",
+      "sourceManifest": "raw/atlas_copco/source-manifest.json",
+      "normalized": "normalized/atlas_copco/status.json"
+    },
+    {
+      "source": "beantech",
+      "displayName": "BeanTech 多卸点多集装箱实例",
+      "dataClassification": "PENDING_EXTERNAL_SOURCE",
+      "instanceCount": 0,
+      "downloadStatus": "SOURCE_FOUND_DATASET_UNAVAILABLE",
+      "sourceManifest": "raw/beantech/source-manifest.json",
+      "normalized": "normalized/beantech/status.json"
+    }
+  ]
+}
