@@ -1,0 +1,40 @@
+{
+  "schema": "portcube-historical-evidence/v1",
+  "generatedAt": "2026-09-26T05:33:22.558Z",
+  "evidenceDate": "2026-09-26",
+  "freshness": "Historical records; generation does not rerun tests.",
+  "checks": [
+    {
+      "id": "contracts",
+      "title": "后端关键合同测试",
+      "result": "17 组测试，446 项通过、0 项失败。",
+      "scope": "定向合同测试；不是全部历史后端测试通过。",
+      "file": "backend-contracts.json",
+      "sha256": "47a91f3a3d6f62c29db646e8ea30200d90771adf8b71360631cfb7f3572b2300"
+    },
+    {
+      "id": "replan",
+      "title": "42 件货物的实际求解与重排",
+      "result": "重排后装入 42 件；40 件位置保持、2 件移动。数据库保存：FAILED。",
+      "scope": "本机 API、演示货单；不代表行业平均效果或云端持久化。",
+      "file": "replan-api.json",
+      "sha256": "0d1ea157e5414114b407aea34b11250b82a69a01d50322cc61cd050402edb20f"
+    },
+    {
+      "id": "browser",
+      "title": "真实浏览器端到端操作",
+      "result": "12 项操作检查通过；覆盖输入变更、失效、重排、版本比较和刷新。",
+      "scope": "历史 Chromium 实际交互记录；不等同于所有设备、所有输入均通过。",
+      "file": "browser-flow.json",
+      "sha256": "0535dca57140bb88b0b760701534b6e0823e709be0520d8dd7b6ad330f8c4d8b"
+    },
+    {
+      "id": "simulation",
+      "title": "连续装载模拟回放",
+      "result": "42 件连续回放完成；现场状态仍为 UNKNOWN。",
+      "scope": "装载模拟；未证明现场设备执行或完整卸载流程。",
+      "file": "operation-replay.json",
+      "sha256": "1760bfb4df7dd4a9993509c396e479e0c59c6726e6a3351f00e6502736a70c45"
+    }
+  ]
+}

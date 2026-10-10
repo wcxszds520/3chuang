@@ -1,0 +1,52 @@
+{
+  "provenance": {
+    "source": "artifacts/master-rebuild-20260922/api/summary.json",
+    "sourceSha256": "74f1ae3ff8021da951e0f1ba2a782a2b13896a2cac8200aafef5d5f08eed4ac2",
+    "kind": "HISTORICAL_EVIDENCE_PROJECTION",
+    "generatedAt": "2026-09-26T05:33:22.158Z"
+  },
+  "evidence": [
+    {
+      "name": "demo42-initial",
+      "httpStatus": 200,
+      "elapsedMs": 2272.4096999999997,
+      "planId": "REQ_1790398282885_da3504bd",
+      "loaded": 42,
+      "unloaded": 0,
+      "valid": true,
+      "persistence": "FAILED",
+      "error": null
+    },
+    {
+      "name": "demo42-replan-width",
+      "httpStatus": 200,
+      "elapsedMs": 1435.9335999999998,
+      "planId": "REQ_1790398285187_3d6c2c89",
+      "loaded": 42,
+      "unloaded": 0,
+      "valid": true,
+      "method": "FULL_REPLAN",
+      "diff": {
+        "unchanged": 40,
+        "moved": 2,
+        "removed": 0,
+        "added": 0,
+        "orientation_changed": 0,
+        "resized": 0
+      },
+      "persistence": "FAILED",
+      "error": null
+    },
+    {
+      "name": "demo42-warm",
+      "httpStatus": 200,
+      "elapsedMs": 1518.995,
+      "planId": "REQ_1790398286552_b4210a57",
+      "loaded": 42,
+      "unloaded": 0,
+      "valid": true,
+      "persistence": "FAILED",
+      "error": null
+    }
+  ]
+}

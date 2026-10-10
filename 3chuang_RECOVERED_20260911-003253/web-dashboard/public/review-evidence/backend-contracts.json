@@ -1,0 +1,21 @@
+{
+  "provenance": {
+    "source": "artifacts/master-rebuild-20260922/final-verification.json",
+    "sourceSha256": "0496e958296272f5383aa4bcacc05eba5606d2ad4d750a3fb90c41a58221dcbd",
+    "kind": "HISTORICAL_EVIDENCE_PROJECTION",
+    "generatedAt": "2026-09-26T05:33:22.155Z"
+  },
+  "evidence": {
+    "scope": "Current targeted backend contracts; not the entire historical backend suite",
+    "checkedAt": "2026-09-26T04:52:38.8667585Z",
+    "passed": 446,
+    "reports": [
+      "route-replan-tests.json",
+      "ai-boundary-tests.json",
+      "algorithm/active-verified-tests.json"
+    ],
+    "failed": 0,
+    "uniqueSuites": 17,
+    "counting": "Deduplicated by test file; each parameterized case retained even when titles repeat"
+  }
+}

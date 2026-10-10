@@ -1,0 +1,5 @@
+.runtime-status{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px;padding:8px 3px;color:var(--text-secondary,#899d9b);font-size:12px;line-height:1.5}
+.runtime-status>span{display:inline-flex;gap:7px;align-items:center}
+.runtime-status i{width:6px;height:6px;border-radius:50%;background:#6bb596}
+.runtime-status i.runtime-status__warning{background:#d7a35d}
+@media(max-width:900px){.runtime-status{gap:4px 12px;font-size:11px}}

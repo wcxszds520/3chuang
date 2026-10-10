@@ -1,0 +1,15 @@
+import {describe,it,expect} from 'vitest';
+import {normalizeCargo,cargoFingerprint} from './cargo.js';
+import {buildPackingRequest} from '../../services/packingApi.js';
+import {configurePackaging,clusterKey} from '../../../../shared/commercePackaging.mjs';
+import {COMMERCE_ORDER} from '../../../../shared/commerceOrder.mjs';
+import {previewCargoCsv,buildInputCargoCsv} from './csvImport.js';
+import {unloadOrder} from '../../three/operation/unloadMachine.js';
+describe('commerce identity and playback',()=>{
+ it('zero top load and layer scope survive CSV without becoming unknown',()=>{const cargo=normalizeCargo({...COMMERCE_ORDER.items[0],maxSupportedWeight:0,maximumSupportedWeightKg:0});expect(cargo.maxSupportedWeight).toBe(0);const back=previewCargoCsv(buildInputCargoCsv([cargo]));expect(back.rows[0].cargo.maxSupportedWeight).toBe(0);expect(back.rows[0].cargo.stackLayerScope).toBe('SAME_SKU');});
+ it('keeps 16 SKU and 17 arrival rows through normalizer and request',()=>{const cargo=COMMERCE_ORDER.items.map(normalizeCargo);expect(new Set(cargo.map(c=>c.sku)).size).toBe(16);expect(cargo).toHaveLength(17);const req=buildPackingRequest({containerType:'40HQ',cargoList:cargo,caseContext:COMMERCE_ORDER.caseContext});expect(req.solverMode).toBe('COMMERCE');expect(req.cargoList[0].visualProfile.assetId).toContain('480_360_320');expect(clusterKey(cargo[0])).toBe(clusterKey(cargo[1]));expect(cargo[0].arrivalBatchId).not.toBe(cargo[1].arrivalBatchId);});
+ it('changing lot or dimensions invalidates plan fingerprint',()=>{const a=normalizeCargo(COMMERCE_ORDER.items[0]);expect(cargoFingerprint([a],'40HQ')).not.toBe(cargoFingerprint([{...a,lotId:'OTHER'}],'40HQ'));});
+ it('configures names and shape without replacing raw dimensions or source record',()=>{const input={name:'',length:1400,width:180,height:160,weight:null,quantity:4,externalMetadata:{externalItemId:'raw-1'}};const result=configurePackaging(input);expect(result.packagingConfig.template).toBe('long_carton');expect(result.name).toBe('长条家居配件');expect(result.externalMetadata).toEqual(input.externalMetadata);expect(result.weight).toBe(null);expect(input.name).toBe('');});
+ it('imports unnamed CSV and round-trips business and top load fields',()=>{const csv='sku,length,width,height,weight,quantity,destinationPort,customerId,lotId,arrivedAt,unloadSequence,maxSupportedWeight\nN1,1400,180,160,7,4,Hamburg,C1,L1,2026-09-16T09:00:00+08:00,2,56';const p=previewCargoCsv(csv);expect(p.summary.valid).toBe(1);expect(p.rows[0].cargo.name).toBe('长条家居配件');expect(p.rows[0].cargo.rawImportRecord.fields.sku).toBe('N1');const back=previewCargoCsv(buildInputCargoCsv([p.rows[0].cargo]));expect(back.rows[0].cargo.customerId).toBe('C1');expect(back.rows[0].cargo.unloadSequence).toBe(2);expect(back.rows[0].cargo.maxSupportedWeight).toBe(56);});
+ it('unload playback follows verified events rather than an independent sort',()=>{const plan={loadedCargo:[{cargoId:'a'},{cargoId:'b'}],businessAudit:{valid:true,unloadEvents:[{cargoId:'b'},{cargoId:'a'}]}};expect(unloadOrder(plan)).toEqual(['b','a']);});
+});
