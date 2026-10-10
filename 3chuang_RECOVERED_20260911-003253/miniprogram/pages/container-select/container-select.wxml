@@ -1,0 +1,161 @@
+<!--柜型选择 v37 · 2026 智能装柜-->
+<view class="container page-enter">
+  <offline-banner />
+
+  <!-- 步骤进度条 -->
+  <view class="stepper">
+    <view class="step step--ready">
+      <view class="step-num">1</view>
+      <view class="step-label">货物录入</view>
+    </view>
+    <view class="step-line step-line--active"></view>
+    <view class="step step--active">
+      <view class="step-num">2</view>
+      <view class="step-label">柜型选择</view>
+    </view>
+    <view class="step-line"></view>
+    <view class="step">
+      <view class="step-num">3</view>
+      <view class="step-label">装箱方案</view>
+    </view>
+    <view class="step-line"></view>
+    <view class="step">
+      <view class="step-num">4</view>
+      <view class="step-label">现场复核</view>
+    </view>
+  </view>
+
+  <!-- 页面标题 -->
+  <view class="page-title">
+    <view class="page-title-main">选择集装箱柜型</view>
+    <view class="page-title-sub">现场选择只改变待用柜型；正式结果以已保存方案为准</view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading-container">
+    <view class="theme-loading">
+      <view class="theme-loading-ring"></view>
+    </view>
+    <view class="loading-text">加载柜型数据...</view>
+  </view>
+
+  <!-- 错误状态 -->
+  <view wx:elif="{{errorMessage}}" class="error-container">
+    <view class="error-icon">⚠️</view>
+    <view class="error-text">{{errorMessage}}</view>
+    <button class="retry-button" bindtap="onRetry">重新加载</button>
+  </view>
+
+  <!-- 柜型列表 -->
+  <view wx:else class="container-list">
+    <!-- AI 推荐骨架屏 -->
+    <view wx:if="{{aiLoading}}" class="ai-banner ai-banner--skeleton">
+      <view class="ai-banner-skeleton-line"></view>
+    </view>
+
+    <!-- AI 推荐横幅（融合到列表顶部） -->
+    <view wx:elif="{{aiRecommendation}}" class="ai-banner" bindtap="onAIRecommendTap">
+      <view class="ai-banner-glow"></view>
+      <view class="ai-banner-tag">
+        <text class="ai-banner-tag-icon">✦</text>
+        <text class="ai-banner-tag-text">智能推荐</text>
+      </view>
+      <view class="ai-banner-body">
+        <view class="ai-banner-title">推荐使用 {{aiRecommendation.name || aiRecommendation.typeId}}</view>
+        <view class="ai-banner-reason">{{aiRecommendation.reason}}</view>
+      </view>
+      <view class="ai-banner-score" wx:if="{{aiRecommendation.score}}">
+        <view class="ai-banner-score-num">{{aiRecommendation.score}}</view>
+        <view class="ai-banner-score-label">匹配度</view>
+      </view>
+    </view>
+
+    <!-- 柜型卡片 -->
+    <view 
+      wx:for="{{containerList}}" 
+      wx:key="typeId" 
+      class="container-card {{selectedContainerId === item.typeId ? 'container-card--selected' : ''}}"
+      data-index="{{index}}"
+      bindtap="onContainerTap"
+    >
+      <!-- AI 分数徽章（右上） -->
+      <view wx:if="{{item.aiScore}}" class="ai-score-badge ai-score-badge--{{item.aiTier}}">
+        <text class="ai-score-num">{{item.aiScore}}</text>
+        <text class="ai-score-unit">分</text>
+      </view>
+
+      <!-- 选中标识 -->
+      <view wx:if="{{selectedContainerId === item.typeId}}" class="selected-check">
+        <text class="selected-check-icon">✓</text>
+      </view>
+
+      <!-- 柜型名称 -->
+      <view class="container-card-head">
+        <view class="container-name">{{item.name}}</view>
+        <view class="container-id">{{item.typeId}}</view>
+      </view>
+
+      <!-- 柜型参数 -->
+      <view class="container-params">
+        <view class="param-item">
+          <view class="param-label">内部尺寸</view>
+          <view class="param-value">{{item.innerLength}} × {{item.innerWidth}} × {{item.innerHeight}} <text class="param-unit">mm</text></view>
+        </view>
+        <view class="param-item">
+          <view class="param-label">容积</view>
+          <view class="param-value">{{item.volumeM3}} <text class="param-unit">m³</text></view>
+        </view>
+        <view class="param-item">
+          <view class="param-label">额定载重</view>
+          <view class="param-value">{{item.maxWeight}} <text class="param-unit">kg</text></view>
+        </view>
+      </view>
+
+      <!-- 装载预演（仅当有货物时） -->
+      <view wx:if="{{item.loadPercent > 0}}" class="load-preview">
+        <view class="load-preview-head">
+          <text class="load-preview-label">装载预演</text>
+          <text class="load-preview-value load-preview-value--{{item.loadTier}}">
+            {{item.loadPercent}}%
+            <text wx:if="{{item.loadTier === 'overflow'}}"> · 溢出</text>
+            <text wx:elif="{{item.loadTier === 'high'}}"> · 性价比最高</text>
+            <text wx:elif="{{item.loadTier === 'mid'}}"> · 适配良好</text>
+            <text wx:else> · 空间富余</text>
+          </text>
+        </view>
+        <view class="load-preview-bar">
+          <view class="load-preview-bar-fill load-preview-bar-fill--{{item.loadTier}}" style="width: {{item.loadBarWidth}}%;"></view>
+        </view>
+      </view>
+
+      <!-- AI 推荐理由（如果有 AI 评分） -->
+      <view wx:if="{{item.aiReason}}" class="container-ai-reason">
+        <text class="container-ai-reason-icon">✦</text>
+        <text class="container-ai-reason-text">{{item.aiReason}}</text>
+      </view>
+
+      <!-- 适用场景 -->
+      <view wx:else class="container-description">
+        <text class="container-description-icon">💡</text>
+        <text class="container-description-text">{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 确认按钮 -->
+  <view wx:if="{{!loading && !errorMessage}}" class="footer-actions">
+    <button class="btn-secondary" bindtap="onConfirm">仅确认柜型</button>
+    <button class="btn-primary" bindtap="onConfirmAndNext">
+      <text>下一步：生成装箱方案 →</text>
+    </button>
+  </view>
+</view>
+
+<!-- Loading 覆盖层 -->
+<loading-overlay 
+  visible="{{_customLoading}}" 
+  text="{{_customLoadingText}}"
+  show-progress="{{_customLoadingProgress}}"
+  progress="{{_customLoadingPercent}}"
+  progress-text="{{_customLoadingProgressText}}"
+/>

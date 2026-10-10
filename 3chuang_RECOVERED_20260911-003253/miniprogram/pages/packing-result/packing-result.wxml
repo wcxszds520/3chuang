@@ -1,0 +1,463 @@
+<!--装箱方案页面 v37.6 · 单页流式布局（数据+3D+筛选 一屏可见）-->
+<view class="container page-enter">
+  <!-- 离线模式横幅 (Req 13.4) -->
+  <offline-banner />
+
+  <view wx:if="{{packingPlan}}">
+    <view class="case-source-strip">
+      <text>{{caseId ? 'CASE ' + caseId : 'LOCAL OPERATION'}}</text>
+      <text>{{strategyName}} · {{planSourceCode}} · {{planSourceLabel}}</text>
+    </view>
+    <!-- ============ 1. 顶部 KPI 横条（吸顶） ============ -->
+    <view class="kpi-strip">
+      <view class="kpi-strip-item kpi-strip-item--main">
+        <view class="kpi-strip-value {{packingPlan.spaceUtilization >= 92 ? 'kpi-strip-value--excellent' : ''}}">
+          <data-counter value="{{packingPlan.spaceUtilization}}" duration="{{800}}" decimals="{{2}}" suffix="%"></data-counter>
+        </view>
+        <view class="kpi-strip-label">利用率</view>
+      </view>
+      <view class="kpi-strip-divider"></view>
+      <view class="kpi-strip-item">
+        <view class="kpi-strip-value">
+          <data-counter value="{{loadedCount}}" duration="{{500}}"></data-counter>
+        </view>
+        <view class="kpi-strip-label">装入</view>
+      </view>
+      <view class="kpi-strip-divider"></view>
+      <view class="kpi-strip-item">
+        <view class="kpi-strip-value {{unloadedCount === 0 ? 'kpi-strip-value--ok' : 'kpi-strip-value--warn'}}">
+          <data-counter value="{{unloadedCount}}" duration="{{500}}"></data-counter>
+        </view>
+        <view class="kpi-strip-label">未装</view>
+      </view>
+      <view class="kpi-strip-divider"></view>
+      <view class="kpi-strip-item">
+        <view class="kpi-strip-value">
+          <data-counter value="{{totalWeightNum}}" duration="{{600}}" decimals="{{0}}"></data-counter>
+        </view>
+        <view class="kpi-strip-label">kg</view>
+      </view>
+      <view class="kpi-strip-divider"></view>
+      <view class="kpi-strip-item">
+        <view class="kpi-strip-value {{aiRiskCount === 0 ? 'kpi-strip-value--ok' : 'kpi-strip-value--warn'}}">
+          <data-counter value="{{aiRiskCount}}" duration="{{400}}"></data-counter>
+        </view>
+        <view class="kpi-strip-label">规则风险</view>
+      </view>
+    </view>
+
+    <!-- ============ 2. 3D 画布（核心区，占 50vh） ============ -->
+    <!-- 当合规报告 modal 打开时，canvas 通过 wx:if 销毁，避免原生组件遮挡 modal -->
+    <view class="canvas-stage" wx:if="{{!showComplianceReport}}">
+      <canvas 
+        type="webgl" 
+        id="packingCanvas" 
+        class="packing-canvas"
+        disable-scroll="{{true}}"
+        bindtouchstart="onCanvasTouchStart"
+        bindtouchmove="onCanvasTouchMove"
+        bindtouchend="onCanvasTouchEnd"
+        catchtap="onCanvasTap"
+      ></canvas>
+    </view>
+
+    <!-- ============ 2.0 装载 HUD（画布下方独立条带，装载时显示当前货物） ============ -->
+    <view class="loading-hud-bar" wx:if="{{loadingHudText}}">
+      <view class="lh-icon">📦</view>
+      <view class="lh-content">
+        <view class="lh-text">{{loadingHudText}}</view>
+        <view class="lh-progress">
+          <view class="lh-progress-bar" style="width: {{loadingHudProgress}}%;"></view>
+        </view>
+      </view>
+      <view class="lh-meta">{{loadingHudCurrent}} / {{loadingHudTotal}}</view>
+    </view>
+
+    <!-- ============ 2.1 3D 演示工具栏（紧贴画布下方，常驻可见） ============ -->
+    <view class="demo-toolbar">
+      <!-- 标题行：柜型 + 当前模式 -->
+      <view class="demo-toolbar-head">
+        <view class="dt-container-tag">
+          <text class="dt-container-icon">🎯</text>
+          <text class="dt-container-name">{{selectedContainer.name}}</text>
+        </view>
+        <view class="dt-mode-tag" wx:if="{{isLoadingAnimating}}">
+          <text class="dt-mode-dot"></text>
+          <text class="dt-mode-text">装载演示中 ×{{loadingSpeed}}</text>
+        </view>
+        <view class="dt-mode-tag dt-mode-tag--camera" wx:elif="{{isCameraPresetPlaying}}">
+          <text class="dt-mode-dot"></text>
+          <text class="dt-mode-text">运镜中</text>
+        </view>
+      </view>
+
+      <!-- 视角行 -->
+      <view class="demo-row">
+        <text class="demo-row-label">视角</text>
+        <view class="dt-btn" bindtap="onSwitchToDoorView">门</view>
+        <view class="dt-btn" bindtap="onSwitchToTopView">俯视</view>
+        <view class="dt-btn" bindtap="onSwitchToSideView">侧视</view>
+      </view>
+
+      <!-- 演示行 -->
+      <view class="demo-row">
+        <text class="demo-row-label">演示</text>
+        <view class="dt-btn dt-btn--accent" bindtap="onPlayLoadingSequence">▶ 装载演示</view>
+        <view class="dt-btn" bindtap="onCameraOrbit">环绕</view>
+        <view class="dt-btn" bindtap="onCameraDive">俯冲</view>
+        <view class="dt-btn dt-btn--stop" bindtap="onStopCameraPreset" wx:if="{{isCameraPresetPlaying || isLoadingAnimating}}">■ 停止</view>
+      </view>
+
+      <!-- 速度行 -->
+      <view class="demo-row">
+        <text class="demo-row-label">速度</text>
+        <view class="dt-btn dt-btn--small {{loadingSpeed === 1 ? 'dt-btn--active' : ''}}" bindtap="onChangeLoadingSpeed" data-speed="1">×1</view>
+        <view class="dt-btn dt-btn--small {{loadingSpeed === 4 ? 'dt-btn--active' : ''}}" bindtap="onChangeLoadingSpeed" data-speed="4">×4</view>
+        <view class="dt-btn dt-btn--small {{loadingSpeed === 10 ? 'dt-btn--active' : ''}}" bindtap="onChangeLoadingSpeed" data-speed="10">×10</view>
+        <view class="dt-btn dt-btn--small {{loadingSpeed === 30 ? 'dt-btn--active' : ''}}" bindtap="onChangeLoadingSpeed" data-speed="30">×30</view>
+      </view>
+    </view>
+
+    <view class="analysis-mode-bar">
+      <text>可视模式</text>
+      <view class="analysis-mode {{analysisMode === 'normal' ? 'analysis-mode--active' : ''}}" bindtap="onAnalysisModeChange" data-mode="normal">Normal</view>
+      <view class="analysis-mode {{analysisMode === 'lifo' ? 'analysis-mode--active' : ''}}" bindtap="onAnalysisModeChange" data-mode="lifo">LIFO</view>
+      <view class="analysis-mode {{analysisMode === 'risk' ? 'analysis-mode--active' : ''}}" bindtap="onAnalysisModeChange" data-mode="risk">Risk</view>
+    </view>
+
+    <!-- ============ 3. 货物类型快速筛选 chip 行（紧贴画布，立即生效） ============ -->
+    <view class="quick-type-bar">
+      <view class="qt-label">货物类型</view>
+      <view class="qt-chip {{currentCargoType === 'all' ? 'qt-chip--active' : ''}}" bindtap="onFilterCargoType" data-type="all">
+        <text class="qt-chip-text">全部</text>
+      </view>
+      <view class="qt-chip {{currentCargoType === 'heavy' ? 'qt-chip--active qt-chip--heavy' : ''}}" bindtap="onFilterCargoType" data-type="heavy">
+        <text class="qt-chip-text">重货</text>
+      </view>
+      <view class="qt-chip {{currentCargoType === 'normal' ? 'qt-chip--active qt-chip--normal' : ''}}" bindtap="onFilterCargoType" data-type="normal">
+        <text class="qt-chip-text">普通</text>
+      </view>
+      <view class="qt-chip {{currentCargoType === 'fragile' ? 'qt-chip--active qt-chip--fragile' : ''}}" bindtap="onFilterCargoType" data-type="fragile">
+        <text class="qt-chip-text">易碎</text>
+      </view>
+    </view>
+
+    <!-- ============ 4. 出货批次 横滑 chip 行 ============ -->
+    <scroll-view scroll-x="true" class="batch-chip-scroll" wx:if="{{batchColorMapping.length > 0}}">
+      <view class="batch-chip-row">
+        <view class="bc-label">批次</view>
+        <view 
+          class="bc-chip {{item.visible ? 'bc-chip--on' : 'bc-chip--off'}}" 
+          wx:for="{{batchColorMapping}}" 
+          wx:key="batchKey"
+          bindtap="onBatchChipTap"
+          data-batch="{{item.batchKey}}"
+        >
+          <view class="bc-dot" style="background-color: {{item.colorCSS}};"></view>
+          <text class="bc-text">{{item.label}}</text>
+          <text class="bc-count">{{item.count}}</text>
+        </view>
+      </view>
+    </scroll-view>
+
+    <!-- ============ 5. 溢出告警 / AI 合规体检主操作 ============ -->
+    <view class="below-canvas">
+      <!-- 溢出告警条 -->
+      <view class="overflow-banner" wx:if="{{unloadedCount > 0}}">
+        <view class="overflow-banner-icon">⚠️</view>
+        <view class="overflow-banner-content">
+          <view class="overflow-banner-title">{{unloadedCount}} 件未装入，建议升级柜型</view>
+          <view class="overflow-banner-desc">{{overflowSuggestionText}}</view>
+        </view>
+        <button class="overflow-banner-btn" bindtap="onSwitchContainer">换柜</button>
+      </view>
+
+      <!-- 确定性规则复核入口；AI 仅用于解释 -->
+      <view class="primary-action-card">
+        <view class="primary-action-head">
+          <text class="primary-action-title">{{selectedContainer.name}} 装箱完成</text>
+          <text class="primary-action-sub" wx:if="{{unloadedCount === 0 && aiRiskCount === 0}}">全部装入 · 当前未返回规则警告</text>
+          <text class="primary-action-sub primary-action-sub--warn" wx:elif="{{unloadedCount > 0}}">⚠ {{unloadedCount}} 件未装入</text>
+          <text class="primary-action-sub primary-action-sub--warn" wx:elif="{{aiRiskCount > 0}}">⚠ 发现 {{aiRiskCount}} 项风险</text>
+        </view>
+        <view class="primary-action-row">
+          <view class="document-icon" wx:if="{{complianceReport}}" bindtap="onViewReport">📄</view>
+          <button 
+            class="ai-compliance-btn {{isCheckingCompliance ? 'loading' : ''}}" 
+            bindtap="onAIComplianceCheck"
+            disabled="{{isCheckingCompliance}}"
+          >{{isCheckingCompliance ? '规则复核中...' : '查看规则与合规摘要'}}</button>
+        </view>
+      </view>
+
+      <!-- 工程总重估算（不是 VGM） -->
+      <view class="vgm-suggestion-bar" wx:if="{{suggestedVGM}}">
+        <text class="vgm-suggestion-icon">💡</text>
+        <text class="vgm-suggestion-text">工程总重估算 {{suggestedVGM}} kg（货物 {{totalWeightText}} kg + 参考箱皮 {{containerTareWeight}} kg）；不是核证 VGM，仍需 Method 1/2 与托运人声明。</text>
+      </view>
+
+      <!-- 具体 SKU 筛选（折叠卡片） -->
+      <view class="sku-filter-card" wx:if="{{uniqueSkuList.length > 0}}">
+        <view class="sku-filter-head" bindtap="onToggleSkuFilter">
+          <view class="sku-filter-title">
+            <text>🎛️ 具体货物筛选</text>
+            <text class="sku-filter-count">已选 {{selectedSkus.length}} / {{uniqueSkuList.length}}</text>
+          </view>
+          <text class="sku-filter-arrow">{{showSkuFilter ? '▲' : '▼'}}</text>
+        </view>
+        <view class="sku-filter-body" wx:if="{{showSkuFilter}}">
+          <view class="quick-actions">
+            <button class="quick-btn" bindtap="onSelectAllSkus">全选</button>
+            <button class="quick-btn" bindtap="onClearAllSkus">清空</button>
+          </view>
+          <view class="sku-list">
+            <label class="sku-item" wx:for="{{uniqueSkuList}}" wx:key="*this" bindtap="onSkuFilterClick" data-sku="{{item}}">
+              <view class="custom-checkbox {{selectedSkusMap[item] ? 'checked' : ''}}">
+                <text class="checkmark" wx:if="{{selectedSkusMap[item]}}">✓</text>
+              </view>
+              <text class="sku-name">{{item}}</text>
+            </label>
+          </view>
+        </view>
+      </view>
+
+      <!-- AI 分析卡片 -->
+      <view class="ai-explanation-section">
+        <view class="ai-explanation-header" bindtap="onToggleAiExplanation">
+          <view class="ai-header-left">
+            <text class="ai-badge-icon">i</text>
+            <text class="ai-explanation-title">方案解释（EXPLANATION_ONLY）</text>
+          </view>
+          <text class="ai-expand-icon">{{showAiExplanation ? '▲' : '▼'}}</text>
+        </view>
+        <view class="ai-explanation-body" wx:if="{{showAiExplanation}}">
+          <view class="ai-loading" wx:if="{{aiExplanationLoading}}">
+            <view class="ai-loading-dot"></view>
+            <view class="ai-loading-dot"></view>
+            <view class="ai-loading-dot"></view>
+            <text class="ai-loading-text">AI 正在分析...</text>
+          </view>
+          <view class="ai-explanation-content" wx:if="{{aiExplanation && !aiExplanationLoading}}">
+            <typewriter text="{{aiExplanation}}" speed="{{40}}" />
+          </view>
+          <view class="ai-highlights" wx:if="{{aiHighlights.length > 0 && !aiExplanationLoading}}">
+            <text class="highlight-tag" wx:for="{{aiHighlights}}" wx:key="index">✓ {{item}}</text>
+          </view>
+          <view class="ai-risks" wx:if="{{aiRisks.length > 0 && !aiExplanationLoading}}">
+            <text class="risk-tag" wx:for="{{aiRisks}}" wx:key="index">⚠ {{item}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="bottom-pad"></view>
+    </view>
+  </view>
+
+  <!-- 货物详情弹窗 -->
+  <view class="cargo-inspector-toast" wx:if="{{cargoInspectorData}}" bindtap="onCloseCargoInspector">
+    <view class="inspector-content" catchtap="onStopPropagation">
+      <view class="inspector-header">
+        <text class="inspector-title">货物详情</text>
+        <text class="inspector-close" bindtap="onCloseCargoInspector">✕</text>
+      </view>
+      <view class="inspector-body">
+        <view class="inspector-row">
+          <text class="inspector-label">产品名称:</text>
+          <text class="inspector-value">{{cargoInspectorData.cargoName || 'N/A'}}</text>
+        </view>
+        <view class="inspector-row">
+          <text class="inspector-label">尺寸 (L×W×H):</text>
+          <text class="inspector-value">
+            {{cargoInspectorData.dimensions.l || 0}}×{{cargoInspectorData.dimensions.w || 0}}×{{cargoInspectorData.dimensions.h || 0}} mm
+          </text>
+        </view>
+        <view class="inspector-row">
+          <text class="inspector-label">重量:</text>
+          <text class="inspector-value">{{cargoInspectorData.weight || 'N/A'}} kg</text>
+        </view>
+        <view class="inspector-row">
+          <text class="inspector-label">批次:</text>
+          <text class="inspector-value">{{cargoInspectorData.batchKey || 'N/A'}}</text>
+        </view>
+        <view class="inspector-row">
+          <text class="inspector-label">装载序号:</text>
+          <text class="inspector-value">#{{cargoInspectorData.loadingIndex || 'N/A'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 叙事加载遮罩 -->
+  <cover-view class="narrative-loading-overlay" wx:if="{{showNarrativeLoading}}">
+    <cover-view class="loading-content">
+      <cover-view class="loading-spinner"></cover-view>
+      <cover-view class="loading-text">{{loadingText}}</cover-view>
+    </cover-view>
+  </cover-view>
+
+  <!-- 合规报告弹窗（规则结果为主，AI 只能解释） -->
+  <view class="compliance-modal" wx:if="{{showComplianceReport}}" bindtap="onCloseComplianceReport">
+    <view class="compliance-content-wrapper" catchtap="onStopPropagation">
+      <view class="compliance-header">
+        <view class="compliance-title">确定性规则与合规摘要</view>
+        <view class="compliance-header-actions">
+          <view class="refresh-btn {{isCheckingCompliance ? 'loading' : ''}}" bindtap="onRefreshReport">
+            {{isCheckingCompliance ? '⏳' : '🔄'}}
+          </view>
+          <view class="compliance-close" bindtap="onCloseComplianceReport">✕</view>
+        </view>
+      </view>
+      <scroll-view scroll-y="true" class="compliance-body-scroll">
+        <view class="compliance-status-card" style="border-left-color: {{complianceReport.statusColor}};">
+          <view class="status-header">
+            <view class="status-text" style="color: {{complianceReport.statusColor}};">{{complianceReport.statusText}}</view>
+            <view class="status-score" style="color: {{complianceReport.statusColor}};">{{complianceReport.scoreText || (complianceReport.score + '分')}}</view>
+          </view>
+          <view class="status-badge" wx:if="{{complianceReport.isFallback}}">
+            <view class="badge-text">⚠️ 降级模式</view>
+          </view>
+          <view class="status-badge" wx:if="{{complianceReport.modelName}}">
+            <view class="badge-text">来源 {{complianceReport.modelName}}</view>
+          </view>
+        </view>
+        <view class="compliance-section" wx:if="{{complianceReport.reportTable && complianceReport.reportTable.length > 0}}">
+          <view class="section-title">规则实测与阈值</view>
+          <view class="compliance-table">
+            <view class="table-header">
+              <view class="table-cell header-cell dimension-col">维度</view>
+              <view class="table-cell header-cell standard-col">标准</view>
+              <view class="table-cell header-cell actual-col">实际</view>
+              <view class="table-cell header-cell result-col">状态</view>
+            </view>
+            <view class="table-body">
+              <view class="table-row" wx:for="{{complianceReport.reportTable}}" wx:key="dimension">
+                <view class="table-cell dimension-col">{{item.dimension}}</view>
+                <view class="table-cell standard-col">{{item.standard}}</view>
+                <view class="table-cell actual-col">{{item.actual}}</view>
+                <view class="table-cell result-col result-{{item.result}}">{{item.result}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="compliance-section" wx:if="{{complianceReport.issues.length > 0}}">
+          <view class="section-title">⚠️ 发现问题 ({{complianceReport.issues.length}})</view>
+          <view class="issue-list">
+            <view class="issue-item" wx:for="{{complianceReport.issues}}" wx:key="*this">
+              <view class="issue-text">• {{item}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="compliance-section">
+          <view class="section-title">解释与处理建议</view>
+          <view class="advice-box">
+            <view class="advice-text">{{complianceReport.advice}}</view>
+          </view>
+        </view>
+        <view class="compliance-footer">
+          <view class="timestamp-text">检查时间: {{complianceReport.timestamp}}</view>
+        </view>
+        <view class="compliance-actions">
+          <view class="recheck-btn" bindtap="onRecheckCompliance">重新运行规则复核</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 【预览区域】生成前显示集装箱和货物信息 -->
+  <view class="pre-generation-view" wx:if="{{selectedContainer && !packingPlan && !isGenerating}}">
+    <view class="container-info-card">
+      <view class="card-header">
+        <text class="card-title">已选集装箱</text>
+        <button class="edit-btn" bindtap="onSwitchContainer">修改</button>
+      </view>
+      <view class="container-details">
+        <view class="detail-row">
+          <text class="detail-label">柜型:</text>
+          <text class="detail-value">{{selectedContainer.name}}</text>
+        </view>
+        <view class="detail-row">
+          <text class="detail-label">内部尺寸:</text>
+          <text class="detail-value">{{selectedContainer.innerLength}}×{{selectedContainer.innerWidth}}×{{selectedContainer.innerHeight}} mm</text>
+        </view>
+        <view class="detail-row">
+          <text class="detail-label">最大载重:</text>
+          <text class="detail-value">{{selectedContainer.maxWeight}} kg</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="cargo-list-view">
+      <view class="card-header">
+        <text class="card-title">已录入货物 ({{cargoListPreview.length}}件)</text>
+        <button class="edit-btn" bindtap="onNavigateToCargoInput">添加货物</button>
+      </view>
+      <view class="cargo-items" wx:if="{{cargoListPreview.length > 0}}">
+        <view class="cargo-item" wx:for="{{cargoListPreview}}" wx:key="cargoId">
+          <view class="cargo-name">{{item.name}}</view>
+          <view class="cargo-specs">
+            <text class="spec-text">{{item.length}}×{{item.width}}×{{item.height}} mm</text>
+            <text class="spec-divider">|</text>
+            <text class="spec-text">{{item.quantity}}件</text>
+            <text class="spec-divider">|</text>
+            <text class="spec-text">{{item.weight}} kg</text>
+          </view>
+        </view>
+      </view>
+      <view class="empty-cargo-tip" wx:else>
+        <text>暂无货物,请先添加货物</text>
+      </view>
+      <view class="cargo-summary" wx:if="{{cargoListPreview.length > 0}}">
+        <view class="summary-item">
+          <text class="summary-label">总件数:</text>
+          <text class="summary-value">{{totalCargoQuantity}}</text>
+        </view>
+        <view class="summary-item">
+          <text class="summary-label">总重量:</text>
+          <text class="summary-value">{{totalCargoWeight}} kg</text>
+        </view>
+        <view class="summary-item">
+          <text class="summary-label">总体积:</text>
+          <text class="summary-value">{{totalCargoVolume}} m³</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="action-section" wx:if="{{selectedContainer && !isGenerating && !packingPlan}}">
+    <button 
+      class="generate-btn theme-btn-ripple {{canGenerate ? '' : 'disabled'}}" 
+      bindtap="onGeneratePackingPlan"
+      disabled="{{!canGenerate}}"
+    >
+      {{canGenerate ? '生成装箱方案' : '请先添加货物'}}
+    </button>
+  </view>
+  
+  <view class="generating-section" wx:if="{{isGenerating}}">
+    <view class="generating-card">
+      <view class="generating-ring-container">
+        <view class="generating-ring"></view>
+        <view class="generating-ring-inner"></view>
+      </view>
+      <view class="generating-text">{{generatingText || '后端约束求解中...'}}</view>
+      <view class="generating-progress" wx:if="{{showGeneratingProgress}}">
+        <view class="generating-progress-bar">
+          <view class="generating-progress-fill" style="width: {{generatingProgress}}%;"></view>
+        </view>
+        <view class="generating-progress-hint">{{generatingProgressText || '正在搜索满足约束的可行排列...'}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="no-container-tip" wx:if="{{!selectedContainer}}">
+    <text>请先选择柜型</text>
+    <button class="select-container-btn" bindtap="onSwitchContainer">去选择</button>
+  </view>
+</view>
+
+<!-- 优雅 Loading 覆盖层 -->
+<elegant-loading 
+  show="{{_elegantLoading}}" 
+  text="{{_elegantLoadingText}}"
+  progress="{{_elegantLoadingProgress}}"
+/>

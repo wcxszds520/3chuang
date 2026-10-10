@@ -1,0 +1,271 @@
+<!--货物录入页面 · 现场数据准备-->
+<view class="container page-enter">
+  <offline-banner />
+
+  <!-- 步骤进度条 -->
+  <view class="stepper">
+    <view class="step step--active">
+      <view class="step-num">1</view>
+      <view class="step-label">货物录入</view>
+    </view>
+    <view class="step-line step-line--active"></view>
+    <view class="step {{cargoList.length > 0 ? 'step--ready' : ''}}">
+      <view class="step-num">2</view>
+      <view class="step-label">柜型选择</view>
+    </view>
+    <view class="step-line"></view>
+    <view class="step">
+      <view class="step-num">3</view>
+      <view class="step-label">装箱方案</view>
+    </view>
+    <view class="step-line"></view>
+    <view class="step">
+      <view class="step-num">4</view>
+      <view class="step-label">现场复核</view>
+    </view>
+  </view>
+
+  <!-- 所有预设均为明确标注的演示数据 -->
+  <view class="preset-strip">
+    <view class="preset-strip-head">
+      <text class="preset-strip-title">DEMO DATA · 演示数据集</text>
+      <text class="preset-strip-sub">仅用于比赛演示与功能验证</text>
+    </view>
+    <scroll-view scroll-x class="preset-scroll" enhanced show-scrollbar="{{false}}">
+      <view class="preset-chip" wx:for="{{demoPresets}}" wx:key="id" bindtap="onSelectDemoPreset" data-id="{{item.id}}">
+        <view class="preset-chip-icon">{{item.icon}}</view>
+        <view class="preset-chip-body">
+          <view class="preset-chip-name">{{item.name}}</view>
+          <view class="preset-chip-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 已录入货物水平卡片堆（仅当有货物时显示） -->
+  <view class="cargo-stack" wx:if="{{cargoList.length > 0}}">
+    <view class="cargo-stack-head">
+      <view class="cargo-stack-title-row">
+        <text class="cargo-stack-title">已录入货物</text>
+        <text class="cargo-stack-stat">{{cargoList.length}} 种 SKU · {{totalQuantity}} 件 · {{totalWeight}} kg</text>
+      </view>
+      <text class="cargo-stack-clear" bindtap="clearAll">清空</text>
+    </view>
+    <scroll-view scroll-x class="cargo-stack-scroll" enhanced show-scrollbar="{{false}}">
+      <view class="cargo-tile" wx:for="{{cargoList}}" wx:key="cargoId" bindtap="editCargo" data-id="{{item.cargoId}}">
+        <view class="cargo-tile-cube">
+          <view class="cube-3d cube-3d--{{item.fragile ? 'fragile' : (item.weight >= 20 ? 'heavy' : 'normal')}}"></view>
+        </view>
+        <view class="cargo-tile-name">{{item.name}}</view>
+        <view class="cargo-tile-meta">{{item.length}}×{{item.width}}×{{item.height}}</view>
+        <view class="cargo-tile-qty">×{{item.quantity}} 件</view>
+        <view class="cargo-tile-delete" catchtap="deleteCargo" data-id="{{item.cargoId}}">×</view>
+      </view>
+      <view class="cargo-tile cargo-tile--add" bindtap="scrollToForm">
+        <view class="cargo-tile-add-plus">+</view>
+        <view class="cargo-tile-add-text">新增</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 表单卡片 -->
+  <view class="form-card" id="form-card">
+    <view class="form-card-head">
+      <text class="form-card-title">{{isEditMode ? '编辑货物' : '货物信息录入'}}</text>
+      <text wx:if="{{isEditMode}}" class="form-card-badge">编辑中</text>
+    </view>
+
+    <!-- 分组 1：基础信息 -->
+    <view class="form-group">
+      <view class="form-group-head">
+        <view class="form-group-num">①</view>
+        <view class="form-group-title">基础信息</view>
+        <view class="form-group-required">必填</view>
+      </view>
+      <view class="form-group-body">
+        <view class="form-item">
+          <view class="form-label">货物名称</view>
+          <input class="form-input" placeholder="如：空气炸锅 5.5L" value="{{cargoName}}" bindinput="onCargoNameInput" />
+        </view>
+
+        <view class="form-row">
+          <view class="form-item">
+            <view class="form-label">长度 mm</view>
+            <input class="form-input" type="digit" placeholder="0" value="{{length}}" bindinput="onLengthInput" />
+          </view>
+          <view class="form-item">
+            <view class="form-label">宽度 mm</view>
+            <input class="form-input" type="digit" placeholder="0" value="{{width}}" bindinput="onWidthInput" />
+          </view>
+          <view class="form-item">
+            <view class="form-label">高度 mm</view>
+            <input class="form-input" type="digit" placeholder="0" value="{{height}}" bindinput="onHeightInput" />
+          </view>
+        </view>
+
+        <view class="form-row">
+          <view class="form-item">
+            <view class="form-label">重量 kg</view>
+            <input class="form-input" type="digit" placeholder="0" value="{{weight}}" bindinput="onWeightInput" />
+          </view>
+          <view class="form-item">
+            <view class="form-label">数量</view>
+            <input class="form-input" type="number" placeholder="0" value="{{quantity}}" bindinput="onQuantityInput" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 分组 2：货物属性 - 胶囊组 -->
+    <view class="form-group">
+      <view class="form-group-head">
+        <view class="form-group-num">②</view>
+        <view class="form-group-title">货物属性</view>
+        <view class="form-group-tag">点击切换</view>
+      </view>
+      <view class="form-group-body">
+        <view class="capsule-group">
+          <view class="capsule {{stackable ? 'capsule--on' : 'capsule--off'}}" bindtap="onToggleStackable">
+            <text class="capsule-check">{{stackable ? '✓' : '○'}}</text>
+            <text>可堆叠</text>
+          </view>
+          <view class="capsule {{canInvert ? 'capsule--on' : 'capsule--off'}}" bindtap="onToggleCanInvert">
+            <text class="capsule-check">{{canInvert ? '✓' : '○'}}</text>
+            <text>可倒置</text>
+          </view>
+          <view class="capsule {{canLayFlat ? 'capsule--on' : 'capsule--off'}}" bindtap="onToggleCanLayFlat">
+            <text class="capsule-check">{{canLayFlat ? '✓' : '○'}}</text>
+            <text>可侧放</text>
+          </view>
+          <view class="capsule capsule--fragile {{fragile ? 'capsule--on' : 'capsule--off'}}" bindtap="onToggleFragile">
+            <text class="capsule-check">{{fragile ? '✓' : '○'}}</text>
+            <text>易碎品</text>
+          </view>
+        </view>
+
+        <view class="form-item" wx:if="{{stackable}}">
+          <view class="form-label">最大堆叠层数</view>
+          <input class="form-input" type="number" placeholder="999 表示无限制" value="{{maxStackLayers}}" bindinput="onMaxStackLayersInput" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 分组 3：物流信息 -->
+    <view class="form-group">
+      <view class="form-group-head">
+        <view class="form-group-num">③</view>
+        <view class="form-group-title">物流信息</view>
+        <view class="form-group-required">必填</view>
+      </view>
+      <view class="form-group-body">
+        <view class="form-item">
+          <view class="form-label">预计到港时间 (ETA)</view>
+          <picker mode="date" value="{{eta}}" bindchange="onETAChange">
+            <view class="picker-input">{{eta || '请选择到港日期'}}</view>
+          </picker>
+        </view>
+
+        <view class="form-item">
+          <view class="form-label">目的港</view>
+          <view class="port-selector">
+            <input class="form-input" type="text" placeholder="输入或搜索目的港" value="{{destinationPort}}" bindinput="onPortSearchInput" bindfocus="onPortSearchFocus" />
+            <view class="port-dropdown" wx:if="{{showPortDropdown && filteredPorts.length > 0}}">
+              <view class="port-option" wx:for="{{filteredPorts}}" wx:key="nameEn" bindtap="onSelectPort" data-port="{{item}}">
+                <text class="port-name">{{item.name}}</text>
+                <text class="port-code">{{item.nameEn}} · {{item.region}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="form-item">
+          <view class="form-label">截关时间 (CY Closing)</view>
+          <picker mode="date" value="{{cyClosing}}" bindchange="onCYClosingChange">
+            <view class="picker-input">{{cyClosing || '选填'}}</view>
+          </picker>
+        </view>
+
+        <view class="form-item">
+          <view class="form-label">报关单号</view>
+          <input class="form-input" placeholder="选填" value="{{customsDeclaration}}" bindinput="onCustomsDeclarationInput" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 提示 -->
+    <view class="form-tips">
+      <text class="form-tips-icon">💡</text>
+      <text class="form-tips-text">尺寸不超 12032×2352×2698 mm（40HQ），单件不超 26000 kg</text>
+    </view>
+
+    <!-- 提交按钮 -->
+    <view class="form-actions">
+      <button class="btn-secondary" wx:if="{{isEditMode}}" bindtap="cancelEdit">取消编辑</button>
+      <button class="btn-primary" bindtap="addCargo">
+        <text>{{isEditMode ? '保存修改' : '+ 添加货物'}}</text>
+      </button>
+    </view>
+  </view>
+
+  <!-- 装箱预览（已选柜型时显示） -->
+  <view class="packing-preview" wx:if="{{cargoList.length > 0 && selectedContainer}}">
+    <view class="packing-preview-head">
+      <text class="packing-preview-title">🎯 装箱方案预览</text>
+    </view>
+    <view class="packing-preview-body">
+      <view class="preview-row">
+        <text class="preview-label">已选货柜</text>
+        <text class="preview-value">{{selectedContainer.name}} · {{selectedContainer.volumeM3}}m³</text>
+      </view>
+      <view class="preview-row">
+        <text class="preview-label">货物总数</text>
+        <text class="preview-value">{{cargoList.length}} 种 SKU · {{totalQuantity}} 件 · {{totalWeight}} kg</text>
+      </view>
+    </view>
+    <button class="btn-generate" bindtap="generatePackingPlan">
+      <text class="btn-generate-icon">🚀</text>
+      <text class="btn-generate-text">立即生成装箱方案</text>
+    </button>
+  </view>
+
+  <!-- 提示：需要选择货柜 -->
+  <view class="hint-card" wx:if="{{cargoList.length > 0 && !selectedContainer}}">
+    <text class="hint-icon">📐</text>
+    <text class="hint-text">下一步：选择合适的集装箱柜型</text>
+    <button class="btn-secondary" bindtap="goToContainerSelect">选择柜型 →</button>
+  </view>
+</view>
+
+<!-- Loading 覆盖层 -->
+<loading-overlay 
+  visible="{{_customLoading}}" 
+  text="{{_customLoadingText}}"
+  show-progress="{{_customLoadingProgress}}"
+  progress="{{_customLoadingPercent}}"
+  progress-text="{{_customLoadingProgressText}}"
+/>
+
+<!-- 模板选择弹窗（保留向后兼容） -->
+<view class="template-modal" wx:if="{{showTemplateModal}}" bindtap="onCloseTemplateModal">
+  <view class="template-modal-content" catchtap="onStopPropagation">
+    <view class="modal-title">选择货物模板</view>
+    <view class="modal-desc">一键导入预设货物数据</view>
+    <view class="template-list">
+      <view 
+        class="template-item" 
+        wx:for="{{templateList}}" 
+        wx:key="id"
+        bindtap="onSelectTemplate"
+        data-id="{{item.id}}"
+      >
+        <view class="template-item-header">
+          <text class="template-item-name">{{item.name}}</text>
+          <text class="template-item-badge">{{item.cargoList.length}} 种</text>
+        </view>
+        <view class="template-item-desc">{{item.description}}</view>
+        <view class="template-item-route">航线：{{item.route}}</view>
+      </view>
+    </view>
+    <button class="modal-close-btn" bindtap="onCloseTemplateModal">取消</button>
+  </view>
+</view>
